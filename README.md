@@ -1,6 +1,4 @@
-# blogs
-test
+#Welcome to Lyon's blog!
+# Python之路系列
 
-vscode
-
-[cmblog](./doc/cmblog.md)
+[Python之路 - 字符串](./doc/cmblog.md)
