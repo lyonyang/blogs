@@ -1,7 +1,7 @@
 # Sumarry
 
-* [Introduction](README.md )
+* [Introduction](README.md)
+* [notes](notes/README.md)
+  * [Python之路 - 内置函数](notes/Python之路 - 内置函数.md)
   * [Python之路 - 字符串](notes/Python之路 - 字符串.md)
-  * [README](notes/README.md)
-* [README](README.md)
 * [SUMMARY](SUMMARY.md)
