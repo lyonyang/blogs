@@ -1,5 +1,14 @@
 # Python之路 - 字符串
 
+<!-- TOC -->
+
+- [Python之路 - 字符串](#python之路---字符串)
+    - [字符串（str）:four_leaf_clover:](#字符串strfour_leaf_clover)
+    - [字符串方法 🍀](#字符串方法-🍀)
+    - [字符串补充 :four_leaf_clover:](#字符串补充-four_leaf_clover)
+
+<!-- /TOC -->
+
 ## 字符串（str）:four_leaf_clover:
 
 字符串类型是Python中的基础数据类型。字符串是序列类型（有序），字符串中每一个字符都是一个元素。**字符串是不可变的**，所以字符串操作都是重新创建了一个新的字符串。
