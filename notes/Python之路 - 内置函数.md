@@ -1,5 +1,31 @@
 # Python之路 - 内置函数
 
+<!-- TOC -->
+
+- [Python之路 - 内置函数](#python之路---内置函数)
+    - [str类型代码的执行（3个）  :four_leaf_clover:](#str类型代码的执行3个--four_leaf_clover)
+    - [数据类型相关（38）  :four_leaf_clover:](#数据类型相关38--four_leaf_clover)
+        - [数字相关](#数字相关)
+            - [数据类型](#数据类型)
+            - [进制转换](#进制转换)
+            - [数学运算](#数学运算)
+        - [数据结构相关](#数据结构相关)
+            - [序列](#序列)
+            - [数据集合](#数据集合)
+            - [相关内置函数](#相关内置函数)
+    - [迭代器/生成器相关（3个）  :four_leaf_clover:](#迭代器生成器相关3个--four_leaf_clover)
+    - [作用域相关（2个）  :four_leaf_clover:](#作用域相关2个--four_leaf_clover)
+    - [面向对象相关（8个）  :four_leaf_clover:](#面向对象相关8个--four_leaf_clover)
+        - [定义类方法](#定义类方法)
+        - [判断类之间的关系](#判断类之间的关系)
+        - [所有类的基类](#所有类的基类)
+        - [类的继承](#类的继承)
+        - [封装](#封装)
+    - [反射相关（4个）  :four_leaf_clover:](#反射相关4个--four_leaf_clover)
+    - [其他（10个）  :four_leaf_clover:](#其他10个--four_leaf_clover)
+
+<!-- /TOC -->
+
 ## str类型代码的执行（3个）  :four_leaf_clover: 
 
 > `exec`(object[, globals[, locals]])   :point_left:
