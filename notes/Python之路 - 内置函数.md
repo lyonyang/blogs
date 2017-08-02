@@ -3,8 +3,8 @@
 <!-- TOC -->
 
 - [Python之路 - 内置函数](#python之路---内置函数)
-    - [str类型代码的执行（3个）  :four_leaf_clover:](#str类型代码的执行3个--four_leaf_clover)
-    - [数据类型相关（38）  :four_leaf_clover:](#数据类型相关38--four_leaf_clover)
+    - [str类型代码的执行（3个） 🍀](#str类型代码的执行3个-🍀)
+    - [数据类型相关（38） 🍀](#数据类型相关38-🍀)
         - [数字相关](#数字相关)
             - [数据类型](#数据类型)
             - [进制转换](#进制转换)
@@ -13,20 +13,20 @@
             - [序列](#序列)
             - [数据集合](#数据集合)
             - [相关内置函数](#相关内置函数)
-    - [迭代器/生成器相关（3个）  :four_leaf_clover:](#迭代器生成器相关3个--four_leaf_clover)
-    - [作用域相关（2个）  :four_leaf_clover:](#作用域相关2个--four_leaf_clover)
-    - [面向对象相关（8个）  :four_leaf_clover:](#面向对象相关8个--four_leaf_clover)
+    - [迭代器/生成器相关（3个） 🍀](#迭代器生成器相关3个-🍀)
+    - [作用域相关（2个）  🍀](#作用域相关2个--🍀)
+    - [面向对象相关（8个） 🍀](#面向对象相关8个-🍀)
         - [定义类方法](#定义类方法)
         - [判断类之间的关系](#判断类之间的关系)
         - [所有类的基类](#所有类的基类)
         - [类的继承](#类的继承)
         - [封装](#封装)
-    - [反射相关（4个）  :four_leaf_clover:](#反射相关4个--four_leaf_clover)
-    - [其他（10个）  :four_leaf_clover:](#其他10个--four_leaf_clover)
+    - [反射相关（4个） 🍀](#反射相关4个-🍀)
+    - [其他（10个） 🍀](#其他10个-🍀)
 
 <!-- /TOC -->
 
-## str类型代码的执行（3个）  :four_leaf_clover: 
+## str类型代码的执行（3个） 🍀 
 
 > `exec`(object[, globals[, locals]])   :point_left:
 
@@ -80,7 +80,7 @@ please input your name:'pythoner'
 "'pythoner'"
 ```
 
-## 数据类型相关（38）  :four_leaf_clover:
+## 数据类型相关（38） 🍀
 
 ### 数字相关
 
@@ -463,7 +463,7 @@ b'lyon'
 
 ```
 
-## 迭代器/生成器相关（3个）  :four_leaf_clover:
+## 迭代器/生成器相关（3个） 🍀
 
 > `range`(*stop*)   :point_left:
 >
@@ -513,7 +513,7 @@ StopIteration
 <list_iterator object at 0x0000026DA649D278>
 ```
 
-## 作用域相关（2个）  :four_leaf_clover:
+## 作用域相关（2个）  🍀
 
 >`locals`()  :point_left:
 
@@ -523,7 +523,7 @@ StopIteration
 
 打印函数的全局命名空间
 
-## 面向对象相关（8个）  :four_leaf_clover:
+## 面向对象相关（8个） 🍀
 
 ### 定义类方法
 
@@ -567,7 +567,7 @@ StopIteration
 
 返回一个对象中包含的属性
 
-## 反射相关（4个）  :four_leaf_clover:
+## 反射相关（4个） 🍀
 
 >`hasattr`(*object*, *name*)  :point_left:
 
@@ -585,7 +585,7 @@ StopIteration
 
 删除对象中的属性值
 
-## 其他（10个）  :four_leaf_clover:
+## 其他（10个） 🍀
 
 >`input`([*prompt*])   :point_left:
 
