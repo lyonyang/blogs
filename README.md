@@ -2,7 +2,7 @@
 
 ## 说明
 
-笔记(md文件)托管与Github,使用Gitbook展示
+笔记(md文件)托管于Github,使用Gitbook展示
 
 ## Python之路系列
 
