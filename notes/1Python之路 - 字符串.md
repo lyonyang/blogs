@@ -22,7 +22,7 @@
 >>> name = """Lyon"""
 ```
 
-查看数据类型  :halloween:
+查看数据类型  👈
 
 ~~~ python
 >>> name = 'Lyon'
@@ -38,13 +38,13 @@
 # 解释器做的事：name = str('Lyon')
 ~~~
 
-​所以其实创建字符串就是利用的`str()`方法   :jack_o_lantern:  
+​所以其实创建字符串就是利用的`str()`方法     
 
 ## 字符串方法 🍀 
 
 字符串中有很多的`内置方法`供我们使用，接下来就来讲讲各个方法
 
-> ​`str.strip`([*chars*]) :   :point_left:
+> ​`str.strip`([*chars*]) :   👈
 
 去除特定字符，常用来去除空格 
 
@@ -59,7 +59,7 @@
 
  *PS：strip()只能去除字符串两边的特定字符，并不能去除字符串中间的特定字符 。还有lstrip和rstrip ，分别用于去除字符串左边和右边的字符。* 
 
-> `str.split`(*sep=None*, *maxsplit=-1*) :   :point_left:
+> `str.split`(*sep=None*, *maxsplit=-1*) :   👈
 
 切割字符串，返回一个列表
 
@@ -75,7 +75,7 @@ sep* : 默认为空，规定切割格式
 ['Lyon']
 ```
 
-> `str.join`(*iterable*) :  :point_left:
+> `str.join`(*iterable*) : 👈
 
 将可迭代对象用str进行拼接，返回一个字符串 
 
@@ -92,7 +92,7 @@ iterable* : 可迭代对象，如：字符串、元组、列表等
 '1+2+3+4'
 ```
 
-> `str.isdigit`() :  :point_left:
+> `str.isdigit`() :   👈
 
 判断字符串中是否仅含数字，返回bool值
 
@@ -105,7 +105,7 @@ True
 False
 ```
 
-> `str.replace`(*old*, *new*[, *count*]) :  :point_left:
+> `str.replace`(*old*, *new*[, *count*]) :  👈
 
 替换字符串中的字符，返回新字符串
 
@@ -125,7 +125,7 @@ False
 'HeLlo Word'
 ```
 
-> `str.format`(\*args, \*\*kwargs) :  :point_left:
+> `str.format`(\*args, \*\*kwargs) :   👈
 
 格式化输出，用' {} '占位
 
@@ -143,7 +143,7 @@ False
 
 *PS：格式化输出还有一个 % 的方式，不过 % 是从C语言里面借鉴过来的，而format才是python自己的东西。官方推荐用 format。*
 
-> `str.capitalize`() :  :point_left:
+> `str.capitalize`() :  👈
 
 首字母大写
 
@@ -153,7 +153,7 @@ False
 >>> 'Lyon'
 ```
 
-> `str.count`(*sub*[, *start*[, *end*]]) :   :point_left:
+> `str.count`(*sub*[, *start*[, *end*]]) :  👈
 
 统计数量
 
@@ -174,7 +174,7 @@ False
 1
 ```
 
-`str.center`(*width*[, *fillchar*]) :   :point_left:
+`str.center`(*width*[, *fillchar*]) :  👈
 
 中间对齐填充
 
@@ -190,7 +190,7 @@ False
 
 *PS* : `str.ljust(width,[fillchar]) `  左对齐，即向右填充；`str.rjust(width,[fillchar])`  右对齐，即向左填充；`str.zfill(width)`  右对齐，用0填充。
 
-> `str.find`(*sub*[, *start*[, *end*]]) :  :point_left:
+> `str.find`(*sub*[, *start*[, *end*]]) :  👈
 
 查找子串，找到返回子串中第一个字符的下标，没找到返回-1
 
@@ -214,7 +214,7 @@ False
 
 *PS：find为从左往右查找，找到第一个就停止查找并返回下标；rfind 从右往左查找，找到第一个就停止查找并返回下标*
 
-> `str.startswith`(*prefix*[, *start*[, *end*]])  :   :point_left:
+> `str.startswith`(*prefix*[, *start*[, *end*]])  :   👈
 
 判断字符串是否以*prefix* 开头，返回bool值
 
@@ -230,7 +230,7 @@ True
 False
 ```
 
-> `str.endswith`(*suffix*[, *start*[, *end*]])  :  :point_left:
+> `str.endswith`(*suffix*[, *start*[, *end*]])  : 👈
 
 判断字符串是否以*suffix* 结尾，返回bool 值
 
@@ -246,7 +246,7 @@ True
 False
 ```
 
-> `str.index`(*sub*[, *start*[, *end*]])  :   :point_left:
+> `str.index`(*sub*[, *start*[, *end*]])  :  👈
 
 返回子串第一个元素的下标，没有就会报错
 
@@ -271,7 +271,7 @@ ValueError: substring not found
 
 *PS：rindex从右往左找*
 
-> `str.lower`() :   :point_left:
+> `str.lower`() :  👈
 
 将字母转换成小写
 
@@ -281,7 +281,7 @@ ValueError: substring not found
 'lyon'
 ```
 
-> `str.upper`()  :    :point_left:
+> `str.upper`()  :   👈
 
 将字母转换成大写
 
@@ -291,7 +291,7 @@ ValueError: substring not found
 'LYON'
 ```
 
-> `str.encode`(*encoding="utf-8"*, *errors="strict"*) :   :point_left:
+> `str.encode`(*encoding="utf-8"*, *errors="strict"*) :  👈
 
 将字符串按照指定编码转换成bytes类型，默认编码utf-8
 
@@ -302,7 +302,7 @@ ValueError: substring not found
 b'Lyon'
 ```
 
-> `str.splitlines`([*keepends*]) :    :point_left:
+> `str.splitlines`([*keepends*]) :   👈
 
 官方的例子如下：
 
@@ -317,7 +317,7 @@ b'Lyon'
 
 ## 字符串补充 🍀 
 
-字符串其他内置方法(仅作了解)    :ear_of_rice:
+字符串其他内置方法(仅作了解)    
 
 ```python
 str.isalnum()        #是否全是字母和数字，并至少有一个字符
@@ -392,8 +392,5 @@ i am Lyon
 >>> name[0:3:2]
 'Lo'
 ```
-
-
-
 
 

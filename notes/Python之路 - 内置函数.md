@@ -22,12 +22,12 @@
         - [类的继承](#类的继承)
         - [封装](#封装)
     - [反射相关(4个) 🍀](#反射相关4个-🍀)
-    - [其他（10个) 🍀](#其他10个-🍀)
+    - [其他(10个) 🍀](#其他10个-🍀)
 
 <!-- /TOC -->
 ## str类型代码的执行(3个) 🍀 
 
-> `exec`(object[, globals[, locals]])   :point_left:
+> `exec`(object[, globals[, locals]])  👈
 
 将字符串当做表达式去执行，没有返回值
 
@@ -41,7 +41,7 @@
 None
 ```
 
-> `eval`(expression, globals=None, locals=None)   :point_left:
+> `eval`(expression, globals=None, locals=None)   👈
 
 将字符串当做表达式去执行，并返回执行结果
 
@@ -52,7 +52,7 @@ None
 10
 ```
 
-> `compile`(source, filename, mode, flags=0, dont_inherit=False, optimize=-1)   :point_left:
+> `compile`(source, filename, mode, flags=0, dont_inherit=False, optimize=-1)   👈
 
 把字符传编译成python可执行的代码，但是不会执行
 
@@ -85,11 +85,11 @@ please input your name:'pythoner'
 
 #### 数据类型
 
-> `bool`([*x*])   :point_left:
+> `bool`([*x*])   👈
 
 查看一个元素的布尔值
 
-> `int`(*x=0*)  /  `int`(*x*, *base=10*)   :point_left:
+> `int`(*x=0*)  /  `int`(*x*, *base=10*)   👈
 
 获取一个数的十进制或者进行进制转换
 
@@ -101,11 +101,11 @@ please input your name:'pythoner'
 3
 ```
 
-> `float`([*x*])   :point_left:
+> `float`([*x*])   👈
 
 将整数和字符串转换成浮点数
 
-> `complex`([*real*[, *imag*]])   :point_left:
+> `complex`([*real*[, *imag*]])  👈
 
 创建一个值为real + imag * j的复数或者转化一个字符串或数为复数。如果第一个参数为字符串，则不需要指定第二个参数
 
@@ -125,7 +125,7 @@ please input your name:'pythoner'
 
 #### 进制转换
 
-> `bin`(*x*)   :point_left:
+> `bin`(*x*)  👈
 
 将整数x转换为二进制字符串，如果x不为Python中int类型，x必须包含方法`__index__()`并且返回值为整数
 
@@ -143,7 +143,7 @@ please input your name:'pythoner'
 '0b100011'
 ```
 
-> `oct`(*x*)   :point_left:
+> `oct`(*x*)   👈
 
 转换为八进制
 
@@ -152,7 +152,7 @@ please input your name:'pythoner'
 '0o10'
 ```
 
-> `hex`(*x*)   :point_left:
+> `hex`(*x*)  👈
 
 转换为十六进制
 
@@ -163,7 +163,7 @@ please input your name:'pythoner'
 
 #### 数学运算
 
->`abs`(*x*)  :point_left:
+>`abs`(*x*)  👈
 
 返回一个数的绝对值
 
@@ -173,7 +173,7 @@ please input your name:'pythoner'
 1
 ```
 
-> `divmod`(*a*, *b*)  :point_left:
+> `divmod`(*a*, *b*)  👈
 
 返回两个数的除,余
 
@@ -197,7 +197,7 @@ please input your name:'pythoner'
 [1,2,3]
 ```
 
->`max`(*iterable*, **[, key, default]*)  👈
+>`max`(*iterable*, **[, key, default]*)   👈
 >
 >`max`(*arg1* , *arg2*, **args*[, *key*])  👈
 
@@ -210,7 +210,7 @@ please input your name:'pythoner'
 [2, 3]
 ```
 
-> `sum`(*iterable*[, *start*])  :point_left:
+> `sum`(*iterable*[, *start*])  👈
 
 求和,参数为可迭代对象
 
@@ -219,7 +219,7 @@ please input your name:'pythoner'
 10
 ```
 
-> `round`(*number[, ndigits]*)  :point_left:
+> `round`(*number[, ndigits]*)  👈
 
 小数精确
 
@@ -229,7 +229,7 @@ please input your name:'pythoner'
 1.24
 ```
 
-> `pow`(*x*, *y*[, *z*])  :point_left:
+> `pow`(*x*, *y*[, *z*])  👈
 
 幂运算
 
@@ -248,23 +248,23 @@ please input your name:'pythoner'
 
 列表和元组
 
->`list`([*iterable*])  :point_left:
+>`list`([*iterable*])  👈
 
 将可迭代对象转换成list对象,实际上我们创建一个空list时,python解释器自动为我们调用了该方法
 
-> `tuple`([*iterable*])  :point_left:
+> `tuple`([*iterable*])  👈
 
 将可迭代对象转换成tuple对象,与list类似
 
 相关内置函数
 
->`reversed`(*seq*)  :point_left:
+>`reversed`(*seq*)  👈
 
 顺序翻转,与list中reverse的区别在于,该翻转为新生成了一个对象,而不是在原对象上操作
 
->`slice`(*stop*)   :point_left:
+>`slice`(*stop*)   👈
 >
->`slice`(*start*, *stop*[, *step*])   :point_left:
+>`slice`(*start*, *stop*[, *step*])   👈
 
 返回切片操作的三个参数
 
@@ -278,13 +278,13 @@ please input your name:'pythoner'
 
 字符串
 
->`str`(*object=''*)   :point_left:
+>`str`(*object=''*)   👈
 >
->`str`(*object=b''*, *encoding='utf-8'*, *errors='strict'*)   :point_left:
+>`str`(*object=b''*, *encoding='utf-8'*, *errors='strict'*)  👈
 
 返回一个字符串对象,创建字符串时python解释器为我们调用了该方法进行创建
 
-> `repr`(*object*)   :point_left:
+> `repr`(*object*)   👈
 
 返回一个可打印的字符串对象
 
@@ -292,11 +292,11 @@ please input your name:'pythoner'
 >>> repr(123)
 ```
 
->`format`(*value*[, *format_spec*])  :point_left:
+>`format`(*value*[, *format_spec*]) 👈
 
 格式化字符串
 
->`bytes`([*source*[, *encoding*[, *errors*]]])   :point_left:
+>`bytes`([*source*[, *encoding*[, *errors*]]])   👈
 
 将字符串转成bytes类型
 
@@ -305,7 +305,7 @@ please input your name:'pythoner'
 b'lyon'
 ```
 
-> `bytearray`([*source*[, *encoding*[, *errors*]]])   :point_left:
+> `bytearray`([*source*[, *encoding*[, *errors*]]])  👈
 
 返回一个byte数组,Bytearray类型是一个可变的序列,并且序列中的元素的取值范围为[0,255]
 
@@ -316,13 +316,13 @@ b'lyon'
 3. 如果source为可迭代类型,则元素必须为[0,255]中的整数;
 4. 如果source为与buffer接口一致的对象,则此对象也可以被用于初始化bytearray
 
->`memoryview`(*obj*)   :point_left:
+>`memoryview`(*obj*)   👈
 
 函数返回给定参数的内存查看对象(Momory view)
 
 所谓内存查看对象，是指对支持缓冲区协议的数据进行包装，在不需要复制对象基础上允许Python代码访问
 
->`ord`(*c*)  :point_left:
+>`ord`(*c*)  👈
 
 把一个字符转换成ASCII表中对应的数字
 
@@ -331,7 +331,7 @@ b'lyon'
 97
 ```
 
->  `chr`(*i*)   :point_left:
+>  `chr`(*i*)  👈
 
 返回一个数字在ASCII编码中对应的字符
 
@@ -340,7 +340,7 @@ b'lyon'
 'B'
 ```
 
-> `ascii`(*object*)  :point_left:
+> `ascii`(*object*)  👈
 
 在对象的类中寻找` __repr__`方法,获取返回值
 
@@ -371,11 +371,11 @@ b'lyon'
 
 集合
 
-> `set`([*iterable*])  :point_left:
+> `set`([*iterable*])  👈
 
 转换成集合类型,创建集合时,事实上就是通过该方法进行创建的
 
-> `frozenset`([*iterable*])   :point_left:
+> `frozenset`([*iterable*])   👈
 
 定义冻结集合,即不可变集合,存在hash值
 
@@ -383,11 +383,11 @@ b'lyon'
 
 #### 相关内置函数
 
->`len`(*s*)   :point_left:
+>`len`(*s*)   👈
 
 返回一个对象的长度
 
->`enumerate`(*iterable*, *start=0*)   :point_left:
+>`enumerate`(*iterable*, *start=0*)   👈
 
 为元素生成序号,可以定义序号的初始值,默认从0开始
 
@@ -401,15 +401,15 @@ b'lyon'
 2 c
 ```
 
-> `all`(*iterable*)   ​:point_left:​
+> `all`(*iterable*)   👈
 
 判断一个可迭代对象中的元素是否都为空,返回bool值
 
->`any`(*iterable*)   :point_left:
+>`any`(*iterable*)   👈
 
 判断一个可迭代对象中是否有真元素,返回bool值
 
->`zip`(**iterables*)   :point_left:
+>`zip`(**iterables*)   👈
 
 将两个长度相同的序列整合成键值对,返回一个zip对象可以用dict方法转换查看
 
@@ -421,7 +421,7 @@ b'lyon'
 {'k1':'v1','k2':'v2','k3':'v3'}
 ```
 
-> `filter`(*function*, *iterable*)   :point_left:
+> `filter`(*function*, *iterable*)  👈
 
 筛选过滤,把可迭代对象中的元素一一传入function中进行过滤
 
@@ -435,7 +435,7 @@ b'lyon'
 [2,4]
 ```
 
->`map`(*function*, *iterable*, *...*)   :point_left:
+>`map`(*function*, *iterable*, *...*)  👈
 
 将可迭代对象中的元素一一传入function中执行并返回结果
 
@@ -450,7 +450,7 @@ b'lyon'
 ['alex hello', 'egon hello', 'lyon hello']
 ```
 
-> `sorted`(*iterable*, ***, *key=None*, *reverse=False*)   :point_left:
+> `sorted`(*iterable*, ***, *key=None*, *reverse=False*)  👈
 
 为一个对象进行排序,在list中有个sort方法;区别:sort会改变原list,而sorted则不会改变原list
 
@@ -464,9 +464,9 @@ b'lyon'
 
 ## 迭代器/生成器相关(3个) 🍀
 
-> `range`(*stop*)   :point_left:
+> `range`(*stop*)  👈
 >
-> `range`(*start*, *stop*[, *step*])   :point_left:
+> `range`(*start*, *stop*[, *step*])   👈
 
 返回一个序列,为一个可迭代对象,并可用下标取值
 
@@ -481,7 +481,7 @@ True
 [0,1,2,3,4,5,6,7,8,9]
 ```
 
-> `next`(*iterator*[, *default*])  :point_left:
+> `next`(*iterator*[, *default*])  👈
 
 拿取迭代器中的元素,一次只拿一个
 
@@ -502,7 +502,7 @@ Traceback (most recent call last):
 StopIteration
 ```
 
->`iter`(*object*[, *sentinel*])   :point_left:
+>`iter`(*object*[, *sentinel*])   👈
 
 创建一个迭代器
 
@@ -514,11 +514,11 @@ StopIteration
 
 ## 作用域相关(2个)  🍀
 
->`locals`()  :point_left:
+>`locals`()  👈
 
 打印函数局部命名空间
 
->`globals`()   :point_left:
+>`globals`()   👈
 
 打印函数的全局命名空间
 
@@ -526,104 +526,104 @@ StopIteration
 
 ### 定义类方法
 
->`classmethod`(*function*)  :point_left:
+>`classmethod`(*function*)  👈
 
 返回一个函数的类方法
 
->`staticmethod`(*function*)   :point_left:
+>`staticmethod`(*function*)   👈
 
 返回一个函数的属性方法
 
->`property`(*fget=None*, *fset=None*, *fdel=None*, *doc=None*)   :point_left:
+>`property`(*fget=None*, *fset=None*, *fdel=None*, *doc=None*)   👈
 
 返回一个静态属性
 
 ### 判断类之间的关系
 
->`isinstance`(*object*, *classinfo*)  :point_left:
+>`isinstance`(*object*, *classinfo*)  👈
 
 判断对象的类型,返回bool值,主要用于判断类之间的关心,因为type无法判断类之间的关心
 
->`issubclass`(*class*, *classinfo*)   :point_left:
+>`issubclass`(*class*, *classinfo*)   👈
 
 判断一个类是否为另一个类的子类,返回bool值
 
 ### 所有类的基类
 
-> *class*`object`   :point_left:
+> *class*`object`   👈
 
 返回一个基类,不接收任何参数
 
 ### 类的继承
 
-> `super`([*type*[, *object-or-type*]])  :point_left:
+> `super`([*type*[, *object-or-type*]])  👈
 
 用于继承父类
 
 ### 封装
 
-> `vars`([*object*])  :point_left:
+> `vars`([*object*])  👈
 
 返回一个对象中包含的属性
 
 ## 反射相关(4个) 🍀
 
->`hasattr`(*object*, *name*)  :point_left:
+>`hasattr`(*object*, *name*)  > `vars`([*object*])  👈
 
 参数是一个对象和一个字符串。如果字符串是对象的一个属性的名称，则结果为True,否则为False
 
->`getattr`(*object*, *name*[, *default*])   :point_left:
+>`getattr`(*object*, *name*[, *default*])   > `vars`([*object*])  👈
 
 返回对象的命名属性的值,name必须是字符串,如果字符串是对象属性之一的名称,则返回该属性的值
 
->`setattr`(*object*, *name*, *value*)   :point_left:
+>`setattr`(*object*, *name*, *value*)   > `vars`([*object*])  👈
 
 为某个对象设置一个属性
 
->`delattr`(*object*, *name*)   :point_left:
+>`delattr`(*object*, *name*)   > `vars`([*object*])  👈
 
 删除对象中的属性值
 
 ## 其他(10个) 🍀
 
->`input`([*prompt*])   :point_left:
+>`input`([*prompt*])   > `vars`([*object*])  👈
 
 交互式输入
 
->`print`(**objects*, *sep=' '*, *end='\n'*, *file=sys.stdout*, *flush=False*)  :point_left:
+>`print`(**objects*, *sep=' '*, *end='\n'*, *file=sys.stdout*, *flush=False*)  > `vars`([*object*])  👈
 
 交互式输出
 
->`open`(*file*, *mode='r'*, *buffering=-1*, *encoding=None*, *errors=None*, *newline=None*, *closefd=True*, *opener=None*)   :point_left:
+>`open`(*file*, *mode='r'*, *buffering=-1*, *encoding=None*, *errors=None*, *newline=None*, *closefd=True*, *opener=None*)   > `vars`([*object*])  👈
 
 打开文件
 
->`help`([*object*])  :point_left:
+>`help`([*object*])  > `vars`([*object*])  👈
 
 查找官方说明
 
->`hash`(*object*)  :point_left:
+>`hash`(*object*)  > `vars`([*object*])  👈
 
 返回一个hash地址
 
->`callable`(*object*)   :point_left:
+>`callable`(*object*)   > `vars`([*object*])  👈
 
 判断一个对象是否可以被调用执行
 
->`dir`([*object*])  :point_left:
+>`dir`([*object*])  👈
 
 返回一个对象中的所有方法
 
->`id`(*object*)   :point_left:
+>`id`(*object*)   👈
 
 返回一个对象的内存地址
 
 >`type`(*object*)
 >
->`type`(*name*, *bases*, *dict*)   :point_left:
+>`type`(*name*, *bases*, *dict*)   👈
 
 查看一个对象的数据类型
 
->`__import__`(*name*, *globals=None*, *locals=None*, *fromlist=()*, *level=0*)   :point_left:
+>`__import__`(*name*, *globals=None*, *locals=None*, *fromlist=()*, *level=0*)   👈
 
 该函数是由import进行调用的,我们一般不用
