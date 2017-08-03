@@ -6,3 +6,4 @@
   * [Python之路 - 字符串](notes/Python之路 - 字符串.md)
   * [Python之路 - 递归](notes/Python之路 - 递归.md)
 * [SUMMARY](SUMMARY.md)
+* [test](test/README.md)
