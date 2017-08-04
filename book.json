@@ -10,7 +10,7 @@
             "google": null,
             "twitter": null,
             "weibo": null
-        },
+        }
     },
     "pdf": {
         "fontSize": 18,
@@ -32,6 +32,6 @@
         "-sharing",
         "search"
     ],
-    "title": "blog",
+    "title": "book",
     "variables": {}
 }
