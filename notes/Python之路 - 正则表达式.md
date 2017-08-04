@@ -178,7 +178,7 @@
 
 | 字符        | 描述                                       |
 | :-------- | :--------------------------------------- |
-| 丨        | 匹配|左或丨右的字符，re.search("abc丨ABC","ABCBabcCD").group() 结果'ABC' |
+| 丨        | 匹配丨左或丨右的字符，re.search("abc丨ABC","ABCBabcCD").group() 结果'ABC' |
 | (...)     | 分组匹配，re.search("(abc){2}a(123丨456)c", "abcabca456c").group() 结果 abcabca456c |
 | (?P\<..>) | 命名分组匹配 re.search("(?P\<province>[0-9]{4})(?P\<city>[0-9]{2})(?P\<birthday>[0-9]{4})","371481199306143242").groupdict("city") 结果{'province': '3714', 'city': '81', 'birthday': '1993'} |
 
