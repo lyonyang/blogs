@@ -1,6 +1,6 @@
 # Sumarry
 
-* [Introduction](README.md)
+* [介绍](README.md)
 * [Python](Python/README.md)
   * [Python之路 - 内置函数](Python/Python之路 - 内置函数.md)
   * [Python之路 - 字符串](Python/Python之路 - 字符串.md)
