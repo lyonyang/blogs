@@ -1,14 +1,14 @@
 # Sumarry
 
 * [Introduction](README.md)
-* [01-Python基础](01-Python基础/README.md)
+* [Python基础](01-Python基础/README.md)
   * [Python之路 - 字符串](01-Python基础/Python之路 - 字符串.md)
-* [02-Python进阶](02-Python进阶/README.md)
+* [Python进阶](02-Python进阶/README.md)
   * [Python之路 - 内置函数](02-Python进阶/Python之路 - 内置函数.md)
   * [Python之路 - 匿名函数](02-Python进阶/Python之路 - 匿名函数.md)
   * [Python之路 - 迭代器和生成器](02-Python进阶/Python之路 - 迭代器和生成器.md)
   * [Python之路 - 递归](02-Python进阶/Python之路 - 递归.md)
-* [03-Python模块](03-Python模块/README.md)
+* [Python模块](03-Python模块/README.md)
   * [Python之路 - 时间和日期模块](03-Python模块/Python之路 - 时间和日期模块.md)
   * [Python之路 - 模块初识](03-Python模块/Python之路 - 模块初识.md)
   * [Python之路 - 正则表达式](03-Python模块/Python之路 - 正则表达式.md)
