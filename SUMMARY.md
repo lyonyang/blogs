@@ -13,4 +13,6 @@
   * [Python之路 - 时间和日期模块](03-Python模块/02-Python之路 - 时间和日期模块.md)
   * [Python之路 - 正则表达式](03-Python模块/03-Python之路 - 正则表达式.md)
   * [Python之路 - 序列化](03-Python模块/04-Python之路 - 序列化.md)
+  * [Python之路 - 模块导入详解](03-Python模块/05-Python之路 - 模块导入详解.md)
+* [Python面向对象](04-Python面向对象/README.md)
 * [SUMMARY](SUMMARY.md)
