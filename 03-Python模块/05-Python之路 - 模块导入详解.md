@@ -147,7 +147,7 @@ from my_module import (read1,
 
 ## from ... import * 🍀
 
-from my_module import \* 会将my_module 中的所有的不是以下划线 ' _ ' 开头的名字都导入到当前位置 , 在大部分情况下我们python程序不应该使用这种导入方式 , 因为你无法知道 * 导入了什么名字 , 很有可能会覆盖掉你已经定义过的名字 , 而且可读性极其的差
+from my_module import \* 会将my_module 中的所有的不是以下划线 ' _ ' 开头的名字都导入到当前位置 , 在大部分情况下我们python程序不应该使用这种导入方式 , 因为你无法知道 \* 导入了什么名字 , 很有可能会覆盖掉你已经定义过的名字 , 而且可读性极其的差
 
 在my_module.py中新增一行
 
