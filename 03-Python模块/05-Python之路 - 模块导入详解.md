@@ -6,7 +6,7 @@
     - [import ... as ... 🍀](#import--as--🍀)
     - [from ... import ... 🍀](#from--import--🍀)
     - [from ... import * 🍀](#from--import--🍀)
-    - [if \_\_name_\_ == '__main__' 🍀](#if-\_\_name_\_--__main__-🍀)
+    - [if __name__ == '__main__' 🍀](#if-__name__--__main__-🍀)
 
 <!-- /TOC -->
 ## import 🍀
@@ -156,7 +156,7 @@ from my_module import * 会将my_module 中的所有的不是以下划线 ' _ ' 
 __all__ = ['money' , 'read1']
 ```
 
-## if \_\_name_\_ == '__main__' 🍀
+## if __name__ == '__main__' 🍀
 
 所有的模块都有一个内置属性 \_\_name_\_ , 可以用来查看模块名
 
