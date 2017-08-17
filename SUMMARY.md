@@ -17,5 +17,5 @@
 * [Python面向对象](04-Python面向对象/README.md)
   * [Python之路 - 反射](04-Python面向对象/Python之路 - 反射.md)
   * [Python之路 - 属性方法,类方法,静态方法](04-Python面向对象/Python之路 - 属性方法,类方法,静态方法.md)
-  * [Python之路 - 面向对象特性之封装](04-Python面向对象/Python之路 - 面向对象特性之封装.md)
+  * [Python之路 - 面向对象之封装](04-Python面向对象/Python之路 - 面向对象之封装.md)
 * [SUMMARY](SUMMARY.md)
