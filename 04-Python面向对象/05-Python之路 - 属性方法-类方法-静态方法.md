@@ -108,10 +108,10 @@ class Goods:
     def price(self):
         del self.original_price
 goods = Goods()
-goods.price         # 获取打折后商品价格
-goods.price = 200   # 修改商品原价
+goods.price         
+goods.price = 200  
 print(goods.price)
-del goods.price     # 删除商品原价
+del goods.price    
 ```
 
 ## 类方法  🍀
