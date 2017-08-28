@@ -17,6 +17,7 @@
 * [Python面向对象](04-Python面向对象/README.md)
   * [Python之路 - 面向对象初识](04-Python面向对象/01-Python之路 - 面向对象初识.md)
   * [Python之路 - 面向对象之继承](04-Python面向对象/02-Python之路 - 面向对象之继承.md)
+  * [Python之路 - 面向对象之多态](04-Python面向对象/03-Python之路 - 面向对象之多态.md)
   * [Python之路 - 面向对象之封装](04-Python面向对象/04-Python之路 - 面向对象之封装.md)
   * [Python之路 - 属性方法-类方法-静态方法](04-Python面向对象/05-Python之路 - 属性方法-类方法-静态方法.md)
   * [Python之路 - 特殊成员方法](04-Python面向对象/06-Python之路 - 特殊成员方法.md)
