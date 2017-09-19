@@ -29,4 +29,5 @@
     * [Python之路 - 网络编程之Socket](01-Python之路/05-网络编程篇/02-Python之路 - 网络编程之Socket.md)
     * [Python之路 - Socket实现QQ聊天](01-Python之路/05-网络编程篇/03-Python之路 - Socket实现QQ聊天.md)
     * [Python之路 - Socket实现远程执行命令](01-Python之路/05-网络编程篇/04-Python之路 - Socket实现远程执行命令.md)
+    * [Python之路 - 网络编程之粘包](01-Python之路/05-网络编程篇/05-Python之路 - 网络编程之粘包.md)
 * [SUMMARY](SUMMARY.md)
