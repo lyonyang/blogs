@@ -92,6 +92,7 @@ while True:
             print("Can't be empty...")
             continue
         sock.sendto(messages, addr)
+        break
 sock.close()
 ```
 
