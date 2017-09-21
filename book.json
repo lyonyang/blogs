@@ -27,7 +27,7 @@
     },
     "plugins": [
         "toggle-chapters",
-        "theme-sepia",
+        "theme-comscore",
         "splitter",
         "-sharing",
         "search"
