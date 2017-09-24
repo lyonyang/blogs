@@ -32,6 +32,13 @@
         "-sharing",
         "search"
     ],
+    "pluginsConfig":{
+        "fontsettings":{
+            "theme":"sepia",
+            "family":"serif",
+            "size": 1
+        }
+    },
     "title": "book",
     "variables": {}
 }
