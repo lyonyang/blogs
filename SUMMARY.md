@@ -32,6 +32,7 @@
     * [Python之路 - 网络编程之粘包](01-Python/05-网络编程篇/05-Python之路 - 网络编程之粘包.md)
     * [Python之路 - Socketserver实现多并发](01-Python/05-网络编程篇/06-Python之路 - Socketserver实现多并发.md)
     * [Python之路 - 进程与线程](01-Python/05-网络编程篇/07-Python之路 - 进程与线程.md)
+    * [Python之路 - 多线程编程](01-Python/05-网络编程篇/08-Python之路 - 多线程编程.md)
 * [MySQL](02-MySQL/README.md)
 * [WebDesign](03-WebDesign/README.md)
 * [ReadNotes](ReadNotes/README.md)
