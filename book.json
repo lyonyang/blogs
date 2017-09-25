@@ -30,9 +30,13 @@
         "theme-comscore",
         "splitter",
         "-sharing",
-        "search"
+        "search",
+        "disqus"
     ],
     "pluginsConfig":{
+        "disqus": {
+            "shortName": "gitbookuse"
+        },
         "fontsettings":{
             "theme":"sepia",
             "family":"serif",
