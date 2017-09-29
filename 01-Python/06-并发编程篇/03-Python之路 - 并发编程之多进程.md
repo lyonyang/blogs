@@ -598,7 +598,7 @@ if __name__ == '__main__':
 | 方法                                       | 说明                                       |
 | ---------------------------------------- | ---------------------------------------- |
 | Pool.apply(self, func, args=(), kwds={}) | 在一个进程池中执行func(*args , **kwargs) , 并返回结果  |
-| Pool.apply_async(self, func, args=(), kwds={}, callback=None, | 与apply()方法一样 , 该方法为异步版本应用的方法 , 返回结果是AsyncResult类的实例 , callback是可调用对象 . callback禁止执行任何阻塞操作 , 否则将接收其他异步操作中的结果 |
+| Pool.apply_async(self, func, args=(), kwds={}, callback=None, | 与apply()方法一样 , 该方法为异步版本应用的方法 , 返回结果是AsyncResult类的实例 , callback指定回调的函数 . callback禁止执行任何阻塞操作 , 否则将接收其他异步操作中的结果 |
 | Pool.close(self)                         | 关闭进程池 , 如果所有操作持续挂起 , 它们将在工作进程终止前完成       |
 | Pool.join(self)                          | 等待所有工作进程退出                               |
 | Pool.get(self, timeout=None)             | 获取结果 , timeout可选                         |
