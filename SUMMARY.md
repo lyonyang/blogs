@@ -37,6 +37,8 @@
     * [Python之路 - 并发编程之多进程](01-Python/06-并发编程篇/03-Python之路 - 并发编程之多进程.md)
     * [Python之路 - 多进程实例及回调函数](01-Python/06-并发编程篇/04-Python之路 - 多进程实例及回调函数.md)
     * [Python之路 - 并发编程之协程](01-Python/06-并发编程篇/05-Python之路 - 并发编程之协程.md)
+    * [Python之路 - 并发编程之IO多路复用](01-Python/06-并发编程篇/06-Python之路 - 并发编程之IO多路复用.md)
+  * [标准库](01-Python/07-标准库/README.md)
 * [MySQL](02-MySQL/README.md)
 * [WebDesign](03-WebDesign/README.md)
 * [ReadNotes](ReadNotes/README.md)
