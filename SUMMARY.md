@@ -40,6 +40,7 @@
     * [Python之路 - 并发编程之IO多路复用](01-Python/06-并发编程篇/06-Python之路 - 并发编程之IO多路复用.md)
   * [标准库](01-Python/07-标准库/README.md)
 * [MySQL](02-MySQL/README.md)
+  * [Python之路 - MySQL初识](02-MySQL/01-Python之路 - MySQL初识.md)
 * [WebDesign](03-WebDesign/README.md)
 * [ReadNotes](ReadNotes/README.md)
   * [《现代操作系统》](ReadNotes/《现代操作系统》.md)
