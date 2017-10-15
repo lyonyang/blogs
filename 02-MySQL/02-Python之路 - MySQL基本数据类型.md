@@ -163,7 +163,7 @@ MySQL包括了CHAR , VARCHAR , BINARY , VARBINARY , BLOB , TEXT , ENUM 和 SET�
 - CHAR长度固定 , VARCHAR长度可变
 - 在检索时 , CHAR列删除了尾部的空格 , 而VARCHAR则保留这些空格 
 
-BINARY 与 VARBINARY
+**BINARY 与 VARBINARY**
 
 BINARY 与 VARBINARY 类似于 CHAR 与 VARCHAR , 不同的是它们包含二进制字符串而不包含非二进制字符串 , 也就是说 , 它们包含字节字符串而不是字符字符串 , 它们没有字符集 , 并且排序和比较基于列值字节的数值值
 
