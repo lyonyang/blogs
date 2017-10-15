@@ -41,6 +41,7 @@
   * [标准库](01-Python/07-标准库/README.md)
 * [MySQL](02-MySQL/README.md)
   * [Python之路 - MySQL初识](02-MySQL/01-Python之路 - MySQL初识.md)
+  * [Python之路 - MySQL基本数据类型](02-MySQL/02-Python之路 - MySQL基本数据类型.md)
 * [WebDesign](03-WebDesign/README.md)
 * [ReadNotes](ReadNotes/README.md)
   * [《现代操作系统》](ReadNotes/《现代操作系统》.md)
