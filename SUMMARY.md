@@ -42,6 +42,7 @@
 * [MySQL](02-MySQL/README.md)
   * [Python之路 - MySQL初识](02-MySQL/01-Python之路 - MySQL初识.md)
   * [Python之路 - MySQL基本数据类型](02-MySQL/02-Python之路 - MySQL基本数据类型.md)
+  * [Python之路 - MySQL表内操作](02-MySQL/03-Python之路 - MySQL表内操作.md)
 * [WebDesign](03-WebDesign/README.md)
 * [ReadNotes](ReadNotes/README.md)
   * [《现代操作系统》](ReadNotes/《现代操作系统》.md)
