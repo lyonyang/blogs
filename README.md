@@ -6,6 +6,14 @@
 
 笔记(md文件)托管于Github,使用Gitbook展示
 
+项目根目录下执行如下命令, 在本地进行展示
+
+```shell
+bash summary_create.sh
+gitbook install
+gitbook serve .
+```
+
 ## Python之路系列
 
 目录: [SUMMARY](SUMMARY.md)
