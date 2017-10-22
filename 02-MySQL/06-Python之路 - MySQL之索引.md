@@ -1,6 +1,18 @@
 # Python之路 - MySQL之索引
+<!-- TOC -->
 
-## 介绍
+- [Python之路 - MySQL之索引](#python之路---mysql之索引)
+    - [介绍  🍀](#介绍--🍀)
+    - [B-Tree索引与HASH索引  🍀](#b-tree索引与hash索引--🍀)
+    - [MySQL索引管理  🍀](#mysql索引管理--🍀)
+        - [普通索引  🍀](#普通索引--🍀)
+        - [唯一索引  🍀](#唯一索引--🍀)
+        - [主键索引  🍀](#主键索引--🍀)
+        - [组合索引  🍀](#组合索引--🍀)
+    - [使用索引  🍀](#使用索引--🍀)
+
+<!-- /TOC -->
+## 介绍  🍀
 
 索引是数据库中最常用也是最重要的手段之一 , 是数据库中专门用于帮助用户快速查询数据的一种数据结构 , 类似于字典中的目录 , 查找字典内容时可以根据目录查找到数据的存放位置 , 然后直接获取值即可
 
@@ -17,7 +29,7 @@
 
 下面对比较常用的两个索引类型进行说明
 
-## B-Tree索引与HASH索引
+## B-Tree索引与HASH索引  🍀
 
 **B-Tree索引**
 
@@ -31,13 +43,13 @@ HASH索引相对简单 , 只有Memory/Heap引擎支持
 
 HASH索引适用于 **Key - Value**查询 , 通过HASH索引要比通过B-Tree索引查询更迅速 , 但是HASH**不适用范围查询** , 例如 : < , > , <= , >=这类操作 ; 如果使用Memory/Heap引擎并且where条件中不使用 "=" 今夕in个索引列 , 那么不会用到索引 , Memory/Heap引擎只有在 "=" 的条件下才会使用索引
 
-## MySQL索引管理
+## MySQL索引管理  🍀
 
 索引的功能就是为了加速查找和约束 , 下面对常用索引进行介绍
 
 查看索引 : `SHOW INDEX FROM tablename \G;` 
 
-### 普通索引
+### 普通索引  🍀
 
 普通索引仅有一个功能 , 就是加速查找
 
@@ -77,7 +89,7 @@ DROP INDEX indexname ON tablename;
 ALTER TABLE tablename DROP INDEX column_name;
 ```
 
-### 唯一索引
+### 唯一索引  🍀
 
 唯一索引有两个功能 : 加速查找和唯一约束(可含NULL)
 
@@ -117,7 +129,7 @@ DROP INDEX indexname ON tablename;
 ALTER TABLE tablename DROP INDEX column_name;
 ```
 
-### 主键索引
+### 主键索引  🍀
 
 主键有两个功能 : 加速查找和唯一约束(不可NULL)
 
@@ -153,7 +165,7 @@ ALTER TABLE tablename DROP PRIMARY KEY;
 ALTER TABLE tablename MODIFY column_name column_type, drop primary key;
 ```
 
-###　组合索引
+###　组合索引  🍀
 
 组合索引是将n个列组合成一个索引 , 专门用于组合搜索 , 其效率大于索引合并
 
@@ -191,7 +203,7 @@ MySQL只需要通过索引就可以返回查询所需要的数据 , 而不必在
 
 当你对一个sql 使用explain statement 查看一个sql的执行计划时 , 在EXPLAIN的Extra列出现Using Index提示时 , 就说明该select查询使用了覆盖索引
 
-## 使用索引
+## 使用索引  🍀
 
 使用索引可以加速查找 , 但是如果以错误的方式使用 , 即使建立索引也不会生效
 
