@@ -1,6 +1,17 @@
 # Python之路 - 第三方库之PyMySQL
+<!-- TOC -->
 
-## 介绍
+- [Python之路 - 第三方库之PyMySQL](#python之路---第三方库之pymysql)
+    - [介绍  🍀](#介绍--🍀)
+    - [使用  🍀](#使用--🍀)
+        - [连接数据库  🍀](#连接数据库--🍀)
+        - [创建表  🍀](#创建表--🍀)
+        - [查询表  🍀](#查询表--🍀)
+        - [修改表  🍀](#修改表--🍀)
+        - [删除表  🍀](#删除表--🍀)
+
+<!-- /TOC -->
+## 介绍  🍀
 
 pymysql是用于Python 3.x 链接MySQL数据库的一个第三方库 , 其使用方法和MySQLdb几乎相同 , pymysql的目的就是为了称为MySQLdb的替代品 , 因为MySQLdb不支持Python 3.x以后的版本
 
@@ -28,7 +39,7 @@ PACKAGE CONTENTS
     util
 ```
 
-## 使用
+## 使用  🍀
 
 包中我们主要需要了解`connectinos.py` 中的内容
 
@@ -97,7 +108,7 @@ Connect(*args, **kwargs)
         passwd: Alias for password. (for compatibility to MySQLdb)
 ```
 
-### 连接数据库
+### 连接数据库  🍀
 
 ```python
 import pymysql
@@ -113,7 +124,7 @@ connection = pymysql.connect(host='localhost',
 
 pymysql包中的`cursors.py` 中的`class Cursor(object)` 可供我们建立与数据库进行交互的对象 , cursor(游标) , 下面就开始与数据库进行交互了
 
-### 创建表
+### 创建表  🍀
 
 ```mysql
 import pymysql.cursors
@@ -164,7 +175,7 @@ cursor.execute("update hosts set host = '1.1.1.2' where nid > %s", (1,))
 cursor.execute("insert into hosts(host,color_id) values(%s,%s)", [("1.1.1.11",1),("1.1.1.11",2)])
 ```
 
-### 查询表
+### 查询表  🍀
 
 Python查询MySQL获取数据使用方法如下 : 
 
@@ -211,7 +222,7 @@ finally:
 
 获取最新自增ID : `cursor.lastrowid`
 
-### 修改表
+### 修改表  🍀
 
 ```python
 import pymysql.cursors
@@ -239,7 +250,7 @@ except:
 connection.close()
 ```
 
-### 删除表
+### 删除表  🍀
 
 ```python
 import pymysql.cursors
