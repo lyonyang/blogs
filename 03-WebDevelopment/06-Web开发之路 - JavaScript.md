@@ -370,27 +370,26 @@ JavaScript中的数据类型有字符串 , 数字 , 布尔 , 数组 , 对象 , N
 
 ## 其他  🍀
 
-1. **序列化**
+1.  **序列化**
 
+      ```javascript
+      - JSON.stringify(obj)   序列化
+      - JSON.parse(str)        反序列化
+      ```
 
-   ```javascript
-   - JSON.stringify(obj)   序列化
-   - JSON.parse(str)        反序列化
-   ```
+2.  **转义**
 
-2. **转义**
+      ```javascript
+      - decodeURI( )            URl中未转义的字符
+      - decodeURIComponent( )   URI组件中的未转义字符
+      - encodeURI( )            URI中的转义字符
+        - encodeURIComponent( )   转义URI组件中的字符
+        - escape( )               对字符串转义
+        - unescape( )             给转义字符串解码
+        - URIError                由URl的编码和解码方法抛出
+      ```
 
-   ```javascript
-   - decodeURI( )            URl中未转义的字符
-   - decodeURIComponent( )   URI组件中的未转义字符
-   - encodeURI( )            URI中的转义字符
-   - encodeURIComponent( )   转义URI组件中的字符
-   - escape( )               对字符串转义
-   - unescape( )             给转义字符串解码
-   - URIError                由URl的编码和解码方法抛出
-   ```
-
-3. **eval**
+3.  **eval**
 
    ```javascript
    // JavaScript中的eval是Python中eval和exec的合集,既可以编译代码也可以获取返回值
@@ -398,7 +397,7 @@ JavaScript中的数据类型有字符串 , 数字 , 布尔 , 数组 , 对象 , N
    -EvalError   // 执行字符串中的JavaScript代码
    ```
 
-4. **正则表达式**
+4.  **正则表达式**
 
    *定义正则表达式*
 
@@ -468,7 +467,7 @@ JavaScript中的数据类型有字符串 , 数字 , 布尔 , 数组 , 对象 , N
    // $$：直接量$符号
    ```
 
-5. **时间处理**
+5.  **时间处理**
 
    Date对象用于处理日期和时间
 
