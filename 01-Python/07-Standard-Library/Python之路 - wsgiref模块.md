@@ -58,7 +58,7 @@ read_environ()
 
 本文中所有思维导图全部来自[这里 , 点我吧](https://github.com/minixalpha/SourceLearning/tree/master/wsgiref-0.1.2)
 
-![handlers]()
+![handlers](http://oux34p43l.bkt.clouddn.com/handlers.bmp)
 
 对于各个类中的具体实现 , 可以去阅读源代码https://pypi.python.org/pypi/wsgiref
 
@@ -77,7 +77,7 @@ class Headers(builtins.object)
 
 headers思维导图
 
-![headers](D:\桌面\headers.bmp)
+![headers](http://oux34p43l.bkt.clouddn.com/headers.bmp)!
 
 ## simple_server  🍀
 
@@ -139,7 +139,7 @@ make_server(host, port, app, server_class=<class 'wsgiref.simple_server.WSGIServ
 
 simple_server思维导图
 
-![simple_server](D:\桌面\simple_server.bmp)
+![simple_server](http://oux34p43l.bkt.clouddn.com/simple_server.bmp)
 
 simple_server模块主要有两部分内容
 
@@ -274,7 +274,7 @@ shift_path_info(environ)
 
 util思维导图
 
-![util](D:\桌面\util.bmp)
+![util](http://oux34p43l.bkt.clouddn.com/util.bmp)
 
 ## validate  🍀
 
@@ -286,7 +286,7 @@ util思维导图
 
 思维导图如下
 
-![validate](D:\桌面\validate.png)
+![validate](http://oux34p43l.bkt.clouddn.com/validate.png)
 
 本文主要参考http://blog.csdn.net/on_1y/article/details/18818081
 
