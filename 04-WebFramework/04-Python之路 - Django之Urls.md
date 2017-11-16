@@ -149,7 +149,7 @@ urlpatterns = [
 
 - 模板中使用生成URL
 
-  ```python
+  ```html
   {% url 'h2' 2012 %}
   ```
 
@@ -241,7 +241,7 @@ def detail(request, pk):
 
 - `v = reverse('app01:detail', kwargs={'pk':11})` 
 
-- ```python
+- ```html
   {% url 'app01:detail' pk=12 pp=99 %}
   ```
 
