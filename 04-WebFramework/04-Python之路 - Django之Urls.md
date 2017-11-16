@@ -149,9 +149,9 @@ urlpatterns = [
 
 - 模板中使用生成URL
 
-  ```html
-  {% url 'h2' 2012 %}
-  ```
+```html
+{% url 'h2' 2012 %}
+```
 
 - 函数中使用生成URL , `django.urls.reverse('h2', args=(2012,))` 
 
