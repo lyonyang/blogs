@@ -147,8 +147,14 @@ urlpatterns = [
 
 设置名称之后 , 可以在不同的地方调用 , 如 : 
 
-- 模板中使用生成URL , `{% url'h2'2012 %}` 
+- 模板中使用生成URL
+
+  ```python
+  {% url 'h2' 2012 %}
+  ```
+
 - 函数中使用生成URL , `django.urls.reverse('h2', args=(2012,))` 
+
 - model中使用获取URL , 自定义`get_absoulte_url()` 方法
 
 ```python
@@ -234,7 +240,10 @@ def detail(request, pk):
 以上定义带命名空间的url之后 , 使用name生成URL时 , 应该如下 : 
 
 - `v = reverse('app01:detail', kwargs={'pk':11})` 
-- `{% url 'app01:detail' pk=12 pp=99 %}` 
+
+- ```python
+  {% url 'app01:detail' pk=12 pp=99 %}
+  ```
 
 Django中的路由系统和其他语言的框架有所不同 , 在Django中每一个请求的url都要有一条路由映射 ; 其他大部分的Web框架则是对一类的url请求做一条路由映射 , 从而使路由系统变得简洁
 
