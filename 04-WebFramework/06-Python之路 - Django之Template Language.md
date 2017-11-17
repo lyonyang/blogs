@@ -382,5 +382,10 @@ child.html
 <h1>This &amp; that</h1>
 <b>Hello!</b>
 ```
+自定义标签和过滤器 :
+
+https://docs.djangoproject.com/en/1.10/howto/custom-template-tags/
+
+https://docs.djangoproject.com/en/1.10/ref/templates/language/#custom-tag-and-filter-libraries
 
 更多Template Language相关 : https://docs.djangoproject.com/en/1.10/ref/templates/language/
