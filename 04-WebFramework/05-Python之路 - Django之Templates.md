@@ -3,11 +3,11 @@
 
 - [Python之路 - Django之Template](#python之路---django之template)
     - [介绍  🍀](#介绍--🍀)
-    - [配置  🍀](#配置--🍀)
-    - [用法  🍀](#用法--🍀)
-    - [内置后端  🍀](#内置后端--🍀)
-        - [DjangoTemplates  🍀](#djangotemplates--🍀)
-        - [Jinja2  🍀](#jinja2--🍀)
+    - [Engine  🍀](#engine--🍀)
+        - [用法  🍀](#用法--🍀)
+        - [内置后端  🍀](#内置后端--🍀)
+    - [Template  🍀](#template--🍀)
+    - [Context  🍀](#context--🍀)
 
 <!-- /TOC -->
 ## 介绍  🍀
@@ -22,7 +22,13 @@ Django项目可以配置一个或多个模板引擎 , Django为其自己的模�
 
 当我们使用`Pycharm` 创建一个项目时 , 会自动会我们创建一个`templates` 文件夹 , 就是用来存放我们的模板文件的
 
-## 配置  🍀
+Python使用模板系统是一个三步过程 : 
+
+1. 配置一个[Engine](https://docs.djangoproject.com/en/1.10/ref/templates/api/#django.template.Engine)
+2. 将模板代码编译成一个 [Template](https://docs.djangoproject.com/en/1.10/ref/templates/api/#django.template.Template)对象
+3. 利用[Context](https://docs.djangoproject.com/en/1.11/ref/templates/api/#django.template.Context)对象对模板进行渲染
+
+## Engine  🍀
 
 模板引擎使用`TEMPLATES` 设置进行配置 , 位于`settings.py` 中 , 如下 : 
 
@@ -30,7 +36,7 @@ Django项目可以配置一个或多个模板引擎 , Django为其自己的模�
 TEMPLATES = [
     {
         # 实现Django模板后端API的模板引擎类的Python路径,内置后端是
-        # ajango.template.bakcends.django.DjangoTemplates
+        # django.template.bakcends.django.DjangoTemplates
         # django.template.backends.jinja2.Jinja2
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         
@@ -55,7 +61,7 @@ TEMPLATES = [
 ]
 ```
 
-## 用法  🍀
+### 用法  🍀
 
 在`django.template.loader` 模块中定义了两个函数来加载模板
 
@@ -145,7 +151,7 @@ def render_to_string(template_name, context=None, request=None, using=None):
 
 用法示例 : 
 
-```python
+```html
 from django.template.loader import render_to_string
 rendered = render_to_string('my_template.html', {'foo': 'bar'})
 ```
@@ -154,16 +160,16 @@ rendered = render_to_string('my_template.html', {'foo': 'bar'})
 
 模板引擎可以使用`django.template.engines`  : 
 
-```python
+```html
 from django.template import engines
 # The lookup key — 'django' in this example — is the engine’s NAME.
 django_engine = engines['django']
 template = django_engine.from_string("Hello {{ name }}!")
 ```
 
-## 内置后端  🍀
+### 内置后端  🍀
 
-### DjangoTemplates  🍀
+**DjangoTemplates**
 
 ```python
 TEMPLATES = [
@@ -218,7 +224,7 @@ TEMPLATES = [
 ]
 ```
 
-### Jinja2  🍀
+**Jinja2**
 
 安装
 
@@ -233,7 +239,7 @@ pip install Jinja2
 Django添加了几个与Jinja2不同的默认值 :
 
 - `'autoescape'` : True 
-- `'loader'` : a loader configured for [`DIRS`](https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-TEMPLATES-DIRS) and [`APP_DIRS`](https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-TEMPLATES-APP_DIRS)
+- `'loader'` : a loader configured for [DIRS](https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-TEMPLATES-DIRS) and [APP_DIRS](https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-TEMPLATES-APP_DIRS)
 - `'auto_reload'` : settings.DEBUG
 - `'undefined'` : DebugUndefined if settings.DEBUG else Undefined
 
@@ -257,12 +263,85 @@ TEMPLATES = [
 ]
 ```
 
-自定义后端 : https://docs.djangoproject.com/en/1.11/topics/templates/#custom-backends
+Jinja2 : http://jinja.pocoo.org/docs/2.10/
 
-更多: https://docs.djangoproject.com/en/1.11/topics/templates/
+自定义后端 : https://docs.djangoproject.com/en/1.11/topics/templates/#custom-backends
 
 origin API : https://docs.djangoproject.com/en/1.11/topics/templates/#origin-api-and-3rd-party-integration
 
-这一篇中主要与模板系统的配置有关 , 所以该篇内容当做一个铺垫 , 下篇将继续对模板系统进行整理
+## Template  🍀
 
-另一篇从技术层面讲解的官方文档 : https://docs.djangoproject.com/en/1.11/ref/templates/api/
+通过上文我们就可以配置好一个Engine了 , 那么接下来就是将模板代码编译成Template对象了
+
+推荐创建Template对象的方法是调用Engine中的`get_template()` , `select_template()` 和工厂方法`from_string()` 
+
+同样`django.template.backends.django.Template` 也适用`django.template.Template` 通用的模板API , 也就是说无论`DjangoTemplate` 还是`Jinja2` , 都可以通过`django.template.Tempalte` 来进行创建
+
+> *class* Template[[source](https://docs.djangoproject.com/en/1.11/_modules/django/template/base/#Template)]
+
+这个类存在于`django.template.Template` 中 , 构造函数如下 : 
+
+```python
+def __init__(self, template_string, origin=None, name=None, engine=None):
+```
+
+实例 
+
+```html
+from django.template import Template
+template = Template("My name is {{ my_name }}.")
+```
+
+注意 : 创建Template对象时 , 系统只解析一次原始模板代码 , 从那时起 , 它就被存储在内部 , 作为一个树形结构来提高性能
+
+## Context  🍀
+
+一旦我们拥有了一个Template对象 , 我们就可以用它来渲染一个上下文 ; 并且可以重复使用相同的模板 , 使用不同的上下文多次渲染它
+
+`django.template.Context` 除了上下文数据之外 , 还保存一些元数据 , 它被传递给Template.render() 来呈现模板
+
+`django.template.RequestContext` 是Context存储当前HttpRequest并运行模板上下文处理器的子类
+
+> *class* Context(dict_ = None) [[source\] ](https://docs.djangoproject.com/en/1.11/_modules/django/template/context/#Context)
+
+构造函数如下 
+
+```python
+def __init__(self, dict_=None, autoescape=True, use_l10n=None, use_tz=None):
+```
+
+实例 
+
+```html
+>>> from django.template import Context, Template
+>>> template = Template("My name is {{ my_name }}.")
+>>> context = Context({"my_name": "Adrian"})
+>>> template.render(context)
+"My name is Adrian."
+>>> context = Context({"my_name": "Dolores"})
+>>> template.render(context)
+"My name is Dolores."
+```
+
+大多数情况下 , 我们将Context通过传入完全填充的字典来实例化对象Context() , 但是Context , 使用标准字典语法 , 也可以在实例化对象后添加和删除项目 , 如下 : 
+
+```html
+>>> from django.template import Context
+>>> c = Context({"foo": "bar"})
+>>> c['foo']
+'bar'
+>>> del c['foo']
+>>> c['foo']
+Traceback (most recent call last):
+...
+KeyError: 'foo'
+>>> c['newvariable'] = 'hello'
+>>> c['newvariable']
+'hello'
+```
+
+更多 :
+
+https://docs.djangoproject.com/en/1.11/ref/templates/api/
+
+https://docs.djangoproject.com/en/1.11/topics/templates/

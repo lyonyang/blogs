@@ -156,6 +156,16 @@ Django附带大约二十个内置模板标签 , 一下是一些常用标签 :
 </ul>
 ```
 
+- for ... empty : 当给出的组为空或者没有被找到时 , 所执行的操作
+
+```html
+{% for person in person_list %}
+    <p>{{ person.name }}</p>
+{% empty %}
+    <p>sorry,no person here</p>
+{% endfor %}
+```
+
 - if , elif 和else : 流程控制
 
 ```html
