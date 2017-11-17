@@ -113,23 +113,23 @@ Django中提供了大约60个内置的模板过滤器 , 一下是一些常用的
 
 - default : 如果一个变量是错误或者为空 , 则使用默认给定的 , 否则就使用变量的值
 
-  ```html
-  {{ value|default:"nothing"}}
-  ```
+```html
+{{ value|default:"nothing"}}
+```
 
 - length : 返回值的长度 , 适用于字符串和列表
 
-  ```html
-  {{ value|length}}
-  ```
+```html
+{{ value|length}}
+```
 
 - filesizeformat : 格式化值为一个人们可读的文件大小 , 如 : '13KB' , '4.1MB' , '102bytes'等
 
-  ```html
-  {{ value|filesizeformat}}
-  # value = 123456789
-  # output : 117.7MB
-  ```
+```html
+{{ value|filesizeformat}}
+# value = 123456789
+# output : 117.7MB
+```
 
 更多内置过滤器 :  [built-in filter reference](https://docs.djangoproject.com/en/1.10/ref/templates/builtins/#ref-templates-builtins-filters)
 
@@ -147,36 +147,36 @@ Django附带大约二十个内置模板标签 , 一下是一些常用标签 :
 
 - for : 遍历数组中的每个项目
 
-  ```html
-  # 展示运动员名单
-  <ul>
+```html
+# 展示运动员名单
+<ul>
   {% for athlete in athlete_list %}
-      <li>{{ athlete.name }}</li>
+    <li>{{ athlete.name }}</li>
   {% endfor %}
-  </ul>
-  ```
+</ul>
+```
 
 - if , elif 和else : 流程控制
 
-  ```html
-  {% if athlete_list %}
-      Number of athletes: {{ athlete_list|length }}
-  {% elif athlete_in_locker_room_list %}
-      Athletes should be out of the locker room soon!
-  {% else %}
-      No athletes.
-  {% endif %}
-  ```
+```html
+{% if athlete_list %}
+    Number of athletes: {{ athlete_list|length }}
+{% elif athlete_in_locker_room_list %}
+    Athletes should be out of the locker room soon!
+{% else %}
+    No athletes.
+{% endif %}
+```
 
-  使用过滤器和各种操作符
+使用过滤器和各种操作符
 
-  ```html
-  {% if athlete_list|length > 1 %}
-     Team: {% for athlete in athlete_list %} ... {% endfor %}
-  {% else %}
-     Athlete: {{ athlete_list.0.name }}
-  {% endif %}
-  ```
+```html
+{% if athlete_list|length > 1 %}
+    Team: {% for athlete in athlete_list %} ... {% endfor %}
+{% else %}
+    Athlete: {{ athlete_list.0.name }}
+{% endif %}
+```
 
 **注意 : 大多数模板的过滤器返回字符串 , 所以使用过滤器在数学上通常不会像所期望的那样工作 , length是一个列外**
 
