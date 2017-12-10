@@ -237,3 +237,5 @@ urlpatterns = [
 ```
 
 本章仅对Model进行简单的操作介绍
+
+详细参考 : [Model instance reference](https://docs.djangoproject.com/en/1.11/ref/models/instances/)
