@@ -296,4 +296,31 @@ total = sum( 10, 20 )
 '''
 执行结果:
 两数之和: 30
+'''
 ```
+如果我们返回函数名
+
+```python
+def func():
+    print("I am Lyon")
+    # 返回func,函数名 → 内存地址
+    return func
+# result1接收返回值func函数名
+result1 = func()
+# 返回一个函数对象
+print(result1)
+# 可以继续调用
+result2 = result1()
+print(result2)
+result2()
+'''
+执行结果:
+I am Lyon
+<function func at 0x0000013C309B7F28>
+I am Lyon
+<function func at 0x0000013C309B7F28>
+I am Lyon
+'''
+```
+
+这是一处妙用 , 当然在单层函数中作用不明显 , 下一章的《Python之路 - 函数进阶》中的闭包可以让你体会魅力之所在
