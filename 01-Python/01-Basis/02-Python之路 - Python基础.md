@@ -334,23 +334,27 @@ a b a b
 | is     | is 是判断两个标识符是不是引用自一个对象     | **x is y ** , 类似 **id(x) == id(y)** , 如果引用的是同一个对象则返回 True , 否则返回 False |
 | is not | is not 是判断两个标识符是不是引用自不同对象 | **x is not y**  ,  类似 **id(a) != id(b) , 如果引用的不是同一个对象则返回结果 True , 否则返回 False |
 
-运算符优先级
+运算符优先级表 , 从上到下优先级依次增高
 
-| 运算符                         | 描述                                |
-| --------------------------- | --------------------------------- |
-| \*\*                        | 指数 (最高优先级)                        |
-| ~ + -                       | 按位翻转, 一元加号和减号 (最后两个的方法名为 +@ 和 -@) |
-| \* / % //                   | 乘，除，取模和取整除                        |
-| + -                         | 加法减法                              |
-| >> <<                       | 右移，左移运算符                          |
-| &                           | 位 'AND'                           |
-| ^ \                         | 位运算符                              |
-| <= < > >=                   | 比较运算符                             |
-| <> == !=                    | 等于运算符                             |
-| = %= /= //= -= += \*= \*\*= | 赋值运算符                             |
-| is ,is not                   | 身份运算符                             |
-| in ,not in                   | 成员运算符                             |
-| not and or                  | 逻辑运算符                             |
+| Operator                                 | Description                              |
+| ---------------------------------------- | ---------------------------------------- |
+| [`lambda`](https://docs.python.org/3/reference/expressions.html?highlight=operator%20precedence#lambda) | Lambda expression                        |
+| [`if`](https://docs.python.org/3/reference/compound_stmts.html#if) – [`else`](https://docs.python.org/3/reference/compound_stmts.html#else) | Conditional expression                   |
+| [`or`](https://docs.python.org/3/reference/expressions.html?highlight=operator%20precedence#or) | Boolean OR                               |
+| [`and`](https://docs.python.org/3/reference/expressions.html?highlight=operator%20precedence#and) | Boolean AND                              |
+| [`not`](https://docs.python.org/3/reference/expressions.html?highlight=operator%20precedence#not) `x` | Boolean NOT                              |
+| [`in`](https://docs.python.org/3/reference/expressions.html?highlight=operator%20precedence#in), [`not in`](https://docs.python.org/3/reference/expressions.html?highlight=operator%20precedence#not-in), [`is`](https://docs.python.org/3/reference/expressions.html?highlight=operator%20precedence#is), [`is not`](https://docs.python.org/3/reference/expressions.html?highlight=operator%20precedence#is-not), `<`, `<=`, `>`, `>=`, `!=`, `==` | Comparisons, including membership tests and identity tests |
+| `|`                                      | Bitwise OR                               |
+| `^`                                      | Bitwise XOR                              |
+| `&`                                      | Bitwise AND                              |
+| `<<`, `>>`                               | Shifts                                   |
+| `+`, `-`                                 | Addition and subtraction                 |
+| `*`, `@`, `/`, `//`, `%`                 | Multiplication, matrix multiplication, division, floor division, remainder [[5\]](https://docs.python.org/3/reference/expressions.html?highlight=operator%20precedence#id21) |
+| `+x`, `-x`, `~x`                         | Positive, negative, bitwise NOT          |
+| `**`                                     | Exponentiation [[6\]](https://docs.python.org/3/reference/expressions.html?highlight=operator%20precedence#id22) |
+| `await` `x`                              | Await expression                         |
+| `x[index]`, `x[index:index]`, `x(arguments...)`, `x.attribute` | Subscription, slicing, call, attribute reference |
+| `(expressions...)`, `[expressions...]`, `{key: value...}`, `{expressions...}` | Binding or tuple display, list display, dictionary display, set display |
 
 ## if ... else
 
