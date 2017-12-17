@@ -10,8 +10,6 @@
         - [exclude()](#exclude)
         - [annotate()](#annotate)
         - [order_by()](#order_by)
-- [与上面相同](#与上面相同)
-- [Blog设置ordering=['name'],第一个QuerySet等同于](#blog设置orderingname第一个queryset等同于)
         - [reverse()](#reverse)
         - [distinct()](#distinct)
         - [values()](#values)
@@ -264,13 +262,13 @@ Entry.objects.order_by('blog__name', 'headline')
 
 如果排序的字段与另外一个模型关联 , Django将使用关联的模型的默认排序 , 或者如果没有指定`Meta.ordering` 将通过关联的模型的主键排序 , 如下 :
 
- ```python
+```python
 Entry.objects.order_by('blog')
 # 与上面相同
 Entry.objects.order_by('blog__id')
 # Blog设置ordering=['name'],第一个QuerySet等同于
 Entry.objects.order_by('blog__name')
- ```
+```
 
 ### reverse()
 
