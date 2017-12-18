@@ -4,10 +4,10 @@
 - [Python之路 -  模块初识](#python之路----模块初识)
     - [模块介绍 🍀](#模块介绍-🍀)
     - [collections模块  🍀](#collections模块--🍀)
-        - [namedtuple](#namedtuple)
-        - [deque](#deque)
-        - [OrderedDict](#ordereddict)
-        - [defaultdict](#defaultdict)
+        - [namedtuple  🍀](#namedtuple--🍀)
+        - [deque  🍀](#deque--🍀)
+        - [OrderedDict  🍀](#ordereddict--🍀)
+        - [defaultdict  🍀](#defaultdict--🍀)
 
 <!-- /TOC -->
 ##  模块介绍 🍀
@@ -39,7 +39,7 @@ Python 模块 , 说白了就是一个 .py 文件 , 里面放了一坨函数和�
 
 在内置数据类型(dict、list、set、tuple)的基础上 , conllections模块还提供了几个额外的数据类型 : Counter 、deque、defaultdict、namedtuple和OrderedDict等
 
-### namedtuple 
+### namedtuple  🍀
 
 生成可以使用名字来访问元素内容的tuple
 
@@ -68,7 +68,7 @@ Python 模块 , 说白了就是一个 .py 文件 , 里面放了一坨函数和�
 >>> Circle = namedtuple('Circle',['x','y','r'])
 ```
 
-### deque 
+### deque  🍀
 
 双向队列 , 可以快速的从另外一侧追加和推出对象
 
@@ -91,7 +91,7 @@ deque(['y','a','b','c','x'])
 
 deque除了实现list的 append() 和 pop() 外, 还支持 appendleft() 和 popleft() , 这样就可以非常高效地往头部添加或删除元素
 
- ###  Counter 
+ ###  Counter  🍀
 
 Counter类的目的是用来跟踪值出现的次数 , 它是一个无序的容器类型 , 以字典的键值对形式存储 , 其中元素作为key , 其计数作为value ; 计数值可以是任意interger(包括0和负数) , Counter类和其他语言的bags或multisets很相似
 
@@ -103,7 +103,7 @@ Counter({'a': 5, 'b': 4, 'c': 3, 'd': 2, 'e': 1})
 
  [Counter详细用法](http://www.cnblogs.com/Eva-J/articles/7291842.html)
 
-### OrderedDict 
+### OrderedDict  🍀
 
 创建有序字典
 
@@ -134,7 +134,7 @@ PS : OrderedDict的key会按照插入的顺序排序 , 不是key本身排序:
 ['z','y','x']
 ```
 
-### defaultdict
+### defaultdict  🍀
 
 带有默认值的字典
 
