@@ -335,3 +335,5 @@ def my_view(request):
 更多shortcuts内容 : [Django shortcut functions](https://docs.djangoproject.com/en/1.11/topics/http/shortcuts/)
 
 The Django Book : http://docs.30c.org/djangobook2/index.html
+
+Request and response objects : https://docs.djangoproject.com/en/1.11/ref/request-response/
