@@ -13,15 +13,15 @@ Python总体分为三个部分 , 即文件组 , Python核心 (解释器) , 运�
 ```
    File Groups          Python Core			Runtime Environment
 						INTERPRETER
-+---------------+	+----------------+
-| Core Modules  |   |     Scanner    |  ↓
++---------------+   +----------------+
+| Core Modules  |   |    Scanner     |  ↓
++---------------+   +----------------+	    +--------------------------+
+| Library       |   |    Parser      |	↓   |  Object/Type Structures  |
 +---------------+   +----------------+		+--------------------------+
-| Library       |	|     Parser     |	↓	|  Object/Type Structures  |
-+---------------+	+----------------+		+--------------------------+
-| User-defined  |	|     Compiler	 |	↓	|  Memory Allocator        |
-|    Modules    |	+----------------+		+--------------------------+
-+---------------+	|  Code Evauator |	↓	|  Current State of Python |
-					+----------------+		+--------------------------+
+| User-defined  |   |    Compiler	 |	↓   |  Memory Allocator        |
+|    Modules    |   +----------------+	    +--------------------------+
++---------------+   |  Code Evauator |	↓   |  Current State of Python |
+				    +----------------+	    +--------------------------+
 ```
 
 ## 源码组织  🍀
