@@ -249,9 +249,9 @@ def detail(request, pk):
 
 - `v = reverse('app01:detail', kwargs={'pk':11})` 
 
-- ```python
-  {% url 'app01:detail' pk=12 pp=99 %}
-  ```
+'''html
+{% url 'app01:detail' pk=12 pp=99 %}
+```
 
 Django中的路由系统和其他语言的框架有所不同 , 在Django中每一个请求的url都要有一条路由映射 ; 其他大部分的Web框架则是对一类的url请求做一条路由映射 , 从而使路由系统变得简洁
 
