@@ -153,7 +153,7 @@ urlpatterns = [
 
 - 模板中使用生成URL
 
-  ```python
+  ```html
   # 反向解析为action=index/2012
   <form action="{% url 'h2' 2012 %}">
   	<p>用户:<input type="text" name="user"></p>
