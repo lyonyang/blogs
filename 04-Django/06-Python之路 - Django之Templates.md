@@ -12,13 +12,73 @@
 <!-- /TOC -->
 ## 介绍  🍀
 
-作为一个Web框架 , Django需要一个方便的方式来动态生成HTML , 最常见的方法就是依赖于模板
+上一篇中我们了解了视图 , 即处理请求返回响应 ; 通常我们都是返回一个字符串 , 一个以HTML规则编写的字符串 , 使其在浏览器上能够很好的显示
+
+那么最初 , 我们都是直接返回一堆字符串 , 如下 :
+
+```python
+# 原始视图函数
+from djang.shortcuts import HttpResponse
+def index(request):
+  	# 所有的视图函数都必须返回响应
+  	return HttpResponse("""
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Title</title>
+        </head>
+        <body>
+            <h1 style="color: #46b8da;">%s</h1>
+        </body>
+        </html>""" % "Hello World!")
+```
+
+Django为我们提供了另一种写法 :
+
+```html
+from django.template import Template,Context
+from django.shortcuts import HttpResponse,render
+def index(request):
+	# 创建模板对象,其中{{ message }}如同%s一样占位
+	tem_obj = Template("""
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Title</title>
+        </head>
+        <body>
+            <h1 style="color: #46b8da;">{{ message }}</h1>
+        </body>
+        </html>""")
+	# 创建上下文对象,用于渲染模板
+	con_obj = Context({'message':'Hello World'})
+	# 进行渲染
+	html = tem_obj.render(con_obj)
+	# 将渲染完成的html返回给前端
+	return HttpResponse(html)
+```
+
+这种写法看起来并没有比原生视图函数有什么好 , 我们一般不这么写 , 而是使用如下写法 : 
+
+```html
+from django.shortcuts import HttpResponse,render
+def index(request):
+	message = "Hello World!"
+	# render为我们进行了封装,我们只需直接传递模板文件名和上下文就可直接完成
+	return render(request,'index.html',{'message':message})
+```
+
+我们知道 , 我们的页面 (也就是我们的模板) 经常有很多相同的代码 , 这是非常不好的 , 所以 , 这是Web框架需要解决的问题
+
+所以作为一个Web框架 , Django需要一个方便的方式来动态生成HTML , 最常见的方法就是依赖于模板
 
 Django项目可以配置一个或多个模板引擎 , Django为其自己的模板系统提供内置后端 , 也就是我们所说的Djanog模板语言 , 目前最流行的就是`Jinja2` 
 
-由于历史原因 , 对模板引擎的一般支持和Django模板语言的实现都存在于`django.template` 命名空间中
+由于历史原因 , 对模板引擎的一般支持和Django模板语言的实现都存在于`django.template` 命名空间中 , 对于模板语言会放在下一篇中进行整理
 
-**warning** : 模板系统对于不受信任的模板作者是不安全的 , 如 : 一个站点不应允许其用户提供自己的模板 , 因为模板作者可以执行诸如XSS攻击和访问可能包含敏感信息的模板变量的属性
+**Warning** : 模板系统对于不受信任的模板作者是不安全的 , 如 : 一个站点不应允许其用户提供自己的模板 , 因为模板作者可以执行诸如XSS攻击和访问可能包含敏感信息的模板变量的属性
 
 当我们使用`Pycharm` 创建一个项目时 , 会自动会我们创建一个`templates` 文件夹 , 就是用来存放我们的模板文件的
 
@@ -27,6 +87,8 @@ Python使用模板系统是一个三步过程 :
 1. 配置一个[Engine](https://docs.djangoproject.com/en/1.10/ref/templates/api/#django.template.Engine)
 2. 将模板代码编译成一个 [Template](https://docs.djangoproject.com/en/1.10/ref/templates/api/#django.template.Template)对象
 3. 利用[Context](https://docs.djangoproject.com/en/1.11/ref/templates/api/#django.template.Context)对象对模板进行渲染
+
+**注意 : 这一篇主要对于模板引擎的配置 , Template对象 , Context对象进行描述 ; 但是我们一般不会自己创建Template和Context对象 , 因为Django已经帮我们做了这些工作 , 所以我们主要还是直接使用`render()`** 
 
 ## Engine  🍀
 
@@ -86,14 +148,7 @@ def select_template(template_name_list, using=None):
     # select_template() is just like get_template(), except it takes a list of template names. It tries each name in order and returns the first template that exists.
 ```
 
-Template对象通过调用`get_template()` 和`select_template()` 生成 , 但是必须提供一个`render()` 方法 , render如下 : 
-
-```python
-Template.render(context=None, request=None)
-	"""使用给定的上下文呈现此模板
-	context:是一个dict,默认引擎将使用空的上下文呈现模板
-	request:是一个HttpRequest,引擎必须在模板中使用它以及CSRF令牌"""
-```
+Template对象通过调用`get_template()` 和`select_template()` 生成 , 但是必须提供一个`render()` 方法
 
 一个搜索算法🌰
 

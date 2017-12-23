@@ -35,6 +35,7 @@ blog\views.py
 ```python
 from django.http import HttpResponse
 def hello(request):
+    # 视图中必须实现响应
     return HttpResponse("Hello Lyon")
 ```
 
@@ -211,7 +212,10 @@ https://docs.djangoproject.com/en/1.11/_modules/django/http/response/
 
 为了方便 , Django中有一个shortcuts模块 , 其中收集了跨越多个级别的MVC的帮助函数和类
 
-这里介绍一下其中的`render()`和`redirect()` 
+这里介绍一下其中的`render()`和`redirect()`  :
+
+- render , 对html进行渲染
+- redirect , 从当前页面进行跳转
 
 ```python
 def render(request, template_name, context=None, content_type=None, status=None, using=None):
@@ -335,5 +339,3 @@ def my_view(request):
 更多shortcuts内容 : [Django shortcut functions](https://docs.djangoproject.com/en/1.11/topics/http/shortcuts/)
 
 The Django Book : http://docs.30c.org/djangobook2/index.html
-
-Request and response objects : https://docs.djangoproject.com/en/1.11/ref/request-response/
