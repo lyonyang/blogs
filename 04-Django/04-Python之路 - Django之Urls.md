@@ -249,7 +249,7 @@ def detail(request, pk):
 
 - `v = reverse('app01:detail', kwargs={'pk':11})` 
 
-'''html
+```html
     {% url 'app01:detail' pk=12 pp=99 %}
 ```
 
