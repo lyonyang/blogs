@@ -105,19 +105,22 @@ Separate the underlying binary buffer from the TextIOBase and return it.
 
 After the underlying buffer has been detached, the TextIOBase is in an unusable state.
 
-Some TextIOBase implementations, like StringIO, may not have the concept of an underlying buffer and calling this method will raise UnsupportedOperation.
+Some TextIOBase implementations, like StringIO,
+ may not have the concept of an underlying buffer and calling this method will raise UnsupportedOperation.
 
 New in version 3.1.
 '''
 
 read(size)
 '''
-Read and return at most size characters from the stream as a single str. If size is negative or None, reads until EOF.
+Read and return at most size characters from the stream as a single str. 
+If size is negative or None, reads until EOF.
 '''
 
 readline(size=-1)
 '''
-Read until newline or EOF and return a single str. If the stream is already at EOF, an empty string is returned.
+Read until newline or EOF and return a single str. 
+If the stream is already at EOF, an empty string is returned.
 
 If size is specified, at most size characters will be read.
 '''
@@ -131,7 +134,8 @@ Note that it’s already possible to iterate on file objects using for line in f
 
 readable()
 '''
-Return True if the stream can be read from. If False, read() will raise OSError.
+Return True if the stream can be read from. 
+If False, read() will raise OSError.
 '''
 
 write(s)
@@ -141,21 +145,30 @@ Write the string s to the stream and return the number of characters written.
 
 writable()
 '''
-Return True if the stream supports writing. If False, write() and truncate() will raise OSError.
+Return True if the stream supports writing. 
+If False, write() and truncate() will raise OSError.
 '''
 
 writelines(lines)
 '''
-Write a list of lines to the stream. Line separators are not added, so it is usual for each of the lines provided to have a line separator at the end.
+Write a list of lines to the stream.
+Line separators are not added, 
+so it is usual for each of the lines provided to have a line separator at the end.
 '''
 
 seek(offset[, whence])
 '''
-Change the stream position to the given offset. Behaviour depends on the whence parameter. The default value for whence is SEEK_SET.
+Change the stream position to the given offset. 
+Behaviour depends on the whence parameter. 
+The default value for whence is SEEK_SET.
 
-SEEK_SET or 0: seek from the start of the stream (the default); offset must either be a number returned by TextIOBase.tell(), or zero. Any other offset value produces undefined behaviour.
-SEEK_CUR or 1: “seek” to the current position; offset must be zero, which is a no-operation (all other values are unsupported).
-SEEK_END or 2: seek to the end of the stream; offset must be zero (all other values are unsupported).
+SEEK_SET or 0: seek from the start of the stream (the default); 
+offset must either be a number returned by TextIOBase.tell(), or zero. 
+Any other offset value produces undefined behaviour.
+SEEK_CUR or 1: “seek” to the current position; 
+offset must be zero, which is a no-operation (all other values are unsupported).
+SEEK_END or 2: seek to the end of the stream; 
+offset must be zero (all other values are unsupported).
 Return the new absolute position as an opaque number.
 
 New in version 3.1: The SEEK_* constants.
@@ -163,14 +176,19 @@ New in version 3.1: The SEEK_* constants.
 
 tell()
 '''
-Return the current stream position as an opaque number. The number does not usually represent a number of bytes in the underlying binary storage.
+Return the current stream position as an opaque number. 
+The number does not usually represent a number of bytes in the underlying binary storage.
 '''
 
 close()
 '''
-Flush and close this stream. This method has no effect if the file is already closed. Once the file is closed, any operation on the file (e.g. reading or writing) will raise a ValueError.
+Flush and close this stream. 
+This method has no effect if the file is already closed. 
+Once the file is closed, 
+any operation on the file (e.g. reading or writing) will raise a ValueError.
 
-As a convenience, it is allowed to call this method more than once; only the first call, however, will have an effect.
+As a convenience, it is allowed to call this method more than once; 
+only the first call, however, will have an effect.
 '''
 
 fileno()
@@ -180,7 +198,8 @@ Return the underlying file descriptor (an integer) of the stream if it exists. A
 
 flush()
 '''
-Flush the write buffers of the stream if applicable. This does nothing for read-only and non-blocking streams.
+Flush the write buffers of the stream if applicable. 
+This does nothing for read-only and non-blocking streams.
 '''
 
 isatty()
@@ -190,26 +209,38 @@ Return True if the stream is interactive (i.e., connected to a terminal/tty devi
 
 seek(offset[, whence])
 '''
-Change the stream position to the given byte offset. offset is interpreted relative to the position indicated by whence. The default value for whence is SEEK_SET. Values for whence are:
+Change the stream position to the given byte offset. 
+offset is interpreted relative to the position indicated by whence. 
+The default value for whence is SEEK_SET. Values for whence are:
 
-SEEK_SET or 0 – start of the stream (the default); offset should be zero or positive
-SEEK_CUR or 1 – current stream position; offset may be negative
-SEEK_END or 2 – end of the stream; offset is usually negative
+SEEK_SET or 0 – start of the stream (the default); 
+offset should be zero or positive
+SEEK_CUR or 1 – current stream position; 
+offset may be negative
+SEEK_END or 2 – end of the stream; 
+offset is usually negative
 Return the new absolute position.
 
 New in version 3.1: The SEEK_* constants.
 
-New in version 3.3: Some operating systems could support additional values, like os.SEEK_HOLE or os.SEEK_DATA. The valid values for a file could depend on it being open in text or binary mode.
+New in version 3.3: Some operating systems could support additional values, 
+like os.SEEK_HOLE or os.SEEK_DATA. 
+The valid values for a file could depend on it being open in text or binary mode.
 '''
 
 seekable()
 '''
-Return True if the stream supports random access. If False, seek(), tell() and truncate() will raise OSError.
+Return True if the stream supports random access. 
+If False, seek(), tell() and truncate() will raise OSError.
 '''
 
 truncate(size=None)
 '''
-Resize the stream to the given size in bytes (or the current position if size is not specified). The current stream position isn’t changed. This resizing can extend or reduce the current file size. In case of extension, the contents of the new file area depend on the platform (on most systems, additional bytes are zero-filled). The new file size is returned.
+Resize the stream to the given size in bytes (or the current position if size is not specified). 
+The current stream position isn’t changed. 
+This resizing can extend or reduce the current file size. 
+In case of extension, the contents of the new file area depend on the platform (on most systems, additional bytes are zero-filled). 
+The new file size is returned.
 
 Changed in version 3.5: Windows will now zero-fill files when extending.
 '''
