@@ -1,6 +1,24 @@
 # Python之路 - Djano之Middleware
+<!-- TOC -->
 
-## 介绍
+- [Python之路 - Djano之Middleware](#python之路---djano之middleware)
+    - [介绍  🍀](#介绍--🍀)
+    - [CSRF  🍀](#csrf--🍀)
+        - [CSRF中间件使用  🍀](#csrf中间件使用--🍀)
+    - [激活中间件  🍀](#激活中间件--🍀)
+    - [自定义中间件  🍀](#自定义中间件--🍀)
+        - [MiddlewareMixin  🍀](#middlewaremixin--🍀)
+        - [钩子函数  🍀](#钩子函数--🍀)
+            - [process_request()  🍀](#process_request--🍀)
+            - [process_view()  🍀](#process_view--🍀)
+            - [process_exception()  🍀](#process_exception--🍀)
+            - [process_template_response()  🍀](#process_template_response--🍀)
+            - [process_response()  🍀](#process_response--🍀)
+    - [处理流响应  🍀](#处理流响应--🍀)
+    - [RBAC案例  🍀](#rbac案例--🍀)
+
+<!-- /TOC -->
+## 介绍  🍀
 
 在Django中 , 中间件本质上就是一个类 , 我们可以使用中间件来对请求和响应进行批量处理 , 中间件所在的层次介于WSGI协议与Django URL系统之间 , 它类似一个一个的盒子 , 所有的请求和响应到来时 , 都必须穿过一个一个的盒子 (中间件) , 如下 :
 
@@ -41,7 +59,7 @@ MIDDLEWARE = [
 
 内置中间件 :  [built-in middleware reference](https://docs.djangoproject.com/en/1.11/ref/middleware/)
 
-## CSRF
+## CSRF  🍀
 
 CSRF 即`Cross Site Request Forgery protection` , 中文意思为跨站请求伪造 , 也被称为"One Click Attack"或者 Session Riding , 通常缩写为CSRF或XSRF , 是一种对网站的恶意利用
 
@@ -49,7 +67,7 @@ CSRF 即`Cross Site Request Forgery protection` , 中文意思为跨站请求伪
 
 所以为了防止CSRF的发生 , Django为我们提供了中间件`django.middleware.csrf.CsrfViewMiddleware` 
 
-### CSRF中间件使用
+### CSRF中间件使用  🍀
 
 如果要在我们的视图中使用CSRF保护 , 我们需要进行如下操作 :
 
@@ -73,7 +91,7 @@ CSRF 即`Cross Site Request Forgery protection` , 中文意思为跨站请求伪
 
 更多CSRF中间件使用参考 :  [Cross Site Request Forgery protection documentation](https://docs.djangoproject.com/en/1.11/ref/csrf/) 
 
-## 激活中间件
+## 激活中间件  🍀
 
 我们如果要使用中间件 , 就需要在Django配置中的`MIDDLEWARE`添加中间件组件
 
@@ -92,7 +110,7 @@ MIDDLEWARE = [
 ]
 ```
 
-## 自定义中间件
+## 自定义中间件  🍀
 
 有时候我们需要自定义中间件来达到我们的实际要求 , 其有两种方式 , 即通过类或者函数
 
@@ -122,7 +140,7 @@ class SimpleMiddleware(object):
 2. 每个请求都会调用一次`__call__()`方法
 3. 当Web服务器启动时 , `__init__()`仅会被调用一次
 
-### MiddlewareMixin
+### MiddlewareMixin  🍀
 
 上面的写法只适用于Django 1.9及之前的写法 , 在1.10的版本中 , Django为我们提供了`django.utils.deprecation.MiddlewareMixin`以简化`MIDDLEWARE`和旧的`MIDDLEWARE_CLASSES`兼容的中间件类 ; Django 1.10之后的版本使用`MIDDLEWARE`代替`MIDDLEWARE_CLASSES` , Django中包含的所有中间件类都兼容这两种设置
 
@@ -156,7 +174,7 @@ class MiddlewareMixin(object):
 
 在大多数情况下 , 继承这种混合将足以使旧式中间件与新系统兼容 , 具有足够的向后兼容性
 
-### 钩子函数
+### 钩子函数  🍀
 
 在请求阶段中 , 调用视图之前 , Django会按照`MIDDLEWARE`中定义的顺序自顶向下应用中间件 , 我们需要用到以下两个钩子函数 : 
 
@@ -171,7 +189,7 @@ class MiddlewareMixin(object):
 
 如下图 : 
 
-![MIDDLEWARE](D:\桌面\MIDDLEWARE.png)
+![MIDDLEWARE](http://oux34p43l.bkt.clouddn.com/MIDDLEWARE.png)
 
 我们可以将这些中间件比作为一个洋葱 , 每个中间件类都是一个"洋葱层" 
 
@@ -179,7 +197,7 @@ class MiddlewareMixin(object):
 
 如果其中某一层短路并返回响应 , 那么将不能到达视图 , 而是直接在短路层就返回响应
 
-#### process_request()
+#### process_request()  🍀
 
 ```python
 process_request(request):
@@ -195,7 +213,7 @@ process_request(request):
 - 如果返回None , Django会继续处理这个请求 , 执行其它中间件的`process_request()` , 然后执行中间件的`process_view()` , 最后执行对应的视图
 - 如果返回一个HttpResponse对象 , Django就不会去调用其他的中间件的`request_view`或`request_exception`或对应的视图 , 而是直接转变到响应阶段 , 按照原路返回
 
-#### process_view()
+#### process_view()  🍀
 
 ```python
 process_view(request, view_func, view_args, view_kwargs):
@@ -221,7 +239,7 @@ Accessing request.POST inside middleware before the view runs or in process_view
 The CsrfViewMiddleware class can be considered an exception, as it provides the csrf_exempt() and csrf_protect() decorators which allow views to explicitly control at what point the CSRF validation should occur.
 ```
 
-#### process_exception()
+#### process_exception()  🍀
 
 ```python
 process_exception(request, exception):
@@ -235,7 +253,7 @@ process_exception(request, exception):
 
 注意 : 在处理响应期间 , 中间件的执行顺序是倒序执行的 , 所以如果异常中间件返回响应 ,  那么下一层中间件的`process_exception`方法将不会调用 , 因为在上一层已经捕捉完成
 
-#### process_template_response()
+#### process_template_response()  🍀
 
 ```python
 process_template_response(request, response):
@@ -250,7 +268,7 @@ process_template_response(request, response):
 
 并且一旦所有的模板响应中间件被调用 , 响应会自动被渲染
 
-#### process_response()
+#### process_response()  🍀
 
 ```python
 process_response(request,response):
@@ -266,7 +284,7 @@ process_response(request,response):
 
 `process_response`不像`process_request`和`process_view`那样会因为前一个中间件返回的HttpResponse而被跳过 , `process_response`方法总是会被调用 , 这意味着你的`process_response`方法不能依赖于`process_request`方法中的设置
 
-## 处理流响应
+## 处理流响应  🍀
 
 不像`HttpResponse` , `StreamingHttpResponse`并没有`content`属性 , 所以 , 中间件再也不能假设所有响应都带有`content`属性 , 如果它们需要访问内容 , 他们必须测试是否为流式响应 , 并相应地调整自己的行为 , 如下 : 
 
@@ -287,7 +305,7 @@ def wrap_streaming_content(content):
         yield alter_content(chunk)
 ```
 
-## RBAC案例
+## RBAC案例  🍀
 
 rbac即Role-Based Access Control , 基于角色的权限访问控制 , 这种控制极大地简化了权限的管理 , 下面为rbac中我们自定义使用的中间件案例 : 
 
