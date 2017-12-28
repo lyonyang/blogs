@@ -1,7 +1,7 @@
-# Python之路 - Djano之Middleware
+# Python之路 - Django之Middleware
 <!-- TOC -->
 
-- [Python之路 - Djano之Middleware](#python之路---djano之middleware)
+- [Python之路 - Django之Middleware](#python之路---django之middleware)
     - [介绍  🍀](#介绍--🍀)
     - [CSRF  🍀](#csrf--🍀)
         - [CSRF中间件使用  🍀](#csrf中间件使用--🍀)
