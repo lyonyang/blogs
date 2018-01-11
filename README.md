@@ -14,13 +14,17 @@ gitbook install
 gitbook serve .
 ```
 
+### Github
+
+`Github`地址 : [https://github.com/lyonyang](https://github.com/lyonyang)
+
 ## Python之路系列
 
 目录: [SUMMARY](SUMMARY.md)
 
-`GitHub Pages`方式展示: [https://lyonyang.github.io/blogs/](https://lyonyang.github.io/blogs/)
+`GitHub Pages`方式展示 : [https://lyonyang.github.io/blogs/](https://lyonyang.github.io/blogs/)
 
-`GitBook`方式展示: [https://lyonyang.gitbooks.io/blog/](https://lyonyang.gitbooks.io/blog/)
+`GitBook`方式展示 : [https://lyonyang.gitbooks.io/blog/](https://lyonyang.gitbooks.io/blog/)
 
 持续更新中 ... 
 
