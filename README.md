@@ -1,6 +1,6 @@
 # Welcome to Lyon's blog!
 
-[![Build Status](https://travis-ci.org/LyonYang/blogs.svg?branch=master)](https://travis-ci.org/LyonYang/blogs)
+[![Build Status](https://travis-ci.org/lyonyang/blogs.svg?branch=gitbook)](https://travis-ci.org/lyonyang/blogs)
 
 ## 说明
 
