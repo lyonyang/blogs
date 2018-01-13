@@ -154,7 +154,7 @@ urlpatterns = [
 - 模板中使用生成URL
 
 ```html
-# 反向解析为action=index/2012
+<!-- 反向解析为action=index/2012 -->
 <form action="{% url 'h2' 2012 %}">
     <p>用户:<input type="text" name="user"></p>
     <p>密码:<input type="password" name="pwd"></p>
