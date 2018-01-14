@@ -1,7 +1,7 @@
-# Python之路 - wsgiref模块
+# Python之路 - 标准库之wsgiref
 <!-- TOC -->
 
-- [Python之路 - wsgiref模块](#python之路---wsgiref模块)
+- [Python之路 - 标准库之wsgiref](#python之路---标准库之wsgiref)
     - [介绍  🍀](#介绍--🍀)
     - [handlers  🍀](#handlers--🍀)
     - [headers  🍀](#headers--🍀)

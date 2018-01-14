@@ -1,7 +1,7 @@
-# Python之路 - os模块
+# Python之路 - 标准库之os
 <!-- TOC -->
 
-- [Python之路 - os模块](#python之路---os模块)
+- [Python之路 - 标准库之os](#python之路---标准库之os)
     - [介绍  🍀](#介绍--🍀)
     - [OS  🍀](#os--🍀)
     - [OS.Path  🍀](#ospath--🍀)
@@ -22,7 +22,7 @@
 - 调度程序接口 (仅在一些Unix平台上)
 - 系统信息处理
 
-简单描述
+总体概况
 
 ```python
 DESCRIPTION
