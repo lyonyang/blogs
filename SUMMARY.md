@@ -1,4 +1,4 @@
-# Sumarry
+# Summary
 
 * [Introduction](README.md)
 * [Python](01-Python/README.md)
