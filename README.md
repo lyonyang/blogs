@@ -14,6 +14,10 @@ gitbook install
 gitbook serve .
 ```
 
+问题交流可以发送邮件告知我 , 我的邮箱 : 547903993@qq.com
+
+**欢迎收藏交流 , 如需转载 , 请注明出处**
+
 ### Github
 
 `Github`地址 : [https://github.com/lyonyang](https://github.com/lyonyang)
@@ -28,4 +32,3 @@ gitbook serve .
 
 持续更新中 ... 
 
-**欢迎收藏交流 , 如需转载 , 请注明出处**
