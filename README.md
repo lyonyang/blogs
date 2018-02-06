@@ -16,6 +16,8 @@ gitbook serve .
 
 问题交流可以发送邮件告知我 , 我的邮箱 : 547903993@qq.com
 
+`本文地址 : https://lyonyang.github.io/blogs/`
+
 **欢迎收藏交流 , 如需转载 , 请注明出处**
 
 ### Github
