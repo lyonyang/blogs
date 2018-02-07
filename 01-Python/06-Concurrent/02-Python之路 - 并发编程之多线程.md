@@ -513,7 +513,7 @@ Thread-2 get mutexA...
 
 为了解决这样的问题 , 于是就有了递归锁 , 在Python中为了支持在同一线程中多次请求同一资源 , Python提供了可重入锁RLock
 
-这个RLock内部维护着一个Lokc和一个counter变量 , counter记录了acquire的次数 , 从而使得资源可以被多次require . 知道一个线程所有的acquire都被release , 其他的线程才能获得资源
+这个RLock内部维护着一个Lock和一个counter变量 , counter记录了acquire的次数 , 从而使得资源可以被多次require . 直到一个线程所有的acquire都被release , 其他的线程才能获得资源
 
 RLock版本
 
