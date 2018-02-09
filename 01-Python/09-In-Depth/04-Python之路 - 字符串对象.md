@@ -18,6 +18,30 @@
 
 **Python 2.x 与 Python 3.x**
 
+```python
+# Python 2.7
+>>> name = 'lyon'
+>>> type(name)
+<type 'str'>
+>>> name.decode('utf-8')
+u'lyon'
+>>> uname = u'lyon'
+>>> type(uname)
+<type 'unicode'>
+
+# Python 3.5.2
+>>> name = 'lyon'
+>>> type(name)
+<class 'str'>
+>>> name.decode('utf-8')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'decode'
+>>> uname = u'lyon'
+>>> type(uname)
+<class 'str'>
+```
+
 在进行对比两种版本的差异前 , 我们需要知道在它们中有哪些字符串类型 : 
 
 - Python 3.x中 , 有3种字符串类型 : 
@@ -33,6 +57,8 @@
 **总体差异 :** 
 
 在Python 2.x 与 Python 3.x中 , 字符串的实现主要体现在 , Python 3.x中将Python 2.x中常规的`str`和`Unicode`字符串整合到了一个单独的类型`str`中 ,  以支持常规的和`Unicode`文本 ; 这样的处理使得Python在编码处理方面更加的方便
+
+
 
 接下来就来分析Python中的字符串对象了
 
@@ -114,4 +140,140 @@
 
 Python 2.7 提供了两个接口 : `PyString_FromString` 和 `PyString_FromStringAndSize` 
 
-未完待续 ...
+`Python-2.7\Include\stringobject.c :`
+
+**PyString_FromString**
+
+```C
+119:PyString_FromString(const char *str)
+    {
+        register size_t size;
+        register PyStringObject *op;
+	    // 判断字符串长度
+        assert(str != NULL);
+        size = strlen(str);
+        if (size > PY_SSIZE_T_MAX - PyStringObject_SIZE) {
+            PyErr_SetString(PyExc_OverflowError,
+                "string is too long for a Python string");
+            return NULL;
+        }
+    
+        // 处理null string
+        if (size == 0 && (op = nullstring) != NULL) {
+    #ifdef COUNT_ALLOCS
+            null_strings++;
+    #endif
+            Py_INCREF(op);
+            return (PyObject *)op;
+        }
+    
+        // 处理字符
+        if (size == 1 && (op = characters[*str & UCHAR_MAX]) != NULL) {
+    #ifdef COUNT_ALLOCS
+            one_strings++;
+    #endif
+            Py_INCREF(op);
+            return (PyObject *)op;
+        }
+
+        /* Inline PyObject_NewVar */
+        op = (PyStringObject *)PyObject_MALLOC(PyStringObject_SIZE + size);
+        if (op == NULL)
+            return PyErr_NoMemory();
+        PyObject_INIT_VAR(op, &PyString_Type, size);
+        op->ob_shash = -1;
+        op->ob_sstate = SSTATE_NOT_INTERNED;
+        Py_MEMCPY(op->ob_sval, str, size+1);
+        /* share short strings */
+        if (size == 0) {
+            PyObject *t = (PyObject *)op;
+            PyString_InternInPlace(&t);
+            op = (PyStringObject *)t;
+            nullstring = op;
+            Py_INCREF(op);
+        } else if (size == 1) {
+            PyObject *t = (PyObject *)op;
+            PyString_InternInPlace(&t);
+            op = (PyStringObject *)t;
+            characters[*str & UCHAR_MAX] = op;
+            Py_INCREF(op);
+        }
+        return (PyObject *) op;
+169:}
+```
+
+传给`PyString_FromString`的参数必须是一个指向以`NUL('\0')` 结尾的字符串的指针
+
+根据定义我们知道 , 在创建`PyStringObject`时 : 
+
+- 首先会检查该字符串数组的长度 , 如果字符数组的长度大于`PY_SSIZE_T_MAX`  , 那么Python将不会创建对应的`PyStringObject`对象 , `PY_SSIZE_T_MAX`是一个与平台相关的值 , 在`WIN32`系统下 , 该值为`2147483647`  , 即2GB 
+- 接下来检查传入的字符串是不是一个空串 , 对于空串 , Python并不是每一次都会创建相应的`PyStringObject` ; Python运行时有一个`PyStringObject`对象指针`nullstring`专门负责处理空的字符数组 , 如果第一次在一个空字符串基础上创建`PyStringObject` , 由于`nullstring`指针被初始化为NULL , 所以iPython会为这个字符建立一个`PyStringObject`对象 , 将这个对象通过`intern`机制进行共享 , 然后将`nullstring`指向这个被共享的对象 , 以后再创建空字符串就直接返回`nullstring`的引用了
+- 如果不是创建空字符串对象 , 那么就申请内存 , 创建`PyStringObject`对象 ; 处理申请字符串本身所需要的内存外 , 还会申请额外的内存 , 存放了其他的属性 , 如下图
+
+
+...
+
+
+**PyString_FromStringAndSize**
+
+```C
+ 61:PyString_FromStringAndSize(const char *str, Py_ssize_t size)
+    {
+        register PyStringObject *op;
+        if (size < 0) {
+            PyErr_SetString(PyExc_SystemError,
+                "Negative size passed to PyString_FromStringAndSize");
+            return NULL;
+        }
+        if (size == 0 && (op = nullstring) != NULL) {
+    #ifdef COUNT_ALLOCS
+            null_strings++;
+    #endif
+            Py_INCREF(op);
+            return (PyObject *)op;
+        }
+        if (size == 1 && str != NULL &&
+            (op = characters[*str & UCHAR_MAX]) != NULL)
+        {
+    #ifdef COUNT_ALLOCS
+            one_strings++;
+    #endif
+            Py_INCREF(op);
+            return (PyObject *)op;
+        }
+
+        if (size > PY_SSIZE_T_MAX - PyStringObject_SIZE) {
+            PyErr_SetString(PyExc_OverflowError, "string is too large");
+            return NULL;
+        }
+
+        /* Inline PyObject_NewVar */
+        op = (PyStringObject *)PyObject_MALLOC(PyStringObject_SIZE + size);
+        if (op == NULL)
+            return PyErr_NoMemory();
+        PyObject_INIT_VAR(op, &PyString_Type, size);
+        op->ob_shash = -1;
+        op->ob_sstate = SSTATE_NOT_INTERNED;
+        if (str != NULL)
+            Py_MEMCPY(op->ob_sval, str, size);
+        op->ob_sval[size] = '\0';
+        /* share short strings */
+        if (size == 0) {
+            PyObject *t = (PyObject *)op;
+            PyString_InternInPlace(&t);
+            op = (PyStringObject *)t;
+            nullstring = op;
+            Py_INCREF(op);
+        } else if (size == 1 && str != NULL) {
+            PyObject *t = (PyObject *)op;
+            PyString_InternInPlace(&t);
+            op = (PyStringObject *)t;
+            characters[*str & UCHAR_MAX] = op;
+            Py_INCREF(op);
+        }
+        return (PyObject *) op;
+116:}
+
+
+```
+
