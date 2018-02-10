@@ -6,6 +6,7 @@
     - [PyStringObject  🍀](#pystringobject--🍀)
     - [PyString_Type  🍀](#pystring_type--🍀)
     - [创建PyStringObject对象  🍀](#创建pystringobject对象--🍀)
+    - [intern机制  🍀](#intern机制--🍀)
 
 <!-- /TOC -->
 ## 介绍  🍀
@@ -57,8 +58,6 @@ AttributeError: 'str' object has no attribute 'decode'
 **总体差异 :** 
 
 在Python 2.x 与 Python 3.x中 , 字符串的实现主要体现在 , Python 3.x中将Python 2.x中常规的`str`和`Unicode`字符串整合到了一个单独的类型`str`中 ,  以支持常规的和`Unicode`文本 ; 这样的处理使得Python在编码处理方面更加的方便
-
-
 
 接下来就来分析Python中的字符串对象了
 
@@ -208,10 +207,10 @@ Python 2.7 提供了两个接口 : `PyString_FromString` 和 `PyString_FromStrin
 
 - 首先会检查该字符串数组的长度 , 如果字符数组的长度大于`PY_SSIZE_T_MAX`  , 那么Python将不会创建对应的`PyStringObject`对象 , `PY_SSIZE_T_MAX`是一个与平台相关的值 , 在`WIN32`系统下 , 该值为`2147483647`  , 即2GB 
 - 接下来检查传入的字符串是不是一个空串 , 对于空串 , Python并不是每一次都会创建相应的`PyStringObject` ; Python运行时有一个`PyStringObject`对象指针`nullstring`专门负责处理空的字符数组 , 如果第一次在一个空字符串基础上创建`PyStringObject` , 由于`nullstring`指针被初始化为NULL , 所以iPython会为这个字符建立一个`PyStringObject`对象 , 将这个对象通过`intern`机制进行共享 , 然后将`nullstring`指向这个被共享的对象 , 以后再创建空字符串就直接返回`nullstring`的引用了
-- 如果不是创建空字符串对象 , 那么就申请内存 , 创建`PyStringObject`对象 ; 处理申请字符串本身所需要的内存外 , 还会申请额外的内存 , 存放了其他的属性 , 如下图
+- 如果不是创建空字符串对象 , 那么就申请内存 , 创建`PyStringObject`对象 ; 处理申请字符串本身所需要的内存外 , 还会申请额外的内存 , 存放了其他的属性 , 以字符数组`"Python"`为例 , 如下图
 
 
-...
+![PyStringObject内存布局](http://oux34p43l.bkt.clouddn.com/PyStringObject内存布局.png)
 
 
 **PyString_FromStringAndSize**
@@ -273,7 +272,13 @@ Python 2.7 提供了两个接口 : `PyString_FromString` 和 `PyString_FromStrin
         }
         return (PyObject *) op;
 116:}
-
-
 ```
+
+`PyString_FromStringAndSize` 的操作和`PyString_FromString`几乎一样 , 只有一点 , `PyString_FromString`传入的参数必须是以`NUL('\0')` 结尾的字符数组的指针 , 而`PyString_FromStringAndSize`则没有这个要求 , 因为通过传的`size`参数就可以确定需要拷贝的字符的个数
+
+## intern机制  🍀
+
+从上面两种创建方式的源码中发现 , 无论是`PyString_FromString`还是`PyString_FromStringAndSize` , 当字符数组的长度为0或1时 , 需要进行一个特别的操作 : `PyString_InternInPlace` , 这就是字符串的`intern`机制
+
+未完待续
 
