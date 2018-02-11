@@ -7,6 +7,8 @@
     - [PyString_Type  🍀](#pystring_type--🍀)
     - [创建PyStringObject对象  🍀](#创建pystringobject对象--🍀)
     - [intern机制  🍀](#intern机制--🍀)
+        - [PyString_InternInPlace  🍀](#pystring_interninplace--🍀)
+        - [特殊的引用计数  🍀](#特殊的引用计数--🍀)
 
 <!-- /TOC -->
 ## 介绍  🍀
@@ -278,7 +280,117 @@ Python 2.7 提供了两个接口 : `PyString_FromString` 和 `PyString_FromStrin
 
 ## intern机制  🍀
 
-从上面两种创建方式的源码中发现 , 无论是`PyString_FromString`还是`PyString_FromStringAndSize` , 当字符数组的长度为0或1时 , 需要进行一个特别的操作 : `PyString_InternInPlace` , 这就是字符串的`intern`机制
+从上面两种创建方式的源码中发现 , 无论是`PyString_FromString`还是`PyString_FromStringAndSize` , 当字符数组的长度为0或1时 , 需要进行一个特别的操作 : `PyString_InternInPlace` , 这就是字符串的`intern`机制 , 也就是上面代码中`share short strings` 注释下的代码 
 
-未完待续
+```C
+ /* share short strings */
+if (size == 0) {
+    PyObject *t = (PyObject *)op;
+    PyString_InternInPlace(&t);
+    op = (PyStringObject *)t;
+    nullstring = op;
+    Py_INCREF(op);
+} else if (size == 1 && str != NULL) {
+    PyObject *t = (PyObject *)op;
+    PyString_InternInPlace(&t);
+    op = (PyStringObject *)t;
+    characters[*str & UCHAR_MAX] = op;
+    Py_INCREF(op);
+}
+return (PyObject *) op;
+```
+
+字符串对象的`intern`机制的目的是 : 对于被共享之后的字符串 , 比如`"Ruby"` , 在整个Python的运行期间 , 系统中都只有唯一的一个与字符串`"Ruby"`对应的 `PyStringObject`对象
+
+当判断两个字符串对象是否相同时 , 如果它们都被共享了 , 那么只需要检查它们对应的`PyObject * `是否相同就可以了 , 这个机制节省了空间 , 如下 : 
+
+```python
+# Python 2.7
+>>> str1 = 'lyon'
+>>> str2 = 'lyon'
+>>> id(str1)
+79116928L
+>>> id(str2)
+79116928L
+
+# Python 3.5.2
+>>> str1 = 'lyon'
+>>> str2 = 'lyon'
+>>> id(str1)
+2767446375480
+>>> id(str2)
+2767446375480
+```
+
+这个例子的创建过程 : 
+
+1. 因为` 'lyon'` 对象不存在 , 所以调用接口创建`PyStringObject`对象 (创建时经过`intern`机制处理) 
+2. Python在查找系统中记录的已经被`intern`机制处理了的`PyStringObject` 对象 (上一步中同样会进行查找) , 发现`'lyon'`字符数组对应的`PyStringObject`已经存在 , 于是返回该对象的引用返回
+
+### PyString_InternInPlace  🍀
+
+我们已经知道了创建字符串对象时进行了特殊的操作`PyString_InternInPlace` , 其源码如下 : 
+
+```C
+4712:void
+     PyString_InternInPlace(PyObject **p)
+     {
+         register PyStringObject *s = (PyStringObject *)(*p);
+         PyObject *t;
+    
+    	 // 对PyStringObject进行类型和状态检查
+         if (s == NULL || !PyString_Check(s))
+             Py_FatalError("PyString_InternInPlace: strings only please!");
+         /* If it's a string subclass, we don't really know what putting
+            it in the interned dict might do. */
+         if (!PyString_CheckExact(s))
+             return;
+         if (PyString_CHECK_INTERNED(s))
+             return;
+    
+    	 // 创建记录经intern机制处理后的PyStringObject的dict
+         if (interned == NULL) {
+             interned = PyDict_New();
+             if (interned == NULL) {
+                 PyErr_Clear(); /* Don't leave an exception */
+                 return;
+             }
+         }
+    
+    	 // 检查PyStringObject对象s是否存在对应的intern后的PyStrinObject对象
+         t = PyDict_GetItem(interned, (PyObject *)s);
+         if (t) {
+             
+             // 调整引用计数
+             Py_INCREF(t);
+             Py_DECREF(*p);
+             *p = t;
+             return;
+         }
+
+    	 // 在interned中记录检查PyStringObject对象s
+         if (PyDict_SetItem(interned, (PyObject *)s, (PyObject *)s) < 0) {
+             PyErr_Clear();
+             return;
+         }
+         /* The two references in interned are not counted by refcnt.
+            The string deallocator will take care of this */
+    	 // 调整引用计数
+         Py_REFCNT(s) -= 2;
+    
+         // 调整s中的intern状态标志
+         PyString_CHECK_INTERNED(s) = SSTATE_INTERNED_MORTAL;
+4748:}
+```
+
+`PyString_InternInPlace` 首先会进行一系列检查 : 
+
+- 检查传入的对象是否是一个`PyStringObject`对象 , `intern`机制只能应用在`PyStringObject`对象上 , 甚至对于它的派生类对象系统都不会应用`intern`机制
+- 检查传入的`PyStringObject`对象是否已经被`intern`机制处理过
+
+在代码中 , 我们可以清楚的看到 , `intern`机制的核心在于`interned` , 它指向一个由`PyDict_new`创建的对象 , 也就是一个字典 , 也就是说`intern`机制的关键就是在系统中有一个存在映射关系的集合 , 它的名字叫做`interned` , 这个集合里面记录了被`intern`机制处理过的
+
+### 特殊的引用计数  🍀
+
+
 
