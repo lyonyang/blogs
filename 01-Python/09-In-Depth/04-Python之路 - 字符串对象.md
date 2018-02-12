@@ -456,3 +456,155 @@ return (PyObject *) op;
 
 ## 万恶的加号  🍀
 
+字符串拼接绝对是再正常不过的事情了 , 一拼接 , 那么效率问题就来了
+
+Python中提供了 `"+"` 来进行字符串拼接 , 可惜这实际上就是万恶之源 ; 我们除了使用`"+"` 外 , 还有一种方法就是使用list的`join`方法 , 这也是官方推荐我们使用的
+
+**`"+"` 与 `join`**
+
+通过`"+"`操作符对字符串进行拼接时 , 会调用`string_concat`函数 : 
+
+```C
+1014:static PyObject *
+     string_concat(register PyStringObject *a, register PyObject *bb)
+     {
+          register Py_ssize_t size;
+          register PyStringObject *op;
+	  ......
+      #define b ((PyStringObject *)bb)
+          /* Optimize cases with empty left or right operand */
+	 	  ......
+      	  // 计算字符串连接后的长度size
+          size = Py_SIZE(a) + Py_SIZE(b);
+          /* Check that string sizes are not negative, to prevent an
+             overflow in cases where we are passed incorrectly-created
+             strings with negative lengths (due to a bug in other code).
+          */
+          ......
+    	  // 创建新的PyStringObject对象,其维护的用于存储字符的内存长度为size
+          op = (PyStringObject *)PyObject_MALLOC(PyStringObject_SIZE + size);
+          if (op == NULL)
+              return PyErr_NoMemory();
+          PyObject_INIT_VAR(op, &PyString_Type, size);
+          op->ob_shash = -1;
+          op->ob_sstate = SSTATE_NOT_INTERNED;
+    
+       	  // 将a和b中的字符拷贝到新创建的PyStringObject中
+          Py_MEMCPY(op->ob_sval, a->ob_sval, Py_SIZE(a));
+          Py_MEMCPY(op->ob_sval + Py_SIZE(a), b->ob_sval, Py_SIZE(b));
+          op->ob_sval[size] = '\0';
+          return (PyObject *) op;
+      #undef b
+1071:}
+```
+
+**小结 : 对于任意两个PyStringObject对象的连接 , 就会进行一次内存申请的动作**
+
+通过`join`函数对字符串进行拼接时 , 会调用`string_join`函数 : 
+
+```C
+1573:static PyObject *
+     string_join(PyStringObject *self, PyObject *orig)
+     {
+         char *sep = PyString_AS_STRING(self);
+         const Py_ssize_t seplen = PyString_GET_SIZE(self);
+         PyObject *res = NULL;
+         char *p;
+         Py_ssize_t seqlen = 0;
+         size_t sz = 0;
+         Py_ssize_t i;
+         PyObject *seq, *item;
+		 // 拼接字符
+         seq = PySequence_Fast(orig, "");
+         if (seq == NULL) {
+             return NULL;
+         }
+		 // 拼接字符长度
+         seqlen = PySequence_Size(seq);
+         if (seqlen == 0) {
+             Py_DECREF(seq);
+             return PyString_FromString("");
+         }
+         if (seqlen == 1) {
+             item = PySequence_Fast_GET_ITEM(seq, 0);
+             if (PyString_CheckExact(item) || PyUnicode_CheckExact(item)) {
+                 Py_INCREF(item);
+                 Py_DECREF(seq);
+                 return item;
+             }
+         }
+
+         /* There are at least two things to join, or else we have a subclass
+          * of the builtin types in the sequence.
+          * Do a pre-pass to figure out the total amount of space we'll
+          * need (sz), see whether any argument is absurd, and defer to
+          * the Unicode join if appropriate.
+          */
+    	 // 遍历list中每一个字符串,获取所有字符串长度
+         for (i = 0; i < seqlen; i++) {
+             const size_t old_sz = sz;
+             item = PySequence_Fast_GET_ITEM(seq, i);
+             if (!PyString_Check(item)){
+     #ifdef Py_USING_UNICODE
+                 if (PyUnicode_Check(item)) {
+                     /* Defer to Unicode join.
+                      * CAUTION:  There's no gurantee that the
+                      * original sequence can be iterated over
+                      * again, so we must pass seq here.
+                      */
+                     PyObject *result;
+                     result = PyUnicode_Join((PyObject *)self, seq);
+                     Py_DECREF(seq);
+                     return result;
+                 }
+     #endif
+                 PyErr_Format(PyExc_TypeError,
+                              "sequence item %zd: expected string,"
+                              " %.80s found",
+                              i, Py_TYPE(item)->tp_name);
+                 Py_DECREF(seq);
+                 return NULL;
+             }
+             sz += PyString_GET_SIZE(item);
+             if (i != 0)
+                 sz += seplen;
+             if (sz < old_sz || sz > PY_SSIZE_T_MAX) {
+                 PyErr_SetString(PyExc_OverflowError,
+                     "join() result is too long for a Python string");
+                 Py_DECREF(seq);
+                 return NULL;
+             }
+         }
+
+         /* Allocate result space. */
+    	 // 创建长度为sz的PyStringObject对象
+         res = PyString_FromStringAndSize((char*)NULL, sz);
+         if (res == NULL) {
+             Py_DECREF(seq);
+             return NULL;
+         }
+
+         /* Catenate everything. */
+    	 // 将list中的字符串拷贝到新创建的PyStringObject对象中
+         p = PyString_AS_STRING(res);
+         for (i = 0; i < seqlen; ++i) {
+             size_t n;
+             item = PySequence_Fast_GET_ITEM(seq, i);
+             n = PyString_GET_SIZE(item);
+             Py_MEMCPY(p, PyString_AS_STRING(item), n);
+             p += n;
+             if (i < seqlen - 1) {
+                 Py_MEMCPY(p, sep, seplen);
+                 p += seplen;
+             }
+         }
+
+         Py_DECREF(seq);
+         return res;
+1668:}
+```
+
+**小结 : 首先统计出`list`中的对象个数 , 并统计这些对象的字符串总长度 , 申请一次内存空间 , 将所有的`PyStringObject`对象维护的字符串都拷贝到新开辟的内存空间中**
+
+通过小结可以很直接的得出答案 , 如果要拼接n个字符串对象 , 那么使用 "+" 需要申请空间`n-1`次 , 而使用`join`则仅需一次
+
