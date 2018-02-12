@@ -9,6 +9,8 @@
     - [intern机制  🍀](#intern机制--🍀)
         - [PyString_InternInPlace  🍀](#pystring_interninplace--🍀)
         - [特殊的引用计数  🍀](#特殊的引用计数--🍀)
+    - [字符缓冲池  🍀](#字符缓冲池--🍀)
+    - [万恶的加号  🍀](#万恶的加号--🍀)
 
 <!-- /TOC -->
 ## 介绍  🍀
@@ -392,5 +394,65 @@ return (PyObject *) op;
 
 ### 特殊的引用计数  🍀
 
+`intern`机制进行处理时 , 会将`PyStringObject`对象的`PyObject`指针分别作为`key`和`value`添加到`interned`中, 也就是说在这里该对象的引用计数应该加了2 , 如果按照正常的引用计数机制 , 那么明显这个对象是永远都不会被删除的 , 比如`a = 1;del a` , 我们只能够让引用计数减1  , 却无法让其减2 , 所以这里肯定用了特殊的引用计数机制
 
+特殊就在于 , `interned`中的指针不能作为对象的有效引用 , 这也是为什么在`PyString_InternInPlace`的代码清单中第`4746`行为什么会将引用计数减2的原因
+
+ 一个对象的引用计数在某个时刻减为0之后 , 系统将会销毁该对象 , 那么字符串中到底是怎么解决的呢 ? 看看`string_dealloc`代码清单 : 
+
+`Python-2.7\Include\stringobject.c :`
+
+```C
+582:static void
+    string_dealloc(PyObject *op)
+    {
+        switch (PyString_CHECK_INTERNED(op)) {
+            case SSTATE_NOT_INTERNED:
+                break;
+
+            case SSTATE_INTERNED_MORTAL:
+                /* revive dead object temporarily for DelItem */
+                Py_REFCNT(op) = 3;
+                if (PyDict_DelItem(interned, op) != 0)
+                    Py_FatalError(
+                        "deletion of interned string failed");
+                break;
+
+            case SSTATE_INTERNED_IMMORTAL:
+                Py_FatalError("Immortal interned string died.");
+
+            default:
+                Py_FatalError("Inconsistent interned string state.");
+        }
+        Py_TYPE(op)->tp_free(op);
+602:}
+```
+
+在这份代码清单中 , `SSTATE_INTERNED_MORTAL` 和 `SSTATE_INTERNED_IMMORTAL` 表示着`PyStringObject`的两种状态 , 也就是说被`intern`机制处理后的`PyStringObject`对象分为两类 , 这两类的区别在于 , `SSTATE_INTERNED_IMMORTAL` 状态的`PyStringObject`对象是永远不会被销毁的
+
+`PyString_IntenInPlace` 只能创建`SSTATE_INTERNED_MORTAL` 状态的`PyStringObject`对象 , 如果想创建`SSTATE_INTERNED_IMMORTAL`状态的对象 , 必须通过另外的接口 , 在调用了`PyString_InternInPlace`后 , 强制改变`PyStringObject`的`intern`状态
+
+注意 : `intern`机制节省了内存空间 , 但是在我们创建`PyStringObject`时 , 无论在`interned`中是否存在 , 都是会创建一个`PyStringObject`对象的 , 只不过这是一个临时的对象 , 如果`interned`中有 , 那么就`PyString_InternInPlace` 会对这个对象的引用计数减1 , 于是它就会被销毁了
+
+## 字符缓冲池  🍀
+
+与Python整数对象类似 , Python的设计者为`PyStringObject`中的一个字节的字符对应的`PyStringObject`对象也设计了一个对象池`characters` 
+
+`Python-2.7\Include\stringobject.c :`
+
+```C
+13:static PyStringObject *characters[UCHAR_MAX + 1]
+```
+
+其中`UCHAR_MAX`是在系统头文件中定义的常量 , 这一个跟平台相关的常量 , 在Win32平台下 : 
+
+```C
+#define UCHAR_MAX     0xff      /* maximum unsigned char value */
+```
+
+在Python的整数对象体系中 , 小整数的缓冲池是在Python初始化时被创建的 , 而字符串对象体系中的字符串缓冲池则是以静态变量的形式存在着的 , 在Python初始化完成之后 , 缓冲池中的所有`PyStringObject`指针都为空
+
+当我们创建一个字符串对象时 , 无论是通过调用`PyString_FromString` 还是`PyString_FromStringAndSize`  , 如果字符串实际上是一个字符 , 则会对所创建字符串 (字符)  对象进行`intern`操作 , 再将`intern`的结果缓存到字符缓冲池`characters`中
+
+## 万恶的加号  🍀
 
