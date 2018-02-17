@@ -211,7 +211,7 @@ All integers are implemented as “long” integer objects of arbitrary size.
 
 而`PyIntBlock`的单向列表通过`block_list`维护 , 每一个block中都维护了一个`PyIntObject`数组 , 这就是真正用于存储被缓存的`PyIntObject`对象的内存 , 而对于这个内存中的空闲内存则是由单向链表`free_list`进行管理 ; 最开始时这两个指针都指向一个空值 (NULL)
 
-在Python 3.5.2中 , 我没有找到如同2.7一样的源码 , 但是我们可以通过两个版本的实验发现 , 通用对象池机制是一样的 :
+在Python 3.5.4中 , 我没有找到如同2.7一样的源码 , 但是我们可以通过两个版本的实验发现 , 通用对象池机制是一样的 :
 
 ```python
 # Python 2.x
@@ -277,7 +277,7 @@ All integers are implemented as “long” integer objects of arbitrary size.
 113:}
 ```
 
-`Python-3.5.2\Objects\longobject.c` 中`25行至296行` 可以查看到关于Python 3中的一些处理
+`Python-3.5.4\Objects\longobject.c` 中`25行至296行` 可以查看到关于Python 3中的一些处理
 
 ```C
 37:get_small_int(sdigit ival)

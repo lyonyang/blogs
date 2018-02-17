@@ -34,7 +34,7 @@ u'lyon'
 >>> type(uname)
 <type 'unicode'>
 
-# Python 3.5.2
+# Python 3.5.4
 >>> name = 'lyon'
 >>> type(name)
 <class 'str'>
@@ -315,7 +315,7 @@ return (PyObject *) op;
 >>> id(str2)
 79116928L
 
-# Python 3.5.2
+# Python 3.5.4
 >>> str1 = 'lyon'
 >>> str2 = 'lyon'
 >>> id(str1)

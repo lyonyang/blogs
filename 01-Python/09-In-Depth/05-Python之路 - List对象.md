@@ -151,7 +151,7 @@ PyListObject采用的内存管理策略和C++中`vector`采取的内存管理策
 98:static int numfree = 0;
 ```
 
-`Python-3.5.2\Objects\listobject.c` 
+`Python-3.5.4\Objects\listobject.c` 
 
 ```C
 95:#ifndef PyList_MAXFREELIST
@@ -195,7 +195,7 @@ PyListObject采用的内存管理策略和C++中`vector`采取的内存管理策
 220:}
 ```
 
-`Python-3.5.2\Objects\listobject.c` 
+`Python-3.5.4\Objects\listobject.c` 
 
 ```C
 215:int
@@ -280,7 +280,7 @@ Python内部通过调用`PyList_Insert`来完成元素的插入动作 , 而`PyLi
 263:}
 ```
 
-`Python-3.5.2\Objects\listobject.c` 
+`Python-3.5.4\Objects\listobject.c` 
 
 ```C
 239:static int
@@ -390,7 +390,7 @@ Python内部通过调用`PyList_Insert`来完成元素的插入动作 , 而`PyLi
 73:}
 ```
 
-同样的 , 在`Python-3.5.2\Objects\listobject.c` 中的第25至74行为该函数的定义
+同样的 , 在`Python-3.5.4\Objects\listobject.c` 中的第25至74行为该函数的定义
 
 在调整`PyListObject`对象所维护的列表的内存时 , Python分两种情况处理 : 
 
@@ -427,7 +427,7 @@ Python内部通过调用`PyList_Insert`来完成元素的插入动作 , 而`PyLi
 2354:}
 ```
 
-`Python-3.5.2\Objects\listobject.c` 第2197至2215见同上代码清单
+`Python-3.5.4\Objects\listobject.c` 第2197至2215见同上代码清单
 
 首先Python会对整个列表进行遍历 , 在遍历`PyListObject`中所有元素的过程中 , 将待删除元素与`PyListObject`中的每个元素一一进行比较 , 比较操作是通过`PyObject_RichCompareBool`完成的 , 如果返回值大于0 , 则表示要删除的元素与列表中的元素匹配成功 , Python将立即调用`list_ass_slice`删除该元素
 
@@ -447,7 +447,7 @@ Python内部通过调用`PyList_Insert`来完成元素的插入动作 , 而`PyLi
 709:}
 ```
 
-`Python-3.5.2\Objects\listobject.c` 第572至579见同上代码清单
+`Python-3.5.4\Objects\listobject.c` 第572至579见同上代码清单
 
 如上 , 对于`list_ass_slice`其实是有两种语义的 , 即`replace`和`remove` ; 于是 , 在Python列表中删除元素我们还可以这样做 : 
 
