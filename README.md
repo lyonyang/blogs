@@ -15,6 +15,7 @@ gitbook install
 gitbook serve .
 ```
 
+<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png"/></a>
 
 问题交流可以发送邮件告知我 , 我的邮箱 : 547903993@qq.com
 
