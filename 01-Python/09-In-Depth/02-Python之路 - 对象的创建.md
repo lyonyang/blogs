@@ -136,7 +136,7 @@ object对象的创建 : 如上图 , 创建object对象首先调用类型API (PyB
 
 我们发现就算是`type`类竟然也是由`type` (PyType_Type)产生的 , 就像在type类中成了一个 "圈一样" , 自己引用自己 , 事实上确实是这样 , 同样以上一小节的例子进行说明 , 如下图 : 
 
-![对象类型关系图](http://oux34p43l.bkt.clouddn.com/对象类型关系图?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![object_type_relation](http://oux34p43l.bkt.clouddn.com/object_type_relation.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
 
 也就是说PyType_Type中的`ob_type`指针最终指向了自己本身
 

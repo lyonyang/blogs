@@ -214,7 +214,7 @@ Python 2.7 提供了两个接口 : `PyString_FromString` 和 `PyString_FromStrin
 - 如果不是创建空字符串对象 , 那么就申请内存 , 创建`PyStringObject`对象 ; 处理申请字符串本身所需要的内存外 , 还会申请额外的内存 , 存放了其他的属性 , 以字符数组`"Python"`为例 , 如下图
 
 
-![PyStringObject内存布局](http://oux34p43l.bkt.clouddn.com/PyStringObject内存布局.png)
+![PyStringObject内存布局](http://oux34p43l.bkt.clouddn.com/PyStringObject内存布局?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
 
 
 **PyString_FromStringAndSize**

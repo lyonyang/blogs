@@ -189,7 +189,7 @@ class MiddlewareMixin(object):
 
 如下图 : 
 
-![MIDDLEWARE](http://oux34p43l.bkt.clouddn.com/MIDDLEWARE.png)
+![MIDDLEWARE](http://oux34p43l.bkt.clouddn.com/MIDDLEWARE?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
 
 我们可以将这些中间件比作为一个洋葱 , 每个中间件类都是一个"洋葱层" 
 
