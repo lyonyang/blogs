@@ -35,7 +35,8 @@ gitbook serve .
  
 邮箱地址 : `lyon.yang@qq.com`
 
-<span><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ" style="text-decoration:none;"><img src="http://oux34p43l.bkt.clouddn.com/email.png?imageMogr2/auto-orient/thumbnail/x50/blur/1x0/quality/75|imageslim /></a>
+<span>
+<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ" style="text-decoration:none;" ><img src="http://oux34p43l.bkt.clouddn.com/email.png?imageMogr2/auto-orient/thumbnail/x50/blur/1x0/quality/75|imageslim"/></a>
 &nbsp;&nbsp;
 <a href="https://github.com/lyonyang" ><img src="http://oux34p43l.bkt.clouddn.com/GitHub.png?imageMogr2/auto-orient/thumbnail/x50/blur/1x0/quality/75|imageslim"/></a></span>
 
