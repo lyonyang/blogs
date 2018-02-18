@@ -35,9 +35,9 @@ gitbook serve .
  
 邮箱地址 : `lyon.yang@qq.com`
 
-<span><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ" style="text-decoration:none;"><img style="width: 50px; height: 50px;src="http://oux34p43l.bkt.clouddn.com/email.png"/></a>
+<span><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ" style="text-decoration:none;"><img src="http://oux34p43l.bkt.clouddn.com/email.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10"/></a>
 &nbsp;&nbsp;
-<a href="https://github.com/lyonyang" style="width: 50px; height: 50px;"><img src="http://oux34p43l.bkt.clouddn.com/GitHub.png"/></a></span>
+<a href="https://github.com/lyonyang" style="width: 50px; height: 50px;"><img src="http://oux34p43l.bkt.clouddn.com/GitHub.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10"/></a></span>
 
 
 持续更新中 ... 
