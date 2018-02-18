@@ -15,20 +15,6 @@ gitbook install
 gitbook serve .
 ```
 
-<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"/></a>
-
-
-`本文地址 : https://lyonyang.github.io/blogs/`
-
-
-**欢迎收藏交流 , 如需转载 , 请注明出处**
-
-
-### Github
-
-`Github`地址 : [https://github.com/lyonyang](https://github.com/lyonyang)
-
-
 ## Python之路系列
 
 目录: [SUMMARY](SUMMARY.md)
@@ -36,6 +22,18 @@ gitbook serve .
 `GitHub Pages`方式展示 : [https://lyonyang.github.io/blogs/](https://lyonyang.github.io/blogs/)
 
 `GitBook`方式展示 : [https://lyonyang.gitbooks.io/blog/](https://lyonyang.gitbooks.io/blog/)
+
+
+**欢迎收藏交流 , 如需转载 , 请注明出处[https://lyonyang.github.io/blogs]**
+ 
+## 关于我
+
+### Github
+
+`Github`地址 : [https://github.com/lyonyang](https://github.com/lyonyang)
+ 
+邮箱地址 : `Lyon.Yang@qq.com`   <span><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png"/></a></span>
+ 
 
 持续更新中 ... 
 
