@@ -33,7 +33,7 @@ gitbook serve .
 `Github`地址 : [https://github.com/lyonyang](https://github.com/lyonyang)
  
  
-邮箱地址 : `Lyon.Yang@qq.com`      <span><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png"/></a></span>
+邮箱地址 : `Lyon.Yang@qq.com`&nbsp;&nbsp;&nbsp;<span><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"/></a></span>
  
 
 持续更新中 ... 
