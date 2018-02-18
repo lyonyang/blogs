@@ -15,7 +15,7 @@ gitbook install
 gitbook serve .
 ```
 
-## Python之路系列
+### Python之路系列
 
 目录: [SUMMARY](SUMMARY.md)
 
@@ -26,7 +26,7 @@ gitbook serve .
 
 **欢迎收藏交流 , 如需转载 , 请注明出处[https://lyonyang.github.io/blogs]**
  
-## 联系我 
+### 联系我 
 
 点击图标联系我吧 :
 
