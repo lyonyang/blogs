@@ -71,7 +71,7 @@ script:                  # 指定要运行的脚本
 ```
 # Markdown语法
 
-[![Build Status](https://secure.travis-ci.org/用户名/仓库名.png)](http://travis-ci.org/用户名/仓库名)
+[![Build Status](https://secure.travis-ci.org/用户名/仓库名.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)](http://travis-ci.org/用户名/仓库名)
 ```
 
 这样 , 在我们查看README.md时 , 就能够通过图片观察测试是否通过了 ; 绿色的图片就表示仓库内代码顺利通过测试 , 灰色的图片表示仓库没有通过测试 , 证明仓库可能存在某种问题 , 这样既可以显示仓库的健全性 , 又可以防止自己遗漏`Travis CI的结果`

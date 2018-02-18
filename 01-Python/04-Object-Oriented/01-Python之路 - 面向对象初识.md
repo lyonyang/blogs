@@ -82,7 +82,7 @@ p.eat()
 
 在Python中 , 我们将***静态属性*** 就称为` 属性 `  , 将***动态属性*** 就称为` 方法  `  , 并且以变量来表示属性 , 以函数表示方法 , 见下图:
 
-![object_attr](http://oux34p43l.bkt.clouddn.com/object_attr.png)
+![object_attr](http://oux34p43l.bkt.clouddn.com/object_attr.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
 
 *PS:类中的函数已经不叫函数了 , 而叫做方法* 
 
@@ -282,7 +282,7 @@ print(hex(id(b)))
 
 如下图中 , 类与实例 , 实例与实例 都开辟了自己的内存空间
 
-![memory_space](http://oux34p43l.bkt.clouddn.com/memory_space.png)
+![memory_space](http://oux34p43l.bkt.clouddn.com/memory_space?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
 
 ## 对象交互与类的组合  🍀
 

@@ -216,11 +216,11 @@ index e69de29..88b52b3 100644
 
 从master分支创建了feature-A分支和fix-B分支
 
-![branch](http://oux34p43l.bkt.clouddn.com/branch.png)
+![branch](http://oux34p43l.bkt.clouddn.com/branch.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
 
 在不同的分支中 , 可以同时进行完全不同的作业 , 等改分支的作业完成之后 , 再与master分支合并 , 如下 : 
 
-![merge_branch](http://oux34p43l.bkt.clouddn.com/merge_branch.png)
+![merge_branch](http://oux34p43l.bkt.clouddn.com/merge_branch.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
 
 通过灵活的使用分支 , 可以让多个人同时高效地进行并行开发 , 并且使开发过程更加的安全
 

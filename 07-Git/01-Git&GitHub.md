@@ -166,7 +166,7 @@ Enter same passphrase again:                # 输入密码
 
 进入头像下拉框中的`settings` , 添加公有密钥 , 即复制`id_rsa.pub`中的内容
 
-![new_ssh_key](http://oux34p43l.bkt.clouddn.com/new_ssh_key.png)
+![new_ssh_key](http://oux34p43l.bkt.clouddn.com/new_ssh_key.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
 
 添加完成之后 , 创建账号时所用的邮箱会接到一封邮件 , 提示 "公有密钥添加完成"
 
@@ -187,7 +187,7 @@ provide shell access.
 
 点击头像旁边的 "+" 下拉框 , 选择`New repository`
 
-![create_new_repository](http://oux34p43l.bkt.clouddn.com/create_new_repository.png)
+![create_new_repository](http://oux34p43l.bkt.clouddn.com/create_new_repository.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
 
 - **Repository name**
 
