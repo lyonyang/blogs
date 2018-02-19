@@ -213,8 +213,7 @@ Python 2.7 提供了两个接口 : `PyString_FromString` 和 `PyString_FromStrin
 - 接下来检查传入的字符串是不是一个空串 , 对于空串 , Python并不是每一次都会创建相应的`PyStringObject` ; Python运行时有一个`PyStringObject`对象指针`nullstring`专门负责处理空的字符数组 , 如果第一次在一个空字符串基础上创建`PyStringObject` , 由于`nullstring`指针被初始化为NULL , 所以iPython会为这个字符建立一个`PyStringObject`对象 , 将这个对象通过`intern`机制进行共享 , 然后将`nullstring`指向这个被共享的对象 , 以后再创建空字符串就直接返回`nullstring`的引用了
 - 如果不是创建空字符串对象 , 那么就申请内存 , 创建`PyStringObject`对象 ; 处理申请字符串本身所需要的内存外 , 还会申请额外的内存 , 存放了其他的属性 , 以字符数组`"Python"`为例 , 如下图
 
-
-![PyStringObject内存布局](http://oux34p43l.bkt.clouddn.com/PyStringObject内存布局?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![PyStringObject内存布局](http://oux34p43l.bkt.clouddn.com/PyStringObject内存布局.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
 
 
 **PyString_FromStringAndSize**
