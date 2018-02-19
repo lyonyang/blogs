@@ -35,7 +35,7 @@ class MyObject(object):
 
 在分析自定义类型的对象创建之前 , 我们需要分析一下object对象是如何创建的 , 虽然我们在实际中是不会也不需要去创建object对象的 , 但是这有利于我们下一步的分析 : 
 
-![创建object对象](http://oux34p43l.bkt.clouddn.com/创建object对象?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![创建object对象](http://oux34p43l.bkt.clouddn.com/创建object对象.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
 
 object对象的创建 : 如上图 , 创建object对象首先调用类型API (PyBaseObject_Type) , 并且会首先调用API中的`tp_new` , 因为这里是创建object , 所以`tp_new`中不会为NULL
 
