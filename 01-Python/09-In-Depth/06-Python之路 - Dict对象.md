@@ -7,6 +7,10 @@
     - [PyDictObject  🍀](#pydictobject--🍀)
     - [创建与维护  🍀](#创建与维护--🍀)
     - [元素搜索  🍀](#元素搜索--🍀)
+        - [lookdict  🍀](#lookdict--🍀)
+        - [lookdict_string  🍀](#lookdict_string--🍀)
+    - [插入与删除  🍀](#插入与删除--🍀)
+    - [对象缓冲池  🍀](#对象缓冲池--🍀)
 
 <!-- /TOC -->
 ## 介绍  🍀
@@ -196,7 +200,9 @@ PyDictObject缓冲池见下文
 
 Python为PyDictObject对象提供了两种搜索策略 , lookdict和lookdict_string , 但是实际上 , 这两种策略使用的相同的算法 , lookdict_string只是对lookdict的一种针对PyStringObject对象的特殊形式 , 这是因为以PyStringObject对象作为PyDictObject对象中entry的键在Python中应用非常广泛 
 
-`Python-2.7\Include\dictobject.h`
+### lookdict  🍀
+
+`Python-2.7\Include\dictobject.c`
 
 ```C
 319:static PyDictEntry *
@@ -243,7 +249,8 @@ Python为PyDictObject对象提供了两种搜索策略 , lookdict和lookdict_str
             }
             freeslot = NULL;
         }
-
+//------------------ 以上为第一检查--------------------
+    
         /* In the loop, me_key == dummy is by far (factor of 100s) the
            least likely outcome, so test for that last. */
     
@@ -287,6 +294,8 @@ Python为PyDictObject对象提供了两种搜索策略 , lookdict和lookdict_str
 396:}
 ```
 
+**第一次检查**
+
 PyDictObject中维护的entry的数量是有限的 , 而传入lookdict中的key的hash值却不一定在限定范围内 , 所以这就要求lookdict将hash值映射到某个entry上去 , lookdict采取的策略是 , 直接将hash值与entry的数量做一个`&`操作(见331行) , 该操作的结果就是entry的数量 , 也就是`ma_mask`
 
 之所以命名为mask而不是size , 是因为`ma_mask`会被用来进行大量的`&`操作 , 所以entry数量相关的变量被命名为`ma_mask`
@@ -295,7 +304,7 @@ PyDictObject中维护的entry的数量是有限的 , 而传入lookdict中的key�
 
 在搜索过程中 , 如果探测链中的某个位置上 , entry处于Dummy态 , 那么如果在这个序列中搜索不成功 , 就会返回这个处于Dummy态的entry , 这个`freeslot`正是用来指向探测序列中第一个处于Dummy态的entry (`me_value`为NULL); 如果探测序列并没有Dummy态entry , 搜索失败时 , `freeslot`则指向一个处于Unused态的entry , 同样是一个能指示失败且立即可用的entry
 
-在元素搜索时 , 会先进行亮哥key的值检查 , 首先检查两个对象的hash值是否相同 , 如果不相同 , 就直接中断 ; 而如果相同 , 那么Python将通过PyObject_RichCompareBool进行比较 , 其原型如下 : 
+在元素搜索时 , 会先进行两个key的值检查 , 首先检查两个对象的hash值是否相同 , 如果不相同 , 就直接中断 ; 而如果相同 , 那么Python将通过PyObject_RichCompareBool进行比较 , 其原型如下 : 
 
 ```C
 int PyObject_RichCompareBool(PyObject *v, PyObject *w, int op)
@@ -305,6 +314,273 @@ int PyObject_RichCompareBool(PyObject *v, PyObject *w, int op)
 
 在lookdict代码清单中 , 指定的Py_EQ , 表示进行相等比较操作
 
+对于lookdict代码清单的前半部分 , 也就是第一次检查小结 : 
+
+1. 根据hash值获取entry索引 , 这是冲突探测链上的第一个entry索引
+2. 两种情况下 , 搜索结束 : 
+   1. entry处于Unused态 , 表明冲突探测链搜索完成 , 搜索失败
+   2. `ep->me_key == key` , 表明entry的key与待搜索的key匹配 , 搜索成功
+3. 若当前entry处于Dummy态 , 设置`freeslot`
+4. 检查Active态entry中的key与待查找的key是否值相同 
+
+
+**后续操作**
+
+在第一个entry检查完毕后 , 后续的动作本质都是一样的
+
+对于lookdict代码清单的前半部分小结 : 
+
+1. 根据Python所采用的探测函数 , 获得探测链中的下一个待检查的entry
+2. 检查到一个Unused态entry , 表明搜索失败 , 有如下两种结果 : 
+   1. 如果`freeslot`不为空 , 则返回`freeslot` 所指entry
+   2. 如果`freeslot`为空 , 则返回该Unused态entry
+3. 检查entry中的key与待查找的key是否引用相同
+4. 检查entry中的key与待查找的key是否值相同
+5. 在遍历过程中 , 如果发现Dummy态entry , 且`freeslot`未设置 , 则设置`freeslot`
+
+### lookdict_string  🍀
+
+`Python-2.7\Include\dictobject.c`
+
+```C
+407:static PyDictEntry *
+    lookdict_string(PyDictObject *mp, PyObject *key, register long hash)
+    {
+        register size_t i;
+        register size_t perturb;
+        register PyDictEntry *freeslot;
+        register size_t mask = (size_t)mp->ma_mask;
+        PyDictEntry *ep0 = mp->ma_table;
+        register PyDictEntry *ep;
+
+        /* Make sure this function doesn't have to handle non-string keys,
+           including subclasses of str; e.g., one reason to subclass
+           strings is to override __eq__, and for speed we don't cater to
+           that here. */
+    	// 选择搜索策略
+        if (!PyString_CheckExact(key)) {
+    #ifdef SHOW_CONVERSION_COUNTS
+            ++converted;
+    #endif
+            mp->ma_lookup = lookdict;
+            return lookdict(mp, key, hash);
+        }
+    	// 检查冲突链上第一个entry
+        i = hash & mask;
+        ep = &ep0[i];
+    	// entry处于Unused态,entry中的key与待搜索的key匹配
+        if (ep->me_key == NULL || ep->me_key == key)
+            return ep;
+    	// 第一个entry处于Dummy态,设置freeslot
+        if (ep->me_key == dummy)
+            freeslot = ep;
+        else {
+            // 检查Active态entry
+            if (ep->me_hash == hash && _PyString_Eq(ep->me_key, key))
+                return ep;
+            freeslot = NULL;
+        }
+
+        /* In the loop, me_key == dummy is by far (factor of 100s) the
+           least likely outcome, so test for that last. */
+    	// 遍历冲突链,检查每一个entry
+        for (perturb = hash; ; perturb >>= PERTURB_SHIFT) {
+            i = (i << 2) + i + perturb + 1;
+            ep = &ep0[i & mask];
+            if (ep->me_key == NULL)
+                return freeslot == NULL ? ep : freeslot;
+            if (ep->me_key == key
+                || (ep->me_hash == hash
+                && ep->me_key != dummy
+                && _PyString_Eq(ep->me_key, key)))
+                return ep;
+            if (ep->me_key == dummy && freeslot == NULL)
+                freeslot = ep;
+        }
+        assert(0);          /* NOT REACHED */
+        return 0;
+457:}
+```
+
+lookdict_string是一种有条件限制的搜索策略 , 即待搜索的key是一个PyStringObject对象 , 只有当假设成立时 , lookdict_string才会被使用 , 其中`_PyString_Eq`将保证能正确处理非`PyStringObject *`参数
+
+其实lookdict_string仅仅是一个lookdict的优化版本 , 因为在Python中大量的使用了PyDictObject对象 , 以用来维护一个命名空间(名字空间)中变量名与变量值之间的对应关系 , 又或者是用来在为函数传递参数名与参数值的对应关系 , 而这些对象几乎都是用PyStringObject对象作为entry中的key , 所以lookdict_string的出现是很有必要的 , 它对Python整体的运行效率都有着重要的影响
+
+## 插入与删除  🍀
+
+PyDictObject对象中元素的插入动作是建立在搜索的基础之上的
+
+`Python-2.7\Include\dictobject.c`
+
+```C
+512:static int
+insertdict(register PyDictObject *mp, PyObject *key, long hash, PyObject *value)
+{
+    PyObject *old_value;
+    register PyDictEntry *ep;
+    typedef PyDictEntry *(*lookupfunc)(PyDictObject *, PyObject *, long);
+
+    assert(mp->ma_lookup != NULL);
+    ep = mp->ma_lookup(mp, key, hash);
+    if (ep == NULL) {
+        Py_DECREF(key);
+        Py_DECREF(value);
+        return -1;
+    }
+    MAINTAIN_TRACKING(mp, key, value);
+    // 搜索成功
+    if (ep->me_value != NULL) {
+        old_value = ep->me_value;
+        ep->me_value = value;
+        Py_DECREF(old_value); /* which **CAN** re-enter */
+        Py_DECREF(key);
+    }
+    // 搜索失败
+    else {
+        if (ep->me_key == NULL)
+            mp->ma_fill++;
+        else {
+            assert(ep->me_key == dummy);
+            Py_DECREF(dummy);
+        }
+        ep->me_key = key;
+        ep->me_hash = (Py_ssize_t)hash;
+        ep->me_value = value;
+        mp->ma_used++;
+    }
+    return 0;
+546:}
+```
+
+insertdict中 , 根据搜索的结果采取不同的动作 : 
+
+- 搜索成功 , 返回处于Active的entry , 并直接替换`me_value`
+- 搜索失败 , 返回Unused或Dummy态的entry , 完整设置`me_key` , `me_hash` 和 `me_value`
+
+在Python中 , 对PyDictObject对象插入或设置元素两种情况 , 如下代码 : 
+
+```python
+d = {}
+# entry不存在
+d[1] = 1
+# entry已存在
+d[1] = 2
+```
+
+当这段代码执行时 , Python并不是直接调用insertdict , 因为insertdict需要一个hash值作为调用参数 , 所以在调用insertdict会先调用PyDict_SetItem
+
+`Python-2.7\Include\dictobject.c`
+
+```C
+747:int
+    PyDict_SetItem(register PyObject *op, PyObject *key, PyObject *value)
+    {
+        register PyDictObject *mp;
+        register long hash;
+        register Py_ssize_t n_used;
+        if (!PyDict_Check(op)) {
+            PyErr_BadInternalCall();
+            return -1;
+        }
+        assert(key);
+        assert(value);
+        mp = (PyDictObject *)op;
+    	// 计算hash值
+        if (PyString_CheckExact(key)) {
+            hash = ((PyStringObject *)key)->ob_shash;
+            if (hash == -1)
+                hash = PyObject_Hash(key);
+        }
+        else {
+            hash = PyObject_Hash(key);
+            if (hash == -1)
+                return -1;
+        }
+        assert(mp->ma_fill <= mp->ma_mask);  /* at least one empty slot */
+    	// 插入(key, value)元素对
+        n_used = mp->ma_used;
+        Py_INCREF(value);
+        Py_INCREF(key);
+    	// 必要时调整dict的内存空间
+        if (insertdict(mp, key, hash, value) != 0)
+            return -1;
+        /* If we added a key, we can safely resize.  Otherwise just return!
+         * If fill >= 2/3 size, adjust size.  Normally, this doubles or
+         * quaduples the size, but it's also possible for the dict to shrink
+         * (if ma_fill is much larger than ma_used, meaning a lot of dict
+         * keys have been * deleted).
+         *
+         * Quadrupling the size improves average dictionary sparseness
+         * (reducing collisions) at the cost of some memory and iteration
+         * speed (which loops over every possible entry).  It also halves
+         * the number of expensive resize operations in a growing dictionary.
+         *
+         * Very large dictionaries (over 50K items) use doubling instead.
+         * This may help applications with severe memory constraints.
+         */
+    	// 可转换为 (mp->mafill)/(mp->ma_mask+1) >= 2/3
+        if (!(mp->ma_used > n_used && mp->ma_fill*3 >= (mp->ma_mask+1)*2))
+            return 0;
+        return dictresize(mp, (mp->ma_used > 50000 ? 2 : 4) * mp->ma_used);
+794:}
+```
+
+我们可以看到 , 在PyDict_SetItem中 , 会首先获取key的hash值 , 随后会调用insertdict来插入元素对 , 再接下来会检查是否需要改变PyDictObject内部`ma_table`所维护的内存区域的大小
+
+至于如何调整 , 可以查看`dictobject.c`中的dictresize函数 , 接下来看如何删除一个元素
+
+`Python-2.7\Include\dictobject.c`
+
+```C
+796:int
+    PyDict_DelItem(PyObject *op, PyObject *key)
+    {
+        register PyDictObject *mp;
+        register long hash;
+        register PyDictEntry *ep;
+        PyObject *old_value, *old_key;
+
+        if (!PyDict_Check(op)) {
+            PyErr_BadInternalCall();
+            return -1;
+        }
+        assert(key);
+    	// 同样先获取hash值
+        if (!PyString_CheckExact(key) ||
+            (hash = ((PyStringObject *) key)->ob_shash) == -1) {
+            hash = PyObject_Hash(key);
+            if (hash == -1)
+                return -1;
+        }
+    	// 搜索entry
+        mp = (PyDictObject *)op;
+        ep = (mp->ma_lookup)(mp, key, hash);
+        if (ep == NULL)
+            return -1;
+        if (ep->me_value == NULL) {
+            set_key_error(key);
+            return -1;
+        }
+    	// 删除entry所维护的元素,将entry的状态转为dummy态
+        old_key = ep->me_key;
+        Py_INCREF(dummy);
+        ep->me_key = dummy;
+        old_value = ep->me_value;
+        ep->me_value = NULL;
+        mp->ma_used--;
+        Py_DECREF(old_value);
+        Py_DECREF(old_key);
+        return 0;
+832:}
+```
+
+与插入操作类似 , 先计算hash值 , 然后搜索相应的entry , 最后删除entry中维护的元素 , 并将entry从Active态变换为Dummy态 , 同时还将调整PyDictObject对象中维护table使用情况的变量
+
+小结 : 
+
+无论是插入还是删除元素 , 都会先计算hash值 , 随后进行搜索相应的entry , 随后插入或删除元素 , 转换entry的状态 ; 而PyDictObject对象元素的插入则主要是通过`freeslot`所指向的entry来进行的
+
+## 对象缓冲池  🍀
 
 
 
