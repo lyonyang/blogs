@@ -582,6 +582,48 @@ d[1] = 2
 
 ## 对象缓冲池  🍀
 
+在PyDictObject的实现机制中 , 同样使用了缓冲池计数 , 并且其缓冲池机制与PyListObject中使用的缓冲池机制是一样的 
+
+`Python-2.7\Include\dictobject.c`
+
+```C
+974:static void
+    dict_dealloc(register PyDictObject *mp)
+    {
+        register PyDictEntry *ep;
+        Py_ssize_t fill = mp->ma_fill;
+        PyObject_GC_UnTrack(mp);
+        Py_TRASHCAN_SAFE_BEGIN(mp)
+        // 调整dict中对象的引用计数
+        for (ep = mp->ma_table; fill > 0; ep++) {
+            if (ep->me_key) {
+                --fill;
+                Py_DECREF(ep->me_key);
+                Py_XDECREF(ep->me_value);
+            }
+        }
+    	// 释放从系统堆中申请的内存空间
+        if (mp->ma_table != mp->ma_smalltable)
+            PyMem_DEL(mp->ma_table);
+    	// 将被销毁的PyDictObject对象放入缓冲池
+        if (numfree < PyDict_MAXFREELIST && Py_TYPE(mp) == &PyDict_Type)
+            free_list[numfree++] = mp;
+        else
+            Py_TYPE(mp)->tp_free((PyObject *)mp);
+        Py_TRASHCAN_SAFE_END(mp)
+995:}
+```
+
+开始时 , 这个缓冲池中什么也没有 , 直到第一个PyDictObject被销毁时 , 这个缓冲池才开始接纳被缓冲的PyDictObject对象 , 与PyListObject对象一样 , 只保留了PyDictObject对象
+
+但是需要注意的是 , 销毁时根据`ma_table`的两种情况处理方式也是不同的 : 
+
+- 如果`ma_table`指向的是从系统堆申请的内存空间 (额外的内存) , 那么Python将释放这块内存空间归还给系统堆
+- 如果`ma_table`指向的是PyDictObject的`ma_smalltable` , 那么只需要调整`ma_smalltable`中的对象的引用计数就可以了
+
+在创建新的PyDictObject对象时 , 如果在缓冲池中有可以使用的对象 , 则直接从缓冲池中取出使用 , 而不需要再重新创建 , 这一点在PyDict_New中就已经体现了
+
+至此 , 对于Python 2.7中的dict对象就差不多了 , 对于Python 3.5.4版本的比较待后期继续 , 不过简单的对比之下就可以发现 , 在Python 3.5.4的版本中 , 新增了一个`dictnotes.txt`文件 , 而且由2.7的3个状态变成了4个状态 , 数据层次也发生了一些改变 , 比如PyDictObject从2.7中的一种形式 , 变成了两种形式 (联合表和分割表) , 新增了PyDictKeyObject对象等
 
 
 
