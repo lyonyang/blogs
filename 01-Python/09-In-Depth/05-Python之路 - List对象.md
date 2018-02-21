@@ -60,6 +60,11 @@ PyListObject采用的内存管理策略和C++中`vector`采取的内存管理策
 
 在`Python-3.5.4\Include\listobject.h`的22至40行 , 我们可以找到相同的代码 , 也就是说2.7与3.5.4的这一部分是没有区别的 
 
+<!-- TOC -->
+[**返回顶部**](#python之路---list对象)
+<!-- /TOC -->
+
+
 ## 创建与维护  🍀
 
 在之前对于Python对象创建方式已有说明 , 为了创建一个列表 , Python只提供了唯一的一条途径 , 就是`PyList_New`
@@ -86,8 +91,10 @@ PyListObject采用的内存管理策略和C++中`vector`采取的内存管理策
         }
         /* Check for overflow without an actual overflow,
          *  which can cause compiler to optimise out */
+        // 检查是否会发生溢出
         if ((size_t)size > PY_SIZE_MAX / sizeof(PyObject *))
             return PyErr_NoMemory();
+        // 计算需要使用的内存总量
         nbytes = size * sizeof(PyObject *);
         if (numfree) {
             
@@ -130,7 +137,7 @@ PyListObject采用的内存管理策略和C++中`vector`采取的内存管理策
 分析 : 
 
 - 这个函数接受一个size参数 , 也就是我们可以在创建时指定`PyListObject`对象的初始元素个数
-- 在创建时 , 首先计算需要使用的内存总量 , 因为`PyList_New`指定的仅仅是元素的个数 , 而不是元素实际将占用的内存空间 , 在这里 , Python会检查指定的元素个数是否会大到使所需内存数量产生溢出的程度 , 如果会产生溢出 , 那么Python将不会进行任何操作
+- 在创建时 , 首先计算需要使用的内存总量 , 因为`PyList_New`指定的仅仅是元素的个数 , 而不是元素实际将占用的内存空间 , 在这里 , Python会检查指定的元素个数是否会大到使所需内存数量产生溢出的程度 , 并根据判断结果做出相应的操作
 - 检查缓冲池是否可用
 - 为维护对象申请内存空间 , 维护对象与PyListOjbect对象本身通过`ob_item`建立了连接
 
@@ -160,6 +167,11 @@ PyListObject采用的内存管理策略和C++中`vector`采取的内存管理策
 98:static PyListObject *free_list[PyList_MAXFREELIST];
 99:static int numfree = 0;
 ```
+
+<!-- TOC -->
+[**返回顶部**](#python之路---list对象)
+<!-- /TOC -->
+
 
 ## 设置元素  🍀
 
@@ -224,6 +236,11 @@ PyListObject采用的内存管理策略和C++中`vector`采取的内存管理策
 ```
 
 在两个版本中 , 没有变化
+
+<!-- TOC -->
+[**返回顶部**](#python之路---list对象)
+<!-- /TOC -->
+
 
 ## 插入元素  🍀
 
@@ -399,6 +416,11 @@ Python内部通过调用`PyList_Insert`来完成元素的插入动作 , 而`PyLi
 
 我们可以发现 , 对于第二种情况 , 比如`newsize < allocated/2` 时 , Python也会调用`realloc`来收缩列表的内存空间 , 不得不说这是物尽其用的设计
 
+<!-- TOC -->
+[**返回顶部**](#python之路---list对象)
+<!-- /TOC -->
+
+
 ## 删除元素  🍀
 
 以`list`对象方法`remove`为例 , 当我们使用`remove`方法时 , `PyListObject`中的`listremove`操作就会被激活
@@ -461,6 +483,10 @@ Python内部通过调用`PyList_Insert`来完成元素的插入动作 , 而`PyLi
 
 对于`list`对象的`pop`方法 , 同样也是调用`list_ass_slice`来进行删除 , 源码位于`listobject.c`文件中
 
+<!-- TOC -->
+[**返回顶部**](#python之路---list对象)
+<!-- /TOC -->
+
 ## 对象缓冲池  🍀
 
 在`PyList_New`中我们见过一个`free_list` , 这就是`PyListObject`对象缓冲池 ; 但是我们在`PyList_New`中并没有看到缓冲池中的`PyListObject`对象的添加过程 , 这是因为缓冲池对象并不像前面的字符串对象或者整数对象一样 , 是在创建时添加的 , Python列表的缓冲池是在其销毁的时候添加的
@@ -503,3 +529,6 @@ Python内部通过调用`PyList_Insert`来完成元素的插入动作 , 而`PyLi
 
 对于每次创建`PyListObject`对象时必须创建元素列表 , 这是Python为了避免过多的消耗系统内存 , 采取的时间换空间的做法
 
+<!-- TOC -->
+[**返回顶部**](#python之路---list对象)
+<!-- /TOC -->
