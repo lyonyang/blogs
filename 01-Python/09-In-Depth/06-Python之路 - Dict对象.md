@@ -103,6 +103,10 @@
 
 ![ma_table](http://oux34p43l.bkt.clouddn.com/ma_table.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
 
+<!-- TOC -->
+[**返回顶部**](#python之路---dict对象)
+<!-- /TOC -->
+
 ## 创建与维护  🍀
 
 Python内部通过PyDict_New来创建一个新的dict对象
@@ -195,6 +199,10 @@ Python内部通过PyDict_New来创建一个新的dict对象
 在创建过程的最后 , 将`lookdict_string`赋给了`ma_lookup` , 这个`ma_lookup`指定了PyDictObjec在entry集合中搜索某一特定entry时需要进行的动作 , 在`ma_lookup`中 , 包含了散列函数和发生冲突时二次探测函数的具体实现 , 它时PyDictObject的搜索策略
 
 PyDictObject缓冲池见下文
+
+<!-- TOC -->
+[**返回顶部**](#python之路---dict对象)
+<!-- /TOC -->
 
 ## 元素搜索  🍀
 
@@ -406,6 +414,10 @@ lookdict_string是一种有条件限制的搜索策略 , 即待搜索的key是�
 
 其实lookdict_string仅仅是一个lookdict的优化版本 , 因为在Python中大量的使用了PyDictObject对象 , 以用来维护一个命名空间(名字空间)中变量名与变量值之间的对应关系 , 又或者是用来在为函数传递参数名与参数值的对应关系 , 而这些对象几乎都是用PyStringObject对象作为entry中的key , 所以lookdict_string的出现是很有必要的 , 它对Python整体的运行效率都有着重要的影响
 
+<!-- TOC -->
+[**返回顶部**](#python之路---dict对象)
+<!-- /TOC -->
+
 ## 插入与删除  🍀
 
 PyDictObject对象中元素的插入动作是建立在搜索的基础之上的
@@ -580,6 +592,10 @@ d[1] = 2
 
 无论是插入还是删除元素 , 都会先计算hash值 , 随后进行搜索相应的entry , 随后插入或删除元素 , 转换entry的状态 ; 而PyDictObject对象元素的插入则主要是通过`freeslot`所指向的entry来进行的
 
+<!-- TOC -->
+[**返回顶部**](#python之路---dict对象)
+<!-- /TOC -->
+
 ## 对象缓冲池  🍀
 
 在PyDictObject的实现机制中 , 同样使用了缓冲池计数 , 并且其缓冲池机制与PyListObject中使用的缓冲池机制是一样的 
@@ -626,6 +642,6 @@ d[1] = 2
 至此 , 对于Python 2.7中的dict对象就差不多了 , 对于Python 3.5.4版本的比较待后期继续 , 不过简单的对比之下就可以发现 , 在Python 3.5.4的版本中 , 新增了一个`dictnotes.txt`文件 , 而且由2.7的3个状态变成了4个状态 , 数据层次也发生了一些改变 , 比如PyDictObject从2.7中的一种形式 , 变成了两种形式 (联合表和分割表) , 新增了PyDictKeyObject对象等
 
 <!-- TOC -->
-[返回顶部](#python之路---dict对象)
+[**返回顶部**](#python之路---dict对象)
 <!-- /TOC -->
 
