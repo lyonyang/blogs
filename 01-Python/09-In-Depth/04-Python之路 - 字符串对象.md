@@ -111,7 +111,7 @@ AttributeError: 'str' object has no attribute 'decode'
 
 如下是`PyStringObject`的类型对象的定义 : 
 
-`Python-2.7\Include\stringobject.c :`
+`Python-2.7\Objects\stringobject.c :`
 
 ```C
 
@@ -143,7 +143,7 @@ AttributeError: 'str' object has no attribute 'decode'
 
 Python 2.7 提供了两个接口 : `PyString_FromString` 和 `PyString_FromStringAndSize` 
 
-`Python-2.7\Include\stringobject.c :`
+`Python-2.7\Objects\stringobject.c :`
 
 **PyString_FromString**
 
@@ -217,6 +217,8 @@ Python 2.7 提供了两个接口 : `PyString_FromString` 和 `PyString_FromStrin
 
 
 **PyString_FromStringAndSize**
+
+`Python-2.7\Objects\stringobject.c :`
 
 ```C
  61:PyString_FromStringAndSize(const char *str, Py_ssize_t size)
@@ -332,6 +334,8 @@ return (PyObject *) op;
 
 我们已经知道了创建字符串对象时进行了特殊的操作`PyString_InternInPlace` , 其源码如下 : 
 
+`Python-2.7\Objects\stringobject.c :`
+
 ```C
 4712:void
      PyString_InternInPlace(PyObject **p)
@@ -399,7 +403,7 @@ return (PyObject *) op;
 
  一个对象的引用计数在某个时刻减为0之后 , 系统将会销毁该对象 , 那么字符串中到底是怎么解决的呢 ? 看看`string_dealloc`代码清单 : 
 
-`Python-2.7\Include\stringobject.c :`
+`Python-2.7\Objects\stringobject.c :`
 
 ```C
 582:static void
@@ -437,7 +441,7 @@ return (PyObject *) op;
 
 与Python整数对象类似 , Python的设计者为`PyStringObject`中的一个字节的字符对应的`PyStringObject`对象也设计了一个对象池`characters` 
 
-`Python-2.7\Include\stringobject.c :`
+`Python-2.7\Objects\stringobject.c :`
 
 ```C
 13:static PyStringObject *characters[UCHAR_MAX + 1]
