@@ -9,6 +9,7 @@
     - [添加和删除  🍀](#添加和删除--🍀)
 
 <!-- /TOC -->
+**欢迎收藏交流 , 如需转载 , 请注明出处**
 ## 介绍  🍀
 
 在Python的应用程序中 , 整数的使用非常地广泛
@@ -116,6 +117,10 @@ All integers are implemented as “long” integer objects of arbitrary size.
 
 而对于创建`long`方法就更多了 , 这些创建方法都定义在`Python\Objects\`目录下对应的`.c`文件中
 
+<!-- TOC -->
+[**返回顶部**](#python之路---整数对象)
+<!-- /TOC -->
+
 ## 小整数对象池  🍀
 
 在实际编程中 , 数值比较小的整数 , 比如 1, 2, 29等 , 可能在程序中会非常频繁地使用 ; 在Python中 , 所有的对象都存货在系统堆上 , 也就是说 , 如果没有特殊的机制 , 对于这些频繁使用的小整数对象 , Python将一次又一次使用malloc在堆上申请空间 , 并且不厌其烦地一次次free释放空间 , 这样的操作会严重影响Python的整体性能
@@ -185,6 +190,10 @@ All integers are implemented as “long” integer objects of arbitrary size.
 
 注意 : **小整数对象池**中完全地缓存其对象 , 也就是说在执行我们的程序之前**小整数对象池**就已经激活
 
+<!-- TOC -->
+[**返回顶部**](#python之路---整数对象)
+<!-- /TOC -->
+
 ## 通用整数对象池  🍀
 
 小整数对象池解决了小整数频繁的使用问题 , 但是我们并不能保证大整数就不会被频繁的使用 , 所以对于这些整数 , Python运行环境将提供一块内存空间 , 供这些大整数轮流使用 , 结构体如下 : 
@@ -236,6 +245,10 @@ All integers are implemented as “long” integer objects of arbitrary size.
 3. 也就是说 , 通用整数对象池机制所做的优化就是 , **解决了内存的频繁开辟问题**
 
 注意 : 如果第一块空间满了 , 那么就会往第二块进行存储 ; 
+
+<!-- TOC -->
+[**返回顶部**](#python之路---整数对象)
+<!-- /TOC -->
 
 ## 添加和删除  🍀
 
@@ -313,3 +326,7 @@ All integers are implemented as “long” integer objects of arbitrary size.
 2. 如果不能使用小整数对象池 , 则使用通用的整数对象池
 
 对于整数对象的实现大概核心就是这些东西了 , 关于通用对象池的创建 , 可以通过源码或者 , 《Python源码剖析》一书进行探索
+
+<!-- TOC -->
+[**返回顶部**](#python之路---整数对象)
+<!-- /TOC -->

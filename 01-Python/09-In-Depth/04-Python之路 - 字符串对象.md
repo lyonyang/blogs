@@ -13,6 +13,7 @@
     - [万恶的加号  🍀](#万恶的加号--🍀)
 
 <!-- /TOC -->
+**欢迎收藏交流 , 如需转载 , 请注明出处**
 ## 介绍  🍀
 
 在前面有提到过 "定长对象" 和 "变长对象" , 这是一种对对象的二分法
@@ -65,6 +66,10 @@ AttributeError: 'str' object has no attribute 'decode'
 
 接下来就来分析Python中的字符串对象了
 
+<!-- TOC -->
+[**返回顶部**](#python之路---字符串对象)
+<!-- /TOC -->
+
 ## PyStringObject  🍀
 
 在Python中 , `PyStringObject`是对字符串对象的实现 , `PyStringObject` 是一个拥有可变长度内存的对象 , 比如 : `"Lyon"` 和 `"KennethReitz"` 这两个字符串对象所需要的内存空间明显是不一样的
@@ -107,6 +112,10 @@ AttributeError: 'str' object has no attribute 'decode'
 
 在Python 3.x中 , 遗留的字符串定义在`unicodeobject.h`中 , 不另行说明了
 
+<!-- TOC -->
+[**返回顶部**](#python之路---字符串对象)
+<!-- /TOC -->
+
 ## PyString_Type  🍀
 
 如下是`PyStringObject`的类型对象的定义 : 
@@ -138,6 +147,10 @@ AttributeError: 'str' object has no attribute 'decode'
 对于类型对象就无需多说了 , 在前面的篇章也已经介绍过了 , 这里值得注意的是 , `tp_itemsize`和`ob_size`共同决定了应该额外申请的内存之总大小是多少 , `tp_itemsize`指明了由变长对象保存的元素的单位长度 , 这里就是单个字符在内存中的长度
 
 `tp_as_number` , `tp_as_sequence` , `tp_as_mapping` 三个域都被设置了 , 表示`PyStringObject`对数值操作 , 序列操作和映射操作都支持
+
+<!-- TOC -->
+[**返回顶部**](#python之路---字符串对象)
+<!-- /TOC -->
 
 ## 创建PyStringObject对象  🍀
 
@@ -281,6 +294,10 @@ Python 2.7 提供了两个接口 : `PyString_FromString` 和 `PyString_FromStrin
 
 `PyString_FromStringAndSize` 的操作和`PyString_FromString`几乎一样 , 只有一点 , `PyString_FromString`传入的参数必须是以`NUL('\0')` 结尾的字符数组的指针 , 而`PyString_FromStringAndSize`则没有这个要求 , 因为通过传的`size`参数就可以确定需要拷贝的字符的个数
 
+<!-- TOC -->
+[**返回顶部**](#python之路---字符串对象)
+<!-- /TOC -->
+
 ## intern机制  🍀
 
 从上面两种创建方式的源码中发现 , 无论是`PyString_FromString`还是`PyString_FromStringAndSize` , 当字符数组的长度为0或1时 , 需要进行一个特别的操作 : `PyString_InternInPlace` , 这就是字符串的`intern`机制 , 也就是上面代码中`share short strings` 注释下的代码 
@@ -329,6 +346,10 @@ return (PyObject *) op;
 
 1. 因为` 'lyon'` 对象不存在 , 所以调用接口创建`PyStringObject`对象 (创建时经过`intern`机制处理) 
 2. Python在查找系统中记录的已经被`intern`机制处理了的`PyStringObject` 对象 (上一步中同样会进行查找) , 发现`'lyon'`字符数组对应的`PyStringObject`已经存在 , 于是返回该对象的引用返回
+
+<!-- TOC -->
+[**返回顶部**](#python之路---字符串对象)
+<!-- /TOC -->
 
 ### PyString_InternInPlace  🍀
 
@@ -395,6 +416,10 @@ return (PyObject *) op;
 
 在代码中 , 我们可以清楚的看到 , `intern`机制的核心在于`interned` , 它指向一个由`PyDict_new`创建的对象 , 也就是一个字典 , 也就是说`intern`机制的关键就是在系统中有一个存在映射关系的集合 , 它的名字叫做`interned` , 这个集合里面记录了被`intern`机制处理过的
 
+<!-- TOC -->
+[**返回顶部**](#python之路---字符串对象)
+<!-- /TOC -->
+
 ### 特殊的引用计数  🍀
 
 `intern`机制进行处理时 , 会将`PyStringObject`对象的`PyObject`指针分别作为`key`和`value`添加到`interned`中, 也就是说在这里该对象的引用计数应该加了2 , 如果按照正常的引用计数机制 , 那么明显这个对象是永远都不会被删除的 , 比如`a = 1;del a` , 我们只能够让引用计数减1  , 却无法让其减2 , 所以这里肯定用了特殊的引用计数机制
@@ -437,6 +462,10 @@ return (PyObject *) op;
 
 注意 : `intern`机制节省了内存空间 , 但是在我们创建`PyStringObject`时 , 无论在`interned`中是否存在 , 都是会创建一个`PyStringObject`对象的 , 只不过这是一个临时的对象 , 如果`interned`中有 , 那么就`PyString_InternInPlace` 会对这个对象的引用计数减1 , 于是它就会被销毁了
 
+<!-- TOC -->
+[**返回顶部**](#python之路---字符串对象)
+<!-- /TOC -->
+
 ## 字符缓冲池  🍀
 
 与Python整数对象类似 , Python的设计者为`PyStringObject`中的一个字节的字符对应的`PyStringObject`对象也设计了一个对象池`characters` 
@@ -456,6 +485,10 @@ return (PyObject *) op;
 在Python的整数对象体系中 , 小整数的缓冲池是在Python初始化时被创建的 , 而字符串对象体系中的字符串缓冲池则是以静态变量的形式存在着的 , 在Python初始化完成之后 , 缓冲池中的所有`PyStringObject`指针都为空
 
 当我们创建一个字符串对象时 , 无论是通过调用`PyString_FromString` 还是`PyString_FromStringAndSize`  , 如果字符串实际上是一个字符 , 则会对所创建字符串 (字符)  对象进行`intern`操作 , 再将`intern`的结果缓存到字符缓冲池`characters`中
+
+<!-- TOC -->
+[**返回顶部**](#python之路---字符串对象)
+<!-- /TOC -->
 
 ## 万恶的加号  🍀
 
@@ -610,4 +643,9 @@ Python中提供了 `"+"` 来进行字符串拼接 , 可惜这实际上就是万�
 **小结 : 首先统计出`list`中的对象个数 , 并统计这些对象的字符串总长度 , 申请一次内存空间 , 将所有的`PyStringObject`对象维护的字符串都拷贝到新开辟的内存空间中**
 
 通过小结可以很直接的得出答案 , 如果要拼接n个字符串对象 , 那么使用 "+" 需要申请空间`n-1`次 , 而使用`join`则仅需一次
+
+<!-- TOC -->
+[**返回顶部**](#python之路---字符串对象)
+<!-- /TOC -->
+
 
