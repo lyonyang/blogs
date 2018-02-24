@@ -143,7 +143,7 @@ PyListObject采用的内存管理策略和C++中`vector`采取的内存管理策
 - 为维护对象申请内存空间 , 维护对象与PyListOjbect对象本身通过`ob_item`建立了连接
 
 
-当Python创建了新的`PyListObject`对象之后 , 会立即根据调用`PyLIst_New`时传递的size参数创建`PyListObject`对象所维护的元素列表 , 其中每一个元素都被初始化为`NULL` 
+当Python创建了新的`PyListObject`对象之后 , 会立即根据调用`PyList_New`时传递的size参数创建`PyListObject`对象所维护的元素列表 , 其中每一个元素都被初始化为`NULL` 
 
 在完成了`PyListObject`对象及维护的列表的创建之后 , Python会调整该`PyListObject`对象 , 用于维护元素列表中元素数量的`ob_size`和`allocated`两个变量
 
@@ -176,7 +176,7 @@ PyListObject采用的内存管理策略和C++中`vector`采取的内存管理策
 
 ## 设置元素  🍀
 
-在我们创建第一个`PyListObject`创建时 , 这时候缓冲池是不可用的 , 于是会调用`PyObject_GC_New`在系统堆上创建一个新的`PyListObject`对象 , 假如我们创建一个包含6个元素的`PyListObject` , 那么创建成功之后 , 这个对象的`ob_size`为6 , `allocated`为6 , 而`ob_item`则是指向这些元素的指针
+在我们创建第一个`PyListObject`对象时 , 这时候缓冲池是不可用的 , 于是会调用`PyObject_GC_New`在系统堆上创建一个新的`PyListObject`对象 , 假如我们创建一个包含6个元素的`PyListObject` , 那么创建成功之后 , 这个对象的`ob_size`为6 , `allocated`为6 , 而`ob_item`则是指向这些元素的指针
 
  而当我们设置元素时 , 如现有一个列表`la = [1, 2, 3]`  , 当我们执行`la[0] = 4`时 , 在Python内部 , 会调用`PyList_SetItem`来完成这个动作 ; 首先Python会进行类型检查 , 随后会进行索引的有效性检查 , 当这两者都通过后 , 将新设置的元素指针放到指定的位置 , 然后调整引用计数 , 将这个位置原来存放的对象的引用计数减1 , 源码如下 : 
 
