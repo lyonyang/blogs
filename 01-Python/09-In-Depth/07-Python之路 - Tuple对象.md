@@ -37,7 +37,7 @@ Python中的`tuple`与`str`一样 , 都属于不可变对象 , 即其所维护�
 通过前面的整理 , 对于这些再熟悉不过了
 
 <!-- TOC -->
-[**返回顶部🌴**](#python之路---tuple对象)
+[**返回顶部 😆**](#python之路---tuple对象)
 <!-- /TOC -->
 
 ## 创建与维护  🍀
@@ -147,7 +147,7 @@ PyTupleObject对象的创建同其他对象一样 , 其是通过`PyTuple_New`来
 并且缓冲池的第一个位置是留给`()`的 (有且仅有一个) , 也就是空元组 ; 对于空元组它是在PyTupleObject对象创建时就已经被放入缓冲池了的 , 而其他的PyTupleObject对象什么时候会放入缓冲池中 , 与PyListObject对象也是一样的 , 就是在对象被销毁时 , 这一点同前面的篇章一样 , 放在最后来说
 
 <!-- TOC -->
-[**返回顶部🌴**](#python之路---tuple对象)
+[**返回顶部 😆**](#python之路---tuple对象)
 <!-- /TOC -->
 
 ## 设置元素  🍀
@@ -188,7 +188,7 @@ PyTupleObject对象的创建同其他对象一样 , 其是通过`PyTuple_New`来
 PyTupleObject对象是不可变对象 , 所以没有类似于PyListObject对象的插入等操作
 
 <!-- TOC -->
-[**返回顶部🌴**](#python之路---tuple对象)
+[**返回顶部 😆**](#python之路---tuple对象)
 <!-- /TOC -->
 
 ## 对象缓冲池  🍀
@@ -259,5 +259,5 @@ PyTupleObject对象是不可变对象 , 所以没有类似于PyListObject对象�
 由于缓冲池实现的小差异 , 空元组是不会反复创建的 , 并且在缓冲池的第一位置
 
 <!-- TOC -->
-[**返回顶部🌴**](#python之路---tuple对象)
+[**返回顶部 😆**](#python之路---tuple对象)
 <!-- /TOC -->
