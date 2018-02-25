@@ -2,6 +2,15 @@
 
 [![Build Status](https://travis-ci.org/lyonyang/blogs.svg?branch=master)](https://travis-ci.org/lyonyang/blogs)
 
+
+<span>
+<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ" style="text-decoration:none;" ><img src="http://oux34p43l.bkt.clouddn.com/email.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim"/></a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/lyonyang" ><img src="http://oux34p43l.bkt.clouddn.com/GitHub.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim"/></a>
+&nbsp;&nbsp;&nbsp;
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=547903993&site=qq&menu=yes"><img src="http://oux34p43l.bkt.clouddn.com/QQ.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim" /></a>
+</span>
+
 ## 说明
 
 笔记使用`Markdown`格式编写 , 托管于Github , 使用`GitHub Pages` 和 `Gitbook`两种方式展示
@@ -25,17 +34,6 @@ gitbook serve .
 
 
 **欢迎收藏交流 , 如需转载 , 请注明出处[https://lyonyang.github.io/blogs]**
- 
-### 联系我 
-
-点击图标联系我吧 :
-
-<span>
-<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ" style="text-decoration:none;" ><img src="http://oux34p43l.bkt.clouddn.com/email.png?imageMogr2/auto-orient/thumbnail/x50/blur/1x0/quality/75|imageslim"/></a>
-&nbsp;&nbsp;&nbsp;
-<a href="https://github.com/lyonyang" ><img src="http://oux34p43l.bkt.clouddn.com/GitHub.png?imageMogr2/auto-orient/thumbnail/x50/blur/1x0/quality/75|imageslim"/></a></span>
-&nbsp;&nbsp;&nbsp;
-<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=547903993&site=qq&menu=yes"><img src="http://oux34p43l.bkt.clouddn.com/QQ.png?imageMogr2/auto-orient/thumbnail/x50/blur/1x0/quality/75|imageslim" /></a>
 
 持续更新中 ... 
 
