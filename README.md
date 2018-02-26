@@ -3,15 +3,7 @@
 [![Build Status](https://travis-ci.org/lyonyang/blogs.svg?branch=master)](https://travis-ci.org/lyonyang/blogs)
 
 
-<span>
-<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ" style="text-decoration:none;" ><img src="http://oux34p43l.bkt.clouddn.com/email.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim"/></a>
-&nbsp;&nbsp;&nbsp;
-
-<a href="https://github.com/lyonyang" ><img src="http://oux34p43l.bkt.clouddn.com/GitHub.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim"/></a>
-&nbsp;&nbsp;&nbsp;
-
-<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=547903993&site=qq&menu=yes"><img src="http://oux34p43l.bkt.clouddn.com/QQ.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim" /></a>
-</span>
+<span><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ" style="text-decoration:none;" ><img src="http://oux34p43l.bkt.clouddn.com/email.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim"/></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/lyonyang" ><img src="http://oux34p43l.bkt.clouddn.com/GitHub.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim"/></a>&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=547903993&site=qq&menu=yes"><img src="http://oux34p43l.bkt.clouddn.com/QQ.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim" /></a></span>
 
 ## 说明
 
