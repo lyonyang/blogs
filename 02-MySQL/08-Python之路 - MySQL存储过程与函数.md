@@ -90,6 +90,10 @@ CALL sp_name([parameter[,...]])
 
 事务
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之存储过程和函数)
+<!-- /TOC -->
+
 ## 修改存储过程或函数  🍀
 
 语法 : 
@@ -101,6 +105,11 @@ ALTER {PRCEDURE|FUNCTION} sp_name [characteristic...]
 |SQL SECURITY {DEFINER|INVOKER}
 |COMMENT 'string'
 ```
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之存储过程和函数)
+<!-- /TOC -->
+
 
 ## 删除存储过程或函数  🍀
 
@@ -118,6 +127,10 @@ DROP {PROCEDURE|FUNCTION} [IF EXISTS] sp_name
 mysql> DROP PROCEDURE film_in_stock;
 Query OK, 0 rows affected (0.00 sec)
 ```
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之存储过程和函数)
+<!-- /TOC -->
 
 ## 查看存储过程或函数  🍀
 
@@ -138,6 +151,10 @@ Query OK, 0 rows affected (0.00 sec)
    ```mysql
    SELECT * FROM ROUTINES WHERE ROUTINE_NAME = 'film_in_stock' \G;
    ```
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之存储过程和函数)
+<!-- /TOC -->
 
 ## 变量的使用  🍀
 
@@ -186,6 +203,10 @@ SELECT col_name [,...] INTO var_name [,...] table_expr;
 ```mysql
 DECLARE v_payments DECIMAL(5,2); -- SUM OF PAYMENTS MADE PREVIOUSLY
 ```
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之存储过程和函数)
+<!-- /TOC -->
 
 ## 条件处理  🍀
 
@@ -245,6 +266,10 @@ mysql> CREATE PROCEDURE p1(
 Query OK, 0 rows affected (0.10 sec)
 ```
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之存储过程和函数)
+<!-- /TOC -->
+
 ## 光标  🍀
 
 在存储过程或函数中 , 可以使用光标对结果集进行循环处理
@@ -296,6 +321,10 @@ mysql> CREATE PROCEDURE p3()
     -> END $$
 Query OK, 0 rows affected (0.02 sec)
 ```
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之存储过程和函数)
+<!-- /TOC -->
 
 ## 流程控制  🍀
 
@@ -380,9 +409,17 @@ Query OK, 0 rows affected (0.02 sec)
    END WHILE [end_label]
    ```
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之存储过程和函数)
+<!-- /TOC -->
+
 
 ## 内置函数  🍀
 
 对于一些内置函数 , 就直接看官方的吧 https://dev.mysql.com/doc/refman/5.7/en/functions.html
 
 需要注意的是 , 上述为自定义函数的操作 , 而对于自定义函数 , 在功能块中不要写SQL语句 , 否则会报错 , 函数仅仅只是一个功能 , 一个在SQL中被应用的功能 , 如果要写SQL则应该使用存储过程
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之存储过程和函数)
+<!-- /TOC -->

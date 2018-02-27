@@ -43,6 +43,10 @@ HASH索引相对简单 , 只有Memory/Heap引擎支持
 
 HASH索引适用于 **Key - Value**查询 , 通过HASH索引要比通过B-Tree索引查询更迅速 , 但是HASH**不适用范围查询** , 例如 : < , > , <= , >=这类操作 ; 如果使用Memory/Heap引擎并且where条件中不使用 "=" 今夕in个索引列 , 那么不会用到索引 , Memory/Heap引擎只有在 "=" 的条件下才会使用索引
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之索引)
+<!-- /TOC -->
+
 ## MySQL索引管理  🍀
 
 索引的功能就是为了加速查找和约束 , 下面对常用索引进行介绍
@@ -89,6 +93,10 @@ DROP INDEX indexname ON tablename;
 ALTER TABLE tablename DROP INDEX column_name;
 ```
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之索引)
+<!-- /TOC -->
+
 ### 唯一索引  🍀
 
 唯一索引有两个功能 : 加速查找和唯一约束(可含NULL)
@@ -129,6 +137,10 @@ DROP INDEX indexname ON tablename;
 ALTER TABLE tablename DROP INDEX column_name;
 ```
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之索引)
+<!-- /TOC -->
+
 ### 主键索引  🍀
 
 主键有两个功能 : 加速查找和唯一约束(不可NULL)
@@ -164,6 +176,10 @@ PRIMARY KEY(id)
 ALTER TABLE tablename DROP PRIMARY KEY;
 ALTER TABLE tablename MODIFY column_name column_type, drop primary key;
 ```
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之索引)
+<!-- /TOC -->
 
 ###　组合索引  🍀
 
@@ -202,6 +218,10 @@ PS : 对于同时搜索n个条件时 , 组合索引的性能好于多个单一�
 MySQL只需要通过索引就可以返回查询所需要的数据 , 而不必在查到索引之后进行回表操作 , 减少IO , 提供效率
 
 当你对一个sql 使用explain statement 查看一个sql的执行计划时 , 在EXPLAIN的Extra列出现Using Index提示时 , 就说明该select查询使用了覆盖索引
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之索引)
+<!-- /TOC -->
 
 ## 使用索引  🍀
 
@@ -279,3 +299,7 @@ MySQL只需要通过索引就可以返回查询所需要的数据 , 而不必在
 -- 索引散列值（重复少）不适合建索引，例：性别不适合
 ```
 
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之索引)
+<!-- /TOC -->

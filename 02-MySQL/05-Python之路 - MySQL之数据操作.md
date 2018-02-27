@@ -2,7 +2,7 @@
 <!-- TOC -->
 
 - [Python之路 - MySQL之数据操作](#python之路---mysql之数据操作)
-    - [前言  🍀](#前言--🍀)
+    - [介绍  🍀](#介绍--🍀)
     - [插入记录  🍀](#插入记录--🍀)
     - [更新记录  🍀](#更新记录--🍀)
     - [删除记录  🍀](#删除记录--🍀)
@@ -16,7 +16,7 @@
         - [记录联合  🍀](#记录联合--🍀)
 
 <!-- /TOC -->
-## 前言  🍀
+## 介绍  🍀
 
 DML操作是指对数据库中表记录的操作 , 即数据操作
 
@@ -74,6 +74,10 @@ INSERT INTO tablename(field1,field2,...,fieldn) VALUES
 (value1,value2,...,valuen);
 ```
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之数据操作)
+<!-- /TOC -->
+
 ## 更新记录  🍀
 
 语法 : 
@@ -95,6 +99,10 @@ Rows matched: 1  Changed: 1  Warnings: 0
 ```mysql
 UPDATE t1,t2,...,tn SET t1.field1=expr1,tn.fieldn=exprn [WHERE CONDITION];
 ```
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之数据操作)
+<!-- /TOC -->
 
 ## 删除记录  🍀
 
@@ -163,6 +171,10 @@ mysql> SELECT * FROM dept;
 
 PS : 不管是单表还是多表 , 不加where条件会把表的所有记录删除 , 所以操作时一定要小心
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之数据操作)
+<!-- /TOC -->
+
 ## 查询记录  🍀
 
 语法 : 
@@ -179,6 +191,10 @@ SELECT * FROM tablename [WHERE CONDITION];
 mysql> SELECT ename,hiredate,sal,deptno FROM emp;
 ```
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之数据操作)
+<!-- /TOC -->
+
 ### 查询不重复的记录  🍀
 
 ```mysql
@@ -191,6 +207,10 @@ mysql> SELECT DISTINCT deptno FROM emp;
 1 row in set (0.00 sec)
 ```
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之数据操作)
+<!-- /TOC -->
+
 ### 条件查询  🍀
 
 ```mysql
@@ -202,6 +222,10 @@ mysql> SELECT * FROM emp WHERE deptno=1;
 +-------+------------+-----------+--------+
 1 row in set (0.00 sec)
 ```
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之数据操作)
+<!-- /TOC -->
 
 ### 排序和限制   🍀
 
@@ -239,6 +263,10 @@ mysql> SELECT * FROM emp ORDER BY sal LIMIT 2;
 ```
 
 PS : limit属于MySQL扩展SQL92后的语法 , 在其他数据库上并不能通用
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之数据操作)
+<!-- /TOC -->
 
 ### 聚合  🍀
 
@@ -313,6 +341,10 @@ mysql> SELECT sum(sal),max(sal),min(sal) FROM emp;
 1 row in set (0.00 sec)
 ```
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之数据操作)
+<!-- /TOC -->
+
 ### 表连接  🍀
 
 同时显示多个表中的字段 , 分为内连接和外连接
@@ -367,6 +399,11 @@ mysql> SELECT ename,deptname FROM emp,dept WHERE emp.deptno=dept.deptno;
 
 右连接 : `SELECT ename,deptname FROM emp RIGHT JOIN dept ON emp.deptno=dept.deptno;`
 
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之数据操作)
+<!-- /TOC -->
+
 ### 子查询  🍀
 
 查询时 , 需要的条件是另一个select语句的结果
@@ -408,6 +445,10 @@ PS :
 - MySQL 4.1 以前的版本不支持子查询 , 需要用表连接来实现子查询
 - 表连接在很多情况下用于优化子查询
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之数据操作)
+<!-- /TOC -->
+
 ### 记录联合  🍀
 
 `union` 和`union all` 关键字可以实现 , 将多个表的数据按照一定的查询条件查询出来后 , 将结果合并到一起显示
@@ -440,3 +481,7 @@ mysql> SELECT deptno FROM emp
 ```
 
 PS : `union all`是把结果集直接合并在一起 , 而`union`是将union all后的结果进行一次distinct , 去除重复记录后的结果 
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之数据操作)
+<!-- /TOC -->

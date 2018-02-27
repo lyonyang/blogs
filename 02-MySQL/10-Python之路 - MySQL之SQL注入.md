@@ -74,6 +74,10 @@ http://127.0.0.1/injection/user.php?username=angel'#
 
 "or" 是利用逻辑运算 , 注释符是根据MySQL的特性 , 这个比逻辑运算简单多了 , 两者都实现了SQL注入效果
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之sql注入)
+<!-- /TOC -->
+
 ## 应对措施  🍀
 
 对于SQL注入隐患 , 后果可想而知 , 轻则获得数据信息 , 重则可以将数据进行非法更改 , 一下则是常用的防范方法
@@ -86,6 +90,10 @@ MySQL服务器端并不存在共享池的概念 , 所以在MySQL上使用绑定�
 
 需要注意 , PrepareStatement语句是由JDBC驱动来支持的 , 他仅仅做了简单的替换和转义 , 斌不是MySQL提供了PreparedStatement的特性
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之sql注入)
+<!-- /TOC -->
+
 ### 使用应用程序提供的转换函数  🍀
 
 很多应用程序接口都提供了对特殊字符进行转换的函数 , 恰当地使用这些函数 , 可以防止应用程序用户输入使应用程序生成不期望的语句
@@ -95,6 +103,10 @@ MySQL服务器端并不存在共享池的概念 , 所以在MySQL上使用绑定�
 - PHP : 使用mysql_real_escape_string()函数
 - Perl DBI : 使用placeholders 或者quote()方法
 - Ruby DBI : 使用paceholders 或者quote()方法
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之sql注入)
+<!-- /TOC -->
 
 ### 自己定义函数进行检验  🍀
 
@@ -111,6 +123,10 @@ MySQL服务器端并不存在共享池的概念 , 所以在MySQL上使用绑定�
 effect_row = cursor.execute("select username from user_info where username='%s' and password = '%s'", (username, pwd))
 ......
 ```
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之sql注入)
+<!-- /TOC -->
 
 
 

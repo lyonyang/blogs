@@ -58,6 +58,10 @@ MySQL视图的定义有一些限制,例如,在FROM关键字后面不能包含子
 1. 使用视图后无需每次都重写子查询的sql , 但是这样效率并不高 , 还不如我们写子查询的效率高
 2. 一个致命的问题 : 视图是存放在数据库中的 , 如果我们程序中的sql过分依赖于数据库中存放的视图 , 那么意味着 , 一旦sql需要修改且涉及到视图的部分 , 则必须去数据库中进行修改 , 而通常在公司中数据库有专门的DBA负责 , 你要想完成修改 , 必须付出大量的沟通成本DBA可能才会帮你完成修改 , 极其的不方便
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之视图)
+<!-- /TOC -->
+
 ### 修改视图  🍀
 
 语法 : 
@@ -154,6 +158,10 @@ mysql> UPDATE payment_view2 SET amount=10
 ERROR 1369 (HY000): CHECK OPTION failed 'sakila.payment_view2'
 ```
 
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之视图)
+<!-- /TOC -->
+
 ### 删除视图  🍀
 
 用户可以一次删除一个或者多个视图 , 前提是必须有该视图的DROP权限
@@ -164,6 +172,10 @@ ERROR 1369 (HY000): CHECK OPTION failed 'sakila.payment_view2'
 DROP VIEW [IF EXISTS] view_name [,view_name]...[RESTRICT|CASCADE];
 -- 即 DROP VIEW view_name
 ```
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之视图)
+<!-- /TOC -->
 
 ### 查看视图  🍀
 
@@ -198,4 +210,9 @@ SHOW CREATE VIEW view_name \G;
 ```mysql
 SELECT * FROM VIEWS WHERE table_name = 'view_name' \G;
 ```
+
+<!-- TOC -->
+[**返回顶部**](#python之路---mysql之视图)
+<!-- /TOC -->
+
 
