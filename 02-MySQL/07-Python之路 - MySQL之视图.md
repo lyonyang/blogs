@@ -28,25 +28,26 @@
 
 ### 创建视图  🍀
 
-创建视图需要有CREATE VIEW 的权限 , 并且对于查询涉及的列有SELECT权限 ; 如果使用CREATE OR REPLACE 或者ALTER修改i视图 , 那么还需要该视图的DROP权限
+创建视图需要有`CREATE VIEW `的权限 , 并且对于查询涉及的列有`SELECT`权限 ; 如果使用`CREATE OR REPLACE `或者`ALTER`修改视图 , 那么还需要该视图的DROP权限
 
 语法 : 
 
 ```mysql
-/* 创建视图 */
+-- 创建视图
+CREATE VIWE 视图名称 AS SQL语句
+
+-- 完整
 CREATE [OR REPLACE] [ALGORITHM = {UNDEFINED|MERGE|TEMPTABLE}]
 	VIEW view_name [(column_list)]
 	AS select_statement
 	[WITH [CASCADED|LOCAL] CHECK OPTION]
--- 即 CREATE VIWE 视图名称 AS SQL语句
 ```
 
 实例
 
 ```mysql
-CREATE VIEW v1 AS
-SELECT nid,name
-FROM A WHERE nid > 4;
+mysql> CREATE VIEW lyon_view AS SELECT * FROM test;
+Query OK, 0 rows affected (0.08 sec)
 /* 注意 : 
 MySQL视图的定义有一些限制,例如,在FROM关键字后面不能包含子查询,这和其他数据库是不同的
 如果视图是从其他数据库迁移过来的,那么可能需要因此做一些改动,可以将子查询的内容先定义成
@@ -67,20 +68,21 @@ MySQL视图的定义有一些限制,例如,在FROM关键字后面不能包含子
 语法 : 
 
 ```mysql
-/* 修改视图 */
+-- 修改视图 
+ALTER VIEW 视图名称 AS SQL语句
+
+-- 完整如下
 ALTER [ALGORITHM = {UNDEFINED|MERGE|TEMPTABLE}]
 	VIEW view_name [(column_list)]
 	AS select_statement
 	[WITH [CASCADED|LOCAL] CHECK OPTION]
--- 即 ALTER VIEW 视图名称 AS SQL语句
 ```
 
 实例
 
 ```mysql
-ALTER VIEW v1 AS
-SELECT nid,name
-FROM A WHERE nid = 4;
+mysql> ALTER VIEW lyon_view AS SELECT * FROM test WHERE id > 4;
+Query OK, 0 rows affected (0.09 sec)
 ```
 
 **视图的可更新性**
@@ -113,7 +115,7 @@ mysql> CREATE VIEW city_view AS
 Query OK, 0 rows affected(0.00 sec)
 ```
 
-**[WITH [CASCADED|LOCAL] CHECK OPTION]**
+*`[WITH [CASCADED|LOCAL] CHECK OPTION]`*
 
 该语句决定了是否允许更新数据使记录不再满足视图的条件 , 其中 : 
 
@@ -169,8 +171,11 @@ ERROR 1369 (HY000): CHECK OPTION failed 'sakila.payment_view2'
 语法 : 
 
 ```mysql
+-- 删除视图
+DROP VIEW view_name
+
+-- 完整如下
 DROP VIEW [IF EXISTS] view_name [,view_name]...[RESTRICT|CASCADE];
--- 即 DROP VIEW view_name
 ```
 
 <!-- TOC -->
