@@ -1,4 +1,5 @@
 {
+    "title": "blog",
     "author": "Lyon",
     "description": "my notes",
     "extension": null,
@@ -30,7 +31,9 @@
         "theme-comscore",
         "splitter",
         "-sharing",
-        "search",
+        "-lunr",
+        "-search",
+        "search-plus",
         "anchor-navigation-ex"
     ],
     "pluginsConfig": {
@@ -41,7 +44,5 @@
             "tocLevel2Icon": "fa fa-hand-o-right",
             "tocLevel3Icon": "fa fa-hand-o-right"
         }
-    },
-    "title": "blog",
-    "variables": {}
+    }
 }
