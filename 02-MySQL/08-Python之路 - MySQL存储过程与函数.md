@@ -78,8 +78,8 @@ mysql> DELIMITER ;
 | ---------------------------------------- | ---------------------------------------- |
 | LANGUAGE SQL                             | 说明下面过程的body是使用SQL语言编写 , 系统默认的 , 为今后MySQL会支持的除SQL外的其他语言做准备 |
 | [NOT] DETERMINISTIC                      | DETERMINISTIC确定的 , 即每次输入一样输出也一样的程序 , NOT DETERMINISTIC非确定的 , 这个值当前还没有被优化程序使用 |
-| {CONTAINS SQL<br>\|NO SQL<br>\|READS SQL DATA<br>\|MODIFIES SQL DATA} | CONTAINS SQL表示子程序不包含读或写数据的语句<br>NO SQL 表示子程序不包含SQL语句<br>READS SQL DATA表示子程序包含读数据的语句 , 但不包含写数据的语句<br>MODIFIES SQL DATA表示子程序包含写数据的语句<br>默认值为CONTAINS SQL |
-| SQL SECURITY {DEFINER\|INVOKER}          | 可以用来指定子程序该用创建子程序者的许可来执行 , 还是使用调用者的许可来执行 , 默认为DEFINER(定义者) |
+| {CONTAINS SQL<br>丨NO SQL<br>丨READS SQL DATA<br>丨MODIFIES SQL DATA} | CONTAINS SQL表示子程序不包含读或写数据的语句<br>NO SQL 表示子程序不包含SQL语句<br>READS SQL DATA表示子程序包含读数据的语句 , 但不包含写数据的语句<br>MODIFIES SQL DATA表示子程序包含写数据的语句<br>默认值为CONTAINS SQL |
+| SQL SECURITY {DEFINER丨INVOKER}          | 可以用来指定子程序该用创建子程序者的许可来执行 , 还是使用调用者的许可来执行 , 默认为DEFINER(定义者) |
 | COMMENT 'string'                         | 存储过程或者函数的注释信息                            |
 
 通过`call`调用存储过程 
