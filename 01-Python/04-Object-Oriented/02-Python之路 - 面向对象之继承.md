@@ -72,27 +72,27 @@ class Dog(Animal):
 > 单继承就是只以一个类作为父类进行继承
 
 ```python
-# 定义父类
+# 定义基类
 class Parent:
     pass
-# 继承父类
+# 继承基类
 class Subclass(Parent):
     pass
 ```
 
-> 多继承就是同时以多个类做为父类进行继承
+> 多继承就是同时以多个类做为基类进行继承
 
 ```python
-# 定义第一个父类
+# 定义第一个基类
 class Parent1:
     pass
-# 定义第二个父类
+# 定义第二个基类
 class Parent2:
     pass
-# 定义第三个父类
+# 定义第三个基类
 class Parent3:
     pass
-# 继承三个父类
+# 继承三个基类
 class Subclass1(Parent1,Parent2,Parent3):
     pass
 ```
@@ -106,11 +106,16 @@ class Subclass1(Parent1,Parent2,Parent3):
 > 经典类与新式类在声明时的区别在于 , 新式类需要加上object关键字
 
 ```python
+# python 2.x 环境下
 # 经典类
 class A():
     pass
 # 新式类
 class A(object):
+    pass
+
+# python 3.x 环境下
+class A:
     pass
 ```
 
@@ -183,9 +188,9 @@ obj.display()
 属性名 , 方法名不发生冲突
 
 ```python
-# 创建一个父类
+# 创建一个基类
 class Person:
-    # 父类属性
+    # 基类属性
     country = 'China'
     # 构造方法
     def __init__(self, name, age):
@@ -194,7 +199,7 @@ class Person:
     # 工作方法
     def work(self):
         print("I am working ...")
-# 派生一个子类,继承父类中的属性和方法
+# 派生一个子类,继承基类中的属性和方法
 class Man(Person):
     # 子类属性
     male = 'man'
@@ -203,9 +208,9 @@ class Man(Person):
         print("I am sleepiing ...")
 # 实例化子类
 man = Man('Lyon', 18) 
-# 调用从父类继承过来的工作方法
+# 调用从基类继承过来的工作方法
 man.work()
-# 访问从父类继承过来的国家属性
+# 访问从基类继承过来的国家属性
 print(man.country)
 # 调用子类中的睡觉方法
 man.sleep()
