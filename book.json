@@ -30,6 +30,7 @@
         "toggle-chapters",
         "theme-comscore",
         "splitter",
+        "github",
         "-sharing",
         "-lunr",
         "-search",
@@ -38,6 +39,9 @@
         "editlink"
     ],
     "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/lyonyang/blogs"
+        },
         "editlink": {
             "base": "https://github.com/lyonyang/blogs/blob/master",
             "label": "编辑本页"
