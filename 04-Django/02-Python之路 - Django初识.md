@@ -82,7 +82,7 @@ python manage.py runserver 0.0.0.0:8000
 
 启动项目后我们就可以在浏览器输入服务器的IP及端口进行访问了 , 即在浏览器输入`http://127.0.0.1:8000` 
 
-![runserver](http://oux34p43l.bkt.clouddn.com/runserver?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![runserver](http://oux34p43l.bkt.clouddn.com/runserver.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
 
 ## 创建一个Django模型  🍀
 
