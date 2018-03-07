@@ -34,9 +34,14 @@
         "-lunr",
         "-search",
         "search-plus",
-        "anchor-navigation-ex"
+        "anchor-navigation-ex",
+        "editlink"
     ],
     "pluginsConfig": {
+        "editlink": {
+            "base": "https://github.com/lyonyang/blogs/blob/master",
+            "label": "编辑本页"
+        },
         "anchor-navigation-ex": {
             "showLevel": false,
             "isRewritePageTitle": true,
