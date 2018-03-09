@@ -2,6 +2,8 @@
 
 git config user.name "Lyon"
 git config user.email "547903993@qq.com"
+git config --global core.quotepath false
+
 git checkout -b gitbook
 git status
 git add .
