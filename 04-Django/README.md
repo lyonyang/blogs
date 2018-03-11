@@ -1,10 +1,13 @@
 # Django
 
+[![Django Versions](https://img.shields.io/badge/django%20versions-1.11-blue.svg)](https://www.djangoproject.com/download/1.11.0/tarball/)
+[![Python](https://img.shields.io/badge/python-2.6%2C%202.7%2C%203.4%2C%203.5%2C%203.6-blue.svg)](https://www.python.org/)
+
 ## 介绍
 
 本目录下为Django框架整理文章 , 内容概述如下
-
-注 : 暂时仅为由Django 1.11 官方文档翻译版本 , 待后期更新更改
+ 
+暂时内容不全 , 待后期更新修改
 
 ### Django
 
@@ -16,3 +19,4 @@
 - 表单篇
 - 会话篇
 - 认证篇
+- 源码篇
