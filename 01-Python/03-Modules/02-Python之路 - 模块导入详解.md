@@ -1,14 +1,4 @@
 # Python之路 - 模块导入详解
-<!-- TOC -->
-
-- [Python之路 - 模块导入详解](#python之路---模块导入详解)
-    - [import 🍀](#import-🍀)
-    - [import ... as ... 🍀](#import--as--🍀)
-    - [from ... import ... 🍀](#from--import--🍀)
-    - [from ... import * 🍀](#from--import--🍀)
-    - [if \_\_name\_\_ == '\_\_main\_\_' 🍀](#if-\_\_name\_\_--\_\_main\_\_-🍀)
-
-<!-- /TOC -->
 ## import 🍀
 
 我们知道一个模块就是一个py文件 , 当我们执行py文件时 , python解释器会先加载内置命名空间 , 其次是加载全局命名空间( 学习函数就已知道 )  , 还有个局部命名空间就不说了

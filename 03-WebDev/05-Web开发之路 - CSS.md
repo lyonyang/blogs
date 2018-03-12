@@ -1,30 +1,4 @@
 # Web开发之路 - CSS
-<!-- TOC -->
-
-- [Web开发之路 - CSS](#web开发之路---css)
-    - [介绍  🍀](#介绍--🍀)
-    - [选择器  🍀](#选择器--🍀)
-        - [元素选择器  🍀](#元素选择器--🍀)
-        - [Class选择器  🍀](#class选择器--🍀)
-        - [ID选择器  🍀](#id选择器--🍀)
-        - [属性选择器  🍀](#属性选择器--🍀)
-        - [后代选择器  🍀](#后代选择器--🍀)
-        - [子元素选择器  🍀](#子元素选择器--🍀)
-        - [相邻兄弟选择器  🍀](#相邻兄弟选择器--🍀)
-        - [伪类  🍀](#伪类--🍀)
-        - [伪元素  🍀](#伪元素--🍀)
-    - [常用属性  🍀](#常用属性--🍀)
-        - [background  🍀](#background--🍀)
-        - [border  🍀](#border--🍀)
-        - [margin  🍀](#margin--🍀)
-        - [padding  🍀](#padding--🍀)
-        - [display  🍀](#display--🍀)
-        - [cursor  🍀](#cursor--🍀)
-        - [position  🍀](#position--🍀)
-        - [float  🍀](#float--🍀)
-        - [opacity  🍀](#opacity--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 CSS指的是**层叠样式表(Cascading Style Sheets)** , 用于定义如何显示HTML元素

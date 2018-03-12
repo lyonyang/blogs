@@ -1,15 +1,4 @@
 # Python之路 - MySQL触发器与事务
-<!-- TOC -->
-
-- [Python之路 - MySQL触发器与事务](#python之路---mysql触发器与事务)
-    - [介绍  🍀](#介绍--🍀)
-        - [创建触发器  🍀](#创建触发器--🍀)
-        - [删除触发器  🍀](#删除触发器--🍀)
-        - [查看触发器  🍀](#查看触发器--🍀)
-        - [使用触发器  🍀](#使用触发器--🍀)
-    - [事务  🍀](#事务--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 触发器是与表有关的数据库对象 , 在满足定义条件时触发 , 并执行触发器中定义的语句集合
@@ -80,9 +69,6 @@ END
 END $$
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql触发器与事务)
-<!-- /TOC -->
 
 ### 删除触发器  🍀
 
@@ -100,9 +86,6 @@ mysql> DROP TRIGGER ins_film
 Query OK, 0 rows affected (0.00 sec)
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql触发器与事务)
-<!-- /TOC -->
 
 ### 查看触发器  🍀
 
@@ -115,9 +98,6 @@ Query OK, 0 rows affected (0.00 sec)
    SELECT * FROM TRIGGERS WHERE trigger_name = '...' \G;
    ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql触发器与事务)
-<!-- /TOC -->
 
 ### 使用触发器  🍀
 
@@ -128,9 +108,6 @@ Query OK, 0 rows affected (0.00 sec)
 
 总之触发器无法由用户直接调用
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql触发器与事务)
-<!-- /TOC -->
 
 ## 事务  🍀
 
@@ -185,6 +162,3 @@ CALL p1(@i);
 SELECT @i;
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql触发器与事务)
-<!-- /TOC -->

@@ -1,19 +1,4 @@
 # Python之路 - MySQL之存储过程和函数
-<!-- TOC -->
-
-- [Python之路 - MySQL之存储过程和函数](#python之路---mysql之存储过程和函数)
-    - [介绍  🍀](#介绍--🍀)
-    - [创建存储过程或函数  🍀](#创建存储过程或函数--🍀)
-    - [修改存储过程或函数  🍀](#修改存储过程或函数--🍀)
-    - [删除存储过程或函数  🍀](#删除存储过程或函数--🍀)
-    - [查看存储过程或函数  🍀](#查看存储过程或函数--🍀)
-    - [变量的使用  🍀](#变量的使用--🍀)
-    - [条件处理  🍀](#条件处理--🍀)
-    - [光标  🍀](#光标--🍀)
-    - [流程控制  🍀](#流程控制--🍀)
-    - [内置函数  🍀](#内置函数--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 存储过程和函数是实现经过编译并存储在数据库中的一段SQL语句的集合 , 调用存储过程和函数可以简化应用开发人员的很多工作 , 减少数据在数据库和应用服务器之间的传输 , 对于提高数据处理的效率是有好处的
@@ -90,9 +75,6 @@ CALL sp_name([parameter[,...]])
 
 事务
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之存储过程和函数)
-<!-- /TOC -->
 
 ## 修改存储过程或函数  🍀
 
@@ -106,9 +88,6 @@ ALTER {PRCEDURE|FUNCTION} sp_name [characteristic...]
 |COMMENT 'string'
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之存储过程和函数)
-<!-- /TOC -->
 
 
 ## 删除存储过程或函数  🍀
@@ -128,9 +107,6 @@ mysql> DROP PROCEDURE film_in_stock;
 Query OK, 0 rows affected (0.00 sec)
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之存储过程和函数)
-<!-- /TOC -->
 
 ## 查看存储过程或函数  🍀
 
@@ -152,9 +128,6 @@ Query OK, 0 rows affected (0.00 sec)
    SELECT * FROM ROUTINES WHERE ROUTINE_NAME = 'film_in_stock' \G;
    ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之存储过程和函数)
-<!-- /TOC -->
 
 ## 变量的使用  🍀
 
@@ -204,9 +177,6 @@ SELECT col_name [,...] INTO var_name [,...] table_expr;
 DECLARE v_payments DECIMAL(5,2); -- SUM OF PAYMENTS MADE PREVIOUSLY
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之存储过程和函数)
-<!-- /TOC -->
 
 ## 条件处理  🍀
 
@@ -266,9 +236,6 @@ mysql> CREATE PROCEDURE p1(
 Query OK, 0 rows affected (0.10 sec)
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之存储过程和函数)
-<!-- /TOC -->
 
 ## 光标  🍀
 
@@ -322,9 +289,6 @@ mysql> CREATE PROCEDURE p3()
 Query OK, 0 rows affected (0.02 sec)
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之存储过程和函数)
-<!-- /TOC -->
 
 ## 流程控制  🍀
 
@@ -409,9 +373,6 @@ Query OK, 0 rows affected (0.02 sec)
    END WHILE [end_label]
    ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之存储过程和函数)
-<!-- /TOC -->
 
 
 ## 内置函数  🍀
@@ -420,6 +381,3 @@ Query OK, 0 rows affected (0.02 sec)
 
 需要注意的是 , 上述为自定义函数的操作 , 而对于自定义函数 , 在功能块中不要写SQL语句 , 否则会报错 , 函数仅仅只是一个功能 , 一个在SQL中被应用的功能 , 如果要写SQL则应该使用存储过程
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之存储过程和函数)
-<!-- /TOC -->

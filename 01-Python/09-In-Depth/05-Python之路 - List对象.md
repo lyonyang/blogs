@@ -1,16 +1,4 @@
 # Python之路 - List对象
-<!-- TOC -->
-
-- [Python之路 - List对象](#python之路---list对象)
-    - [介绍  🍀](#介绍--🍀)
-    - [PyListObject  🍀](#pylistobject--🍀)
-    - [创建与维护  🍀](#创建与维护--🍀)
-    - [设置元素  🍀](#设置元素--🍀)
-    - [插入元素  🍀](#插入元素--🍀)
-    - [删除元素  🍀](#删除元素--🍀)
-    - [对象缓冲池  🍀](#对象缓冲池--🍀)
-
-<!-- /TOC -->
 **欢迎收藏交流 , 如需转载 , 请注明出处**
 ## 介绍  🍀
 
@@ -61,9 +49,6 @@ PyListObject采用的内存管理策略和C++中`vector`采取的内存管理策
 
 在`Python-3.5.4\Include\listobject.h`的22至40行 , 我们可以找到相同的代码 , 也就是说2.7与3.5.4的这一部分是没有区别的 
 
-<!-- TOC -->
-[**返回顶部**](#python之路---list对象)
-<!-- /TOC -->
 
 
 ## 创建与维护  🍀
@@ -169,9 +154,6 @@ PyListObject采用的内存管理策略和C++中`vector`采取的内存管理策
 99:static int numfree = 0;
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---list对象)
-<!-- /TOC -->
 
 
 ## 设置元素  🍀
@@ -238,9 +220,6 @@ PyListObject采用的内存管理策略和C++中`vector`采取的内存管理策
 
 在两个版本中 , 没有变化
 
-<!-- TOC -->
-[**返回顶部**](#python之路---list对象)
-<!-- /TOC -->
 
 
 ## 插入元素  🍀
@@ -417,9 +396,6 @@ Python内部通过调用`PyList_Insert`来完成元素的插入动作 , 而`PyLi
 
 我们可以发现 , 对于第二种情况 , 比如`newsize < allocated/2` 时 , Python也会调用`realloc`来收缩列表的内存空间 , 不得不说这是物尽其用的设计
 
-<!-- TOC -->
-[**返回顶部**](#python之路---list对象)
-<!-- /TOC -->
 
 
 ## 删除元素  🍀
@@ -484,9 +460,6 @@ Python内部通过调用`PyList_Insert`来完成元素的插入动作 , 而`PyLi
 
 对于`list`对象的`pop`方法 , 同样也是调用`list_ass_slice`来进行删除 , 源码位于`listobject.c`文件中
 
-<!-- TOC -->
-[**返回顶部**](#python之路---list对象)
-<!-- /TOC -->
 
 ## 对象缓冲池  🍀
 
@@ -530,6 +503,3 @@ Python内部通过调用`PyList_Insert`来完成元素的插入动作 , 而`PyLi
 
 对于每次创建`PyListObject`对象时必须创建元素列表 , 这是Python为了避免过多的消耗系统内存 , 采取的时间换空间的做法
 
-<!-- TOC -->
-[**返回顶部**](#python之路---list对象)
-<!-- /TOC -->

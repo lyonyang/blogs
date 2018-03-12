@@ -1,14 +1,4 @@
 # Python之路 - 标准库之sys
-<!-- TOC -->
-
-- [Python之路 - 标准库之sys](#python之路---标准库之sys)
-    - [介绍  🍀](#介绍--🍀)
-    - [Dynamic objects  🍀](#dynamic-objects--🍀)
-    - [Static objects  🍀](#static-objects--🍀)
-    - [Functions  🍀](#functions--🍀)
-    - [Data  🍀](#data--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 `sys`模块为我们提供了对解释器使用或维护的一些变量的访问 , 以及解释器交互的函数 

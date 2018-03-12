@@ -1,11 +1,4 @@
 # Python之路 - Socket实现远程执行命令
-<!-- TOC -->
-
-- [Python之路 - Socket实现远程执行命令](#python之路---socket实现远程执行命令)
-    - [os模块实现  🍀](#os模块实现--🍀)
-    - [subprocess模块实现  🍀](#subprocess模块实现--🍀)
-
-<!-- /TOC -->
 ## os模块实现  🍀
 
 osssh_server.py

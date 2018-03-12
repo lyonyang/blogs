@@ -1,21 +1,4 @@
 # Python之路 - Django之Model Making queries
-<!-- TOC -->
-
-- [Python之路 - Django之Model Making queries](#python之路---django之model-making-queries)
-    - [介绍  🍀](#介绍--🍀)
-    - [获取对象  🍀](#获取对象--🍀)
-        - [过滤器获取对象  🍀](#过滤器获取对象--🍀)
-        - [链接过滤器  🍀](#链接过滤器--🍀)
-        - [QuerySet唯一性  🍀](#queryset唯一性--🍀)
-        - [QuerySet惰性  🍀](#queryset惰性--🍀)
-        - [QuerySet切片  🍀](#queryset切片--🍀)
-        - [获取单个对象  🍀](#获取单个对象--🍀)
-        - [字段查询  🍀](#字段查询--🍀)
-        - [跨表查询  🍀](#跨表查询--🍀)
-        - [F expressions  🍀](#f-expressions--🍀)
-        - [缓存与QuerySet  🍀](#缓存与queryset--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 一旦我们建立好模型 , Django就会自动为我们生成一套数据库抽象的API , 可以让我们进行创建 , 检索 , 更新和删除对象 , 这篇文章主要阐述怎么去使用这些API

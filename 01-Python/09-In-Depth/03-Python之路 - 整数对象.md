@@ -1,14 +1,4 @@
 # Python之路 - 整数对象
-<!-- TOC -->
-
-- [Python之路 - 整数对象](#python之路---整数对象)
-    - [介绍  🍀](#介绍--🍀)
-    - [整数类型  🍀](#整数类型--🍀)
-    - [小整数对象池  🍀](#小整数对象池--🍀)
-    - [通用整数对象池  🍀](#通用整数对象池--🍀)
-    - [添加和删除  🍀](#添加和删除--🍀)
-
-<!-- /TOC -->
 **欢迎收藏交流 , 如需转载 , 请注明出处**
 ## 介绍  🍀
 
@@ -117,9 +107,6 @@ All integers are implemented as “long” integer objects of arbitrary size.
 
 而对于创建`long`方法就更多了 , 这些创建方法都定义在`Python\Objects\`目录下对应的`.c`文件中
 
-<!-- TOC -->
-[**返回顶部**](#python之路---整数对象)
-<!-- /TOC -->
 
 ## 小整数对象池  🍀
 
@@ -190,9 +177,6 @@ All integers are implemented as “long” integer objects of arbitrary size.
 
 注意 : **小整数对象池**中完全地缓存其对象 , 也就是说在执行我们的程序之前**小整数对象池**就已经激活
 
-<!-- TOC -->
-[**返回顶部**](#python之路---整数对象)
-<!-- /TOC -->
 
 ## 通用整数对象池  🍀
 
@@ -246,9 +230,6 @@ All integers are implemented as “long” integer objects of arbitrary size.
 
 注意 : 如果第一块空间满了 , 那么就会往第二块进行存储 ; 
 
-<!-- TOC -->
-[**返回顶部**](#python之路---整数对象)
-<!-- /TOC -->
 
 ## 添加和删除  🍀
 
@@ -327,6 +308,3 @@ All integers are implemented as “long” integer objects of arbitrary size.
 
 对于整数对象的实现大概核心就是这些东西了 , 关于通用对象池的创建 , 可以通过源码或者 , 《Python源码剖析》一书进行探索
 
-<!-- TOC -->
-[**返回顶部**](#python之路---整数对象)
-<!-- /TOC -->

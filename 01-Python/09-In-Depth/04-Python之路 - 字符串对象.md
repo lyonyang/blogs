@@ -1,18 +1,4 @@
 # Python之路 - 字符串对象
-<!-- TOC -->
-
-- [Python之路 - 字符串对象](#python之路---字符串对象)
-    - [介绍  🍀](#介绍--🍀)
-    - [PyStringObject  🍀](#pystringobject--🍀)
-    - [PyString_Type  🍀](#pystring_type--🍀)
-    - [创建PyStringObject对象  🍀](#创建pystringobject对象--🍀)
-    - [intern机制  🍀](#intern机制--🍀)
-        - [PyString_InternInPlace  🍀](#pystring_interninplace--🍀)
-        - [特殊的引用计数  🍀](#特殊的引用计数--🍀)
-    - [字符缓冲池  🍀](#字符缓冲池--🍀)
-    - [万恶的加号  🍀](#万恶的加号--🍀)
-
-<!-- /TOC -->
 **欢迎收藏交流 , 如需转载 , 请注明出处**
 ## 介绍  🍀
 
@@ -66,9 +52,6 @@ AttributeError: 'str' object has no attribute 'decode'
 
 接下来就来分析Python中的字符串对象了
 
-<!-- TOC -->
-[**返回顶部**](#python之路---字符串对象)
-<!-- /TOC -->
 
 ## PyStringObject  🍀
 
@@ -112,9 +95,6 @@ AttributeError: 'str' object has no attribute 'decode'
 
 在Python 3.x中 , 遗留的字符串定义在`unicodeobject.h`中 , 不另行说明了
 
-<!-- TOC -->
-[**返回顶部**](#python之路---字符串对象)
-<!-- /TOC -->
 
 ## PyString_Type  🍀
 
@@ -148,9 +128,6 @@ AttributeError: 'str' object has no attribute 'decode'
 
 `tp_as_number` , `tp_as_sequence` , `tp_as_mapping` 三个域都被设置了 , 表示`PyStringObject`对数值操作 , 序列操作和映射操作都支持
 
-<!-- TOC -->
-[**返回顶部**](#python之路---字符串对象)
-<!-- /TOC -->
 
 ## 创建PyStringObject对象  🍀
 
@@ -294,9 +271,6 @@ Python 2.7 提供了两个接口 : `PyString_FromString` 和 `PyString_FromStrin
 
 `PyString_FromStringAndSize` 的操作和`PyString_FromString`几乎一样 , 只有一点 , `PyString_FromString`传入的参数必须是以`NUL('\0')` 结尾的字符数组的指针 , 而`PyString_FromStringAndSize`则没有这个要求 , 因为通过传的`size`参数就可以确定需要拷贝的字符的个数
 
-<!-- TOC -->
-[**返回顶部**](#python之路---字符串对象)
-<!-- /TOC -->
 
 ## intern机制  🍀
 
@@ -347,9 +321,6 @@ return (PyObject *) op;
 1. 因为` 'lyon'` 对象不存在 , 所以调用接口创建`PyStringObject`对象 (创建时经过`intern`机制处理) 
 2. Python在查找系统中记录的已经被`intern`机制处理了的`PyStringObject` 对象 (上一步中同样会进行查找) , 发现`'lyon'`字符数组对应的`PyStringObject`已经存在 , 于是返回该对象的引用返回
 
-<!-- TOC -->
-[**返回顶部**](#python之路---字符串对象)
-<!-- /TOC -->
 
 ### PyString_InternInPlace  🍀
 
@@ -416,9 +387,6 @@ return (PyObject *) op;
 
 在代码中 , 我们可以清楚的看到 , `intern`机制的核心在于`interned` , 它指向一个由`PyDict_new`创建的对象 , 也就是一个字典 , 也就是说`intern`机制的关键就是在系统中有一个存在映射关系的集合 , 它的名字叫做`interned` , 这个集合里面记录了被`intern`机制处理过的
 
-<!-- TOC -->
-[**返回顶部**](#python之路---字符串对象)
-<!-- /TOC -->
 
 ### 特殊的引用计数  🍀
 
@@ -462,9 +430,6 @@ return (PyObject *) op;
 
 注意 : `intern`机制节省了内存空间 , 但是在我们创建`PyStringObject`时 , 无论在`interned`中是否存在 , 都是会创建一个`PyStringObject`对象的 , 只不过这是一个临时的对象 , 如果`interned`中有 , 那么就`PyString_InternInPlace` 会对这个对象的引用计数减1 , 于是它就会被销毁了
 
-<!-- TOC -->
-[**返回顶部**](#python之路---字符串对象)
-<!-- /TOC -->
 
 ## 字符缓冲池  🍀
 
@@ -486,9 +451,6 @@ return (PyObject *) op;
 
 当我们创建一个字符串对象时 , 无论是通过调用`PyString_FromString` 还是`PyString_FromStringAndSize`  , 如果字符串实际上是一个字符 , 则会对所创建字符串 (字符)  对象进行`intern`操作 , 再将`intern`的结果缓存到字符缓冲池`characters`中
 
-<!-- TOC -->
-[**返回顶部**](#python之路---字符串对象)
-<!-- /TOC -->
 
 ## 万恶的加号  🍀
 
@@ -644,8 +606,5 @@ Python中提供了 `"+"` 来进行字符串拼接 , 可惜这实际上就是万�
 
 通过小结可以很直接的得出答案 , 如果要拼接n个字符串对象 , 那么使用 "+" 需要申请空间`n-1`次 , 而使用`join`则仅需一次
 
-<!-- TOC -->
-[**返回顶部**](#python之路---字符串对象)
-<!-- /TOC -->
 
 

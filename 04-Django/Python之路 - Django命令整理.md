@@ -1,12 +1,4 @@
 # Python之路 - Django命令整理
-<!-- TOC -->
-
-- [Python之路 - Django命令整理](#python之路---django命令整理)
-    - [介绍  🍀](#介绍--🍀)
-    - [基础命令  🍀](#基础命令--🍀)
-    - [代码执行命令  🍀](#代码执行命令--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 django-admin是用于管理Django的命令行工具集 , 此外在每个Django项目中会自动为我们生成一个manage.py , 它与django-admin相同 , 但是会帮我们处理以下几件事情 : 

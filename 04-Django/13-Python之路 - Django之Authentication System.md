@@ -1,32 +1,4 @@
 # Python之路 - Django之Authentication System
-<!-- TOC -->
-
-- [Python之路 - Django之Authentication System](#python之路---django之authentication-system)
-    - [介绍  🍀](#介绍--🍀)
-    - [User对象  🍀](#user对象--🍀)
-        - [创建 users  🍀](#创建-users--🍀)
-        - [创建 superusers  🍀](#创建-superusers--🍀)
-        - [修改密码  🍀](#修改密码--🍀)
-        - [用户认证  🍀](#用户认证--🍀)
-        - [默认权限  🍀](#默认权限--🍀)
-        - [Groups  🍀](#groups--🍀)
-        - [编程方式创建权限  🍀](#编程方式创建权限--🍀)
-        - [权限缓存  🍀](#权限缓存--🍀)
-    - [Web请求中的认证  🍀](#web请求中的认证--🍀)
-        - [登录用户  🍀](#登录用户--🍀)
-        - [选择验证后端  🍀](#选择验证后端--🍀)
-        - [登出用户  🍀](#登出用户--🍀)
-        - [限制访问页面  🍀](#限制访问页面--🍀)
-            - [原始方式  🍀](#原始方式--🍀)
-            - [login_required  🍀](#login_required--🍀)
-            - [LoginRequiredMixin  🍀](#loginrequiredmixin--🍀)
-            - [user_passes_test  🍀](#user_passes_test--🍀)
-            - [UserPassesTestMixin  🍀](#userpassestestmixin--🍀)
-            - [permission_required  🍀](#permission_required--🍀)
-            - [PermissionRequiredMixin  🍀](#permissionrequiredmixin--🍀)
-    - [在admin中管理用户  🍀](#在admin中管理用户--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 Django为我们提供了一个认证系统 , 它提供了认证 (*authentiaction*) 和授权功能 (*authorization*) , 这两种功能在某些地方时耦合的 

@@ -1,21 +1,4 @@
 # Python之路 - 多进程编程
-<!-- TOC -->
-
-- [Python之路 - 多进程编程](#python之路---多进程编程)
-    - [前言  🍀](#前言--🍀)
-    - [multiprocessing  🍀](#multiprocessing--🍀)
-    - [Process  🍀](#process--🍀)
-    - [Join & Daemon  🍀](#join--daemon--🍀)
-    - [Lock  🍀](#lock--🍀)
-    - [Producer-consumer  🍀](#producer-consumer--🍀)
-    - [Queue  🍀](#queue--🍀)
-    - [Pipe  🍀](#pipe--🍀)
-    - [Manager  🍀](#manager--🍀)
-    - [Semaphore  🍀](#semaphore--🍀)
-    - [Event  🍀](#event--🍀)
-    - [Pool  🍀](#pool--🍀)
-
-<!-- /TOC -->
 ## 前言  🍀
 
 上一篇《[多线程编程](https://lyonyang.gitbooks.io/blog/01-Python/06-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%AF%87/02-Python%E4%B9%8B%E8%B7%AF%20-%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B.html)》中已经对Python中多线程部分进行了整理 , 进程中有很多也是相似的

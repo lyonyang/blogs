@@ -1,15 +1,4 @@
 # Python之路 -  模块初识
-<!-- TOC -->
-
-- [Python之路 -  模块初识](#python之路----模块初识)
-    - [模块介绍 🍀](#模块介绍-🍀)
-    - [collections模块  🍀](#collections模块--🍀)
-        - [namedtuple  🍀](#namedtuple--🍀)
-        - [deque  🍀](#deque--🍀)
-        - [OrderedDict  🍀](#ordereddict--🍀)
-        - [defaultdict  🍀](#defaultdict--🍀)
-
-<!-- /TOC -->
 ##  模块介绍 🍀
 
 Python 模块 , 说白了就是一个 .py 文件 , 里面放了一坨函数和变量或者类 , 总而言之就是放了一堆代码 , 那么问题来了 , 我要它有什么用?

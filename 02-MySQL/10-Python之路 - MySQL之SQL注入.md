@@ -1,15 +1,4 @@
 # Python之路 - MySQL之SQL注入
-<!-- TOC -->
-
-- [Python之路 - MySQL之SQL注入](#python之路---mysql之sql注入)
-    - [介绍  🍀](#介绍--🍀)
-    - [应对措施  🍀](#应对措施--🍀)
-        - [PrepareStatemen + Bind - Variable  🍀](#preparestatemen--bind---variable--🍀)
-        - [使用应用程序提供的转换函数  🍀](#使用应用程序提供的转换函数--🍀)
-        - [自己定义函数进行检验  🍀](#自己定义函数进行检验--🍀)
-        - [Python中的pymysql模块  🍀](#python中的pymysql模块--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 `SQL注入`(SQL Injection)就是利用某些数据的外部接口将用户数据插入到实际的数据库操作语言(SQL)当中 , 从而达到入侵数据库乃至操作系统的目的 , 它的产生主要是由于程序对用户输入的数据没有进行严格的过滤 , 导致非法数据库查询语句的执行 
@@ -74,9 +63,6 @@ http://127.0.0.1/injection/user.php?username=angel'#
 
 "or" 是利用逻辑运算 , 注释符是根据MySQL的特性 , 这个比逻辑运算简单多了 , 两者都实现了SQL注入效果
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之sql注入)
-<!-- /TOC -->
 
 ## 应对措施  🍀
 
@@ -90,9 +76,6 @@ MySQL服务器端并不存在共享池的概念 , 所以在MySQL上使用绑定�
 
 需要注意 , PrepareStatement语句是由JDBC驱动来支持的 , 他仅仅做了简单的替换和转义 , 斌不是MySQL提供了PreparedStatement的特性
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之sql注入)
-<!-- /TOC -->
 
 ### 使用应用程序提供的转换函数  🍀
 
@@ -104,9 +87,6 @@ MySQL服务器端并不存在共享池的概念 , 所以在MySQL上使用绑定�
 - Perl DBI : 使用placeholders 或者quote()方法
 - Ruby DBI : 使用paceholders 或者quote()方法
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之sql注入)
-<!-- /TOC -->
 
 ### 自己定义函数进行检验  🍀
 
@@ -124,9 +104,6 @@ effect_row = cursor.execute("select username from user_info where username='%s' 
 ......
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之sql注入)
-<!-- /TOC -->
 
 
 

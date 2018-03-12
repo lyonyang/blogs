@@ -1,15 +1,4 @@
 # Python之路 - Django初识
-<!-- TOC -->
-
-- [Python之路 - Django初识](#python之路---django初识)
-    - [介绍  🍀](#介绍--🍀)
-    - [创建一个Django项目  🍀](#创建一个django项目--🍀)
-    - [启动Django项目  🍀](#启动django项目--🍀)
-    - [创建一个Django模型  🍀](#创建一个django模型--🍀)
-    - [同步数据库  🍀](#同步数据库--🍀)
-    - [访问admin  🍀](#访问admin--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 通过上一篇整理 , 对于Web框架应该清晰了很多 , 当然上一篇仅仅是自定义了一个最low , 最底端的Web框架 , 基本仅能处理特定的HTTP请求 , 那么这一章就开始学习Python Web框架中的王牌——Django

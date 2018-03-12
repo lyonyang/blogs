@@ -1,15 +1,4 @@
 # Python之路 - Django之Template
-<!-- TOC -->
-
-- [Python之路 - Django之Template](#python之路---django之template)
-    - [介绍  🍀](#介绍--🍀)
-    - [Engine  🍀](#engine--🍀)
-        - [用法  🍀](#用法--🍀)
-        - [内置后端  🍀](#内置后端--🍀)
-    - [Template  🍀](#template--🍀)
-    - [Context  🍀](#context--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 上一篇中我们了解了视图 , 即处理请求返回响应 ; 通常我们都是返回一个字符串 , 一个以HTML规则编写的字符串 , 使其在浏览器上能够很好的显示

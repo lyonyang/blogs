@@ -1,23 +1,4 @@
 # Python之路 - Django之Middleware
-<!-- TOC -->
-
-- [Python之路 - Django之Middleware](#python之路---django之middleware)
-    - [介绍  🍀](#介绍--🍀)
-    - [CSRF  🍀](#csrf--🍀)
-        - [CSRF中间件使用  🍀](#csrf中间件使用--🍀)
-    - [激活中间件  🍀](#激活中间件--🍀)
-    - [自定义中间件  🍀](#自定义中间件--🍀)
-        - [MiddlewareMixin  🍀](#middlewaremixin--🍀)
-        - [钩子函数  🍀](#钩子函数--🍀)
-            - [process_request()  🍀](#process_request--🍀)
-            - [process_view()  🍀](#process_view--🍀)
-            - [process_exception()  🍀](#process_exception--🍀)
-            - [process_template_response()  🍀](#process_template_response--🍀)
-            - [process_response()  🍀](#process_response--🍀)
-    - [处理流响应  🍀](#处理流响应--🍀)
-    - [RBAC案例  🍀](#rbac案例--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 在Django中 , 中间件本质上就是一个类 , 我们可以使用中间件来对请求和响应进行批量处理 , 中间件所在的层次介于WSGI协议与Django URL系统之间 , 它类似一个一个的盒子 , 所有的请求和响应到来时 , 都必须穿过一个一个的盒子 (中间件) , 如下 :

@@ -1,12 +1,4 @@
 # Python之路 - Python介绍
-<!-- TOC -->
-
-- [Python之路 - Python介绍](#python之路---python介绍)
-    - [什么是Python  🍀](#什么是python--🍀)
-    - [Python主要应用  🍀](#python主要应用--🍀)
-    - [Python版本区别  🍀](#python版本区别--🍀)
-
-<!-- /TOC -->
 ## 什么是Python  🍀
 
 Python的创始人是Guido van Rossum , 因为他是一个叫Monty Python的喜剧团体的爱好者 , 所以该语言就命名Python了

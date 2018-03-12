@@ -1,16 +1,4 @@
 # Web开发之路 - BOM
-<!-- TOC -->
-
-- [Web开发之路 - BOM](#web开发之路---bom)
-    - [介绍  🍀](#介绍--🍀)
-    - [Window  🍀](#window--🍀)
-    - [Document  🍀](#document--🍀)
-    - [Navigator  🍀](#navigator--🍀)
-    - [Screen  🍀](#screen--🍀)
-    - [History  🍀](#history--🍀)
-    - [Location  🍀](#location--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 由于JavaScript的出现就是为了能在浏览器中运行 , BOM , 即浏览器对象模型(Browser Object Model)  , BOM使JavaScript有能力与浏览器进行"对话"

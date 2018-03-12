@@ -1,21 +1,4 @@
 # Python之路 - Django之Views
-<!-- TOC -->
-
-- [Python之路 - Django之Views](#python之路---django之views)
-    - [介绍  🍀](#介绍--🍀)
-    - [一个简单视图  🍀](#一个简单视图--🍀)
-    - [HttpRequest  🍀](#httprequest--🍀)
-        - [HttpRequest属性  🍀](#httprequest属性--🍀)
-        - [应用程序设置的属性  🍀](#应用程序设置的属性--🍀)
-        - [中间件设置的属性  🍀](#中间件设置的属性--🍀)
-    - [HttpResponse  🍀](#httpresponse--🍀)
-        - [用法  🍀](#用法--🍀)
-        - [属性  🍀](#属性--🍀)
-        - [HttpResponse子类  🍀](#httpresponse子类--🍀)
-    - [render  🍀](#render--🍀)
-    - [redirect  🍀](#redirect--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 在前面的文章中已经整理了关于*URLconf* 的相关内容 , 我们知道`url()` 的第二个位置参数是一个视图函数 , 简称视图 , 视图函数其实就是一个简单的Python函数 , 它的作用就是接收Web请求并且返回Web响应

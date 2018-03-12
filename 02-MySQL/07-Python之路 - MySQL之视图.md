@@ -1,15 +1,4 @@
 # Python之路 - MySQL之视图
-<!-- TOC -->
-
-- [Python之路 - MySQL之视图](#python之路---mysql之视图)
-    - [介绍  🍀](#介绍--🍀)
-    - [视图操作  🍀](#视图操作--🍀)
-        - [创建视图  🍀](#创建视图--🍀)
-        - [修改视图  🍀](#修改视图--🍀)
-        - [删除视图  🍀](#删除视图--🍀)
-        - [查看视图  🍀](#查看视图--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 视图是一种虚拟存在的表 , 对于使用视图的用户来说基本上是透明的 
@@ -59,9 +48,6 @@ MySQL视图的定义有一些限制,例如,在FROM关键字后面不能包含子
 1. 使用视图后无需每次都重写子查询的sql , 但是这样效率并不高 , 还不如我们写子查询的效率高
 2. 一个致命的问题 : 视图是存放在数据库中的 , 如果我们程序中的sql过分依赖于数据库中存放的视图 , 那么意味着 , 一旦sql需要修改且涉及到视图的部分 , 则必须去数据库中进行修改 , 而通常在公司中数据库有专门的DBA负责 , 你要想完成修改 , 必须付出大量的沟通成本DBA可能才会帮你完成修改 , 极其的不方便
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之视图)
-<!-- /TOC -->
 
 ### 修改视图  🍀
 
@@ -160,9 +146,6 @@ mysql> UPDATE payment_view2 SET amount=10
 ERROR 1369 (HY000): CHECK OPTION failed 'sakila.payment_view2'
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之视图)
-<!-- /TOC -->
 
 ### 删除视图  🍀
 
@@ -178,9 +161,6 @@ DROP VIEW view_name
 DROP VIEW [IF EXISTS] view_name [,view_name]...[RESTRICT|CASCADE];
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之视图)
-<!-- /TOC -->
 
 ### 查看视图  🍀
 
@@ -216,8 +196,5 @@ SHOW CREATE VIEW view_name \G;
 SELECT * FROM VIEWS WHERE table_name = 'view_name' \G;
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之视图)
-<!-- /TOC -->
 
 

@@ -1,15 +1,4 @@
 # Python之路 - 字符编码
-<!-- TOC -->
-
-- [Python之路 - 字符编码](#python之路---字符编码)
-    - [介绍  🍀](#介绍--🍀)
-    - [ASCII  🍀](#ascii--🍀)
-    - [ANSI  🍀](#ansi--🍀)
-    - [GBXXX  🍀](#gbxxx--🍀)
-    - [Unicode  🍀](#unicode--🍀)
-    - [Python编码处理  🍀](#python编码处理--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 **字符编码**

@@ -1,11 +1,4 @@
 # The road to Python - In-Depth
-<!-- TOC -->
-
-- [The road to Python - In-Depth](#the-road-to-python---in-depth)
-    - [Python总体架构  🍀](#python总体架构--🍀)
-    - [源码组织  🍀](#源码组织--🍀)
-
-<!-- /TOC -->
 ## Python总体架构  🍀
 
 Python总体分为三个部分 , 即文件组 , Python核心 (解释器) , 运行环境 , 如下 : 

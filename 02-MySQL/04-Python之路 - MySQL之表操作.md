@@ -1,21 +1,4 @@
 # Python之路 - MySQL表操作
-<!-- TOC -->
-
-- [Python之路 - MySQL表操作](#python之路---mysql表操作)
-    - [介绍  🍀](#介绍--🍀)
-    - [创建表  🍀](#创建表--🍀)
-    - [删除表  🍀](#删除表--🍀)
-    - [修改表  🍀](#修改表--🍀)
-        - [修改表类型  🍀](#修改表类型--🍀)
-        - [增加表字段  🍀](#增加表字段--🍀)
-        - [删除表字段  🍀](#删除表字段--🍀)
-        - [字段改名  🍀](#字段改名--🍀)
-        - [修改字段排列顺序  🍀](#修改字段排列顺序--🍀)
-        - [更改表名  🍀](#更改表名--🍀)
-        - [默认值  🍀](#默认值--🍀)
-    - [语句合集  🍀](#语句合集--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 该部分语句属于DDL语句 , 对表的定义 , 结构的修改 
@@ -75,9 +58,6 @@ ERROR:
 No query specified
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql表操作)
-<!-- /TOC -->
 
 ## 删除表  🍀
 
@@ -86,9 +66,6 @@ mysql> DROP TABLE tb;
 Query OK, 0 rows affected (0.21 sec)
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql表操作)
-<!-- /TOC -->
 
 ## 修改表  🍀
 
@@ -128,9 +105,6 @@ mysql> DESC emp;
 4 rows in set (0.00 sec)
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql表操作)
-<!-- /TOC -->
 
 ### 增加表字段  🍀
 
@@ -172,9 +146,6 @@ mysql> DESC emp;
 6 rows in set (0.00 sec)
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql表操作)
-<!-- /TOC -->
 
 ### 删除表字段  🍀
 
@@ -211,9 +182,6 @@ mysql> DESC emp;
 5 rows in set (0.00 sec)
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql表操作)
-<!-- /TOC -->
 
 ### 字段改名  🍀
 
@@ -246,9 +214,6 @@ mysql> DESC emp;
 
 PS : change 和 modify都可以修改表类型 , 不同的是change后面需要写两次列名 ; 并且change可以修改列名 , modify则不能
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql表操作)
-<!-- /TOC -->
 
 ### 修改字段排列顺序  🍀
 
@@ -310,9 +275,6 @@ mysql> DESC emp;
 
 **PS :** CHANGE/FIRST|AFTER COLUMN 这些关键字都属于MySQL在标准SQL上的扩展 , 在其他数据库上不一定适用
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql表操作)
-<!-- /TOC -->
 
 ### 更改表名  🍀
 
@@ -342,9 +304,6 @@ mysql> DESC emp1;
 6 rows in set (0.00 sec)
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql表操作)
-<!-- /TOC -->
 
 ### 默认值  🍀
 
@@ -396,9 +355,6 @@ mysql> DESC emp1;
 6 rows in set (0.00 sec)
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql表操作)
-<!-- /TOC -->
 
 ## 语句合集  🍀
 
@@ -488,6 +444,3 @@ ALTER TABLE testalter_tbl ALTER i SET DEFAULT 1000;
 ALTER TABLE testalter_tbl ALTER i DROP DEFAULT;
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql表操作)
-<!-- /TOC -->

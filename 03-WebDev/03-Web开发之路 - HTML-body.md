@@ -1,23 +1,4 @@
 # Web开发之路 - HTML-body
-<!-- TOC -->
-
-- [Web开发之路 - HTML-body](#web开发之路---html-body)
-    - [前言  🍀](#前言--🍀)
-    - [&lt; h &gt;  🍀](#lt-h-gt--🍀)
-    - [&lt; p &gt; and &lt; br &gt;   🍀](#lt-p-gt-and-lt-br-gt---🍀)
-    - [&lt; b &gt; and &lt; i &gt;  🍀](#lt-b-gt-and-lt-i-gt--🍀)
-    - [&lt; ul &gt; &lt; ol &gt; &lt; dl &gt;  🍀](#lt-ul-gt-lt-ol-gt-lt-dl-gt--🍀)
-    - [&lt; select &gt;  🍀](#lt-select-gt--🍀)
-    - [&lt; img &gt;  🍀](#lt-img-gt--🍀)
-    - [&lt; table &gt;  🍀](#lt-table-gt--🍀)
-    - [&lt; div &gt; and &lt; span &gt;  🍀](#lt-div-gt-and-lt-span-gt--🍀)
-    - [&lt; form &gt;  🍀](#lt-form-gt--🍀)
-    - [&lt; input &gt;  🍀](#lt-input-gt--🍀)
-    - [&lt; lable &gt;  🍀](#lt-lable-gt--🍀)
-    - [&lt; textarea &gt;  🍀](#lt-textarea-gt--🍀)
-    - [&lt; fieldset &gt;  🍀](#lt-fieldset-gt--🍀)
-
-<!-- /TOC -->
 ## 前言  🍀
 
 为避免上一篇篇幅过长 , body部分在这一篇进行整理 , 主要介绍常用标签

@@ -1,17 +1,4 @@
 # Python之路 - Django之Urls
-<!-- TOC -->
-
-- [Python之路 - Django之Urls](#python之路---django之urls)
-    - [介绍  🍀](#介绍--🍀)
-    - [请求处理  🍀](#请求处理--🍀)
-    - [基本示例  🍀](#基本示例--🍀)
-    - [分组命名  🍀](#分组命名--🍀)
-    - [额外参数  🍀](#额外参数--🍀)
-    - [反向解析  🍀](#反向解析--🍀)
-    - [路由分发  🍀](#路由分发--🍀)
-    - [命名空间  🍀](#命名空间--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 如`settings.py` 一样 , `django-admin startproject` 或者`python manage.py startproject` 执行创建时 , 会为我们自动创建其一个名为**URLconf** (URL配置) 的Python模块 , 即`urls.py` 通常把它称为路由系统

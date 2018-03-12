@@ -1,20 +1,4 @@
 # Web开发之路 - HTML-head
-<!-- TOC -->
-
-- [Web开发之路 - HTML-head](#web开发之路---html-head)
-    - [介绍  🍀](#介绍--🍀)
-    - [< !DOCTYPE html >  🍀](#-doctype-html---🍀)
-    - [&lt; html &gt;  🍀](#lt-html-gt--🍀)
-        - [&lt; head &gt;  🍀](#lt-head-gt--🍀)
-            - [&lt; meta &gt;  🍀](#lt-meta-gt--🍀)
-            - [&lt; title &gt;  🍀](#lt-title-gt--🍀)
-            - [&lt; base &gt;  🍀](#lt-base-gt--🍀)
-            - [&lt; link &gt;   🍀](#lt-link-gt---🍀)
-            - [&lt; style &gt;  🍀](#lt-style-gt--🍀)
-            - [&lt; script &gt;  🍀](#lt-script-gt--🍀)
-        - [&lt; body &gt;  🍀](#lt-body-gt--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 **HTML是什么 ?** 

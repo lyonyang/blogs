@@ -1,17 +1,4 @@
 # Python之路 - MySQL之索引
-<!-- TOC -->
-
-- [Python之路 - MySQL之索引](#python之路---mysql之索引)
-    - [介绍  🍀](#介绍--🍀)
-    - [B-Tree索引与HASH索引  🍀](#b-tree索引与hash索引--🍀)
-    - [MySQL索引管理  🍀](#mysql索引管理--🍀)
-        - [普通索引  🍀](#普通索引--🍀)
-        - [唯一索引  🍀](#唯一索引--🍀)
-        - [主键索引  🍀](#主键索引--🍀)
-        - [组合索引  🍀](#组合索引--🍀)
-    - [使用索引  🍀](#使用索引--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 索引是数据库中最常用也是最重要的手段之一 , 是数据库中专门用于帮助用户快速查询数据的一种数据结构 , 类似于字典中的目录 , 查找字典内容时可以根据目录查找到数据的存放位置 , 然后直接获取值即可
@@ -43,9 +30,6 @@ HASH索引相对简单 , 只有Memory/Heap引擎支持
 
 HASH索引适用于 **Key - Value**查询 , 通过HASH索引要比通过B-Tree索引查询更迅速 , 但是HASH**不适用范围查询** , 例如 : < , > , <= , >=这类操作 ; 如果使用Memory/Heap引擎并且where条件中不使用 "=" 今夕in个索引列 , 那么不会用到索引 , Memory/Heap引擎只有在 "=" 的条件下才会使用索引
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之索引)
-<!-- /TOC -->
 
 ## MySQL索引管理  🍀
 
@@ -93,9 +77,6 @@ DROP INDEX indexname ON tablename;
 ALTER TABLE tablename DROP INDEX column_name;
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之索引)
-<!-- /TOC -->
 
 ### 唯一索引  🍀
 
@@ -137,9 +118,6 @@ DROP INDEX indexname ON tablename;
 ALTER TABLE tablename DROP INDEX column_name;
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之索引)
-<!-- /TOC -->
 
 ### 主键索引  🍀
 
@@ -177,9 +155,6 @@ ALTER TABLE tablename DROP PRIMARY KEY;
 ALTER TABLE tablename MODIFY column_name column_type, drop primary key;
 ```
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之索引)
-<!-- /TOC -->
 
 ###　组合索引  🍀
 
@@ -219,9 +194,6 @@ MySQL只需要通过索引就可以返回查询所需要的数据 , 而不必在
 
 当你对一个sql 使用explain statement 查看一个sql的执行计划时 , 在EXPLAIN的Extra列出现Using Index提示时 , 就说明该select查询使用了覆盖索引
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之索引)
-<!-- /TOC -->
 
 ## 使用索引  🍀
 
@@ -300,6 +272,3 @@ MySQL只需要通过索引就可以返回查询所需要的数据 , 而不必在
 ```
 
 
-<!-- TOC -->
-[**返回顶部**](#python之路---mysql之索引)
-<!-- /TOC -->

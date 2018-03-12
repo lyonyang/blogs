@@ -1,22 +1,4 @@
 # Python之路 - 多线程编程
-<!-- TOC -->
-
-- [Python之路 - 多线程编程](#python之路---多线程编程)
-    - [前言  🍀](#前言--🍀)
-    - [Threading  🍀](#threading--🍀)
-    - [Thread  🍀](#thread--🍀)
-    - [Join & setDaemon  🍀](#join--setdaemon--🍀)
-    - [Python GIL  🍀](#python-gil--🍀)
-    - [Lock  🍀](#lock--🍀)
-    - [RLock  🍀](#rlock--🍀)
-    - [queue  🍀](#queue--🍀)
-    - [Producer-Consumer  🍀](#producer-consumer--🍀)
-    - [Semaphore  🍀](#semaphore--🍀)
-    - [Event  🍀](#event--🍀)
-    - [Condition  🍀](#condition--🍀)
-    - [Timer  🍀](#timer--🍀)
-
-<!-- /TOC -->
 ## 前言  🍀
 
 在上一篇中说了一大堆理论 , 那么现在就开始实践了 

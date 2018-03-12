@@ -1,16 +1,4 @@
 # Python之路 - Django之Template Language
-<!-- TOC -->
-
-- [Python之路 - Django之Template Language](#python之路---django之template-language)
-    - [介绍  🍀](#介绍--🍀)
-    - [变量  🍀](#变量--🍀)
-    - [过滤器  🍀](#过滤器--🍀)
-    - [标签  🍀](#标签--🍀)
-    - [注释  🍀](#注释--🍀)
-    - [模板继承  🍀](#模板继承--🍀)
-    - [自动HTML转义  🍀](#自动html转义--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 模板只是一个文本文件 , 它能够生成一下文本格式的文件 , 如 : HTML , XML , CSV , etv等

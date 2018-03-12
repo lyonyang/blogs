@@ -1,13 +1,4 @@
 # Python之路 - 反射
-<!-- TOC -->
-
-- [Python之路 - 反射](#python之路---反射)
-    - [hasattr  🍀](#hasattr--🍀)
-    - [getattr  🍀](#getattr--🍀)
-    - [setattr  🍀](#setattr--🍀)
-    - [delattr  🍀](#delattr--🍀)
-
-<!-- /TOC -->
 反射主要是指程序可以访问、检测和修改它本身状态或行为的一种能力 
 
 Python面向对象中的反射是通过字符串的形式来操作对象相关的属性 , 在Python中一切皆对象 , 并且只要是对象就可以使用反射

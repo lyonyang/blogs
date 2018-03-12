@@ -1,11 +1,4 @@
 # Python之路 - Socket实现QQ聊天
-<!-- TOC -->
-
-- [Python之路 - Socket实现QQ聊天](#python之路---socket实现qq聊天)
-    - [TCP实现  🍀](#tcp实现--🍀)
-    - [UDP实现  🍀](#udp实现--🍀)
-
-<!-- /TOC -->
 在上一篇中写了最基本版的socket服务端和客户端 , 即仅能通信一次后就自动关闭了 , 显然实际应用中可不是这样的 , 那就来写一个像QQ一样的聊天程序吧
 
 ## TCP实现  🍀

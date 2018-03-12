@@ -1,15 +1,4 @@
 # Python之路 - 标准库之random
-<!-- TOC -->
-
-- [Python之路 - 标准库之random](#python之路---标准库之random)
-    - [介绍  🍀](#介绍--🍀)
-    - [Bookkeeping functions  🍀](#bookkeeping-functions--🍀)
-    - [Functions for integers  🍀](#functions-for-integers--🍀)
-    - [Functions for sequences  🍀](#functions-for-sequences--🍀)
-    - [Real-valued distributions  🍀](#real-valued-distributions--🍀)
-    - [Examples and Recipes  🍀](#examples-and-recipes--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 `random`模块为我们提供了各种分布的伪随机数生成器

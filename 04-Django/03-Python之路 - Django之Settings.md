@@ -1,26 +1,4 @@
 # Python之路 - Django之Settings
-<!-- TOC -->
-
-- [Python之路 - Django之Settings](#python之路---django之settings)
-    - [介绍  🍀](#介绍--🍀)
-    - [SECRET_KEY  🍀](#secret_key--🍀)
-    - [DEBUG  🍀](#debug--🍀)
-    - [ALLOWED_HOSTS  🍀](#allowed_hosts--🍀)
-    - [INSTALLED_APPS  🍀](#installed_apps--🍀)
-    - [MIDDLEWARE  🍀](#middleware--🍀)
-    - [ROOT_URLCONF  🍀](#root_urlconf--🍀)
-    - [TEMPLATES  🍀](#templates--🍀)
-    - [WSGI_APPLICATION  🍀](#wsgi_application--🍀)
-    - [DATABASES  🍀](#databases--🍀)
-    - [AUTH_PASSWORD_VALIDATORS  🍀](#auth_password_validators--🍀)
-    - [LANGUAGE_CODE  🍀](#language_code--🍀)
-    - [TIME_ZONE  🍀](#time_zone--🍀)
-    - [USE_I18N  🍀](#use_i18n--🍀)
-    - [USE_L10N  🍀](#use_l10n--🍀)
-    - [USE_TZ  🍀](#use_tz--🍀)
-    - [STATIC_URL  🍀](#static_url--🍀)
-
-<!-- /TOC -->
 ## 介绍  🍀
 
 Django项目的配置信息在Django项目建立时就已经为我们创建完成 , 也就是目录下的`settings.py` 文件
