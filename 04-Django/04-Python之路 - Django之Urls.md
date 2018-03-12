@@ -1,4 +1,5 @@
 # Python之路 - Django之Urls
+
 ## 介绍  🍀
 
 如`settings.py` 一样 , `django-admin startproject` 或者`python manage.py startproject` 执行创建时 , 会为我们自动创建其一个名为**URLconf** (URL配置) 的Python模块 , 即`urls.py` 通常把它称为路由系统

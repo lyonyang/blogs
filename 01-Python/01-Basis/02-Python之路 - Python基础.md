@@ -1,4 +1,5 @@
 # Python之路 - Python基础
+
 ## Hello World  🍀
 
 学一门语言基本都是从Hello World开始的 , 如下一个最简单的Hello World程序
@@ -337,7 +338,7 @@ a b a b
 | `x[index]`, `x[index:index]`, `x(arguments...)`, `x.attribute` | Subscription, slicing, call, attribute reference |
 | `(expressions...)`, `[expressions...]`, `{key: value...}`, `{expressions...}` | Binding or tuple display, list display, dictionary display, set display |
 
-## if ... else
+## if ... else  🍀
 
 场景一 : 用户登录验证
 
