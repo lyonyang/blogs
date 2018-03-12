@@ -276,7 +276,7 @@ README.md中的内容就是页面上目录显示的内容
 
 现在基本已经完成了 , 我们可以向我们的仓库做一点更新 , 或者直接点击`More options`选择Trigger build进行构建 , 等待几分钟后 (这是GitBook的一个缺点 , 构建有点慢)
 
-待https://travis-ci.org/左侧 ***My Repositories***变成绿色 (黄色表示正在构建) , 我们就可以访问我们的博客啦 
+待`https://travis-ci.org/`左侧 ***My Repositories***变成绿色 (黄色表示正在构建) , 我们就可以访问我们的博客啦 
 
 地址 : `https://用户名.github.io/仓库名` 
 
