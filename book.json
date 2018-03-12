@@ -35,7 +35,7 @@
         "-lunr",
         "-search",
         "search-plus",
-        "anchor-navigation-ex-toc@0.0.6",
+        "anchor-navigation-ex-toc@0.0.9",
         "editlink"
     ],
     "pluginsConfig": {
