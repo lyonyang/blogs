@@ -1,4 +1,5 @@
-## Python之路 - 数字类型
+# Python之路 - 数字类型
+
 ## Int  🍀
 
 在Python 2.7版本中 , Python把int和long是分开的
