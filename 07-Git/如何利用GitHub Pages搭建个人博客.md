@@ -25,7 +25,7 @@
 3. 纯文本编辑 , 可以转换成各种文档格式 , 如 : html , tex , pd等等
 4. 最重要的是 , Markdown能在GitHub上直接展示出来 , 所以你可以看到很多GitHub开源项目 (不开源你也看不到啊) 中的README都是`.md`文件 
 
-本地Markdown编辑可以使用Typora , VSCode , OSX等等 , 本人用的是Typora , 支持功能比较多
+本地Markdown编辑可以使用Typora , VSCode , Atom等等 , 本人用的是Typora , 支持功能比较多
 
 ### 1.3. 搭建说明  🍀
 
