@@ -35,7 +35,7 @@
         "-lunr",
         "-search",
         "search-plus",
-        "anchor-navigation-ex@1.0.10",
+        "anchor-navigation-ex-toc@0.0.6",
         "editlink"
     ],
     "pluginsConfig": {
@@ -46,7 +46,7 @@
             "base": "https://github.com/lyonyang/blogs/blob/master",
             "label": "编辑本页"
         },
-        "anchor-navigation-ex": {
+        "anchor-navigation-ex-toc": {
             "showLevel": false,
             "mode": "float",
             "float": {
