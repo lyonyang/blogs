@@ -351,9 +351,9 @@ JavaScript中的数据类型有字符串 , 数字 , 布尔 , 数组 , 对象 , N
    - this代指对象
    - 创建对象时需要使用new
 
-   上述代码中每个对象中均保存了一个相同的Func函数 , 从而浪费内存 , 使用原型解决
-
-   ```javascript
+   但是在上述代码中每个对象中均保存了一个相同的Func函数 , 可以使用原型优化处理
+   
+   ```javascript
    function Foo (name,age) {
        this.Name = name;
        this.Age = age;
