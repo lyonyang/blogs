@@ -8,6 +8,14 @@ JavaScript被数百万计的网页用来改进设计 , 验证表单 , 检测浏�
 
 浏览器内置了JavaScript语言的解释器 , 所以浏览器上按照JavaScript的规则编写相应代码 , 浏览器可以解释并作出相应的处理
 
+完整的JavaScript实现是由一下三个不同部分组成的 : 
+
+- 核心 , ECMAScript
+- 文档对象模型 (DOM) , Document Object Model (整合JS , CSS , HTML)
+- 浏览器对象模型 (BOM) , Broswer Object Model (整合JS和浏览器)
+
+简单的说 , ECMAScript描述了JavsScript语言本身的相关内容
+
 **存在形式**
 
 ```html
