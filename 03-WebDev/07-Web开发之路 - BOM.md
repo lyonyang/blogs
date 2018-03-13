@@ -12,7 +12,7 @@
 
 ## Window  🍀
 
-所有的浏览器都支持`window`对象 , 它表示浏览器窗口 , 所有JavaScript全局对象 , 函数以及变量均自动成为window对象的成员
+所有的浏览器都支持`window`对象 , 它表示浏览器窗口 , 所有JavaScript全局对象 , 函数以及变量均自动成为window对象的成员 , 也就是说Window对象是客户端JavaScript最高层对象之一
 
 由于`window`对象是全局对象 , 所有的表达式都在当前的环境中计算 , 所以要引用当前窗口不需要特殊的语法 , 可以直接把窗口的属性作为全局变量来使用 , 如 : `window.document`可以直接写`document` 
 
@@ -112,11 +112,11 @@ Document对象方法
 document.title = '努力学习JavaScript!';
 ```
 
-## Navigator  🍀
+## navigator  🍀
 
-Navigator对象包含有关浏览器的信息 , 所有浏览器中都支持 , Nabigator对象的实例是唯一的 , 可以用Window对象的Navigator属性来引用它 , 即`window.Navigator` 
+navigator对象包含有关浏览器的信息 , 所有浏览器中都支持 , navigator对象的实例是唯一的 , 它是Window对象的子对象 , 所以可以用Window对象的navigator属性来引用它 , 即`window.navigator` , 当然也可以直接`navigator` 
 
-Navigator对象属性
+navigator对象属性
 
 | 属性                                       | 描述                           |
 | ---------------------------------------- | ---------------------------- |
@@ -150,11 +150,11 @@ alert('appName = ' + navigator.appName + '\n' +
       'userAgent = ' + navigator.userAgent);
 ```
 
-## Screen  🍀
+## screen  🍀
 
-Screen对象中存放着有关显示浏览器屏幕的信息 , 可用Window对象中的Screen属性直接引用 , 即`window.Screen` , 所有浏览器都支持
+screen对象中存放着有关显示浏览器屏幕的信息 , 可用Window对象中的screen属性直接引用 , 即`window.screen` , 或者`screen` , 所有浏览器都支持
 
-Screen对象属性
+screen对象属性
 
 | 属性                                       | 描述                          |
 | ---------------------------------------- | --------------------------- |
@@ -175,22 +175,22 @@ Screen对象属性
 实例
 
 ```javascript
-alert('Screen size = ' + screen.width + ' x ' + screen.height);
+alert('screen size = ' + screen.width + ' x ' + screen.height);
 ```
 
-## History  🍀
+## history  🍀
 
-History对象最初设计来表示窗口的浏览历史 , 但出于隐私方面的原因 , History对象不在允许脚本访问已经访问过的实际URL , 唯一保持使用的功能只有[back()](http://www.w3school.com.cn/jsref/met_his_back.asp)、[forward()](http://www.w3school.com.cn/jsref/met_his_forward.asp) 和 [go()](http://www.w3school.com.cn/jsref/met_his_go.asp) 方法 
+history对象最初设计来表示窗口的浏览历史 , 但出于隐私方面的原因 , history对象不在允许脚本访问已经访问过的实际URL , 唯一保持使用的功能只有[back()](http://www.w3school.com.cn/jsref/met_his_back.asp)、[forward()](http://www.w3school.com.cn/jsref/met_his_forward.asp) 和 [go()](http://www.w3school.com.cn/jsref/met_his_go.asp) 方法 
 
-可通过`window.history`进行访问 
+可通过`window.history`或者`history`进行访问 
 
-History对象属性
+history对象属性
 
 | 属性                                       | 描述                 |
 | ---------------------------------------- | ------------------ |
 | [length](http://www.w3school.com.cn/jsref/prop_his_length.asp) | 返回浏览器历史列表中的 URL 数量 |
 
-History对象方法
+history对象方法
 
 | 方法                                       | 描述                     |
 | ---------------------------------------- | ---------------------- |
@@ -206,11 +206,11 @@ history.back()
 // 返回结果:undefined
 ```
 
-## Location  🍀
+## location  🍀
 
-Location对象包含有关当前URL的信息 , Location对象是Window对象的一部分 , 可通过`window.location`属性来访问 
+location对象包含有关当前URL的信息 , location对象是Window对象的一部分 , 可通过`window.location`属性来访问 , 或者`location`
 
-Location对象属性
+location对象属性
 
 | 属性                                       | 描述                         |
 | ---------------------------------------- | -------------------------- |
@@ -223,7 +223,7 @@ Location对象属性
 | [protocol](http://www.w3school.com.cn/jsref/prop_loc_protocol.asp) | 设置或返回当前 URL 的协议            |
 | [search](http://www.w3school.com.cn/jsref/prop_loc_search.asp) | 设置或返回从问号 (?) 开始的 URL（查询部分） |
 
-Location 对象方法
+location 对象方法
 
 | 属性                                       | 描述          |
 | ---------------------------------------- | ----------- |
