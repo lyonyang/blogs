@@ -22,21 +22,21 @@ Window对象属性
 | ---------------------------------------- | ---------------------------------------- |
 | [closed](http://www.w3school.com.cn/jsref/prop_win_closed.asp) | 返回窗口是否已被关闭                               |
 | [defaultStatus](http://www.w3school.com.cn/jsref/prop_win_defaultstatus.asp) | 设置或返回窗口状态栏中的默认文本                         |
-| [document](http://www.w3school.com.cn/jsref/dom_obj_document.asp) | 对 document 对象的只读引用  |
-| [history](http://www.w3school.com.cn/jsref/dom_obj_history.asp) | 对 history 对象的只读引用  |
+| [document](http://www.w3school.com.cn/jsref/dom_obj_document.asp) | 文档对象  |
+| [history](http://www.w3school.com.cn/jsref/dom_obj_history.asp) | 包含窗口的浏览历史 |
 | [innerheight](http://www.w3school.com.cn/jsref/prop_win_innerheight_innerwidth.asp) | 返回窗口的文档显示区的高度                            |
 | [innerwidth](http://www.w3school.com.cn/jsref/prop_win_innerheight_innerwidth.asp) | 返回窗口的文档显示区的宽度                            |
 | length                                   | 设置或返回窗口中的框架数量                            |
-| [location](http://www.w3school.com.cn/jsref/dom_obj_location.asp) | 用于窗口或框架的 location 对象  |
-| [name](http://www.w3school.com.cn/jsref/prop_win_name.asp) | 设置或返回窗口的名称。                              |
-| [navigator](http://www.w3school.com.cn/jsref/dom_obj_navigator.asp) | 对 navigator 对象的只读引用|
+| [location](http://www.w3school.com.cn/jsref/dom_obj_location.asp) | 包含有关当前URL的信息 |
+| [name](http://www.w3school.com.cn/jsref/prop_win_name.asp) | 设置或返回窗口的名称                              |
+| [navigator](http://www.w3school.com.cn/jsref/dom_obj_navigator.asp) | 包含有关浏览器的信息 |
 | [opener](http://www.w3school.com.cn/jsref/prop_win_opener.asp) | 返回对创建此窗口的窗口的引用                           |
 | [outerheight](http://www.w3school.com.cn/jsref/prop_win_outerheight.asp) | 返回窗口的外部高度                                |
 | [outerwidth](http://www.w3school.com.cn/jsref/prop_win_outerwidth.asp) | 返回窗口的外部宽度                                |
 | pageXOffset                              | 设置或返回当前页面相对于窗口显示区左上角的 X 位置               |
 | pageYOffset                              | 设置或返回当前页面相对于窗口显示区左上角的 Y 位置               |
 | parent                                   | 返回父窗口。                                   |
-| [screen](http://www.w3school.com.cn/jsref/dom_obj_screen.asp) | 对 screen 对象的只读引用  |
+| [screen](http://www.w3school.com.cn/jsref/dom_obj_screen.asp) | 包含有关显示浏览器屏幕的信息  |
 | [self](http://www.w3school.com.cn/jsref/prop_win_self.asp) | 返回对当前窗口的引用 , 等价于 Window 属性               |
 | [status](http://www.w3school.com.cn/jsref/prop_win_status.asp) | 设置窗口状态栏的文本                               |
 | [top](http://www.w3school.com.cn/jsref/prop_win_top.asp) | 返回最顶层的先辈窗口                               |
