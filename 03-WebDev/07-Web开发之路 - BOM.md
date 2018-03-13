@@ -22,21 +22,21 @@ Window对象属性
 | ---------------------------------------- | ---------------------------------------- |
 | [closed](http://www.w3school.com.cn/jsref/prop_win_closed.asp) | 返回窗口是否已被关闭                               |
 | [defaultStatus](http://www.w3school.com.cn/jsref/prop_win_defaultstatus.asp) | 设置或返回窗口状态栏中的默认文本                         |
-| [document](http://www.w3school.com.cn/jsref/dom_obj_document.asp) | 对 Document 对象的只读引用 , 请参阅 [Document 对象](http://www.w3school.com.cn/jsref/dom_obj_document.asp) |
-| [history](http://www.w3school.com.cn/jsref/dom_obj_history.asp) | 对 History 对象的只读引用 , 请参数 [History 对象](http://www.w3school.com.cn/jsref/dom_obj_history.asp) |
+| [document](http://www.w3school.com.cn/jsref/dom_obj_document.asp) | 对 document 对象的只读引用  |
+| [history](http://www.w3school.com.cn/jsref/dom_obj_history.asp) | 对 history 对象的只读引用  |
 | [innerheight](http://www.w3school.com.cn/jsref/prop_win_innerheight_innerwidth.asp) | 返回窗口的文档显示区的高度                            |
 | [innerwidth](http://www.w3school.com.cn/jsref/prop_win_innerheight_innerwidth.asp) | 返回窗口的文档显示区的宽度                            |
 | length                                   | 设置或返回窗口中的框架数量                            |
-| [location](http://www.w3school.com.cn/jsref/dom_obj_location.asp) | 用于窗口或框架的 Location 对象 , 请参阅 [Location 对象](http://www.w3school.com.cn/jsref/dom_obj_location.asp) |
+| [location](http://www.w3school.com.cn/jsref/dom_obj_location.asp) | 用于窗口或框架的 location 对象  |
 | [name](http://www.w3school.com.cn/jsref/prop_win_name.asp) | 设置或返回窗口的名称。                              |
-| [Navigator](http://www.w3school.com.cn/jsref/dom_obj_navigator.asp) | 对 Navigator 对象的只读引用 , 请参数 [Navigator 对象](http://www.w3school.com.cn/jsref/dom_obj_navigator.asp) |
+| [navigator](http://www.w3school.com.cn/jsref/dom_obj_navigator.asp) | 对 navigator 对象的只读引用|
 | [opener](http://www.w3school.com.cn/jsref/prop_win_opener.asp) | 返回对创建此窗口的窗口的引用                           |
 | [outerheight](http://www.w3school.com.cn/jsref/prop_win_outerheight.asp) | 返回窗口的外部高度                                |
 | [outerwidth](http://www.w3school.com.cn/jsref/prop_win_outerwidth.asp) | 返回窗口的外部宽度                                |
 | pageXOffset                              | 设置或返回当前页面相对于窗口显示区左上角的 X 位置               |
 | pageYOffset                              | 设置或返回当前页面相对于窗口显示区左上角的 Y 位置               |
 | parent                                   | 返回父窗口。                                   |
-| [Screen](http://www.w3school.com.cn/jsref/dom_obj_screen.asp) | 对 Screen 对象的只读引用 , 请参数 [Screen 对象](http://www.w3school.com.cn/jsref/dom_obj_screen.asp) |
+| [screen](http://www.w3school.com.cn/jsref/dom_obj_screen.asp) | 对 screen 对象的只读引用  |
 | [self](http://www.w3school.com.cn/jsref/prop_win_self.asp) | 返回对当前窗口的引用 , 等价于 Window 属性               |
 | [status](http://www.w3school.com.cn/jsref/prop_win_status.asp) | 设置窗口状态栏的文本                               |
 | [top](http://www.w3school.com.cn/jsref/prop_win_top.asp) | 返回最顶层的先辈窗口                               |
@@ -75,13 +75,13 @@ alert('window inner size:' + window.innerWidth + 'x' + window.innerHeight);
 // 直接在浏览器中consle下执行
 ```
 
-## Document  🍀
+## document  🍀
 
-每个载入浏览器的HTML文档都会成为Document对象 , Document对象使我们可以从脚本中对HTML页面中的所有元素进行访问 
+每个载入浏览器的HTML文档都会成为document对象 , document对象使我们可以从脚本中对HTML页面中的所有元素进行访问 
 
-Document对象是Window对象的一部分 , 可通过`window.document`属性对其进行访问
+document对象是Window对象的一部分 , 可通过`window.document`属性对其进行访问 , 或直接使用`document`
 
-Document对象属性
+document对象属性
 
 | 属性                                       | 描述                                       |
 | ---------------------------------------- | ---------------------------------------- |
@@ -93,7 +93,7 @@ Document对象属性
 | [title](http://www.w3school.com.cn/jsref/prop_doc_title.asp) | 返回当前文档的标题                                |
 | [URL](http://www.w3school.com.cn/jsref/prop_doc_url.asp) | 返回当前文档的 URL                              |
 
-Document对象方法
+document对象方法
 
 | 方法                                       | 描述                                       |
 | ---------------------------------------- | ---------------------------------------- |
@@ -133,7 +133,7 @@ navigator对象属性
 | [userAgent](http://www.w3school.com.cn/jsref/prop_nav_useragent.asp) | 返回由客户机发送服务器的 user-agent 头部的值 |
 | [userLanguage](http://www.w3school.com.cn/jsref/prop_nav_userlanguage.asp) | 返回 OS 的自然语言设置                |
 
-Nabigator对象方法
+navigator对象方法
 
 | 方法                                       | 描述                            |
 | ---------------------------------------- | ----------------------------- |
