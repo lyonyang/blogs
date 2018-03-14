@@ -143,7 +143,7 @@ $ django-admin startproject lyonyangproject
 
 首先`django-admin.py`被执行 , 随后进入了`django/core/management/__init__.py`  , 我们简单提取关键步骤 , 如下图 :
 
-![简单导入流程](D:\桌面\简单导入流程.png)
+![简单导入流程](http://oux34p43l.bkt.clouddn.com/简单导入流程.png)
 
 有了这个图 , 那么文字说明就好说了 , 在`management.execute_from_command_line()` 执行之前 , 我们看看django做了些什么
 
