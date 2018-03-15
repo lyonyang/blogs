@@ -46,7 +46,7 @@ read_environ()
 
 本文中所有思维导图全部来自[这里 , 点我吧](https://github.com/minixalpha/SourceLearning/tree/master/wsgiref-0.1.2)
 
-![handlers](http://oux34p43l.bkt.clouddn.com/handlers.bmp)
+![handlers](http://oux34p43l.bkt.clouddn.com/handlerss.bmp)
 
 对于各个类中的具体实现 , 可以去阅读源代码https://pypi.python.org/pypi/wsgiref
 
