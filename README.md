@@ -6,19 +6,27 @@
 [![Downloads](https://img.shields.io/badge/downloads-4.02MB-blue.svg)](https://codeload.github.com/lyonyang/blogs/zip/master)
 
 
-<span><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ" style="text-decoration:none;" ><img src="http://oux34p43l.bkt.clouddn.com/email.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim"/></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/lyonyang" ><img src="http://oux34p43l.bkt.clouddn.com/GitHub.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim"/></a>&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=547903993&site=qq&menu=yes"><img src="http://oux34p43l.bkt.clouddn.com/QQ.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim" /></a></span>
+[![QQ](http://oux34p43l.bkt.clouddn.com/email.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim)](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ)
+[![GitHub](http://oux34p43l.bkt.clouddn.com/GitHub.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim)](https://github.com/lyonyang)
+[![Email](http://oux34p43l.bkt.clouddn.com/QQ.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim)](http://wpa.qq.com/msgrd?v=3&uin=547903993&site=qq&menu=yes)
+
 
 ## 说明
 
 笔记使用`Markdown`格式编写 , 托管于Github , 使用`GitHub Pages` 和 `Gitbook`两种方式展示
-
-
-项目根目录下执行如下命令 , 在本地进行展示
-
-```shell
-bash summary_create.sh
-gitbook install
-gitbook serve .
+ 
+文档目录 : 
+ 
+```tree
+.
+├── Python           
+├── MySQL          
+├── WebDev         
+├── Django       
+├── DesignPattern   
+├── Algorithms     
+├── Git             
+└── Othres     
 ```
 
 ### Python之路系列
@@ -30,7 +38,7 @@ gitbook serve .
 `GitBook`方式展示 : [https://lyonyang.gitbooks.io/blog/](https://lyonyang.gitbooks.io/blog/)
 
 
-**欢迎收藏交流 , 如需转载 , 请注明出处[https://lyonyang.github.io/blogs]**
+**欢迎收藏交流 , 如需转载 , 请注明出处 : ** [`https://lyonyang.github.io/blogs`](https://lyonyang.gitbooks.io/blog/)
 
 持续更新中 ... 
 
