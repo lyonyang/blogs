@@ -118,6 +118,7 @@ def inner_run(self, *args, **options):
 
 	try:
          # 这里最终获取的是WSGIHandler的实例,并且中间件的加载也是在这一步中完成的
+	 # handler = WSGIHandle()
 		handler = self.get_handler(*args, **options)
          # 我们把实参补全来观察
          # run('127.0.0.1', 8000, WSGIHandler(), False, threading, WSGIServer)
@@ -280,7 +281,7 @@ def handle(self):
             # 设置WSGi环境变量
             self.setup_environ()
             
-            # self.result = WSGIHandler(self.environ, self.start_response)
+            # self.result = WSGIHandler()(self.environ, self.start_response)
             # 实例化过程会完成中间件的加载:self.load_middleware()
             self.result = application(self.environ, self.start_response)
             self.finish_response()
