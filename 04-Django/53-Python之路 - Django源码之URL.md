@@ -1,4 +1,4 @@
-# Python之路 - Django源码之URL
+# Python之路 - Django源码之url
 
 ##  介绍  🍀
 
