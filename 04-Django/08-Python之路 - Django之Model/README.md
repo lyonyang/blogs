@@ -112,6 +112,18 @@ CREATE TABLE myapp_userinfo (
   # mysite/__init__.py
   import pymysql
   pymysql.install_as_MySQLdb()　
+
+  # settings
+  DATABASES = {
+      'default': {
+      'ENGINE': 'django.db.backends.mysql',
+      'NAME':'dbname',
+      'USER': 'root',
+      'PASSWORD': 'xxx',
+      'HOST': '',
+      'PORT': '',
+      }
+  }
   ```
 
 ## 添加数据  🍀
@@ -121,14 +133,15 @@ CREATE TABLE myapp_userinfo (
 myapp/views.py
 
 ```python
-# 一步完成
+# 一步完成:使用create函数
 from django.http import HttpResponse
 from myapp import models
 def add_user(request):
     models.Userinfo.objects.create(username='Lyon', password='123456')
     # models.Userinfo.objects.create(**user1) user1={'username':'Lyon','password':'123465'}
     return HttpResponse('<h1 style="color: blue;">数据添加成功!</h1>')
-# 先创建对象后执行操作
+
+# 先创建对象后执行操作:使用save函数
 from django.http import HttpResponse
 from myapp import models
 def add_user(request):
