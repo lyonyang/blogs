@@ -37,9 +37,9 @@
 
 目录: [SUMMARY](SUMMARY.md)
 
-[`GitHub Pages`方式展示](https://lyonyang.github.io/blogs/)
-
-[`GitBook`方式展示](https://lyonyang.gitbooks.io/blog/) -- 不推荐,速度过慢
+[`GitHub Pages方式展示`](https://lyonyang.github.io/blogs/)  -- 推荐
+ 
+[`GitBook方式展示`](https://lyonyang.gitbooks.io/blog/) -- 不推荐,速度过慢
 
 
 **欢迎收藏交流 , 如需转载 , 请注明出处 : ** [`https://lyonyang.github.io/blogs`](https://lyonyang.gitbooks.io/blog/)
