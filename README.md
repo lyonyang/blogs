@@ -15,6 +15,8 @@
 
 笔记使用`Markdown`格式编写 , 托管于Github , 使用`GitHub Pages` 和 `Gitbook`两种方式展示
  
+链接访问 : [https://lyonyang.github.io/blogs/](https://lyonyang.github.io/blogs/)
+ 
 文档目录 : 
  
 ```tree
@@ -33,11 +35,10 @@
 
 目录: [SUMMARY](SUMMARY.md)
 
-`GitHub Pages`方式展示 : [https://lyonyang.github.io/blogs/](https://lyonyang.github.io/blogs/)
+[`GitHub Pages`方式展示](https://lyonyang.github.io/blogs/)
 
-`GitBook`方式展示 : [https://lyonyang.gitbooks.io/blog/](https://lyonyang.gitbooks.io/blog/)
-
-
+[`GitBook`方式展示](https://lyonyang.gitbooks.io/blog/) -- 不推荐,速度过慢
+ 
 **欢迎收藏交流 , 如需转载 , 请注明出处 : ** [`https://lyonyang.github.io/blogs`](https://lyonyang.gitbooks.io/blog/)
 
 持续更新中 ... 
