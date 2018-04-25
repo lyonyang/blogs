@@ -1,6 +1,7 @@
 # Flask初识
 
-[![Flask](https://img.shields.io/badge/flask%20version-0.12.2-blue.svg)](https://pypi.org/project/Flask)
+[![Flask](https://img.shields.io/badge/flask%20version-0.12.2-blue.svg)](https://pypi.org/project/Flask/)
+[![Python Versions](https://img.shields.io/badge/python-2.x%2C%203.x-blue.svg)](https://www.python.org/)
 
 ## 介绍
 
