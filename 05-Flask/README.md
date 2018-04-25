@@ -1,5 +1,7 @@
 # Flask初识
 
+[![Flask](https://img.shields.io/badge/flask%20version-0.12.2-blue.svg)](https://pypi.org/project/Flask)
+
 ## 介绍
 
 Flask是一个微型框架 , 它基于Python , 并且依赖着两个外部库 : Jinja2模板引擎和Werkzeug WSGI工具集
