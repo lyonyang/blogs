@@ -44,7 +44,9 @@
 [`GitBook方式展示(不推荐)`](https://lyonyang.gitbooks.io/blog/)
 
 
-**欢迎收藏交流 , 如需转载 , 请注明出处 :** [`https://lyonyang.github.io/blogs`](https://lyonyang.gitbooks.io/blog/)
+欢迎收藏交流 , 如需转载 , 请注明出处 : [`https://lyonyang.github.io/blogs`](https://lyonyang.gitbooks.io/blog/)
 
 持续更新中 ... 
-
+ 
+个人邮箱 : `lyon.yang@qq.com`
+ 
