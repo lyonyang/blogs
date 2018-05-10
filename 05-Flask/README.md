@@ -18,3 +18,6 @@ Flask可能是 "微" 型的 , 但是它已经能够在各种各样的需求中�
 Flask有许多带有合理默认值的配置项 , 也遵循一些惯例 , 比如 : 按惯例 , 模板和静态文件存储在应用Python源代码树下的子目录中 , 模板文件夹名称与Django一样 "templates" , 静态文件夹名称 "static" 等等
 
 总之 , Flask由于它的 "微" , 当然也可以说 "轻" , 使它得到的广泛的应用 , 便于扩展 , 而不像Django那样 , 强大却有时会显得笨重
+
+
+https://python-team.gitbooks.io/flask-doc/content/di-yi-zhang-flask-jie-shao.html
