@@ -1,4 +1,4 @@
-# Tutorial 3: Class-based Views  🍀
+# Tutorial 3: Class-based Views
 
 我们也可以使用基于类的视图编写我们的 `API` , 如我们所见 , 这是一个有利的模式 , 允许我们重用共同的功能 , 使3我们的代码不重复
 

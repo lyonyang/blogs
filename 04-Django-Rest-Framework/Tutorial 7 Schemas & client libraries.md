@@ -1,4 +1,4 @@
-# Tutorial 7: Schemas & client libraries  🍀
+# Tutorial 7: Schemas & client libraries
 
 `schema` 是一种机器可读的文档 , 用于描述可用的API端点 , URLS , 以及他们支持的操作
 

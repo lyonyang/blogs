@@ -1,4 +1,4 @@
-# Tutorial 5: Relationships & Hyperlinked APIs  🍀
+# Tutorial 5: Relationships & Hyperlinked APIs
 
 目前 , 我们的API中的关系是通过使用主键来表示的 . 在本教程的这一部分中 , 我们将改进我们的API的内聚性和可见性 , 通过使用超链接来实现关系 
 

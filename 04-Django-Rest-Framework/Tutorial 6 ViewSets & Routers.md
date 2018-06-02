@@ -1,4 +1,4 @@
-# Tutorial 6: ViewSets & Routers  🍀
+# Tutorial 6: ViewSets & Routers
 
 `REST framework` 中有一个 `ViewSets` 的抽象 , 它可以让开发者将精力集中在API的状态和交互上 , 同时帮助开发者 , 基于共同约定 , 自动处理 URL 构建
 

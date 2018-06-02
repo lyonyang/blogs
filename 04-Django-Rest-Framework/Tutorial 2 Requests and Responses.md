@@ -1,4 +1,4 @@
-# Tutorial 2: Requests and Responses  🍀
+# Tutorial 2: Requests and Responses
 
 从这节开始, 我们会接触到 `REST` 框架的核心. 让我们介绍一些基本构建组件
 

@@ -1,4 +1,4 @@
-# Tutorial 4: Authentication & Permissions  🍀
+# Tutorial 4: Authentication & Permissions
 
 当前 , 我们的 `API` 没有限制, 谁都可以编辑或删除 `snippets` , 我们需要一些更高级的行为来确保 :
 

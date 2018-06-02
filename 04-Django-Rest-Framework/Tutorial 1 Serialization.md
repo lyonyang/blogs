@@ -1,4 +1,4 @@
-# Tutorial 1: Serialization   🍀
+# Tutorial 1: Serialization
 
 ## 介绍   🍀
 
