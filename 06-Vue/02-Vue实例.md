@@ -1,6 +1,6 @@
 # Vue实例
 
-## 创建一个Vue实例
+## 创建一个Vue实例  🍀
 
 每个 `Vue` 应用都是通过用 `Vue` 函数创建一个新的 `Vue` 实例开始的 : 
 
@@ -29,7 +29,7 @@ var vm = new Vue({
 
 我们会在稍后的组件系统章节具体展开 , 不过现在 , 你只需要明白所有的 `Vue` 组件都是 `Vue` 实例 , 并且接受相同的选项对象 (一些根实例特有的选项除外)
 
-## 数据与方法
+## 数据与方法  🍀
 
 当一个 `Vue` 实例被创建时 , 它向 `Vue` 的响应式系统中加入了其 `data` 对象中能找到的所有的属性 , 当这些属性的值发生改变时 , 视图将会产生 "响应" , 即匹配更新为新的值
 
@@ -116,7 +116,7 @@ vm.$watch('a', function (newValue, oldValue) {
 
 以后你可以在 [API 参考](https://cn.vuejs.org/v2/api/#实例属性)中查阅到完整的实例属性和方法的列表 
 
-## 实例生命周期钩子
+## 实例生命周期钩子  🍀
 
 每个 `Vue` 实例在被创建时都要经过一系列的初始化过程——例如 , 需要设置数据监听 , 编译模板 , 将实例挂载到 DOM 并在数据变化时更新 DOM 等 , 同时在这个过程中也会运行一些叫做生命周期钩子的函数 , 这给了用户在不同阶段添加自己的代码的机会
 
@@ -139,7 +139,7 @@ new Vue({
 
 不要在选项属性或回调上使用[箭头函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) , 比如`created: () => console.log(this.a)` 或`vm.$watch('a', newValue => this.myMethod())` , 因为箭头函数是和父级上下文绑定在一起的 , `this` 不会是如你所预期的 Vue 实例 , 经常导致`Uncaught TypeError: Cannot read property of undefined` 或`Uncaught TypeError: this.myMethod is not a function` 之类的错误
 
-## 生命周期图示
+## 生命周期图示  🍀
 
 下图展示了实例的生命周期 , 你不需要立马弄明白所有的东西 , 不过随着你的不断学习和使用，它的参考价值会越来越高
 
