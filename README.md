@@ -34,7 +34,7 @@
 └── Othres     
 ```
 
-### Python之路系列
+### 浏览方式
 
 查看目录: [SUMMARY](SUMMARY.md)
 
