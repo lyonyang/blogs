@@ -280,8 +280,8 @@ def handle(self):
             # 设置WSGi环境变量
             self.setup_environ()
             
-            # self.result = WSGIHandler(self.environ, self.start_response)
-            # 实例化过程会完成中间件的加载:self.load_middleware()
+            # self.result = WSGIHandler()(self.environ, self.start_response)
+            # 调用__call__方法,返回结果
             self.result = application(self.environ, self.start_response)
             self.finish_response()
         except:
@@ -291,6 +291,30 @@ def handle(self):
                 # If we get an error handling an error, just give up already!
                 self.close()
                 raise   # ...and let the actual server figure it out.
+```
+
+`WSGIHandler().__call__(self.environ, self.start_response)` 如下 : 
+
+```python
+def __call__(self, environ, start_response):
+    set_script_prefix(get_script_name(environ))
+    signals.request_started.send(sender=self.__class__, environ=environ)
+    # 生成请求对象
+    request = self.request_class(environ)
+    # 根据请求获取响应对象
+    response = self.get_response(request)
+
+    response._handler_class = self.__class__
+    # 状态码
+    status = '%d %s' % (response.status_code, response.reason_phrase)
+    # 响应头
+    response_headers = [(str(k), str(v)) for k, v in response.items()]
+    for c in response.cookies.values():
+        response_headers.append((str('Set-Cookie'), str(c.output(header=''))))
+    start_response(force_str(status), response_headers)
+    if getattr(response, 'file_to_stream', None) is not None and environ.get('wsgi.file_wrapper'):
+        response = environ['wsgi.file_wrapper'](response.file_to_stream)
+    return response
 ```
 
 最后`finish_response()` , 返回响应 , 关闭套接字 ; 当然 , 服务器还是继续等待 "客人" 来光临 ! 
@@ -315,8 +339,6 @@ def finish_response(self):
 
 ## 小结  🍀
 
-不得不说 , 由于几条继承链的存在 , 分析工作并不好做 
-
 分析过程中 , 为了避免派生类重写了基类中的方法而导致分析出错 , 不妨将所有方法整合到一个类中 , 虽然这个工作也不好做 , 但是却是不会出错 
 
 我们通过一条 "执行线" 来完成本次小结 : 
@@ -328,6 +350,7 @@ django-admin runserver  →  Command()  →  handle()  →  run()  →
   →  self.RequestHandlerClass(request, client_address, self)  →  self.handle()  →  
   →  ServerHandler(self.rfile, self.wfile, self.get_stderr(), self.get_environ())  →  
   →  handler.run(self.server.get_app())  →  
+  →  WSGIHandler()(self.environ, self.start_response) → __call__
   →  self.finish_response()
 ```
 
