@@ -3,7 +3,7 @@
 [![Flask](https://img.shields.io/badge/flask%20version-0.12.2-blue.svg)](https://pypi.org/project/Flask/)
 [![Python Versions](https://img.shields.io/badge/python-2.x%2C%203.x-blue.svg)](https://www.python.org/)
 
-## 介绍
+## 介绍  🍀
 
 Flask是一个微型框架 , 它基于Python , 并且依赖着两个外部库 : Jinja2模板引擎和Werkzeug WSGI工具集
 
@@ -13,7 +13,7 @@ Flask的 "微" (Micro) 并不是意味着把整个Web应用放入到一个Python
 
 Flask可能是 "微" 型的 , 但是它已经能够在各种各样的需求中生产使用
 
-## 配置和约定
+## 配置和约定  🍀
 
 Flask有许多带有合理默认值的配置项 , 也遵循一些惯例 , 比如 : 按惯例 , 模板和静态文件存储在应用Python源代码树下的子目录中 , 模板文件夹名称与Django一样 "templates" , 静态文件夹名称 "static" 等等
 
