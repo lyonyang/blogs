@@ -72,7 +72,7 @@ $ gitbook serve .
 
 ### 友情链接
 
-https://docs.yangjinjie.xyz/notes/
+https://notes.yangjinjie.xyz/zh_CN/latest/
 
 ## 致谢
 
