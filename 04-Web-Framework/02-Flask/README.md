@@ -23,4 +23,6 @@ Flask有许多带有合理默认值的配置项 , 也遵循一些惯例 , 比如
 
 本目录下为 Flask 源码阅读相关 , 读者应该对 WSGI 和 socketserver 有一定的了解 , 因为在某些部分这可能成为阻碍 , 相对而言 , Flask 的源码比 Django 要简单得多 , 因为 Django 过于庞大 , 并且耦合度高
 
-[Flask官网](http://www.pythondoc.com/flask/index.html)
+如果您有一定的 Web 框架基础 , 对于 Flask 框架的学习可能会变得简单 , 您可以通过阅读源码来获得更多的灵感 , 该目录文章为本人学习交流所撰 , 欢迎交流
+
+如果您没有 Web 框架基础 , 那么您不妨通过 Flask 官方的文档来进行学习 , 并且 Flask 提供了完整的中文文档 , 链接在此 : [Flask官方文档](http://www.pythondoc.com/flask/index.html)
