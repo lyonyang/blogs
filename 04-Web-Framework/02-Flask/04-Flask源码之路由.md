@@ -1,10 +1,10 @@
 # Flask源码之路由
 
-## 介绍
+## 介绍  🍀
 
 在分析 Flask 的请求处理流程中 , 已经碰到了一些路由相关的代码了 , 但是并未深入 , 现在就来看看吧
 
-## 添加路由
+## 添加路由  🍀
 
 通常我们使用 Flask 中的装饰器 `route` 来完成路由注册 , 实际上 , 它也仅仅是一个中介 , 方便我们使用 ; 本质上它只是帮我们调用了 Flask 对象中的 `add_url_rule` 方法 , 如下 : 
 
@@ -83,7 +83,7 @@ def add_url_rule(self, rule, endpoint=None, view_func=None,
         self.view_functions[endpoint] = view_func
 ```
 
-## 绑定路由
+## 绑定路由  🍀
 
 我们已经知道 , 路由的转换是利用`Map` 对象来实现的 , `self.url_map.add(rule)` 源码如下 : 
 
@@ -183,7 +183,7 @@ def compile(self):
     self._regex = re.compile(regex, re.UNICODE)
 ```
 
-## 转换器
+## 转换器  🍀
 
 在上面这段代码中 , 主要流程为 : 根据 `url` 中的信息 , 解析使用什么转换器 , 以及含有的变量等 , 再利用转换器的规则 , 生成路由放入 `regex_parts` 中 ; `Map` 对象中提供了一些默认的转换器 : 
 
@@ -256,7 +256,7 @@ def string_view(lang_code):
     return lang_code
 ```
 
-## 自定义转换器
+## 自定义转换器  🍀
 
 在 Flask 默认的转换器中 , 并没有支持正则的 , 如果我们需要像 Django 一样 , 支持正则 , 那就需要我们自己来增加这个规则了 , 也就是自定义一个转换器
 
@@ -287,7 +287,7 @@ def index(nid):
     return "Index"
 ```
 
-## 反向生成URL
+## 反向生成URL  🍀
 
 在 Django 中 , 利用 `reverse()` 来反向生成 URL , 而在 Flask 中 , 也提供了一个函数可以反向生成 URL : `url_for()`
 
@@ -372,7 +372,7 @@ def url_for(endpoint, **values):
     return rv
 ```
 
-## 补充
+## 补充  🍀
 
 关于路由默认的 `methods` 属性 , `Rule` 对象实例化时 , 会完成3次添加 : 
 
