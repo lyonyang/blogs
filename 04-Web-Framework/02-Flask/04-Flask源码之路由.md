@@ -392,3 +392,9 @@ if self.has_static_folder:
         view_func=self.send_static_file
     )
 ```
+
+自动添加的静态文件规则如下 : 
+
+```python
+<Rule '/static/<filename>' (HEAD, OPTIONS, GET) -> static>,
+```
