@@ -155,7 +155,7 @@ class MethodView(with_metaclass(MethodViewType, View)):
 实例
 
 ```python
-from flask import Flask, jsonify, abort
+from flask import Flask, jsonify, abort, g
 from flask.views import MethodView
 
 app = Flask(__name__)
@@ -163,10 +163,7 @@ app = Flask(__name__)
 
 def user_required(f):
     def decorator(*args, **kwargs):
-        """
-        这个装饰器毫无用处,
-        """
-        if False:
+        if not g.user:
             abort(401)
         return f(*args, **kwargs)
 
