@@ -19,5 +19,8 @@ Flask有许多带有合理默认值的配置项 , 也遵循一些惯例 , 比如
 
 总之 , Flask由于它的 "微" , 当然也可以说 "轻" , 使它得到的广泛的应用 , 便于扩展 , 而不像Django那样 , 强大却有时会显得笨重
 
+## 阅读指引  🍀
 
-https://python-team.gitbooks.io/flask-doc/content/di-yi-zhang-flask-jie-shao.html
+本目录下为 Flask 源码阅读相关 , 读者应该对 WSGI 和 socketserver 有一定的了解 , 因为在某些部分这可能成为阻碍 , 相对而言 , Flask 的源码比 Django 要简单得多 , 因为 Django 过于庞大 , 并且耦合度高
+
+[Flask官网](http://www.pythondoc.com/flask/index.html)
