@@ -27,6 +27,8 @@ if __name__ == '__main__':
 
 随后写了一个视图函数 `hello_world` 以及给这个视图函数添加了一个装饰器 ; 当然 , 我们已经知道这个装饰器的作用是添加路由规则 , 我们看看它具体是怎么做的 
 
+`flask.app.Flask.route()` :
+
 ```python
 def route(self, rule, **options):
     """
@@ -54,7 +56,7 @@ def route(self, rule, **options):
 
 `app.route('/') == decorator`  →→ `@app.route('/') == @decorator`  , 于是在此装饰器执行时 , 将执行 `self.add_url_rule()` , 源码如下 : 
 
-add_url_rule() :
+`flask.app.Flask.add_url_rule()` :
 
 ```python
 @setupmethod  # 该装饰器与调试模式有关,我们可以跳过它

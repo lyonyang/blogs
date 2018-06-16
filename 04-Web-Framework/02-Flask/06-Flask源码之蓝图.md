@@ -160,7 +160,7 @@ if self.has_static_folder:
 
 该蓝图注册到应用时 , 路由注册规则如下 : 
 
-```python
+```shell
 # 可以在flask.Flask.add_url_rule中
 # line 1215:self.url_map.add(rule)下添加一行输出代码:
 #	  print(rule.__repr()) 
@@ -180,7 +180,7 @@ app.register_blueprint(simple_page, url_prefix='/pages')
 
 生成规则如下 : 
 
-```python
+```shell
 <Rule '/static/<filename>' (HEAD, OPTIONS, GET) -> static>,
 <Rule '/pages/<page>' (HEAD, OPTIONS, GET) -> simple_page.show>,
 <Rule '/pages/' (HEAD, OPTIONS, GET) -> simple_page.show>
