@@ -6,13 +6,14 @@
 [![Downloads](https://img.shields.io/badge/downloads-4.02MB-blue.svg)](https://codeload.github.com/lyonyang/blogs/zip/master)
 
 
-*** 
-
 ## 关于作者
 
 > @Email : [lyon.yang@qq.com](http://wpa.qq.com/msgrd?v=3&uin=547903993&site=qq&menu=yes)
+
 > @GitHub : [https://github.com/lyonyang](https://github.com/lyonyang)
+
 > @QQ : [547903993](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ)
+
 > @微博 : 年纪大了,欣赏不了微博的世界
 
 ### 友情链接
@@ -49,7 +50,7 @@ https://notes.yangjinjie.xyz/zh_CN/latest/
 └── Othres     
 ```
 
-如果你也想和我一样 , 搭建一个这样的博客 , :arrow_right: [如何利用GitHub Pages搭建个人博客](https://lyonyang.github.io/blogs/09-Git/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8GitHub%20Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html)
+如果你也想和我一样 , 搭建一个这样的博客 , 点这里 : [如何利用GitHub Pages搭建个人博客](https://lyonyang.github.io/blogs/09-Git/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8GitHub%20Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html)
 
 ## 阅读说明
 
