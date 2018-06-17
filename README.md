@@ -17,7 +17,7 @@
 > QQ : [547903993](http://wpa.qq.com/msgrd?v=3&uin=547903993&site=qq&menu=yes)
 
 
-> 微博 : [年纪大了,欣赏不了微博的世界]()
+> 微博 : [年纪大了, 欣赏不了微博的世界]()
 
 ### 友情链接  🍀
 
@@ -27,7 +27,8 @@ https://notes.yangjinjie.xyz/zh_CN/latest/
 
 ## 博客说明  🍀
 
-欢迎收藏交流 , 如需转载 , 请注明出处 : [`https://lyonyang.github.io/blogs`](https://lyonyang.gitbooks.io/blog/)
+**欢迎收藏交流 , 欢迎Issues ! 如需转载 , 请注明出处 : [`https://lyonyang.github.io/blogs`](https://lyonyang.gitbooks.io/blog/)**
+
 
 文章使用`Markdown`格式编写 , 托管于Github , 主要使用工具 : 
 
@@ -59,13 +60,13 @@ https://notes.yangjinjie.xyz/zh_CN/latest/
 
 查看目录: [SUMMARY](SUMMARY.md)
 
-**网页浏览**
+### 网页阅读  🍀
 
 [`GitHub Pages方式展示(强烈推荐)`](https://lyonyang.github.io/blogs/)
 
 [`GitBook方式展示(速度慢,不推荐)`](https://lyonyang.gitbooks.io/blog/)
 
-**本地浏览**
+### 本地阅读  🍀
 
 可以使用 `GitBook` 本地浏览 , 具体步骤如下 : 
 
