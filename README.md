@@ -6,18 +6,30 @@
 [![Downloads](https://img.shields.io/badge/downloads-4.02MB-blue.svg)](https://codeload.github.com/lyonyang/blogs/zip/master)
 
 
-[![QQ](http://oux34p43l.bkt.clouddn.com/email.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim)](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ)
-[![GitHub](http://oux34p43l.bkt.clouddn.com/GitHub.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim)](https://github.com/lyonyang)
-[![Email](http://oux34p43l.bkt.clouddn.com/QQ.png?imageMogr2/auto-orient/thumbnail/x30/blur/1x0/quality/75|imageslim)](http://wpa.qq.com/msgrd?v=3&uin=547903993&site=qq&menu=yes)
+*** 
 
+## 关于作者
 
-## 说明
+> @Email : [lyon.yang@qq.com](http://wpa.qq.com/msgrd?v=3&uin=547903993&site=qq&menu=yes)
+> @GitHub : [https://github.com/lyonyang](https://github.com/lyonyang)
+> @QQ : [547903993](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ)
+> @微博 : 年纪大了,欣赏不了微博的世界
 
-笔记使用`Markdown`格式编写 , 托管于Github , 使用`GitHub Pages` 和 `Gitbook`两种方式展示
+### 友情链接
 
+https://notes.yangjinjie.xyz/zh_CN/latest/
 
-链接访问 : [https://lyonyang.github.io/blogs/](https://lyonyang.github.io/blogs/)
+***
 
+## 博客说明
+
+欢迎收藏交流 , 如需转载 , 请注明出处 : [`https://lyonyang.github.io/blogs`](https://lyonyang.gitbooks.io/blog/)
+
+文章使用`Markdown`格式编写 , 托管于Github , 主要使用工具 : 
+
+- [GitBook](https://www.gitbook.com/) , 构建本书
+- [Travis-CI](https://www.travis-ci.org/) , 持续构建
+- [Typora](https://www.typora.io/) , 编写MarkDown
 
 文档目录 : 
 
@@ -25,16 +37,21 @@
 .
 ├── Python           
 ├── MySQL          
-├── WebDev         
-├── Django       
-├── Flask
+├── WebD        
+├── Web-Framework
+│   ├── Django
+│   └── Flask
+├── Django-Rest-Framework
+├── Vue
 ├── DesignPattern   
 ├── Algorithms     
 ├── Git             
 └── Othres     
 ```
 
-### 浏览方式
+如果你也想和我一样 , 搭建一个这样的博客 , :arrow_right: [如何利用GitHub Pages搭建个人博客](https://lyonyang.github.io/blogs/09-Git/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8GitHub%20Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html)
+
+## 阅读说明
 
 查看目录: [SUMMARY](SUMMARY.md)
 
@@ -42,7 +59,7 @@
 
 [`GitHub Pages方式展示(强烈推荐)`](https://lyonyang.github.io/blogs/)
 
-[`GitBook方式展示(不推荐)`](https://lyonyang.gitbooks.io/blog/)
+[`GitBook方式展示(速度慢,不推荐)`](https://lyonyang.gitbooks.io/blog/)
 
 **本地浏览**
 
@@ -70,15 +87,4 @@ $ gitbook install
 $ gitbook serve .
 ```
 
-### 友情链接
-
-https://notes.yangjinjie.xyz/zh_CN/latest/
-
-## 致谢
-
-欢迎收藏交流 , 如需转载 , 请注明出处 : [`https://lyonyang.github.io/blogs`](https://lyonyang.gitbooks.io/blog/)
-
-持续更新中 ... 
-
-个人邮箱 : `lyon.yang@qq.com`
 
