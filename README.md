@@ -8,13 +8,13 @@
 
 ## 关于作者  🍀
 
-> Email : [lyon.yang@qq.com](http://wpa.qq.com/msgrd?v=3&uin=547903993&site=qq&menu=yes)
+> Email : [lyon.yang@qq.com](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ)
 
 
 > GitHub : [https://github.com/lyonyang](https://github.com/lyonyang)
 
 
-> QQ : [547903993](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ)
+> QQ : [547903993](http://wpa.qq.com/msgrd?v=3&uin=547903993&site=qq&menu=yes)
 
 
 > 微博 : [年纪大了,欣赏不了微博的世界]()
