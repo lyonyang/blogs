@@ -25,4 +25,4 @@ Flask有许多带有合理默认值的配置项 , 也遵循一些惯例 , 比如
 
 如果您有一定的 Web 框架基础 , 对于 Flask 框架的学习可能会变得简单 , 您可以通过阅读源码来获得更多的灵感 , 该目录文章为本人学习交流所撰 , 欢迎交流
 
-如果您没有 Web 框架基础 , 那么您不妨通过 Flask 官方的文档来进行学习 , 并且 Flask 提供了完整的中文文档 , 链接在此 : [Flask官方文档](http://www.pythondoc.com/flask/index.html)
+如果您没有 Web 框架基础 , 那么您不妨通过 Flask 官方的文档来进行学习 , 链接在此 : [Flask官方文档](http://flask.pocoo.org/docs/1.0/) ; [中文文档](http://www.pythondoc.com/flask/index.html) , 该文档翻译不一定准确 , 但是可以借鉴
