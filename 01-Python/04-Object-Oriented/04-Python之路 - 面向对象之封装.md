@@ -33,7 +33,7 @@ print(a.__name)
 
 ```python
 class A:
-    def __init__(self):
+    def __init__(self, name):
         # 定义私有属性
         self.__name = name
 # 实例化
