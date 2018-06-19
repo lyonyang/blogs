@@ -162,6 +162,24 @@ g = LocalProxy(partial(_lookup_app_object, 'g'))
 
 `LocalProxy()` 是一个代理对象 , 如通过它来获取请求上下文对象中的 `request` 属性
 
+关于 `LocalProxy` 的一些说明 : 
+
+`LocalProxy` 传入一个函数为参数 , 其构造函数如下  
+
+```python
+def __init__(self, local, name=None):
+    # _类名__属性名为私有属性的另一表现形式,此处等价于如下:
+    #    self.__local = local
+    object.__setattr__(self, '_LocalProxy__local', local)
+    object.__setattr__(self, '__name__', name)
+    if callable(local) and not hasattr(local, '__release_local__'):
+        # "local" is a callable that is not an instance of Local or
+        # LocalManager: mark it as a wrapped function.
+        object.__setattr__(self, '__wrapped__', local)
+```
+
+`LocalProxy` 不会进行额外的操作 , 它会将对其本身的操作转接到上下文对象
+
 我们也可以利用 `LocalStack` 与 `LocalProxy` 自己来实现一个全局可访问的 `current_user` :
 
 ```python
