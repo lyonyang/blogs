@@ -10,12 +10,11 @@
 
 > Email : [lyon.yang@qq.com](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ)
 
-
 > GitHub : [https://github.com/lyonyang](https://github.com/lyonyang)
-
 
 > QQ : [547903993](http://wpa.qq.com/msgrd?v=3&uin=547903993&site=qq&menu=yes)
 
+> 技术交流群 : [590092348](https://jq.qq.com/?_wv=1027&k=52VgMo7)
 
 > 微博 : [年纪大了, 欣赏不了微博的世界]()
 
@@ -51,7 +50,7 @@ https://notes.yangjinjie.xyz/zh_CN/latest/
 ├── DesignPattern   
 ├── Algorithms     
 ├── Git             
-└── Othres     
+└── Others     
 ```
 
 如果你也想和我一样 , 搭建一个这样的博客 , 点这里 : [如何利用GitHub Pages搭建个人博客](https://lyonyang.github.io/blogs/09-Git/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8GitHub%20Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html)
