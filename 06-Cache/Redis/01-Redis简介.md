@@ -21,7 +21,7 @@ Redis 与其他 key - value 缓存产品有以下三个特点 :
 - 原子 – Redis的所有操作都是原子性的 , 同时Redis还支持对几个操作全并后的原子性执行
 - 丰富的特性 – Redis还支持 `publish/subscribe` , 通知 key 过期等等特性
 
-**Linux环境安装**
+## 安装  🍀
 
 方式一
 
