@@ -54,9 +54,9 @@ databases 16
 
 9. 指定在多长时间内 , 有多少次更新操作 , 就将数据同步到数据文件 , 可以多个条件配合
 
-   ```
- save <seconds> <changes>
-   ```
+    ```
+save <seconds> <changes>
+    ```
 
 ​    Redis 默认配置文件中提供了三个条件 : 
 
