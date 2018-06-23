@@ -7,66 +7,66 @@
 1. Redis 默认不是以守护进程的方式运行 , 可以通过该配置项修改 , 使用yes启用守护进程
 
     ```
-daemonize no
+    daemonize no
     ```
 
 2. 当 Redis 以守护进程方式运行时 , Redis 默认会把 `pid` 写入 `/var/run/redis.pid` 文件 , 可以通过 `pidfile` 指定
 
     ```
-pidfile /var/run/redis.pid
+    pidfile /var/run/redis.pid
     ```
 
 3. 指定 Redis 监听端口 , 默认端口为 6379 , 作者在自己的一篇博文中解释了为什么选用 6379 作为默认端口 , 因为 6379 在手机按键上 `MERZ` 对应的号码 , 而 `MERZ` 取自意大利歌女 `Alessia Merz` 的名字
 
     ```
-port 6379
+    port 6379
     ```
 
 4. 绑定的主机地址
 
     ```
-bind 127.0.0.1
+    bind 127.0.0.1
     ```
 
 5. 当客户端闲置多长时间后关闭连接 , 如果指定为0 , 表示关闭该功能
 
     ```
-timeout 300
+    timeout 300
     ```
 
 6. 指定日志记录级别 , Redis总共支持四个级别 : debug , verbose , notice , warning , 默认为 verbose
 
     ```
-loglevel verbose
+    loglevel verbose
     ```
 
 7. 日志记录方式 , 默认为标准输出 , 如果配置 Redis 为守护进程方式运行 , 而这里又配置为日志记录方式为标准输出 , 则日志将会发送给 `/dev/null`
 
     ```
-logfile stdout
+    logfile stdout
     ```
 
 8. 设置数据库的数量 , 默认数据库为0 , 可以使用SELECT `<dbid>`命令在连接上指定数据库id
 
     ```
-databases 16
+    databases 16
     ```
 
 9. 指定在多长时间内 , 有多少次更新操作 , 就将数据同步到数据文件 , 可以多个条件配合
 
     ```
-save <seconds> <changes>
+    save <seconds> <changes>
     ```
 
-​    Redis 默认配置文件中提供了三个条件 : 
+    Redis 默认配置文件中提供了三个条件 : 
 
     ```
-save 900 1
-save 300 10
-save 60 10000
+    save 900 1
+    save 300 10
+    save 60 10000
     ```
 
-​    分别表示900秒 ( 15分钟 ) 内有1个更改 , 300秒 ( 5分钟 ) 内有10个更改以及60秒内有10000个更改
+​	分别表示900秒 ( 15分钟 ) 内有1个更改 , 300秒 ( 5分钟 ) 内有10个更改以及60秒内有10000个更改
 
 10. 指定存储至本地数据库时是否压缩数据 , 默认为yes , Redis 采用 LZF 压缩 , 如果为了节省 CPU 时间 , 可以关闭该选项 , 但会导致数据库文件变的巨大
 
