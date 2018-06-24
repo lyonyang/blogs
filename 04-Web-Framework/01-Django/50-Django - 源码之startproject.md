@@ -1,4 +1,4 @@
-# Python之路 - Django源码之startproject
+# Django - 源码之startproject
 
 ## 介绍  🍀
 

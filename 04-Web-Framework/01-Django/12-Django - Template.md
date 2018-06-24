@@ -1,4 +1,4 @@
-# Python之路 - Django之Template
+# Django - Template
 
 ## 介绍  🍀
 

@@ -1,4 +1,4 @@
-# Django之Settings
+# Django - Settings
 
 ## 介绍  🍀
 

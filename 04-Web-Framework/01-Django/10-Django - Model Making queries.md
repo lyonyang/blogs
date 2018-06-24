@@ -1,4 +1,4 @@
-# Django之Model Making queries
+# Django - Model Making queries
 
 ## 介绍  🍀
 

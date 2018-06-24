@@ -1,4 +1,4 @@
-# Python之路 - Django源码之Admin
+# Django - 源码之Admin
 
 ## 介绍  🍀
 

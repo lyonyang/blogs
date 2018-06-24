@@ -1,4 +1,4 @@
-# Python之路 - Django源码之runserver
+# Django - 源码之runserver
 
 ## 介绍  🍀
 

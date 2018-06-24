@@ -1,4 +1,4 @@
-# Python之路 - Django之Cookie与Sessions
+# Django - Cookie与Sessions
 
 ## 介绍  🍀
 

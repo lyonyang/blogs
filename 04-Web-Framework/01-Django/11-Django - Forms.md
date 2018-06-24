@@ -1,4 +1,4 @@
-# Python之路 - Django之Forms
+# Django - Forms
 
 ## 介绍  🍀
 

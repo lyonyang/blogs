@@ -1,4 +1,4 @@
-# Python之路 - Django命令整理
+# Django - Django命令整理
 
 ## 介绍  🍀
 

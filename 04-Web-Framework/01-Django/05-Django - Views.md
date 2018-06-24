@@ -1,4 +1,4 @@
-# Python之路 - Django之Views
+# Django - Views
 
 ## 介绍  🍀
 

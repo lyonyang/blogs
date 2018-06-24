@@ -1,4 +1,4 @@
-# Python之路 - Django之Middleware
+# Django - Middleware
 
 ## 介绍  🍀
 

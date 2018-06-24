@@ -1,4 +1,4 @@
-# Python之路 - Django之Authentication System
+# Django - Authentication System
 
 ## 介绍  🍀
 
