@@ -1,4 +1,4 @@
-# Python之路 - Django之Model Field Options
+# Django之Model Field Options
 
 ## 介绍  🍀
 

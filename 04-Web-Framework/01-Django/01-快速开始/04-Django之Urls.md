@@ -1,4 +1,4 @@
-# Python之路 - Django之Urls
+# Django之Urls
 
 ## 介绍  🍀
 

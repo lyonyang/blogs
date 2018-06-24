@@ -1,4 +1,4 @@
-# Python之路 - Django初识
+# Django初识
 
 ## 介绍  🍀
 

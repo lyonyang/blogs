@@ -1,4 +1,4 @@
-# Python之路 - Django之Template Language
+# Django之Template Language
 
 ## 介绍  🍀
 

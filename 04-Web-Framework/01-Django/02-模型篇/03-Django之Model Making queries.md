@@ -1,4 +1,4 @@
-# Python之路 - Django之Model Making queries
+# Django之Model Making queries
 
 ## 介绍  🍀
 

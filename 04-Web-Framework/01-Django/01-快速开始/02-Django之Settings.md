@@ -1,4 +1,4 @@
-# Python之路 - Django之Settings
+# Django之Settings
 
 ## 介绍  🍀
 

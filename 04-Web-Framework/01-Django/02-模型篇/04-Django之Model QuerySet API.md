@@ -1,4 +1,4 @@
-# Python之路 - Django之Model QuerySet API
+# Django之Model QuerySet API
 
 ## 介绍  🍀
 
