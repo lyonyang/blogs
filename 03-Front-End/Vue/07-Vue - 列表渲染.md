@@ -496,7 +496,7 @@ new Vue({
   Vue.component('todo-item', {
     template: '\
       <li>\
-        {% raw %}{{ title }}{% endraw %}\
+        {{ title }}\
         <button v-on:click="$emit(\'remove\')">Remove</button>\
       </li>\
     ',
