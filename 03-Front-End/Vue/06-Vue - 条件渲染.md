@@ -161,26 +161,27 @@ Vue 会尽可能高效地渲染元素 , 通常会复用已有元素而不是从�
 
 <script src="vue.min.js"></script>
 <script>
-new Vue({
-  el: '#no-key-example',
-  data: {
-    loginType: 'username'
-  },
-  methods: {
-    toggleLoginType: function () {
-      return this.loginType = this.loginType === 'username' ? 'email' : 'username'
+  new Vue({
+    el: '#no-key-example',
+    data: {
+      loginType: 'username'
+    },
+    methods: {
+      toggleLoginType: function () {
+        return this.loginType = this.loginType === 'username' ? 'email' : 'username'
+      }
     }
-  }
-});
-new Vue({
-  el: '#key-example',
-  data: {
-    loginType: 'username'
-  },
-  methods: {
-    toggleLoginType: function () {
-      return this.loginType = this.loginType === 'username' ? 'email' : 'username'
+  });
+
+  new Vue({
+    el: '#key-example',
+    data: {
+      loginType: 'username'
+    },
+    methods: {
+      toggleLoginType: function () {
+        return this.loginType = this.loginType === 'username' ? 'email' : 'username'
+      }
     }
-  }
-})
+  });
 </script>
