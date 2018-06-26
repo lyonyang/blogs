@@ -279,7 +279,6 @@ var watchExampleVM = new Vue({
     }
   }
 });
-
 var vm = new Vue({
   el: '#example',
   data: {
@@ -292,5 +291,5 @@ var vm = new Vue({
       return this.message.split('').reverse().join('')
     }
   }
-})
+});
 </script>
