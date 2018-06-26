@@ -1,4 +1,4 @@
-# Redis之Sentinel
+# Redis - Sentinel
 
 ## 介绍  🍀
 
