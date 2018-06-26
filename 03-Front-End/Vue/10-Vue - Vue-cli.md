@@ -132,7 +132,7 @@ $ npm run dev
 
 访问 `http://localhost:8000` 
 
-![my-project](D:\桌面\my-project.png)
+![my-project](http://oux34p43l.bkt.clouddn.com/my-project.png)![my-project](D:\桌面\my-project.png)
 
 ## 项目结构  🍀
 
