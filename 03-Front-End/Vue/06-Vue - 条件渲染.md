@@ -154,6 +154,7 @@ Vue 会尽可能高效地渲染元素 , 通常会复用已有元素而不是从�
 
 当 `v-if` 与 `v-for` 一起使用时 , `v-for` 具有比 `v-if` 更高的优先级。
 
+<script src="vue.min.js"></script>
 <script>
 new Vue({
   el: '#no-key-example',

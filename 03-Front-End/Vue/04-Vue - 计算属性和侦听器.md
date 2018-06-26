@@ -241,6 +241,7 @@ var watchExampleVM = new Vue({
 
 除了 `watch` 选项之外 , 您还可以使用命令式的 [vm.$watch API](https://cn.vuejs.org/v2/api/#vm-watch) 
 
+<script src="vue.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
 <script>
