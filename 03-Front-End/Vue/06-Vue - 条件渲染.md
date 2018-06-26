@@ -93,14 +93,15 @@ Vue 会尽可能高效地渲染元素 , 通常会复用已有元素而不是从�
 
 自己动手试一试 , 在输入框中输入一些文本 , 然后按下切换按钮 : 
 
-<div id="no-key-example" style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;"><template v-if="loginType === 'username'">
+<div id="no-key-example" style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;">
+<div><template v-if="loginType === 'username'">
   <label>Username</label>
   <input placeholder="Enter your username">
 </template>
 <template v-else>
   <label>Email</label>
   <input placeholder="Enter your email address">
-</template>
+</template></div>
 <button>Toggle login type</button>
 </div>
 
@@ -120,14 +121,15 @@ Vue 会尽可能高效地渲染元素 , 通常会复用已有元素而不是从�
 
 现在 , 每次切换时 , 输入框都将被重新渲染 , 请看 : 
 
-<div id="key-example" style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;"><template v-if="loginType === 'username'">
+<div id="key-example" style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;">
+<div><template v-if="loginType === 'username'">
   <label>Username</label>
   <input placeholder="Enter your username" key="username-input">
 </template>
 <template v-else>
   <label>Email</label>
   <input placeholder="Enter your email address" key="email-input">
-</template>
+</template></div>
 <button>Toggle login type</button>
 </div>
 

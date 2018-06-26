@@ -42,8 +42,8 @@ var vm = new Vue({
 结果 : 
 
 <div id="example" style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;">
-  <p>Original message: "{{ message }}"</p>
-  <p>Computed reversed message: "{{ reversedMessage }}"</p>
+  <p>Original message: "{% raw %}{{ message }}{% endraw %}"</p>
+  <p>Computed reversed message: "{% raw %}{{ reversedMessage }}{% endraw %}"</p>
 </div>
 
 这里我们声明了一个计算属性 `reversedMessage` , 我们提供的函数将用作属性 `vm.reversedMessage` 的 getter 函数 : 
@@ -234,7 +234,7 @@ var watchExampleVM = new Vue({
     Ask a yes/no question:
     <input v-model="question">
   </p>
-  <p>{{ answer }}</p>
+  <p>{% raw %}{{ answer }}{% endraw %}</p>
 </div>
 
 在这个示例中 , 使用 `watch` 选项允许我们执行异步操作 (访问一个 API) , 限制我们执行该操作的频率 , 并在我们得到最终结果前 , 设置中间状态。这些都是计算属性无法做到的。

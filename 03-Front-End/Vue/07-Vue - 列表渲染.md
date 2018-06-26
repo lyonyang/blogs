@@ -29,7 +29,7 @@ var example1 = new Vue({
 <div id="example-1" style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;">
 <ul id="example-1">
   <li v-for="item in items">
-    {{ item.message }}
+    {% raw %}{{ item.message }}{% endraw %}
   </li>
 </ul>
 </div>
@@ -62,7 +62,7 @@ var example2 = new Vue({
 <div id="example-2" style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;">
 <ul id="example-2">
   <li v-for="(item, index) in items">
-    {{ parentMessage }} - {{ index }} - {{ item.message }}
+    {% raw %}{{ parentMessage }}{% endraw %} - {% raw %}{{ index }}{% endraw %} - {% raw %}{{ item.message }}{% endraw %}
   </li>
 </ul>
 </div>
@@ -103,7 +103,7 @@ new Vue({
 <div style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;">
 <ul id="v-for-object" class="demo">
   <li v-for="value in object">
-    {{ value }}
+    {% raw %}{{ value }}{% endraw %}
   </li>
 </ul>
 </div>
@@ -112,12 +112,12 @@ new Vue({
 
 ```html
 <div v-for="(value, key) in object">
-  {{ key }}: {{ value }}
+  {% raw %}{{ key }}{% endraw %}: {% raw %}{{ value }}{% endraw %}
 </div>
 ```
 
 <div iid="v-for-object" style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;"><div v-for="(value, key) in object">
-  {{ key }}: {{ value }}
+  {% raw %}{{ key }}{% endraw %}: {% raw %}{{ value }}{% endraw %}
 </div>
 </div>
 
@@ -131,7 +131,7 @@ new Vue({
 
 <div id="v-for-object" style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;">
 <div v-for="(value, key, index) in object">
-  {{ index }}. {{ key }}: {{ value }}
+  {% raw %}{{ index }}{% endraw %}. {% raw %}{{ key }}{% endraw %}: {% raw %}{{ value }}{% endraw %}
 </div></div>
 
 在遍历对象时 , 是按 `Object.keys()` 的结果遍历 , 但是不能保证它的结果在不同的 JavaScript 引擎下是一致的
@@ -339,7 +339,7 @@ methods: {
 
 <div id="app" style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;">
 <div>
-  <span v-for="n in 10">{{ n }} </span>
+  <span v-for="n in 10">{% raw %}{{ n }}{% endraw %} </span>
 </div>
 </div>
 
@@ -496,7 +496,7 @@ new Vue({
   Vue.component('todo-item', {
     template: '\
       <li>\
-        {{ title }}\
+        {% raw %}{{ title }}{% endraw %}\
         <button v-on:click="$emit(\'remove\')">Remove</button>\
       </li>\
     ',
