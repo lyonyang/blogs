@@ -482,6 +482,8 @@ Home component
 - 单文件组件 (`.vue`)
 - ``
 
+<script src="vue.min.js"></script>
+
 <script>
 
 Vue.component('button-counter', {

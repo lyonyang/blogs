@@ -296,6 +296,7 @@ Vue.config.keyCodes.f1 = 112
 3. 当一个 ViewModel 被销毁时 , 所有的事件处理器都会自动被删除 , 你无须担心如何自己清理它们
 
 
+<script src="vue.min.js"></script>
 
 <script> 
 

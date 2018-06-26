@@ -492,6 +492,8 @@ new Vue({
   </ul>
 </div>
 
+<script src="vue.min.js"></script>
+
 <script>
   Vue.component('todo-item', {
     template: '\
