@@ -28,10 +28,6 @@ Vue.component('button-counter', {
 new Vue({ el: '#components-demo' })
 ```
 
-<div id="components-demo" style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;">
-<alert-box>
-  <button-counter></button-counter>
-</div>
 
 因为组件是可复用的 Vue 实例 , 所以它们与 `new Vue` 接收相同的选项 , 例如 `data`、`computed`、`watch`、`methods` 以及生命周期钩子等 , 仅有的例外是像 `el` 这样根实例特有的选项
 
@@ -47,12 +43,6 @@ new Vue({ el: '#components-demo' })
 </div>
 ```
 
-<div id="components-demo" style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;">
-<alert-box>
-  <button-counter></button-counter>
-  <button-counter></button-counter>
-  <button-counter></button-counter>
-</div>
 
 注意当点击按钮时 , 每个组件都会各自独立维护它的 `count` , 因为你每用一次组件 , 就会有一个它的新**实例**被创建
 
@@ -75,24 +65,6 @@ data: function () {
   }
 }
 ```
-
-如果 Vue 没有这条规则 , 点击一个按钮就可能会像如下代码一样影响到其它所有实例 : 
-
-<div id="components-demo3" style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;">
-<alert-box><button></button> <button></button> <button></button></div>
-
-<script>
-var buttonCounter2Data = {
-  count: 0
-};
-Vue.component('button-counter2', {
-  data: function () {
-    return buttonCounter2Data
-  },
-  template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
-});
-new Vue({ el: '#components-demo3' });
-</script>
 
 ## 组件的组织  🍀
 
@@ -134,15 +106,6 @@ Vue.component('blog-post', {
 <blog-post title="Blogging with Vue"></blog-post>
 <blog-post title="Why Vue is so fun"></blog-post>
 ```
-
-<div id='blog-post-demo1' style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;">
-<alert-box>
-
-<blog-post title="My journey with Vue"></blog-post>
-<blog-post title="Blogging with Vue"></blog-post>
-<blog-post title="Why Vue is so fun"></blog-post>
-
-</div>
 
 然而在一个典型的应用中 , 你可能在 `data` 里有一个博文的数组 : 
 
@@ -308,12 +271,6 @@ Vue.component('blog-post', {
 ></blog-post>
 ```
 
-<div style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;">
-<blog-post2 title="My journey with Vue"></blog-post2>
-<blog-post2 title="Blogging with Vue"></blog-post2>
-<blog-post2 title="Why Vue is so fun"></blog-post2>
-</div>
-
 ### 使用事件抛出一个值  🍀
 
 有的时候用一个事件来抛出一个特定的值是非常有用的 , 例如我们可能想让 `<blog-post>`组件决定它的文本要放大多少 , 这时可以使用 `$emit` 的第二个参数来提供这个值 : 
@@ -413,14 +370,6 @@ Vue.component('custom-input', {
 </alert-box>
 ```
 
-可能会渲染出这样的东西 : 
-
-<div style="border: 1px solid #eee;border-radius: 2px;padding: 25px 35px;margin-top: 1em;margin-bottom: 40px;font-size: 1.2em;line-height: 1.5em;-webkit-user-select: none;user-select: none;overflow-x: auto;">
-<alert-box>
-  Something bad happened.
-</alert-box>
-</div>
-
 幸好 , Vue 自定义的 `<slot>` 元素让这变得非常简单 : 
 
 ```javascript
@@ -481,53 +430,3 @@ Home component
 - 字符串 (例如 : `template: '...'`)
 - 单文件组件 (`.vue`)
 - ``
-
-<script src="vue.min.js"></script>
-
-<script>
-
-Vue.component('button-counter', {
-  data: function () {
-    return {
-      count: 0
-    }
-  },
-  template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
-});
-
-new Vue({ el: '#components-demo' });
-
-
-
-Vue.component('blog-post', {
-  props: ['title'],
-  template: '<h3>{{ title }}</h3>'
-});
-
-new Vue({ el: '#blog-post-demo1' });
-
-Vue.component('blog-post2', {
-  props: ['post'],
-  template: `
-    <div class="blog-post">
-      <h3>{{ post.title }}</h3>
-      <button>
-        Enlarge text
-      </button>
-      <div v-html="post.content"></div>
-    </div>
-  `
-});
-
-new Vue({
-  el: '#blog-post-demo',
-  data: {
-    posts: [
-      { id: 1, title: 'My journey with Vue' },
-      { id: 2, title: 'Blogging with Vue' },
-      { id: 3, title: 'Why Vue is so fun' }
-    ]
-  }
-})
-
-</script>
