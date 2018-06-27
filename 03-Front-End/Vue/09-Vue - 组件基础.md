@@ -28,7 +28,6 @@ Vue.component('button-counter', {
 new Vue({ el: '#components-demo' })
 ```
 
-
 因为组件是可复用的 Vue 实例 , 所以它们与 `new Vue` 接收相同的选项 , 例如 `data`、`computed`、`watch`、`methods` 以及生命周期钩子等 , 仅有的例外是像 `el` 这样根实例特有的选项
 
 ## 组件的复用  🍀
@@ -42,7 +41,6 @@ new Vue({ el: '#components-demo' })
   <button-counter></button-counter>
 </div>
 ```
-
 
 注意当点击按钮时 , 每个组件都会各自独立维护它的 `count` , 因为你每用一次组件 , 就会有一个它的新**实例**被创建
 
@@ -90,7 +88,7 @@ Vue.component('my-component-name', {
 
 Prop 是你可以在组件上注册的一些自定义特性 , 当一个值传递给一个 prop 特性的时候 , 它就变成了那个组件实例的一个属性 , 为了给博文组件传递一个标题 , 我们可以用一个 `props` 选项将其包含在该组件可接受的 prop 列表中 : 
 
-```javascript
+```html
 Vue.component('blog-post', {
   props: ['title'],
   template: '<h3>{{ title }}</h3>'
@@ -183,7 +181,7 @@ new Vue({
 ></blog-post>
 ```
 
-```javascript
+```html
 Vue.component('blog-post', {
   props: ['post'],
   template: `
@@ -231,7 +229,7 @@ new Vue({
 
 现在我们在每篇博文正文之前添加一个按钮来放大字号 : 
 
-```javascript
+```html
 Vue.component('blog-post', {
   props: ['post'],
   template: `
