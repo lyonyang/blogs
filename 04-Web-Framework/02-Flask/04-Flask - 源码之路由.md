@@ -40,7 +40,7 @@ def add_url_rule(self, rule, endpoint=None, view_func=None,
     # methods we can use that instead.  If neither exists, we go with
     # a tuple of only ``GET`` as default.
     if methods is None:
-        # 默认methods中仅有GET
+        # 此处添加GET,在后续会加入OPTIONS和HEAD
         methods = getattr(view_func, 'methods', None) or ('GET',)
     if isinstance(methods, string_types):
         raise TypeError('Allowed methods have to be iterables of strings, '
