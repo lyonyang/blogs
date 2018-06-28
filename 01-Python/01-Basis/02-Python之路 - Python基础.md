@@ -192,8 +192,8 @@ name = input("Please input your name:")
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 # Author:Lyon
-x="a"
-y="b"
+x = "a"
+y = "b"
 # 换行输出
 print(x)
 print(y)
@@ -202,7 +202,7 @@ print('---------')
 print(x,)
 print(y,)
 # 不换行输出
-print(x,y)
+print(x, y)
 '''
 执行结果:
 a
@@ -400,7 +400,7 @@ loop: 9
 for i in range(10):
     if i<5:
         continue
-    print("loop:"i)
+    print("loop:", i)
 ```
 
 ## while循环  🍀
@@ -410,6 +410,6 @@ for i in range(10):
 ```python
 count = 0
 while True：
-    print("你是风儿我是沙，缠缠绵绵走天涯",count)
-    count +=1
+    print("你是风儿我是沙，缠缠绵绵走天涯", count)
+    count += 1
 ```
