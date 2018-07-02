@@ -30,7 +30,7 @@ $ pip3 install SQLAlchemy
 '1.1.14'
 ```
 
-**各数据库方言(Dialect)**
+**各数据库Dialect**
 
 ```mysql
 MySQL-Python
@@ -86,6 +86,79 @@ Base = declarative_base()
 ```
 
 根据声明的基类"Base" , 我们就可以通过它定义任何数量的映射类
+
+## 使用原生SQL
+
+```python
+from sqlalchemy import create_engine
+from consts import DB_URI
+
+eng = create_engine(DB_URI)
+with eng.connect() as con:
+    con.execute('drop table if exists users')
+    con.execute('create table users(Id INT PRIMARY KEY AUTO_INCREMENT, '
+                'Name VARCHAR(25))')
+    con.execute("insert into users(name) values('Lyon')")
+    con.execute("insert into users(name) values('Kenneth')")
+    rs = con.execute('select * from users')
+    for row in rs:
+        print(row)
+```
+
+## 使用表达式
+
+SQLAlchemy 支持使用表达式的方式来操作数据库
+
+```python
+from sqlalchemy import (create_engine, Table, MetaData, Column, Integer,
+                        String, tuple_)
+from sqlalchemy.sql import select, asc, and_
+from consts import DB_URI
+
+eng = create_engine(DB_URI)
+
+meta = MetaData(eng)
+users = Table(
+    'Users', meta,
+    Column('Id', Integer, primary_key=True, autoincrement=True),
+    Column('Name', String(50), nullable=False),
+)
+
+if users.exists():
+    users.drop()
+users.create()  # 创建表
+
+
+def execute(s):
+    print('-' * 20)
+    rs = con.execute(s)
+    for row in rs:
+        print(row['Id'], row['Name'])
+
+with eng.connect() as con:
+    for username in ('xiaoming', 'wanglang', 'lilei'):
+        user = users.insert().values(Name=username)
+        con.execute(user)
+
+    stm = select([users]).limit(1)
+    execute(stm)
+
+    k = [(2,)]
+    stm = select([users]).where(tuple_(users.c.Id).in_(k))
+    execute(stm)
+
+    stm = select([users]).where(and_(users.c.Id > 2,
+                                     users.c.Id < 4))
+    execute(stm)
+
+    stm = select([users]).order_by(asc(users.c.Name))
+    execute(stm)
+
+    stm = select([users]).where(users.c.Name.like('%min%'))
+    execute(stm)
+```
+
+
 
 ## ORM功能使用  🍀
 
