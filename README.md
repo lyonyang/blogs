@@ -54,7 +54,7 @@ https://notes.yangjinjie.xyz/zh_CN/latest/
 └── Others     
 ```
 
-如果你也想和我一样 , 搭建一个这样的博客 , 点这里 : [如何利用GitHub Pages搭建个人博客](https://lyonyang.github.io/blogs/09-Git/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8GitHub%20Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html)
+如果你也想和我一样 , 搭建一个这样的博客 , 点这里 : [如何利用GitHub Pages搭建个人博客](https://lyonyang.github.io/blogs/09-Linux/Git/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8GitHub%20Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html)
 
 ## 阅读说明  🍀
 
