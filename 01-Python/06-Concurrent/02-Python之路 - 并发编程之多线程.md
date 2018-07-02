@@ -518,8 +518,8 @@ mutexA = mutexB = threading.RLock()
 Queue
 
 ```python
-import queue
-q = queue.Queue()
+import Queue
+q = Queue.Queue()
 q.put('First')
 q.put('Second')
 q.put('Third')
@@ -537,8 +537,8 @@ Third
 LifoQueue
 
 ```python
-import queue
-q = queue.LifoQueue()
+import Queue
+q = Queue.LifoQueue()
 q.put('First')
 q.put('Second')
 q.put('Third')
@@ -556,8 +556,8 @@ First
 PriorityQueue
 
 ```python
-import queue
-q = queue.PriorityQueue()
+import Queue
+q = Queue.PriorityQueue()
 # put进入一个元组,元组的第一个元素是优先级,越小优先级越高
 q.put((20, 'A'))
 q.put((10, 'B'))
