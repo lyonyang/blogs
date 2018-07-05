@@ -14,6 +14,8 @@
 
 > QQ : [547903993](http://wpa.qq.com/msgrd?v=3&uin=547903993&site=qq&menu=yes)
 
+> 微信 : [Happy547903993]()
+
 > 技术交流群 : [590092348](https://jq.qq.com/?_wv=1027&k=52VgMo7)
 
 > 微博 : [年纪大了, 欣赏不了微博的世界]()
