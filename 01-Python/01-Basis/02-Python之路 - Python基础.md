@@ -56,6 +56,7 @@ Python变量定义的规则 :
 
 3. 以下关键字不能声明为变量名 , 属于Python中的保留字and
 
+
    | and      | exec    | not    |
    | -------- | ------- | ------ |
    | assert   | finally | or     |
@@ -67,6 +68,7 @@ Python变量定义的规则 :
    | elif     | in      | while  |
    | else     | is      | with   |
    | except   | lambda  | yield  |
+   
 
 ## 行和缩进  🍀
 
