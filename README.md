@@ -29,7 +29,7 @@ https://notes.yangjinjie.xyz/zh_CN/latest/
 
 ## 博客说明  🍀
 
-**欢迎收藏交流 , 欢迎[Issues](https://github.com/lyonyang/blogs/issues) ! 如需转载 , 请注明出处 : [`https://lyonyang.github.io/blogs`](https://lyonyang.gitbooks.io/blog/)**
+**欢迎收藏交流 , 欢迎[Issues](https://github.com/lyonyang/blogs/issues) ! 如需转载 , 请注明出处 : [`https://lyonyang.github.io/blogs`](https://lyonyang.github.io/blogs)**
 
 > 如果本博客对你有帮助,请顺手点个🍀[star](https://github.com/lyonyang/blogs)🍀吧!
 
