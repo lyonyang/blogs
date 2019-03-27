@@ -231,7 +231,7 @@ func = decorator(func)
 func( )
 ```
 
-### 提前赋值  🍀
+### 数据存储  🍀
 
 ```python
 def func():
@@ -243,7 +243,7 @@ func = func()
 # 调用之前name的值已经传入inner中
 func()
 """
-为什么要提前赋值?
+为什么要数据存储?
 因为如果我们将name定义到inner内部,那么只要inner一执行完毕,Python解释器就会把name释放
 如果我们要执行一万次这样的操作,那么Python解释器就需要如此申请和释放一万次,会造成内存浪费
 """
