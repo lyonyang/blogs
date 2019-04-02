@@ -224,7 +224,7 @@ README.md中的内容就是页面上目录显示的内容
 
 进入如下图页面 : 
 
-![New personal access token](http://oux34p43l.bkt.clouddn.com/New%20personal%20access%20token.png)
+![New personal access token](https://github.com/lyonyang/blogs/blob/master/assets/New%20personal%20access%20token.png?raw=tru)
 
 我们只需给个repo权限就行了
 
