@@ -224,13 +224,13 @@ README.md中的内容就是页面上目录显示的内容
 
 进入如下图页面 : 
 
-![New personal access token](https://github.com/lyonyang/blogs/blob/master/assets/New%20personal%20access%20token.png?raw=tru)
+![New personal access token](https://github.com/lyonyang/blogs/blob/master/assets/New%20personal%20access%20token.png?raw=true)
 
 我们只需给个repo权限就行了
 
 接下来就会自动跳转到如下页面 : 
 
-![Copy Token](http://oux34p43l.bkt.clouddn.com/Copy%20Token.png)
+![Copy Token](https://github.com/lyonyang/blogs/blob/master/assets/Copy%20Token.png?raw=true)
 
 注意 : 一定要先复制这个生成的token , 如果你还没来得及复制 , 那么对不起 , 重新添加一个再复制吧
 
@@ -246,7 +246,7 @@ README.md中的内容就是页面上目录显示的内容
 
 勾选需要持续集成的仓库
 
-![choose repositories](http://oux34p43l.bkt.clouddn.com/choose%20repositories.png)
+![choose repositories](https://github.com/lyonyang/blogs/blob/master/assets/choose%20repositories.png?raw=true)
 
 接下来我们去做一些设置了 , 点击勾选右边的设置按钮
 
@@ -256,7 +256,7 @@ README.md中的内容就是页面上目录显示的内容
 
 现在我们需要用到上面生成的token了 , 将其复制到Environment Variables中的Value框中 , 并将Name设置为`GH_TOKEN` , 点击ADD添加 , 完成后如下 : 
 
-![add token](http://oux34p43l.bkt.clouddn.com/add%20token.png)
+![add token](https://github.com/lyonyang/blogs/blob/master/assets/add%20token.png?raw=true)
 
 现在基本已经完成了 , 我们可以向我们的仓库做一点更新 , 或者直接点击`More options`选择Trigger build进行构建 , 等待几分钟后 (这是GitBook的一个缺点 , 构建有点慢)
 
