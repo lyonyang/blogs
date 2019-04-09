@@ -287,3 +287,5 @@ README.md中的内容就是页面上目录显示的内容
 **注意事项三**
 
 文件夹名称中不得包含空格
+
+**你可能需要的一些gitbook插件:[插件](https://gitbook.zhangjikai.com/plugins.html)**
