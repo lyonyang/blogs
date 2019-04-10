@@ -165,6 +165,7 @@ GitBook样式文件 , 也就是生成html附带的样式
         "paperSize": "a4"
     },
     "plugins": [
+        "advanced-emoji",
         "toggle-chapters",
         "theme-comscore",
         "splitter",
