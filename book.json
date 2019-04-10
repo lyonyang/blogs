@@ -27,6 +27,7 @@
         "paperSize": "a4"
     },
     "plugins": [
+        "advanced-emoji",
         "toggle-chapters",
         "theme-comscore",
         "splitter",
