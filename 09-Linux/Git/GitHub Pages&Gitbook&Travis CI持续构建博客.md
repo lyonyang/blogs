@@ -1,4 +1,4 @@
-# 如何利用GitHub Pages搭建个人博客
+# GitHub Pages&Gitbook&Travis CI持续构建博客
 
 **欢迎收藏交流 , 如需转载 , 请注明出处**
 
