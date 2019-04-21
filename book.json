@@ -38,9 +38,7 @@
         "search-plus",
         "anchor-navigation-ex-toc@0.0.9",
         "editlink",
-        "copy-code-button",
-        "donate"
-        
+        "copy-code-button"
     ],
     "pluginsConfig": {
         "github": {
@@ -59,14 +57,6 @@
                 "level2Icon": "fa fa-hand-o-right",
                 "level3Icon": "fa fa-hand-o-right"
             }
-        },
-        "donate": {
-            "wechat": "https://github.com/lyonyang/blogs/blob/master/assets/wechat.jpeg?raw=true",
-            "alipay": "https://github.com/lyonyang/blogs/blob/master/assets/alipay.jpeg?raw=true",
-            "title": "",
-            "button": "赏",
-            "alipayText": "支付宝打赏",
-            "wechatText": "微信打赏"
         }
     }
 }
