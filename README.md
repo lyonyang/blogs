@@ -48,19 +48,22 @@
 
 ```tree
 .
-├── Python           
+├── Python   
+├── Go
 ├── MySQL          
 ├── Front-End   
 │   └── Vue 
 ├── Web-Framework
 │   ├── Django
+│   ├── Django-Rest-Framework
 │   └── Flask
-├── Django-Rest-Framework
+├── Redis
 ├── DesignPattern   
 ├── Algorithms     
 ├── Linux
 │   └── Git
-└── Others     
+├── Others
+└── Read
 ```
 
 如果你也想和我一样 , 搭建一个这样的博客 , 点这里 : [GitHub Pages&Gitbook&Travis CI持续构建博客](https://lyonyang.github.io/blogs/09-Linux/Git/GitHub%20Pages&Gitbook&Travis%20CI%E6%8C%81%E7%BB%AD%E6%9E%84%E5%BB%BA%E5%8D%9A%E5%AE%A2.html)
