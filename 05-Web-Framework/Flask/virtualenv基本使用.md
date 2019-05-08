@@ -62,6 +62,13 @@ $ . venv/bin/activate
 $ venv\scripts\activate
 ```
 
+在 Mac 下
+
+```shell
+$ source venv/bin/activate
+```
+
+
 ## 退出虚拟环境  🍀
 
 在OS X 和Linux 下
@@ -75,3 +82,10 @@ $ . venv/bin/deactivate
 ```shell
 $ venv\scripts\deactivate.bat
 ```
+
+在 Mac 下
+
+```shell
+$ deactivate
+```
+
