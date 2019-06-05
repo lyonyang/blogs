@@ -15,7 +15,7 @@ class Web_page:
     def content(self):
         # 返回私有属性
         return self.__content if self.__content else urlopen(self.url).read()
-con = Web_page('www.baidu.com')
+con = Web_page('http://www.baidu.com')
 res = con.content
 print(res)
 ```
