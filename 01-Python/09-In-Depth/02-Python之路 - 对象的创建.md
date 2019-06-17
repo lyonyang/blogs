@@ -27,7 +27,7 @@ class MyObject(object):
 
 在分析自定义类型的对象创建之前 , 我们需要分析一下object对象是如何创建的 , 虽然我们在实际中是不会也不需要去创建object对象的 , 但是这有利于我们下一步的分析 : 
 
-![创建object对象](http://oux34p43l.bkt.clouddn.com/创建object对象.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![创建object对象](https://github.com/lyonyang/blogs/blob/master/assets/%E5%88%9B%E5%BB%BAobject%E5%AF%B9%E8%B1%A1.png?raw=true)
 
 object对象的创建 : 如上图 , 创建object对象首先调用类型API (PyBaseObject_Type) , 并且会首先调用API中的`tp_new` , 因为这里是创建object , 所以`tp_new`中不会为NULL
 
@@ -35,7 +35,7 @@ object对象的创建 : 如上图 , 创建object对象首先调用类型API (PyB
 
 无论是Python 2.x还是3.x , Python中所有的类都是以`object`类为基础的 , 也就是说所有的类都继承了`object`类 , 所以自定义类型对象的创建流程如下 : 
 
-![创建myobject对象](http://oux34p43l.bkt.clouddn.com/创建myobject对象.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![创建myobject对象](https://github.com/lyonyang/blogs/blob/master/assets/%E5%88%9B%E5%BB%BAmyobject%E5%AF%B9%E8%B1%A1.png?raw=true)
 
 无论是自定义对象的创建还是object对象的创建 , 其创建对象的流程都是一样的 : 
 
@@ -129,7 +129,7 @@ object对象的创建 : 如上图 , 创建object对象首先调用类型API (PyB
 
 我们发现就算是`type`类竟然也是由`type` (PyType_Type)产生的 , 就像在type类中成了一个 "圈一样" , 自己引用自己 , 事实上确实是这样 , 同样以上一小节的例子进行说明 , 如下图 : 
 
-![object_type_relation](http://oux34p43l.bkt.clouddn.com/object_type_relation.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![object_type_relation](https://github.com/lyonyang/blogs/blob/master/assets/object_type_relation.png?raw=true)
 
 也就是说PyType_Type中的`ob_type`指针最终指向了自己本身
 

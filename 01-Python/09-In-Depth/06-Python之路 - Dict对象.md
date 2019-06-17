@@ -89,7 +89,7 @@
 - ma_table , ma_table域是关联对象的关键所在 , 它将指向一片作为PyDictEntry集合的内存的开始位置 , 当一个PyDictObject对象是一个比较小的dict时 (entry数量少于8) , ma_table域将指向`ma_smalltable` , 而当PyDictObject中的entry数量超过8个时 , 将会申请额外的内存空间 , 并将ma_table指向这块空间 , 这样 , 无论何时 , ma_table域都不会为NULL , 那么在程序运行时就不需要一次又一次的检查`ma_table`的有效性了 , 因为`ma_table`总是有效的 , 这两种`ma_table`见下图
 - ma_mask , PyDictObject中的`ma_mask`记录了一个PyDictObject对象中所拥有的entry数量
 
-![ma_table](http://oux34p43l.bkt.clouddn.com/ma_table.png?imageMogr2/blur/1x0/quality/75|watermark/2/text/bHlvbi55YW5nQHFxLmNvbQ==/font/YXBhcmFqaXRh/fontsize/560/fill/Izk0ODI4Mg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![ma_table](https://github.com/lyonyang/blogs/blob/master/assets/ma_table.png?raw=true)
 
 
 ## 创建与维护  🍀
