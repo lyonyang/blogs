@@ -284,7 +284,7 @@ def rpushx(name, value):
     
 def llen(name):
     """
-    表示从右向左操作
+    返回list的长度
     """
 
 def linsert(name, where, refvalue, value):
@@ -296,7 +296,7 @@ def linsert(name, where, refvalue, value):
     value , 要插入的数据
     """
 
-def r.lset(name, index, value):
+def lset(name, index, value):
     """
     对name对应的list中的某一个索引位置重新赋值
     name , redis的name
@@ -304,7 +304,7 @@ def r.lset(name, index, value):
     value , 要设置的值
     """
 
-def r.lrem(name, value, num):
+def lrem(name, value, num):
     """
     在name对应的list中删除指定的值
     name , redis的name
@@ -359,7 +359,7 @@ def blpop(keys, timeout):
     timeout , 超时时间 , 当元素所有列表的元素获取完之后 , 阻塞等待列表内有数据的时间 (秒), 0 表示永远阻塞
     """
 
-def r.brpop(keys, timeout):
+def brpop(keys, timeout):
     """
     从右向左获取数据
     """
