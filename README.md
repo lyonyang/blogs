@@ -1,5 +1,7 @@
 # Welcome to Lyon's blog!  🍀
 
+### 自律的人不需要计划
+
 [![Build Status](https://travis-ci.org/lyonyang/blogs.svg?branch=master)](https://travis-ci.org/lyonyang/blogs)
 [![Author](https://img.shields.io/badge/Author-Lyon-orange.svg)]()
 [![Python Versions](https://img.shields.io/badge/python-2.x%2C%203.x-blue.svg)](https://www.python.org/)
