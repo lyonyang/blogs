@@ -1,4 +1,4 @@
-# Python之路 - MySQL存储引擎
+# MySQL - 存储引擎
 
 ## 介绍  🍀
 

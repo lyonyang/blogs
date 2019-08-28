@@ -1,4 +1,4 @@
-# Python之路 - Python基础
+# Python - Python基础
 
 ## Hello World  🍀
 

@@ -1,4 +1,4 @@
-# Python之路 - MySQL表操作
+# MySQL - 表操作
 
 ## 介绍  🍀
 

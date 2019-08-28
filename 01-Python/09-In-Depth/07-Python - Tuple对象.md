@@ -1,4 +1,4 @@
-# Python之路 - Tuple对象
+# Python - Tuple对象
 
 **欢迎收藏交流 , 如需转载 , 请注明出处**
 ## 介绍  🍀

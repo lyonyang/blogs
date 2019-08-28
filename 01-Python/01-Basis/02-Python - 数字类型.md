@@ -1,4 +1,4 @@
-# Python之路 - 数字类型
+# Python - 数字类型
 
 ## Int  🍀
 

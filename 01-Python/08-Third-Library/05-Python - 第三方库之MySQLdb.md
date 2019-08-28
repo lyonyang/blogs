@@ -1,4 +1,4 @@
-# Python之路 - 第三方库之MySQLdb
+# Python - 第三方库之MySQLdb
 
 ## 介绍  🍀
 

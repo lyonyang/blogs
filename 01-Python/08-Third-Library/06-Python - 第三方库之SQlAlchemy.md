@@ -1,4 +1,4 @@
-# Python之路 - 第三方库之SQlAlchemy
+# Python - 第三方库之SQlAlchemy
 
 [SQLAlchemy官方文档](https://docs.sqlalchemy.org/en/13/)
 

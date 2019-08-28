@@ -1,4 +1,4 @@
-# Python之路 - MySQL之库操作
+# MySQL - 库操作
 
 ## SQL介绍  🍀
 

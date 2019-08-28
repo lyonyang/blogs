@@ -1,4 +1,4 @@
-# Python之路 - MySQL之数据操作
+# MySQL - 数据操作
 
 ## 介绍  🍀
 

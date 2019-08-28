@@ -1,4 +1,4 @@
-# Python之路 - 第三方库之PyMySQL
+# Python - 第三方库之PyMySQL
 
 ## 介绍  🍀
 

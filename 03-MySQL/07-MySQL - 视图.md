@@ -1,4 +1,4 @@
-# Python之路 - MySQL之视图
+# MySQL - 视图
 
 ## 介绍  🍀
 

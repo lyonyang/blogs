@@ -1,4 +1,4 @@
-# Python之路 - MySQL之索引
+# MySQL - 索引
 
 ## 介绍  🍀
 

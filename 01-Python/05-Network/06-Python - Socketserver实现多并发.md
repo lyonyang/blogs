@@ -1,4 +1,4 @@
-# Python之路 - Socketserver实现多并发
+# Python - Socketserver实现多并发
 
 ## 阅读指引  🍀
 

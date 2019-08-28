@@ -1,4 +1,4 @@
-# Python之路 - 标准库之wsgiref
+# Python - 标准库之wsgiref
 
 ## 介绍  🍀
 

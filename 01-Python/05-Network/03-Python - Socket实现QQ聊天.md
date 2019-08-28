@@ -1,4 +1,4 @@
-# Python之路 - Socket实现QQ聊天
+# Python - Socket实现QQ聊天
 
 ## 介绍  🍀
 

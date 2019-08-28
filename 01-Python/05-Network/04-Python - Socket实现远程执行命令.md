@@ -1,4 +1,4 @@
-# Python之路 - Socket实现远程执行命令
+# Python - Socket实现远程执行命令
 
 ## os模块实现  🍀
 
