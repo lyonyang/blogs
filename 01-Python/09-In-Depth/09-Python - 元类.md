@@ -19,7 +19,7 @@
 <class 'type'>
 ```
 
-至于 `type` 类为什么是元类 , 你可以从我的另一篇文章中获得答案 [《对象的创建》](<https://lyonyang.github.io/blogs/01-Python/09-In-Depth/02-Python%E4%B9%8B%E8%B7%AF%20-%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA.html>) 
+至于 `type` 类为什么是元类 , 你可以从我的另一篇文章中获得答案 [《对象的创建》](<https://lyonyang.github.io/blogs/01-Python/09-In-Depth/02-Python%20-%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA.html>) 
 
 看下面的例子 : 
 
