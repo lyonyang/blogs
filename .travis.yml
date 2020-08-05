@@ -3,10 +3,9 @@ node_js:
   - "node"
 before_install:
   - find . -type f -name "*.md" ! -path "./README.md" -a ! -path "./SUMMARY.md"|xargs -i sed -ri '/^<extoc>/d;0,/^## /s/(^## .*)/\n<extoc><\/extoc>\n\n\1/' '{}'
-# - "npm install -g gitbook@3.2.3"
 install:
   - "npm install -g gitbook"
-  - "npm install gitbook-cli@2.3.0"
+  - "npm install gitbook-cli"
 branches:
   only:
     - master
