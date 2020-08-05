@@ -4,7 +4,7 @@ node_js:
 before_install:
   - find . -type f -name "*.md" ! -path "./README.md" -a ! -path "./SUMMARY.md"|xargs -i sed -ri '/^<extoc>/d;0,/^## /s/(^## .*)/\n<extoc><\/extoc>\n\n\1/' '{}'
 install:
-  - "npm install gitbook@3.2.3"
+  - "npm install gitbook"
   - "npm install gitbook-cli"
 branches:
   only:
