@@ -6,7 +6,7 @@ before_install:
 # - "npm install -g gitbook@3.2.3"
 install:
   - "npm install -g gitbook"
-  - "npm install gitbook-cli@2.3.2"
+  - "npm install gitbook-cli@2.3.0"
 branches:
   only:
     - master
