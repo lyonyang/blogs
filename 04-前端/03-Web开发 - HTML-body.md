@@ -210,12 +210,12 @@ password:<input type="password" name="pwd">
 
 ```html
 <!-- 复选框 -->
-湖北<input type="checkbox">
-湖南<input type="checkbox" checked>
-北京<input type="checkbox" checked="checked">
+湖北<input type="checkbox" name="position">
+湖南<input type="checkbox" name="position" checked>
+北京<input type="checkbox" name="position" checked="checked">
 <!-- 单选框 -->
-男<input type="radio" value="man">
-女<input type="radio" value="male">
+男<input type="radio" name="gender" value="man">
+女<input type="radio" name="gender" value="male">
 <br/><br/>
 男<input type="radio"  name="gender" value="man">
 女<input type="radio"  name="gender" value="male">
