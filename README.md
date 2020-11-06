@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/lyonyang/blogs/blob/master/LICENSE)
 [![Downloads](https://img.shields.io/badge/downloads-4.46MB-blue.svg)](https://codeload.github.com/lyonyang/blogs/zip/master)
 
-由于博文技术层次较低,完整度不高,本博客将在后期断断续续重构~
+**本博客下文章除非特别指明引用, 皆为本人原创, 如需转载, 请注明出处**
 
 ## 关于作者  🍀
 
