@@ -8,9 +8,11 @@
 
 **本博客下文章除非特别指明引用, 皆为本人原创, 如需转载, 请注明出处**
 
-## 关于作者  🍀
+如果我的博客对你有帮助 , 那就帮我点个星星吧 👉 [star](https://github.com/lyonyang/blogs)
 
-> Email : [lyon.yang@qq.com](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WTUgNjd3IDg3PhkoKHc6NjQ)
+## 作者  🍀
+
+> 个人主页 : [Blogs](https://lyonyang.github.io/blogs/)
 
 > GitHub : [https://github.com/lyonyang](https://github.com/lyonyang)
 
@@ -18,26 +20,16 @@
 
 > 微信 : [Happy547903993]()
 
-## 感谢
+## 感谢  🍀
 
 感谢以下老哥们提供的宝贵意见与指正, 一起进步
 
 1. **Jesse**
 
 
-## 博客说明  🍀
+## 博客向导  🍀
 
-**欢迎收藏交流 , 欢迎[Issues](https://github.com/lyonyang/blogs/issues) ! 如需转载 , 请注明出处 : [`https://lyonyang.github.io/blogs`](https://lyonyang.github.io/blogs)**
-
-> 如果本博客对你有帮助,请顺手点个🍀[star](https://github.com/lyonyang/blogs)🍀吧!
-
-文章使用`Markdown`格式编写 , 托管于Github , 主要使用工具 : 
-
-- [GitBook](https://www.gitbook.com/) , 构建本书
-- [Travis-CI](https://www.travis-ci.org/) , 持续构建
-- [Typora](https://www.typora.io/) , 编写MarkDown
-
-博客[目录](SUMMARY.md) : 
+[目录](SUMMARY.md) : 
 
 ```tree
 .
@@ -58,9 +50,5 @@
 └── Read
 ```
 
-如果你也想和我一样 , 搭建一个这样的博客 , 点这里 : [GitHub Pages&Gitbook&Travis CI持续构建博客](https://lyonyang.github.io/blogs/09-Linux/Git/GitHub%20Pages&Gitbook&Travis%20CI%E6%8C%81%E7%BB%AD%E6%9E%84%E5%BB%BA%E5%8D%9A%E5%AE%A2.html)
-
-## 动态  🍀
-
-- 《高性能MySQL》 ---- 2019年9月
+博客搭建指南 : [GitHub Pages&Gitbook&Travis CI持续构建博客](https://lyonyang.github.io/blogs/09-Linux/Git/GitHub%20Pages&Gitbook&Travis%20CI%E6%8C%81%E7%BB%AD%E6%9E%84%E5%BB%BA%E5%8D%9A%E5%AE%A2.html)
 
