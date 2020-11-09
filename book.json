@@ -32,7 +32,7 @@
         "theme-comscore",
         "splitter",
         "github",
-        "github-buttons",
+        "github-buttons@2.1.0",
         "-sharing",
         "-lunr",
         "-search",
@@ -40,7 +40,8 @@
         "anchor-navigation-ex-toc@0.0.9",
         "editlink",
         "fontsettings",
-        "copy-code-button"
+        "copy-code-button",
+        "popup"
     ],
     "pluginsConfig": {
         "github": {
@@ -50,7 +51,6 @@
             "repo": "lyonyang/blogs",
             "types": [
                 "star",
-                "watch",
                 "fork"
             ],
             "size": "small"
