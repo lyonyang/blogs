@@ -32,17 +32,28 @@
         "theme-comscore",
         "splitter",
         "github",
+        "github-buttons",
         "-sharing",
         "-lunr",
         "-search",
         "search-plus",
         "anchor-navigation-ex-toc@0.0.9",
         "editlink",
+        "font-settings",
         "copy-code-button"
     ],
     "pluginsConfig": {
         "github": {
             "url": "https://github.com/lyonyang/blogs"
+        },
+        "github-buttons": {
+            "repo": "lyonyang/blogs",
+            "types": [
+                "star",
+                "watch",
+                "fork"
+            ],
+            "size": "small"
         },
         "editlink": {
             "base": "https://github.com/lyonyang/blogs/blob/master",
