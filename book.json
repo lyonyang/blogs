@@ -41,7 +41,7 @@
         "editlink",
         "fontsettings",
         "copy-code-button",
-        "popup"
+        "lightbox"
     ],
     "pluginsConfig": {
         "github": {
