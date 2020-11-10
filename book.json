@@ -50,8 +50,7 @@
         "github-buttons": {
             "repo": "lyonyang/blogs",
             "types": [
-                "star",
-                "fork"
+                "star"
             ],
             "size": "small"
         },

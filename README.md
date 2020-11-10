@@ -4,11 +4,10 @@
 [![Author](https://img.shields.io/badge/Author-Lyon-orange.svg)]()
 [![Python Versions](https://img.shields.io/badge/python-2.x%2C%203.x-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/lyonyang/blogs/blob/master/LICENSE)
-[![Downloads](https://img.shields.io/badge/downloads-4.46MB-blue.svg)](https://codeload.github.com/lyonyang/blogs/zip/master)
 
 **本博客下文章除非特别指明引用, 皆为本人原创, 如需转载, 请注明出处**
 
-如果我的博客对你有帮助 , 那就帮我点个星星吧 👉 [star](https://github.com/lyonyang/blogs)
+如果我的博客对你有帮助 , 那就帮我点个星星吧 🤣 [Star](https://github.com/lyonyang/blogs)
 
 ## 作者  🍀
 
@@ -28,6 +27,8 @@
 
 
 ## 博客向导  🍀
+
+本博客由 [`Travis CI`](https://travis-ci.org/lyonyang/blogs) 自动构建
 
 [目录](SUMMARY.md) : 
 
