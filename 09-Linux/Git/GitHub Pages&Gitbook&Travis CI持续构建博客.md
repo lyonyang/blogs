@@ -43,6 +43,8 @@
 
 创建仓库就不说了 , 创建完成之后 , 我们就先开始添加配置文件了 , 这是构建的重中之重
 
+注意 : `GitHub` 现在默认分支不是 `master` 而是 `main` , 这里在关联 `Travis CI` 之前 , 先改成 `master`
+
 配置文件目录
 
 ```
@@ -100,6 +102,7 @@ if [ $? -ne 0 ];then
     exit 1
 fi
 cd _book
+sed -i '/a href.*\.md/s#\.md#.html#g;/a href.*README\.html/s#README\.html##g' SUMMARY.html
 git init
 git checkout --orphan gh-pages
 git status
@@ -170,15 +173,33 @@ GitBook样式文件 , 也就是生成html附带的样式
         "theme-comscore",
         "splitter",
         "github",
+        "github-buttons@2.1.0",
         "-sharing",
         "-lunr",
         "-search",
         "search-plus",
-        "anchor-navigation-ex@1.0.10",
-        "editlink"
+        "anchor-navigation-ex-toc@0.0.9",
+        "editlink",
+        "fontsettings",
+        "copy-code-button",
+        "lightbox"
     ],
     "pluginsConfig": {
-        "anchor-navigation-ex": {
+        "github": {
+            "url": "https://github.com/lyonyang/blogs"
+        },
+        "github-buttons": {
+            "repo": "lyonyang/blogs",
+            "types": [
+                "star"
+            ],
+            "size": "small"
+        },
+        "editlink": {
+            "base": "https://github.com/lyonyang/blogs/blob/master",
+            "label": "编辑本页"
+        },
+        "anchor-navigation-ex-toc": {
             "showLevel": false,
             "mode": "float",
             "float": {
@@ -261,7 +282,7 @@ README.md中的内容就是页面上目录显示的内容
 
 现在基本已经完成了 , 我们可以向我们的仓库做一点更新 , 或者直接点击`More options`选择Trigger build进行构建 , 等待几分钟后 (这是GitBook的一个缺点 , 构建有点慢)
 
-待`https://travis-ci.org/`左侧 `My Repositories` 变成绿色 (黄色表示正在构建) , 我们就可以访问我们的博客啦 
+待`https://travis-ci.org/`左侧 `My Repositories` 变成绿色 (黄色表示正在构建) , 我们就可以访问我们的博客啦 , 如果构建失败了 , 注意检查一下 `book.json` 中的插件是否还有效
 
 地址 : `https://用户名.github.io/仓库名` 
 
@@ -279,6 +300,9 @@ README.md中的内容就是页面上目录显示的内容
 ​```html
 内容{{ name }}
 ```
+
+`Django` 的模板语言的文章 , 你可能需要这个 , 因为模板语言会导致你的博客构建失败
+
 
 **注意事项二**
 
