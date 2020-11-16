@@ -25,7 +25,7 @@ SHOW VARIABLES LIKE 'have%';
 
 常用存储引擎对比
 
-|   特点    | MyISAM | InnoDB | MEMORT | MERGE | NDB  |
+|   特点    | MyISAM | InnoDB | MEMORY | MERGE | NDB  |
 | :-----: | :----: | :----: | :----: | :---: | :--: |
 |  存储限制   |   有    |  64TB  |   有    |  没有   |  有   |
 |  事物安全   |        |   支持   |        |       |      |

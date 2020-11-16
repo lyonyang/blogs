@@ -1,4 +1,4 @@
-# MySQL - 触发器与事务
+# MySQL - 触发器
 
 ## 介绍  🍀
 
@@ -108,58 +108,3 @@ Query OK, 0 rows affected (0.00 sec)
 - 不能在触发器中使用以显示或隐式方式开始或结束事务的语句 , 如START TRANSACTION , COMMIT或ROLLBACK
 
 总之触发器无法由用户直接调用
-
-
-## 事务  🍀
-
-事务用于将某些操作的多个SQL作为原子性操作 , 一旦有某一个出现错误 , 即可回滚到原来的状态 , 从而保证数据库数据完整性
-
-MySQL通过`SET AUTOCOMIT` , `START TRANSACTION` , `COMMIT` 和 `ROLLBACK` 等语句支持本地事务 
-
-语法 : 
-
-```mysql
-START TRANSACTION|BEGIN[WORK]
-COMMIT [WORK] [AND [NO] CHAIN] [[NO] RELEASE]
-ROLLBACK [WORK] [AND [NO] CHAIN] [[NO] RELEASE]
-SET AUTOCOMMIT = {0/1}
--- 特征值介绍:
-START TRANSACTION 或 BEGIN 语句可以开始一项新的事务
-COMMIT 和 ROLLBACK 用来提交或者回滚事务
-CHAIN 和 RELEASE子句分别用来定义在事务提交或者回滚之后的操作,CHAIN会立即启动一个新事务,宾且和刚才的事务具有相同的隔离级别,RELEASE则会断开和客户端的连接
-SET AUTOCOMMIT可以修改当前连接的提交方式,如果设置了 SET AUTOCOMMIT=0,则设置之后的所有事务都需要通过明确的命令进行提交或者回滚
-```
-
-默认情况下 , MySQL是自动提交(Autocommt)的 , 如果需要通过明确的Commit和Rollback来提交和回滚事务 , 那么就需要通过明确的事务控制命令来开始事务 , 这是和Oracle的事务管理明显不同的地方
-
-实例
-
-```mysql
-mysql> DELIMITER $$
-mysql> CREATE PROCEDURE p1(
-    -> OUT p_return_code TINYINT
-    -> )
-    -> BEGIN
-    -> 	 DECLARE EXIT HANDLER FOR SQLEXCEPTION
-    -> 	 BEGIN  -- ERROR
-    ->     SET p_return_code = 1;
-    ->     ROLLBACK;  -- 回滚
-    ->   END;
-    ->   DECLARE EXIT HANDLER FOR SQLWARNING
-    ->   BEGIN  -- WARNING
-    ->     SET p_return_code = 2;
-    ->     ROLLBACK;  
-    ->   END;
-    ->   START TRANSACTION;  -- 开始事务
-    ->     DELETE FROM tb1;
-    ->     INSERT INTO tb2(name) values('lyon');
-    ->   COMMIT;
-    ->   SET p_return_code = 0;  -- SUCCESS
-    -> END $$
-Query OK, 0 rows affected (0.10 sec)
--- 调用
-SET @i = 0;
-CALL p1(@i);
-SELECT @i;
-```
-
