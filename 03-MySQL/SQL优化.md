@@ -95,11 +95,49 @@ possible_keys: idx_fk_customer_id
 2 rows in set (0.00 sec)
 ```
 
-参数说明 : 
+### id
 
-- select_type : 表示 SELECT 的类型 , 常见的取值有 SIMPLE (简单表 , 即不使用表连接或者子查询) , PRIMARY (主查询 , 即外层的查询) , UNION (UNION 中的第二个或者后面的查询语句) , SUBQUERY (子查询中的第一个 SELECT ) 等
+查询标识符
 
-- table : 输出结果集的表
+### select_type
+
+SELECT类型 , 类型如下表
+
+| 值                   | 说明                                 |
+| -------------------- | ------------------------------------ |
+| SIMPLE               | 简单的查询 , 没有 `UNION` 或者子查询 |
+| PRIMARY              | 带有子查询的最外层查询               |
+| UNION                |                                      |
+| DEPENDENT UNION      |                                      |
+| UNION RESULT         |                                      |
+| SUBQUERY             |                                      |
+| DEPENDENT SUBQUERY   |                                      |
+| DERIVED              |                                      |
+| DEPENDENT DERIVED    |                                      |
+| MATERIALLZED         |                                      |
+| UNCACHEABLE SUBQUERY |                                      |
+| UNCACHEABLE UNION    |                                      |
+
+
+
+表示 SELECT 的类型 , 常见的取值有 SIMPLE (简单表 , 即不使用表连接或者子查询) , PRIMARY (主查询 , 即外层的查询) , UNION (UNION 中的第二个或者后面的查询语句) , SUBQUERY (子查询中的第一个 SELECT ) 等
+
+### table
+
+输出结果的表 , 也可以是以下值之一 : 
+
+- <union M, N> : 该行是指具有和`id`值的行 的 *M*并集 *N*。
+
+- `<derived*N*>`：该行是指用于与该行的派生表结果`id`的值 *N*。派生表可能来自（例如）`FROM`子句中的子查询 。
+- `<subquery*N*>`：该行是指该行的物化子查询的结果，其`id` 值为*N*。请参见 [第8.2.2.2节“通过实现来优化子查询”](https://dev.mysql.com/doc/refman/8.0/en/subquery-materialization.html)。
+
+### partitions
+
+
+
+### type
+
+
 
 - type : 表示 MySQL 在表中找到所需行的方式 , 或者叫访问类型 , 常见类型有 : 
 
@@ -241,3 +279,6 @@ mysql> show profile for query 1;
 +----------------------+----------+
 11 rows in set, 1 warning (0.03 sec)
 ```
+
+
+参考 : https://dev.mysql.com/doc/refman/8.0/en/explain-output.html
