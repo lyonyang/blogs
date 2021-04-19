@@ -1,5 +1,8 @@
 # Django - Django命令整理
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 django-admin是用于管理Django的命令行工具集 , 此外在每个Django项目中会自动为我们生成一个manage.py , 它与django-admin相同 , 但是会帮我们处理以下几件事情 : 

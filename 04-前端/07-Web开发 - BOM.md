@@ -1,5 +1,8 @@
 # Web开发之路 - BOM
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 由于JavaScript的出现就是为了能在浏览器中运行 , BOM , 即浏览器对象模型(Browser Object Model)  , BOM使JavaScript有能力与浏览器进行"对话"

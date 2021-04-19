@@ -1,5 +1,8 @@
 # Python - 标准库之random
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 `random`模块为我们提供了各种分布的伪随机数生成器

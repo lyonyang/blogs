@@ -2,6 +2,9 @@
 
 从这节开始, 我们会接触到 `REST` 框架的核心. 让我们介绍一些基本构建组件
 
+
+<extoc></extoc>
+
 ## Request对象  🍀
 
 `REST framework` 引入了一个 `Request` 对象 , 它扩展了常规的 `HttpRequest` , 并提供了灵活的请求解析 .  `Request` 对象的核心功能是 `request.data` 属性 , 它和 `request.POST` 属性很相似 , 但是它对 `Web APIs` 更加有用

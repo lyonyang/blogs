@@ -1,5 +1,8 @@
 # Redis - Sentinel
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 Sentinel (哨岗 , 哨兵) 是 Redis 的高可用性 (high availability) 解决方案 : 由一个或多个 Sentinel 实例组成的 Sentinel 系统可以监视任意多个主服务器 , 并在被监视的主服务器进入下线状态时 , 自动将下线主服务器属下的某个从服务器升级为新的主服务器 , 然后由新的主服务器代替已下线的主服务器继续处理命令请求

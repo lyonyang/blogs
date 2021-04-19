@@ -1,5 +1,8 @@
 # Tutorial 1: Serialization
 
+
+<extoc></extoc>
+
 ## 介绍   🍀
 
 本教程将会通过一些简单的代码来实现 Web API. 这个过程将会介绍 `REST framework` 的各个组件, 带你深入理解各个组件是如何一起工作

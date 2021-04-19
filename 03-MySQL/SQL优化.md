@@ -1,5 +1,8 @@
 # SQL优化
 
+
+<extoc></extoc>
+
 ## 一般步骤
 
 MySQL 客户端连接成功后 , 通过

@@ -1,5 +1,8 @@
 # Python - Python基础
 
+
+<extoc></extoc>
+
 ## Hello World  🍀
 
 学一门语言基本都是从Hello World开始的 , 如下一个最简单的Hello World程序

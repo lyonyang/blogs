@@ -1,5 +1,8 @@
 # Web开发之路 - JavaScript
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 JavaScript是属于网络的脚本语言 , 是因特网上最流行的脚本语言

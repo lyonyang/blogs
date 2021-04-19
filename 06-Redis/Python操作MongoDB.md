@@ -1,5 +1,8 @@
 # Python操作MongoDB
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 MongoDB 是一个基于分布式文件存储的数据库 , 由 C++ 编写

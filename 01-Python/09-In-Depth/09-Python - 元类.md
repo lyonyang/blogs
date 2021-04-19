@@ -1,5 +1,8 @@
 # 元类  🍀
 
+
+<extoc></extoc>
+
 ## 定义  🍀
 
 [元类](https://zh.wikipedia.org/wiki/%E5%85%83%E7%B1%BB) ( metaclass ) , 是一种实例是类的类 

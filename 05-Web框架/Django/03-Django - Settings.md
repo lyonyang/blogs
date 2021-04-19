@@ -1,5 +1,8 @@
 # Django - Settings
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 Django项目的配置信息在Django项目建立时就已经为我们创建完成 , 也就是目录下的`settings.py` 文件

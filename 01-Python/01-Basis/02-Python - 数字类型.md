@@ -1,5 +1,8 @@
 # Python - 数字类型
 
+
+<extoc></extoc>
+
 ## Int  🍀
 
 在Python 2.7版本中 , Python把int和long是分开的

@@ -1,5 +1,8 @@
 # Django - Model Making queries
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 一旦我们建立好模型 , Django就会自动为我们生成一套数据库抽象的API , 可以让我们进行创建 , 检索 , 更新和删除对象 , 这篇文章主要阐述怎么去使用这些API

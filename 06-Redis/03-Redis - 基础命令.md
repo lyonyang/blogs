@@ -1,5 +1,8 @@
 # Redis - 基础命令
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 Redis 命令用于在 Redis 服务上执行操作

@@ -1,5 +1,8 @@
 # Redis - 集群
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 Redis 集群是 Redis 提供的分布式数据库方案 , 集群通过分片 (sharding) 来进行数据共享 , 并提供复制和故障转移功能
