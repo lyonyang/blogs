@@ -1,5 +1,8 @@
 # Python - 第三方库之PyMySQL
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 pymysql是用于Python 3.x 链接MySQL数据库的一个第三方库 , 其使用方法和MySQLdb几乎相同 , pymysql的目的就是为了称为MySQLdb的替代品 , 因为MySQLdb不支持Python 3.x以后的版本

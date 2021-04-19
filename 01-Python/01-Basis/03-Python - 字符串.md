@@ -1,5 +1,8 @@
 # Python - 字符串
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 字符串是Python中最基本的数据类型之一 

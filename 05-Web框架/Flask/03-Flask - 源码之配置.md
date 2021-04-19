@@ -1,5 +1,8 @@
 # Flask - 源码之配置
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 Flask 中的配置主要使用 `flask/config.py` 中的两个对象 : `Config` , `ConfigAttribute` 

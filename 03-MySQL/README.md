@@ -1,5 +1,8 @@
 # MySQL
 
+
+<extoc></extoc>
+
 ## 前言
 
 为了科学地组织和存储数据 , 实现高效获取和维护数据 , 我们需要使用一个系统软件 , 数据库管理系统 (DataBase Management System , BDMS) , 简称数据库

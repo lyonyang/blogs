@@ -1,5 +1,8 @@
 # Python使用Redis流程
 
+
+<extoc></extoc>
+
 ## 安装redis-py  🍀
 
 ```shell

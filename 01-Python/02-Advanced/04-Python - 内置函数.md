@@ -1,5 +1,8 @@
 # Python - 内置函数
 
+
+<extoc></extoc>
+
 ## str类型代码的执行(3个) 🍀 
 
 > `exec`(object[, globals[, locals]])  👈

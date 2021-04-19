@@ -1,5 +1,8 @@
 # Flask - 源码之视图
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 在 Flask 请求处理流程中 , 视图的调用是由 `dispatch_request()` 方法来控制的 

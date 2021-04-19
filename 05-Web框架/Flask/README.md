@@ -3,6 +3,9 @@
 [![Flask](https://img.shields.io/badge/flask%20version-0.12.2-blue.svg)](https://pypi.org/project/Flask/)
 [![Python Versions](https://img.shields.io/badge/python-2.x%2C%203.x-blue.svg)](https://www.python.org/)
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 Flask是一个微型框架 , 它基于Python , 并且依赖着两个外部库 : Jinja2模板引擎和Werkzeug WSGI工具集

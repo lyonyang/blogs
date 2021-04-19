@@ -1,5 +1,8 @@
 # Django - Django初识
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 通过上一篇整理 , 对于Web框架应该清晰了很多 , 当然上一篇仅仅是自定义了一个最low , 最底端的Web框架 , 基本仅能处理特定的HTTP请求 , 那么这一章就开始学习Python Web框架中的王牌——Django

@@ -1,5 +1,8 @@
 # Redis - 主从复制
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 在 Redis 中 , 用户可以通过执行 SLAVEOF 命令或者设置 slaveof 选项 , 让一个服务器去复制 (replicate) 另一个服务器 , 我们称呼被复制的服务器为主服务器 (master) , 而对主服务器进行复制的服务器则被称为从服务器 (slave)

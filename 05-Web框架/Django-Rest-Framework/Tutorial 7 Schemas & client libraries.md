@@ -4,6 +4,9 @@
 
 `schema` 可以用于自动生成文档 , 也可以用于驱动可以与API交互的动态客户端库
 
+
+<extoc></extoc>
+
 ## Core API  🍀
 
 为了提供 `schema` 支持, `REST` 框架使用 [Core API](http://www.coreapi.org/)

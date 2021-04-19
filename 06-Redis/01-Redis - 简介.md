@@ -1,5 +1,8 @@
 # Redis - 简介
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 REmote DIctionary Server(Redis) 是一个由 Salvatore Sanfilippo 写的 `key-value` 存储系统

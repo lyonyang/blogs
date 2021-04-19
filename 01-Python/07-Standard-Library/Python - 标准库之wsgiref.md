@@ -1,5 +1,8 @@
 # Python - 标准库之wsgiref
 
+
+<extoc></extoc>
+
 ## 介绍  🍀
 
 wsgiref模块是WSGI规范的一个参考实现 , 它可以用于将WSGI支持添加到Web服务器或框架中 , 它提供了用于操作WSGI环境变量和响应头的实用工具 、 用于实现WSGI服务器的基类 、 用于服务WSGI应用程序的样本HTTP服务器 、以及检查WSGI服务器和应用程序的验证工具 , 以满足WSGI规范(PEP3333)
