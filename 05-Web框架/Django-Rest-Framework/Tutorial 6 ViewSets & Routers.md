@@ -7,6 +7,8 @@
 一个 `ViewSet` 类在它被实例化成一个视图集合的最后时刻 , 通过一个处理复杂 URL 配置的 `Router` 类绑定 , 且只绑定一个方法集合
 
 
+
+
 <extoc></extoc>
 
 ## 使用ViewSets重构  🍀

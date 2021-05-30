@@ -1,6 +1,8 @@
 # MySQL
 
 
+
+
 <extoc></extoc>
 
 ## 前言

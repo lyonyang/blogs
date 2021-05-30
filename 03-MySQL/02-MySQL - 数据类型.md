@@ -1,6 +1,8 @@
 # MySQL - 基本数据类型
 
 
+
+
 <extoc></extoc>
 
 ## 介绍  🍀
