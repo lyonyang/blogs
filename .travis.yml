@@ -1,0 +1,17 @@
+language: "node_js"
+node_js:
+  - "8"
+before_install:
+  - find . -type f -name "*.md" ! -path "./README.md" -a ! -path "./SUMMARY.md"|xargs -i sed -ri '/^<extoc>/d;0,/^## /s/(^## .*)/\n<extoc><\/extoc>\n\n\1/' '{}'
+install:
+  - "npm install gitbook"
+  - "npm install gitbook-cli@2.3.0"
+branches:
+  only:
+    - master
+env:
+  global:
+    - GH_REF: github.com/lyonyang/blogs.git
+script:
+  - bash summary_create.sh
+  - travis_wait 100 bash deploy.sh

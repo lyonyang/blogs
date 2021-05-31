@@ -1,0 +1,3802 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Python操作Redis · blog</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Lyon">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex-toc/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../07-设计模式/" />
+    
+    
+    <link rel="prev" href="Python操作MongoDB.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"lyonyang/blogs","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../SUMMARY.html">
+            
+                <a href="../SUMMARY.html">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../01-Python/">
+            
+                <a href="../01-Python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../01-Python/01-基础篇/">
+            
+                <a href="../01-Python/01-基础篇/">
+            
+                    
+                    基础篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../01-Python/01-基础篇/01-语言基础.html">
+            
+                <a href="../01-Python/01-基础篇/01-语言基础.html">
+            
+                    
+                    语言基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../01-Python/01-基础篇/02-数字.html">
+            
+                <a href="../01-Python/01-基础篇/02-数字.html">
+            
+                    
+                    数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../01-Python/01-基础篇/03-字符串.html">
+            
+                <a href="../01-Python/01-基础篇/03-字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../01-Python/01-基础篇/04-元组.html">
+            
+                <a href="../01-Python/01-基础篇/04-元组.html">
+            
+                    
+                    元组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../01-Python/01-基础篇/05-列表.html">
+            
+                <a href="../01-Python/01-基础篇/05-列表.html">
+            
+                    
+                    列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../01-Python/01-基础篇/06-字典.html">
+            
+                <a href="../01-Python/01-基础篇/06-字典.html">
+            
+                    
+                    字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../01-Python/01-基础篇/07-集合.html">
+            
+                <a href="../01-Python/01-基础篇/07-集合.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../01-Python/01-基础篇/08-字符编码.html">
+            
+                <a href="../01-Python/01-基础篇/08-字符编码.html">
+            
+                    
+                    字符编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../01-Python/01-基础篇/09-文件操作.html">
+            
+                <a href="../01-Python/01-基础篇/09-文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../01-Python/02-函数篇/">
+            
+                <a href="../01-Python/02-函数篇/">
+            
+                    
+                    函数篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../01-Python/02-函数篇/01-函数基础.html">
+            
+                <a href="../01-Python/02-函数篇/01-函数基础.html">
+            
+                    
+                    函数基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../01-Python/02-函数篇/02-匿名函数.html">
+            
+                <a href="../01-Python/02-函数篇/02-匿名函数.html">
+            
+                    
+                    匿名函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../01-Python/02-函数篇/03-函数进阶.html">
+            
+                <a href="../01-Python/02-函数篇/03-函数进阶.html">
+            
+                    
+                    函数进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../01-Python/02-函数篇/04-内置函数.html">
+            
+                <a href="../01-Python/02-函数篇/04-内置函数.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../01-Python/02-函数篇/05-迭代器.html">
+            
+                <a href="../01-Python/02-函数篇/05-迭代器.html">
+            
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../01-Python/02-函数篇/06-生成器.html">
+            
+                <a href="../01-Python/02-函数篇/06-生成器.html">
+            
+                    
+                    生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../01-Python/02-函数篇/07-递归.html">
+            
+                <a href="../01-Python/02-函数篇/07-递归.html">
+            
+                    
+                    递归
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../01-Python/03-对象篇/">
+            
+                <a href="../01-Python/03-对象篇/">
+            
+                    
+                    对象篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../01-Python/03-对象篇/01-面向对象.html">
+            
+                <a href="../01-Python/03-对象篇/01-面向对象.html">
+            
+                    
+                    面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../01-Python/03-对象篇/02-继承.html">
+            
+                <a href="../01-Python/03-对象篇/02-继承.html">
+            
+                    
+                    继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../01-Python/03-对象篇/03-多态.html">
+            
+                <a href="../01-Python/03-对象篇/03-多态.html">
+            
+                    
+                    多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../01-Python/03-对象篇/04-封装.html">
+            
+                <a href="../01-Python/03-对象篇/04-封装.html">
+            
+                    
+                    封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../01-Python/03-对象篇/05-方法转换.html">
+            
+                <a href="../01-Python/03-对象篇/05-方法转换.html">
+            
+                    
+                    方法转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../01-Python/03-对象篇/06-魔术方法.html">
+            
+                <a href="../01-Python/03-对象篇/06-魔术方法.html">
+            
+                    
+                    魔术方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../01-Python/03-对象篇/07-反射.html">
+            
+                <a href="../01-Python/03-对象篇/07-反射.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="../01-Python/03-对象篇/08-异常处理.html">
+            
+                <a href="../01-Python/03-对象篇/08-异常处理.html">
+            
+                    
+                    异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../01-Python/04-模块篇/">
+            
+                <a href="../01-Python/04-模块篇/">
+            
+                    
+                    模块篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../01-Python/04-模块篇/01-模块.html">
+            
+                <a href="../01-Python/04-模块篇/01-模块.html">
+            
+                    
+                    模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../01-Python/04-模块篇/02-包.html">
+            
+                <a href="../01-Python/04-模块篇/02-包.html">
+            
+                    
+                    包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../01-Python/04-模块篇/03-正则表达式.html">
+            
+                <a href="../01-Python/04-模块篇/03-正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../01-Python/04-模块篇/04-序列化.html">
+            
+                <a href="../01-Python/04-模块篇/04-序列化.html">
+            
+                    
+                    序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../01-Python/04-模块篇/05-os模块.html">
+            
+                <a href="../01-Python/04-模块篇/05-os模块.html">
+            
+                    
+                    os模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../01-Python/04-模块篇/06-random模块.html">
+            
+                <a href="../01-Python/04-模块篇/06-random模块.html">
+            
+                    
+                    random模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="../01-Python/04-模块篇/07-sys模块.html">
+            
+                <a href="../01-Python/04-模块篇/07-sys模块.html">
+            
+                    
+                    sys模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.8" data-path="../01-Python/04-模块篇/08-wsgiref模块.html">
+            
+                <a href="../01-Python/04-模块篇/08-wsgiref模块.html">
+            
+                    
+                    wsgiref模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../01-Python/05-网络篇/">
+            
+                <a href="../01-Python/05-网络篇/">
+            
+                    
+                    网络篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../01-Python/05-网络篇/01-网络编程.html">
+            
+                <a href="../01-Python/05-网络篇/01-网络编程.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../01-Python/05-网络篇/02-Socket.html">
+            
+                <a href="../01-Python/05-网络篇/02-Socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../01-Python/05-网络篇/03-Socket实现QQ聊天.html">
+            
+                <a href="../01-Python/05-网络篇/03-Socket实现QQ聊天.html">
+            
+                    
+                    Socket实现QQ聊天
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../01-Python/05-网络篇/04-Socket实现远程执行命令.html">
+            
+                <a href="../01-Python/05-网络篇/04-Socket实现远程执行命令.html">
+            
+                    
+                    Socket实现远程执行命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.5" data-path="../01-Python/05-网络篇/05-粘包.html">
+            
+                <a href="../01-Python/05-网络篇/05-粘包.html">
+            
+                    
+                    粘包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.6" data-path="../01-Python/05-网络篇/06-Socketserver实现多并发.html">
+            
+                <a href="../01-Python/05-网络篇/06-Socketserver实现多并发.html">
+            
+                    
+                    Socketserver实现多并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../01-Python/06-并发篇/">
+            
+                <a href="../01-Python/06-并发篇/">
+            
+                    
+                    并发篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../01-Python/06-并发篇/01-进程与线程.html">
+            
+                <a href="../01-Python/06-并发篇/01-进程与线程.html">
+            
+                    
+                    进程与线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../01-Python/06-并发篇/02-多线程.html">
+            
+                <a href="../01-Python/06-并发篇/02-多线程.html">
+            
+                    
+                    多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="../01-Python/06-并发篇/03-多进程.html">
+            
+                <a href="../01-Python/06-并发篇/03-多进程.html">
+            
+                    
+                    多进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" data-path="../01-Python/06-并发篇/04-多进程实例及回调函数.html">
+            
+                <a href="../01-Python/06-并发篇/04-多进程实例及回调函数.html">
+            
+                    
+                    多进程实例及回调函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.5" data-path="../01-Python/06-并发篇/05-协程.html">
+            
+                <a href="../01-Python/06-并发篇/05-协程.html">
+            
+                    
+                    协程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.6" data-path="../01-Python/06-并发篇/06-IO多路复用.html">
+            
+                <a href="../01-Python/06-并发篇/06-IO多路复用.html">
+            
+                    
+                    IO多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.7" data-path="../01-Python/06-并发篇/07-实现线程池.html">
+            
+                <a href="../01-Python/06-并发篇/07-实现线程池.html">
+            
+                    
+                    实现线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../01-Python/07-内存篇/">
+            
+                <a href="../01-Python/07-内存篇/">
+            
+                    
+                    内存篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../01-Python/07-内存篇/01-对象机制.html">
+            
+                <a href="../01-Python/07-内存篇/01-对象机制.html">
+            
+                    
+                    对象机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../01-Python/07-内存篇/02-对象的创建.html">
+            
+                <a href="../01-Python/07-内存篇/02-对象的创建.html">
+            
+                    
+                    对象的创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../01-Python/07-内存篇/03-整数对象.html">
+            
+                <a href="../01-Python/07-内存篇/03-整数对象.html">
+            
+                    
+                    整数对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.4" data-path="../01-Python/07-内存篇/04-字符串对象.html">
+            
+                <a href="../01-Python/07-内存篇/04-字符串对象.html">
+            
+                    
+                    字符串对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.5" data-path="../01-Python/07-内存篇/05-List对象.html">
+            
+                <a href="../01-Python/07-内存篇/05-List对象.html">
+            
+                    
+                    List对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.6" data-path="../01-Python/07-内存篇/06-Dict对象.html">
+            
+                <a href="../01-Python/07-内存篇/06-Dict对象.html">
+            
+                    
+                    Dict对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.7" data-path="../01-Python/07-内存篇/07-Tuple对象.html">
+            
+                <a href="../01-Python/07-内存篇/07-Tuple对象.html">
+            
+                    
+                    Tuple对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.8" data-path="../01-Python/07-内存篇/08-垃圾回收.html">
+            
+                <a href="../01-Python/07-内存篇/08-垃圾回收.html">
+            
+                    
+                    垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.9" data-path="../01-Python/07-内存篇/09-元类.html">
+            
+                <a href="../01-Python/07-内存篇/09-元类.html">
+            
+                    
+                    元类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../01-Python/08-番外篇/">
+            
+                <a href="../01-Python/08-番外篇/">
+            
+                    
+                    番外篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.8.1" data-path="../01-Python/08-番外篇/04-Python - 第三方库之PyMySQL.html">
+            
+                <a href="../01-Python/08-番外篇/04-Python - 第三方库之PyMySQL.html">
+            
+                    
+                    Python - 第三方库之PyMySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.2" data-path="../01-Python/08-番外篇/05-Python - 第三方库之MySQLdb.html">
+            
+                <a href="../01-Python/08-番外篇/05-Python - 第三方库之MySQLdb.html">
+            
+                    
+                    Python - 第三方库之MySQLdb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.3" data-path="../01-Python/08-番外篇/06-Python - 第三方库之SQlAlchemy.html">
+            
+                <a href="../01-Python/08-番外篇/06-Python - 第三方库之SQlAlchemy.html">
+            
+                    
+                    Python - 第三方库之SQlAlchemy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../02-Go/">
+            
+                <a href="../02-Go/">
+            
+                    
+                    Go
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../02-Go/Golang - 语言基础.html">
+            
+                <a href="../02-Go/Golang - 语言基础.html">
+            
+                    
+                    Golang - 语言基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../03-MySQL/">
+            
+                <a href="../03-MySQL/">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../03-MySQL/01-MySQL - 库操作.html">
+            
+                <a href="../03-MySQL/01-MySQL - 库操作.html">
+            
+                    
+                    MySQL - 库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../03-MySQL/02-MySQL - 数据类型.html">
+            
+                <a href="../03-MySQL/02-MySQL - 数据类型.html">
+            
+                    
+                    MySQL - 数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../03-MySQL/03-MySQL - 存储引擎.html">
+            
+                <a href="../03-MySQL/03-MySQL - 存储引擎.html">
+            
+                    
+                    MySQL - 存储引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../03-MySQL/04-MySQL - 表操作.html">
+            
+                <a href="../03-MySQL/04-MySQL - 表操作.html">
+            
+                    
+                    MySQL - 表操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../03-MySQL/05-MySQL - 数据操作.html">
+            
+                <a href="../03-MySQL/05-MySQL - 数据操作.html">
+            
+                    
+                    MySQL - 数据操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../03-MySQL/06-MySQL - 索引.html">
+            
+                <a href="../03-MySQL/06-MySQL - 索引.html">
+            
+                    
+                    MySQL - 索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../03-MySQL/07-MySQL - 视图.html">
+            
+                <a href="../03-MySQL/07-MySQL - 视图.html">
+            
+                    
+                    MySQL - 视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../03-MySQL/08-MySQL - 存储过程与函数.html">
+            
+                <a href="../03-MySQL/08-MySQL - 存储过程与函数.html">
+            
+                    
+                    MySQL - 存储过程与函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../03-MySQL/09-MySQL - 触发器.html">
+            
+                <a href="../03-MySQL/09-MySQL - 触发器.html">
+            
+                    
+                    MySQL - 触发器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../03-MySQL/10-MySQL - 事务.html">
+            
+                <a href="../03-MySQL/10-MySQL - 事务.html">
+            
+                    
+                    MySQL - 事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../03-MySQL/11-MySQL - SQL注入.html">
+            
+                <a href="../03-MySQL/11-MySQL - SQL注入.html">
+            
+                    
+                    MySQL - SQL注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../03-MySQL/SQL优化.html">
+            
+                <a href="../03-MySQL/SQL优化.html">
+            
+                    
+                    SQL优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../04-前端/">
+            
+                <a href="../04-前端/">
+            
+                    
+                    前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../04-前端/02-Web开发 - HTML-head.html">
+            
+                <a href="../04-前端/02-Web开发 - HTML-head.html">
+            
+                    
+                    Web开发 - HTML-head
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../04-前端/03-Web开发 - HTML-body.html">
+            
+                <a href="../04-前端/03-Web开发 - HTML-body.html">
+            
+                    
+                    Web开发 - HTML-body
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../04-前端/05-Web开发 - CSS.html">
+            
+                <a href="../04-前端/05-Web开发 - CSS.html">
+            
+                    
+                    Web开发 - CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../04-前端/06-Web开发 - JavaScript.html">
+            
+                <a href="../04-前端/06-Web开发 - JavaScript.html">
+            
+                    
+                    Web开发 - JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../04-前端/07-Web开发 - BOM.html">
+            
+                <a href="../04-前端/07-Web开发 - BOM.html">
+            
+                    
+                    Web开发 - BOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../04-前端/08-Web开发 - DOM.html">
+            
+                <a href="../04-前端/08-Web开发 - DOM.html">
+            
+                    
+                    Web开发 - DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../04-前端/09-Web开发 - jQuery.html">
+            
+                <a href="../04-前端/09-Web开发 - jQuery.html">
+            
+                    
+                    Web开发 - jQuery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../04-前端/11-Web开发 - Ajax.html">
+            
+                <a href="../04-前端/11-Web开发 - Ajax.html">
+            
+                    
+                    Web开发 - Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../04-前端/Vue/">
+            
+                <a href="../04-前端/Vue/">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.9.1" data-path="../04-前端/Vue/01-Vue - 介绍.html">
+            
+                <a href="../04-前端/Vue/01-Vue - 介绍.html">
+            
+                    
+                    Vue - 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.2" data-path="../04-前端/Vue/02-Vue - 实例.html">
+            
+                <a href="../04-前端/Vue/02-Vue - 实例.html">
+            
+                    
+                    Vue - 实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.3" data-path="../04-前端/Vue/03-Vue - 模板语法.html">
+            
+                <a href="../04-前端/Vue/03-Vue - 模板语法.html">
+            
+                    
+                    Vue - 模板语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.4" data-path="../04-前端/Vue/04-Vue - 计算属性和侦听器.html">
+            
+                <a href="../04-前端/Vue/04-Vue - 计算属性和侦听器.html">
+            
+                    
+                    Vue - 计算属性和侦听器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.5" data-path="../04-前端/Vue/05-Vue - Class与Style 绑定.html">
+            
+                <a href="../04-前端/Vue/05-Vue - Class与Style 绑定.html">
+            
+                    
+                    Vue - Class与Style 绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.6" data-path="../04-前端/Vue/06-Vue - 条件渲染.html">
+            
+                <a href="../04-前端/Vue/06-Vue - 条件渲染.html">
+            
+                    
+                    Vue - 条件渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.7" data-path="../04-前端/Vue/07-Vue - 列表渲染.html">
+            
+                <a href="../04-前端/Vue/07-Vue - 列表渲染.html">
+            
+                    
+                    Vue - 列表渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.8" data-path="../04-前端/Vue/08-Vue - 事件处理.html">
+            
+                <a href="../04-前端/Vue/08-Vue - 事件处理.html">
+            
+                    
+                    Vue - 事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.9" data-path="../04-前端/Vue/09-Vue - 组件基础.html">
+            
+                <a href="../04-前端/Vue/09-Vue - 组件基础.html">
+            
+                    
+                    Vue - 组件基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.10" data-path="../04-前端/Vue/10-Vue - Vue-cli.html">
+            
+                <a href="../04-前端/Vue/10-Vue - Vue-cli.html">
+            
+                    
+                    Vue - Vue-cli
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../05-Web框架/">
+            
+                <a href="../05-Web框架/">
+            
+                    
+                    Web框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../05-Web框架/01-HTTP基础.html">
+            
+                <a href="../05-Web框架/01-HTTP基础.html">
+            
+                    
+                    HTTP基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../05-Web框架/02-REST.html">
+            
+                <a href="../05-Web框架/02-REST.html">
+            
+                    
+                    REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../05-Web框架/03-ORM简介.html">
+            
+                <a href="../05-Web框架/03-ORM简介.html">
+            
+                    
+                    ORM简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../05-Web框架/Django/">
+            
+                <a href="../05-Web框架/Django/">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../05-Web框架/Django/01-Web框架简介.html">
+            
+                <a href="../05-Web框架/Django/01-Web框架简介.html">
+            
+                    
+                    Web框架简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../05-Web框架/Django/02-Django - Django初识.html">
+            
+                <a href="../05-Web框架/Django/02-Django - Django初识.html">
+            
+                    
+                    Django - Django初识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.3" data-path="../05-Web框架/Django/03-Django - Settings.html">
+            
+                <a href="../05-Web框架/Django/03-Django - Settings.html">
+            
+                    
+                    Django - Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.4" data-path="../05-Web框架/Django/04-Django - Urls.html">
+            
+                <a href="../05-Web框架/Django/04-Django - Urls.html">
+            
+                    
+                    Django - Urls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.5" data-path="../05-Web框架/Django/05-Django - Views.html">
+            
+                <a href="../05-Web框架/Django/05-Django - Views.html">
+            
+                    
+                    Django - Views
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.6" data-path="../05-Web框架/Django/06-Django - Model.html">
+            
+                <a href="../05-Web框架/Django/06-Django - Model.html">
+            
+                    
+                    Django - Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.7" data-path="../05-Web框架/Django/07-Django - Model Fields.html">
+            
+                <a href="../05-Web框架/Django/07-Django - Model Fields.html">
+            
+                    
+                    Django - Model Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.8" data-path="../05-Web框架/Django/08-Django - Model Field Options.html">
+            
+                <a href="../05-Web框架/Django/08-Django - Model Field Options.html">
+            
+                    
+                    Django - Model Field Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.9" data-path="../05-Web框架/Django/09-Django - Model QuerySet API.html">
+            
+                <a href="../05-Web框架/Django/09-Django - Model QuerySet API.html">
+            
+                    
+                    Django - Model QuerySet API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.10" data-path="../05-Web框架/Django/10-Django - Model Making queries.html">
+            
+                <a href="../05-Web框架/Django/10-Django - Model Making queries.html">
+            
+                    
+                    Django - Model Making queries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.11" data-path="../05-Web框架/Django/11-Django - Forms.html">
+            
+                <a href="../05-Web框架/Django/11-Django - Forms.html">
+            
+                    
+                    Django - Forms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.12" data-path="../05-Web框架/Django/12-Django - Template.html">
+            
+                <a href="../05-Web框架/Django/12-Django - Template.html">
+            
+                    
+                    Django - Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.13" data-path="../05-Web框架/Django/13-Django - Template Language.html">
+            
+                <a href="../05-Web框架/Django/13-Django - Template Language.html">
+            
+                    
+                    Django - Template Language
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.14" data-path="../05-Web框架/Django/14-Django - Middleware.html">
+            
+                <a href="../05-Web框架/Django/14-Django - Middleware.html">
+            
+                    
+                    Django - Middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.15" data-path="../05-Web框架/Django/15-Django - Sessions.html">
+            
+                <a href="../05-Web框架/Django/15-Django - Sessions.html">
+            
+                    
+                    Django - Sessions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.16" data-path="../05-Web框架/Django/16-Django - Authentication System.html">
+            
+                <a href="../05-Web框架/Django/16-Django - Authentication System.html">
+            
+                    
+                    Django - Authentication System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.17" data-path="../05-Web框架/Django/50-Django - 源码之startproject.html">
+            
+                <a href="../05-Web框架/Django/50-Django - 源码之startproject.html">
+            
+                    
+                    Django - 源码之startproject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.18" data-path="../05-Web框架/Django/51-Django - 源码之runserver.html">
+            
+                <a href="../05-Web框架/Django/51-Django - 源码之runserver.html">
+            
+                    
+                    Django - 源码之runserver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.19" data-path="../05-Web框架/Django/52-Django - 源码之middleware.html">
+            
+                <a href="../05-Web框架/Django/52-Django - 源码之middleware.html">
+            
+                    
+                    Django - 源码之middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.20" data-path="../05-Web框架/Django/53-Django - 源码之url.html">
+            
+                <a href="../05-Web框架/Django/53-Django - 源码之url.html">
+            
+                    
+                    Django - 源码之url
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.21" data-path="../05-Web框架/Django/54-Django - 源码之admin.html">
+            
+                <a href="../05-Web框架/Django/54-Django - 源码之admin.html">
+            
+                    
+                    Django - 源码之admin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.22" data-path="../05-Web框架/Django/Django - Django命令整理.html">
+            
+                <a href="../05-Web框架/Django/Django - Django命令整理.html">
+            
+                    
+                    Django - Django命令整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../05-Web框架/Django-Rest-Framework/">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/">
+            
+                    
+                    Django-Rest-Framework
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.5.1" data-path="../05-Web框架/Django-Rest-Framework/Quickstart.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Quickstart.html">
+            
+                    
+                    Quickstart
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.2" data-path="../05-Web框架/Django-Rest-Framework/Tutorial 1 Serialization.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Tutorial 1 Serialization.html">
+            
+                    
+                    Tutorial 1 Serialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.3" data-path="../05-Web框架/Django-Rest-Framework/Tutorial 2 Requests and Responses.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Tutorial 2 Requests and Responses.html">
+            
+                    
+                    Tutorial 2 Requests and Responses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.4" data-path="../05-Web框架/Django-Rest-Framework/Tutorial 3 Class-based Views.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Tutorial 3 Class-based Views.html">
+            
+                    
+                    Tutorial 3 Class-based Views
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.5" data-path="../05-Web框架/Django-Rest-Framework/Tutorial 4 Authentication & Permissions.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Tutorial 4 Authentication & Permissions.html">
+            
+                    
+                    Tutorial 4 Authentication & Permissions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.6" data-path="../05-Web框架/Django-Rest-Framework/Tutorial 5 Relationships & Hyperlinked APIs.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Tutorial 5 Relationships & Hyperlinked APIs.html">
+            
+                    
+                    Tutorial 5 Relationships & Hyperlinked APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.7" data-path="../05-Web框架/Django-Rest-Framework/Tutorial 6 ViewSets & Routers.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Tutorial 6 ViewSets & Routers.html">
+            
+                    
+                    Tutorial 6 ViewSets & Routers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.8" data-path="../05-Web框架/Django-Rest-Framework/Tutorial 7 Schemas & client libraries.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Tutorial 7 Schemas & client libraries.html">
+            
+                    
+                    Tutorial 7 Schemas & client libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../05-Web框架/Flask/">
+            
+                <a href="../05-Web框架/Flask/">
+            
+                    
+                    Flask
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.6.1" data-path="../05-Web框架/Flask/01-Flask - 源码简要说明.html">
+            
+                <a href="../05-Web框架/Flask/01-Flask - 源码简要说明.html">
+            
+                    
+                    Flask - 源码简要说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.2" data-path="../05-Web框架/Flask/02-Flask - 源码之开始.html">
+            
+                <a href="../05-Web框架/Flask/02-Flask - 源码之开始.html">
+            
+                    
+                    Flask - 源码之开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.3" data-path="../05-Web框架/Flask/03-Flask - 源码之配置.html">
+            
+                <a href="../05-Web框架/Flask/03-Flask - 源码之配置.html">
+            
+                    
+                    Flask - 源码之配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.4" data-path="../05-Web框架/Flask/04-Flask - 源码之路由.html">
+            
+                <a href="../05-Web框架/Flask/04-Flask - 源码之路由.html">
+            
+                    
+                    Flask - 源码之路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.5" data-path="../05-Web框架/Flask/05-Flask - 源码之视图.html">
+            
+                <a href="../05-Web框架/Flask/05-Flask - 源码之视图.html">
+            
+                    
+                    Flask - 源码之视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.6" data-path="../05-Web框架/Flask/06-Flask - 源码之蓝图.html">
+            
+                <a href="../05-Web框架/Flask/06-Flask - 源码之蓝图.html">
+            
+                    
+                    Flask - 源码之蓝图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.7" data-path="../05-Web框架/Flask/07-Flask - 源码之本地线程.html">
+            
+                <a href="../05-Web框架/Flask/07-Flask - 源码之本地线程.html">
+            
+                    
+                    Flask - 源码之本地线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.8" data-path="../05-Web框架/Flask/08-Flask - 源码之上下文.html">
+            
+                <a href="../05-Web框架/Flask/08-Flask - 源码之上下文.html">
+            
+                    
+                    Flask - 源码之上下文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.9" data-path="../05-Web框架/Flask/09-Flask - 源码之信号.html">
+            
+                <a href="../05-Web框架/Flask/09-Flask - 源码之信号.html">
+            
+                    
+                    Flask - 源码之信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.10" data-path="../05-Web框架/Flask/10-Flask - 扩展.html">
+            
+                <a href="../05-Web框架/Flask/10-Flask - 扩展.html">
+            
+                    
+                    Flask - 扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.11" data-path="../05-Web框架/Flask/DBUtils.html">
+            
+                <a href="../05-Web框架/Flask/DBUtils.html">
+            
+                    
+                    DBUtils
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.12" data-path="../05-Web框架/Flask/virtualenv基本使用.html">
+            
+                <a href="../05-Web框架/Flask/virtualenv基本使用.html">
+            
+                    
+                    virtualenv基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../05-Web框架/Tornado/">
+            
+                <a href="../05-Web框架/Tornado/">
+            
+                    
+                    Tornado
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="01-Redis - 简介.html">
+            
+                <a href="01-Redis - 简介.html">
+            
+                    
+                    Redis - 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="02-Redis - 配置参数说明.html">
+            
+                <a href="02-Redis - 配置参数说明.html">
+            
+                    
+                    Redis - 配置参数说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="03-Redis - 基础命令.html">
+            
+                <a href="03-Redis - 基础命令.html">
+            
+                    
+                    Redis - 基础命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="04-Redis - 数据库.html">
+            
+                <a href="04-Redis - 数据库.html">
+            
+                    
+                    Redis - 数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="05-Redis - 事务.html">
+            
+                <a href="05-Redis - 事务.html">
+            
+                    
+                    Redis - 事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="06-Redis - 主从复制.html">
+            
+                <a href="06-Redis - 主从复制.html">
+            
+                    
+                    Redis - 主从复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="07-Redis - 集群.html">
+            
+                <a href="07-Redis - 集群.html">
+            
+                    
+                    Redis - 集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="08-Redis - Sentinel.html">
+            
+                <a href="08-Redis - Sentinel.html">
+            
+                    
+                    Redis - Sentinel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="Python操作MongoDB.html">
+            
+                <a href="Python操作MongoDB.html">
+            
+                    
+                    Python操作MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.10" data-path="Python操作Redis.html">
+            
+                <a href="Python操作Redis.html">
+            
+                    
+                    Python操作Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../07-设计模式/">
+            
+                <a href="../07-设计模式/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../07-设计模式/01-六大原则.html">
+            
+                <a href="../07-设计模式/01-六大原则.html">
+            
+                    
+                    六大原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../07-设计模式/02-单例模式.html">
+            
+                <a href="../07-设计模式/02-单例模式.html">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../08-算法/">
+            
+                <a href="../08-算法/">
+            
+                    
+                    算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../08-算法/01-算法基础.html">
+            
+                <a href="../08-算法/01-算法基础.html">
+            
+                    
+                    算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../08-算法/02-数组.html">
+            
+                <a href="../08-算法/02-数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../08-算法/03-栈.html">
+            
+                <a href="../08-算法/03-栈.html">
+            
+                    
+                    栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../08-算法/03-链表.html">
+            
+                <a href="../08-算法/03-链表.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../08-算法/04-树.html">
+            
+                <a href="../08-算法/04-树.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../08-算法/04-队列.html">
+            
+                <a href="../08-算法/04-队列.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../08-算法/05-哈希表.html">
+            
+                <a href="../08-算法/05-哈希表.html">
+            
+                    
+                    哈希表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../08-算法/06-双指针.html">
+            
+                <a href="../08-算法/06-双指针.html">
+            
+                    
+                    双指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../08-算法/07-并查集.html">
+            
+                <a href="../08-算法/07-并查集.html">
+            
+                    
+                    并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../08-算法/08-前缀树.html">
+            
+                <a href="../08-算法/08-前缀树.html">
+            
+                    
+                    前缀树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../08-算法/09-KMP&RK.html">
+            
+                <a href="../08-算法/09-KMP&RK.html">
+            
+                    
+                    KMP&RK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../08-算法/10-跳表.html">
+            
+                <a href="../08-算法/10-跳表.html">
+            
+                    
+                    跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.13" data-path="../08-算法/11-剪枝.html">
+            
+                <a href="../08-算法/11-剪枝.html">
+            
+                    
+                    剪枝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14" data-path="../08-算法/Python时间复杂度.html">
+            
+                <a href="../08-算法/Python时间复杂度.html">
+            
+                    
+                    Python时间复杂度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.15" data-path="../08-算法/优先队列.html">
+            
+                <a href="../08-算法/优先队列.html">
+            
+                    
+                    优先队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.16" data-path="../08-算法/力扣题解/">
+            
+                <a href="../08-算法/力扣题解/">
+            
+                    
+                    力扣题解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.17" data-path="../08-算法/双端队列.html">
+            
+                <a href="../08-算法/双端队列.html">
+            
+                    
+                    双端队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.18" data-path="../08-算法/排序合集.html">
+            
+                <a href="../08-算法/排序合集.html">
+            
+                    
+                    排序合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.19" data-path="../08-算法/树.html">
+            
+                <a href="../08-算法/树.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.20" data-path="../08-算法/链表.html">
+            
+                <a href="../08-算法/链表.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../09-Linux/">
+            
+                <a href="../09-Linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../09-Linux/Command/">
+            
+                <a href="../09-Linux/Command/">
+            
+                    
+                    Command
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1.1" data-path="../09-Linux/Command/01-常用命令.html">
+            
+                <a href="../09-Linux/Command/01-常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.2" data-path="../09-Linux/Command/vim.html">
+            
+                <a href="../09-Linux/Command/vim.html">
+            
+                    
+                    vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../09-Linux/Docker/">
+            
+                <a href="../09-Linux/Docker/">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../09-Linux/Git/">
+            
+                <a href="../09-Linux/Git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.3.1" data-path="../09-Linux/Git/01-Git&GitHub.html">
+            
+                <a href="../09-Linux/Git/01-Git&GitHub.html">
+            
+                    
+                    Git&GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2" data-path="../09-Linux/Git/02-Git基础命令.html">
+            
+                <a href="../09-Linux/Git/02-Git基础命令.html">
+            
+                    
+                    Git基础命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.3" data-path="../09-Linux/Git/GitHub Pages&Gitbook&Travis CI持续构建博客.html">
+            
+                <a href="../09-Linux/Git/GitHub Pages&Gitbook&Travis CI持续构建博客.html">
+            
+                    
+                    GitHub Pages&Gitbook&Travis CI持续构建博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.4" data-path="../09-Linux/Git/Travis  CI.html">
+            
+                <a href="../09-Linux/Git/Travis  CI.html">
+            
+                    
+                    Travis  CI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../09-Linux/RabbitMQ.html">
+            
+                <a href="../09-Linux/RabbitMQ.html">
+            
+                    
+                    RabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Read/">
+            
+                <a href="../Read/">
+            
+                    
+                    Read
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Python操作Redis</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#python&#x4F7F;&#x7528;redis&#x6D41;&#x7A0B;"><b></b>Python&#x4F7F;&#x7528;Redis&#x6D41;&#x7A0B;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;redis-py--&#x1F340;"><b></b>&#x5B89;&#x88C5;redis-py  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;redis&#x63A5;&#x53E3;&#x5BF9;&#x8C61;--&#x1F340;"><b></b>&#x521B;&#x5EFA;Redis&#x63A5;&#x53E3;&#x5BF9;&#x8C61;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x8FDE;&#x63A5;&#x6C60;--&#x1F340;"><b></b>&#x4F7F;&#x7528;&#x8FDE;&#x63A5;&#x6C60;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#string&#x64CD;&#x4F5C;--&#x1F340;"><b></b>String&#x64CD;&#x4F5C;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#hash&#x64CD;&#x4F5C;--&#x1F340;"><b></b>Hash&#x64CD;&#x4F5C;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#list&#x64CD;&#x4F5C;--&#x1F340;"><b></b>List&#x64CD;&#x4F5C;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#set&#x64CD;&#x4F5C;--&#x1F340;"><b></b>Set&#x64CD;&#x4F5C;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#zset&#x64CD;&#x4F5C;--&#x1F340;"><b></b>Zset&#x64CD;&#x4F5C;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x5176;&#x4ED6;&#x64CD;&#x4F5C;--&#x1F340;"><b></b>&#x5176;&#x4ED6;&#x64CD;&#x4F5C;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x7BA1;&#x9053;--&#x1F340;"><b></b>&#x7BA1;&#x9053;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x5229;&#x7528;&#x7BA1;&#x9053;&#x5B9E;&#x73B0;&#x8BA1;&#x6570;&#x5668;--&#x1F340;"><b></b>&#x5229;&#x7528;&#x7BA1;&#x9053;&#x5B9E;&#x73B0;&#x8BA1;&#x6570;&#x5668;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x53D1;&#x5E03;&#x8BA2;&#x9605;--&#x1F340;"><b></b>&#x53D1;&#x5E03;&#x8BA2;&#x9605;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#sentinel--&#x1F340;"><b></b>Sentinel  &#x1F340;</a></li></ul></ul></div><a href="#python&#x4F7F;&#x7528;redis&#x6D41;&#x7A0B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="python&#x4F7F;&#x7528;redis&#x6D41;&#x7A0B;"><a name="python&#x4F7F;&#x7528;redis&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#python&#x4F7F;&#x7528;redis&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>Python&#x4F7F;&#x7528;Redis&#x6D41;&#x7A0B;</h1>
+<div id="anchor-navigation-ex-pagetop-navbar"><ul><li><span class="title-icon "></span><a href="#python&#x4F7F;&#x7528;redis&#x6D41;&#x7A0B;"><b></b>Python&#x4F7F;&#x7528;Redis&#x6D41;&#x7A0B;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;redis-py--&#x1F340;"><b></b>&#x5B89;&#x88C5;redis-py  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;redis&#x63A5;&#x53E3;&#x5BF9;&#x8C61;--&#x1F340;"><b></b>&#x521B;&#x5EFA;Redis&#x63A5;&#x53E3;&#x5BF9;&#x8C61;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x8FDE;&#x63A5;&#x6C60;--&#x1F340;"><b></b>&#x4F7F;&#x7528;&#x8FDE;&#x63A5;&#x6C60;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#string&#x64CD;&#x4F5C;--&#x1F340;"><b></b>String&#x64CD;&#x4F5C;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#hash&#x64CD;&#x4F5C;--&#x1F340;"><b></b>Hash&#x64CD;&#x4F5C;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#list&#x64CD;&#x4F5C;--&#x1F340;"><b></b>List&#x64CD;&#x4F5C;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#set&#x64CD;&#x4F5C;--&#x1F340;"><b></b>Set&#x64CD;&#x4F5C;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#zset&#x64CD;&#x4F5C;--&#x1F340;"><b></b>Zset&#x64CD;&#x4F5C;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x5176;&#x4ED6;&#x64CD;&#x4F5C;--&#x1F340;"><b></b>&#x5176;&#x4ED6;&#x64CD;&#x4F5C;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x7BA1;&#x9053;--&#x1F340;"><b></b>&#x7BA1;&#x9053;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x5229;&#x7528;&#x7BA1;&#x9053;&#x5B9E;&#x73B0;&#x8BA1;&#x6570;&#x5668;--&#x1F340;"><b></b>&#x5229;&#x7528;&#x7BA1;&#x9053;&#x5B9E;&#x73B0;&#x8BA1;&#x6570;&#x5668;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x53D1;&#x5E03;&#x8BA2;&#x9605;--&#x1F340;"><b></b>&#x53D1;&#x5E03;&#x8BA2;&#x9605;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#sentinel--&#x1F340;"><b></b>Sentinel  &#x1F340;</a></li></ul></ul></div>
+
+<h2 id="&#x5B89;&#x88C5;redis-py--&#x1F340;"><a name="&#x5B89;&#x88C5;redis-py--&#x1F340;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;redis-py--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;redis-py  &#x1F340;</h2>
+<pre><code class="lang-shell">$ pip install redis
+</code></pre>
+<h2 id="&#x521B;&#x5EFA;redis&#x63A5;&#x53E3;&#x5BF9;&#x8C61;--&#x1F340;"><a name="&#x521B;&#x5EFA;redis&#x63A5;&#x53E3;&#x5BF9;&#x8C61;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;redis&#x63A5;&#x53E3;&#x5BF9;&#x8C61;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;Redis&#x63A5;&#x53E3;&#x5BF9;&#x8C61;  &#x1F340;</h2>
+<p>&#x521B;&#x5EFA; Redis &#x63A5;&#x53E3;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B; , &#x5C06;&#x901A;&#x8FC7;&#x5B9E;&#x4F8B;&#x5BF9; Redis &#x8FDB;&#x884C;&#x64CD;&#x4F5C;</p>
+<p>&#x6709;&#x4E24;&#x79CD;&#x521B;&#x5EFA;&#x65B9;&#x5F0F; :</p>
+<ul>
+<li>Redis : &#x7EE7;&#x627F; StrictRedis &#x7C7B; , &#x7528;&#x4E8E;&#x5411;&#x540E;&#x517C;&#x5BB9;&#x65E7;&#x7248;&#x672C;&#x7684; redis-py</li>
+<li>StrictRedis : &#x5B9E;&#x73B0;&#x5927;&#x90E8;&#x5206;&#x5B98;&#x65B9;&#x7684;&#x547D;&#x4EE4; , &#x5E76;&#x4F7F;&#x7528;&#x5B98;&#x65B9;&#x7684;&#x8BED;&#x6CD5;&#x548C;&#x547D;&#x4EE4;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> redis
+r = redis.Redis(host=<span class="hljs-string">&apos;127.0.0.1&apos;</span>, port=<span class="hljs-number">6379</span>)
+r = redis.StrictRedis(host=<span class="hljs-string">&apos;127.0.0.1&apos;</span>, port=<span class="hljs-number">6379</span>)
+</code></pre>
+<h2 id="&#x4F7F;&#x7528;&#x8FDE;&#x63A5;&#x6C60;--&#x1F340;"><a name="&#x4F7F;&#x7528;&#x8FDE;&#x63A5;&#x6C60;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x8FDE;&#x63A5;&#x6C60;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;&#x8FDE;&#x63A5;&#x6C60;  &#x1F340;</h2>
+<p>&#x901A;&#x8FC7;&#x8FDE;&#x63A5;&#x6C60;&#x7BA1;&#x7406; Redis &#x5BF9;&#x8C61;</p>
+<p>&#x9ED8;&#x8BA4;&#x6BCF;&#x4E2A; Redis &#x5B9E;&#x4F8B;&#x90FD;&#x4F1A;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x81EA;&#x5DF1;&#x7684;&#x8FDE;&#x63A5;&#x6C60; , &#x53EF;&#x4EE5;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x6C60; , &#x7136;&#x540E;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x521B;&#x5EFA; Redis &#x5B9E;&#x4F8B; , &#x4EE5;&#x6B64;&#x5B9E;&#x73B0; Redis &#x5B9E;&#x4F8B;&#x5171;&#x4EAB;&#x8FDE;&#x63A5;&#x6C60;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> redis
+pool = redis.ConnectionPool(host=<span class="hljs-string">&apos;127.0.0.1&apos;</span>, port=<span class="hljs-number">6379</span>)
+r = redis.Redis(connection_pool=pool)
+</code></pre>
+<h2 id="string&#x64CD;&#x4F5C;--&#x1F340;"><a name="string&#x64CD;&#x4F5C;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#string&#x64CD;&#x4F5C;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>String&#x64CD;&#x4F5C;  &#x1F340;</h2>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set</span><span class="hljs-params">(name, value, ex=None, px=None, nx=False, xx=False)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x8BBE;&#x7F6E;&#x503C; , &#x9ED8;&#x8BA4;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x521B;&#x5EFA; , &#x5B58;&#x5728;&#x5219;&#x4FEE;&#x6539;
+    ex , &#x8FC7;&#x671F;&#x65F6;&#x95F4; (&#x79D2;)
+    px , &#x8FC7;&#x671F;&#x65F6;&#x95F4; (&#x6BEB;&#x79D2;)
+    nx , &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;True , &#x5219;&#x53EA;&#x6709;name&#x4E0D;&#x5B58;&#x5728;&#x65F6; , &#x5F53;&#x524D;set&#x64CD;&#x4F5C;&#x624D;&#x6267;&#x884C;
+    xx , &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;True , &#x5219;&#x53EA;&#x6709;name&#x5B58;&#x5728;&#x65F6; , &#x5C97;&#x524D;set&#x64CD;&#x4F5C;&#x624D;&#x6267;&#x884C;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setnx</span><span class="hljs-params">(name, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x8BBE;&#x7F6E;&#x503C; , &#x53EA;&#x6709;name&#x4E0D;&#x5B58;&#x5728;&#x65F6; , &#x6267;&#x884C;&#x8BBE;&#x7F6E;&#x64CD;&#x4F5C;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setex</span><span class="hljs-params">(name, value, time)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x8BBE;&#x7F6E;&#x503C;
+    time , &#x8FC7;&#x671F;&#x65F6;&#x95F4; (&#x6570;&#x5B57;&#x79D2; &#x6216; timedelta&#x5BF9;&#x8C61;)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">psetex</span><span class="hljs-params">(name, time_ms, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x8BBE;&#x7F6E;&#x503C;
+    time_ms , &#x8FC7;&#x671F;&#x65F6;&#x95F4; (&#x6570;&#x5B57;&#x6BEB;&#x79D2; &#x6216; timedelta&#x5BF9;&#x8C61;)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mset</span><span class="hljs-params">(*args, **kwargs)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x6279;&#x91CF;&#x8BBE;&#x7F6E;&#x503C;,&#x53C2;&#x6570;&#x4E3A;&#x5173;&#x952E;&#x5B57;&#x6216;&#x5B57;&#x5178;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;&#x503C;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mget</span><span class="hljs-params">(keys, *args)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x6279;&#x91CF;&#x83B7;&#x53D6;,&#x5982;:
+        mget(&apos;1&apos;, &apos;2&apos;)
+        mget([&apos;1&apos;, &apos;2&apos;])
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getset</span><span class="hljs-params">(name, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x8BBE;&#x7F6E;&#x65B0;&#x503C;&#x5E76;&#x83B7;&#x53D6;&#x539F;&#x6765;&#x7684;&#x503C;
+    &quot;&quot;&quot;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getrange</span><span class="hljs-params">(key, start, end)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;&#x5B50;&#x5E8F;&#x5217; (&#x6839;&#x636E;&#x5B57;&#x8282;&#x83B7;&#x53D6; , &#x975E;&#x5B57;&#x7B26;)
+    name , Redis &#x7684; name
+    start , &#x8D77;&#x59CB;&#x4F4D;&#x7F6E; (&#x5B57;&#x8282;)
+    end , &#x7ED3;&#x675F;&#x4F4D;&#x7F6E; (&#x5B57;&#x8282;)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setrange</span><span class="hljs-params">(name, offset, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x4FEE;&#x6539;&#x5B57;&#x7B26;&#x4E32;&#x5185;&#x5BB9; , &#x4ECE;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x7D22;&#x5F15;&#x5F00;&#x59CB;&#x5411;&#x540E;&#x66FF;&#x6362; (&#x65B0;&#x503C;&#x592A;&#x957F;&#x65F6; , &#x5219;&#x5411;&#x540E;&#x6DFB;&#x52A0;)
+    offset , &#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7D22;&#x5F15; , &#x5B57;&#x8282; (&#x4E00;&#x4E2A;&#x6C49;&#x5B57;&#x4E09;&#x4E2A;&#x5B57;&#x8282;)
+    value , &#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x503C;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setbit</span><span class="hljs-params">(name, offset, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5BF9;name&#x5BF9;&#x5E94;&#x503C;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x8868;&#x793A;&#x7684;&#x4F4D;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getbit</span><span class="hljs-params">(name, offset)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;name&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x8868;&#x793A;&#x4E2D;&#x7684;&#x67D0;&#x4F4D;&#x7684;&#x503C;  (0&#x6216;1)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bitcount</span><span class="hljs-params">(key, start=None, end=None)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;name&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x8868;&#x793A;&#x4E2D; 1 &#x7684;&#x4E2A;&#x6570;
+    key , Redis&#x7684;name
+    start , &#x4F4D;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;
+    end , &#x4F4D;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bitop</span><span class="hljs-params">(operation, dest, *keys)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;&#x591A;&#x4E2A;&#x503C; , &#x5E76;&#x5C06;&#x503C;&#x505A;&#x4F4D;&#x8FD0;&#x7B97; , &#x5C06;&#x6700;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x4FDD;&#x5B58;&#x81F3;&#x65B0;&#x7684;name&#x5BF9;&#x5E94;&#x7684;&#x503C;
+    operation,AND (&#x5E76;) &#x3001; OR (&#x6216;) &#x3001; NOT (&#x975E;) &#x3001; XOR (&#x5F02;&#x6216;)
+    dest, &#x65B0;&#x7684;Redis&#x7684;name
+    *keys,&#x8981;&#x67E5;&#x627E;&#x7684;Redis&#x7684;name
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">strlen</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x8FD4;&#x56DE;name&#x5BF9;&#x5E94;&#x503C;&#x7684;&#x5B57;&#x8282;&#x957F;&#x5EA6; (&#x4E00;&#x4E2A;&#x6C49;&#x5B57;3&#x4E2A;&#x5B57;&#x8282;)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">incr</span><span class="hljs-params">(self, name, amount=<span class="hljs-number">1</span>)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x81EA;&#x589E; name&#x5BF9;&#x5E94;&#x7684;&#x503C; , &#x5F53;name&#x4E0D;&#x5B58;&#x5728;&#x65F6; , &#x5219;&#x521B;&#x5EFA;name&#xFF1D;amount , &#x5426;&#x5219; , &#x5219;&#x81EA;&#x589E;&#x3002;
+    amount,&#x81EA;&#x589E;&#x6570; (&#x5FC5;&#x987B;&#x662F;&#x6574;&#x6570;)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">incrbyfloat</span><span class="hljs-params">(self, name, amount=<span class="hljs-number">1.0</span>)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x81EA;&#x589E; name&#x5BF9;&#x5E94;&#x7684;&#x503C; , &#x5F53;name&#x4E0D;&#x5B58;&#x5728;&#x65F6; , &#x5219;&#x521B;&#x5EFA;name&#xFF1D;amount , &#x5426;&#x5219; , &#x5219;&#x81EA;&#x589E;&#x3002;
+    amount,&#x81EA;&#x589E;&#x6570; (&#x6D6E;&#x70B9;&#x578B;)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">decr</span><span class="hljs-params">(self, name, amount=<span class="hljs-number">1</span>)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x81EA;&#x51CF; name&#x5BF9;&#x5E94;&#x7684;&#x503C; , &#x5F53;name&#x4E0D;&#x5B58;&#x5728;&#x65F6; , &#x5219;&#x521B;&#x5EFA;name&#xFF1D;amount , &#x5426;&#x5219; , &#x5219;&#x81EA;&#x51CF;
+    amount,&#x81EA;&#x51CF;&#x6570; (&#x6574;&#x6570;)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">append</span><span class="hljs-params">(key, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;redis name&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x540E;&#x9762;&#x8FFD;&#x52A0;&#x5185;&#x5BB9;
+    &quot;&quot;&quot;</span>
+</code></pre>
+<h2 id="hash&#x64CD;&#x4F5C;--&#x1F340;"><a name="hash&#x64CD;&#x4F5C;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#hash&#x64CD;&#x4F5C;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>Hash&#x64CD;&#x4F5C;  &#x1F340;</h2>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hset</span><span class="hljs-params">(name, key, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    name&#x5BF9;&#x5E94;&#x7684;hash&#x4E2D;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x952E;&#x503C;&#x5BF9; (&#x4E0D;&#x5B58;&#x5728; , &#x5219;&#x521B;&#x5EFA;&#xFF1B;&#x5426;&#x5219; , &#x4FEE;&#x6539;)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hsetnx</span><span class="hljs-params">(name, key, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5F53;name&#x5BF9;&#x5E94;&#x7684;hash&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#x5F53;&#x524D;key&#x65F6;&#x5219;&#x521B;&#x5EFA; (&#x76F8;&#x5F53;&#x4E8E;&#x6DFB;&#x52A0;)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hmset</span><span class="hljs-params">(name, mapping)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;name&#x5BF9;&#x5E94;&#x7684;hash&#x4E2D;&#x6279;&#x91CF;&#x8BBE;&#x7F6E;&#x952E;&#x503C;&#x5BF9;
+    name , redis&#x7684;name
+    mapping , &#x5B57;&#x5178; , &#x5982; : hmset(&apos;xx&apos;, {&apos;k1&apos;:&apos;v1&apos;, &apos;k2&apos;: &apos;v2&apos;})
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hget</span><span class="hljs-params">(name,key)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;name&#x5BF9;&#x5E94;&#x7684;hash&#x4E2D;&#x83B7;&#x53D6;&#x6839;&#x636E;key&#x83B7;&#x53D6;value
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hmget</span><span class="hljs-params">(name, keys, *args)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;name&#x5BF9;&#x5E94;&#x7684;hash&#x4E2D;&#x83B7;&#x53D6;&#x591A;&#x4E2A;key&#x7684;&#x503C;
+    name , reids&#x5BF9;&#x5E94;&#x7684;name
+    keys , &#x8981;&#x83B7;&#x53D6;key&#x96C6;&#x5408; , &#x5982; : [&apos;k1&apos;, &apos;k2&apos;, &apos;k3&apos;]
+    *args , &#x8981;&#x83B7;&#x53D6;&#x7684;key , &#x5982; : k1,k2,k3
+    r.mget(&apos;xx&apos;, [&apos;k1&apos;, &apos;k2&apos;])
+    &#x6216;
+    r.hmget(&apos;xx&apos;, &apos;k1&apos;, &apos;k2&apos;)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hgetall</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;name&#x5BF9;&#x5E94;hash&#x7684;&#x6240;&#x6709;&#x952E;&#x503C;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hlen</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;name&#x5BF9;&#x5E94;&#x7684;hash&#x4E2D;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x4E2A;&#x6570;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hkeys</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;name&#x5BF9;&#x5E94;&#x7684;hash&#x4E2D;&#x6240;&#x6709;&#x7684;key&#x7684;&#x503C;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hvals</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;name&#x5BF9;&#x5E94;&#x7684;hash&#x4E2D;&#x6240;&#x6709;&#x7684;key&#x7684;&#x503C;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hexists</span><span class="hljs-params">(name, key)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x68C0;&#x67E5;name&#x5BF9;&#x5E94;&#x7684;hash&#x662F;&#x5426;&#x5B58;&#x5728;&#x5F53;&#x524D;&#x4F20;&#x5165;&#x7684;key
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hdel</span><span class="hljs-params">(name,*keys)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5C06;name&#x5BF9;&#x5E94;&#x7684;hash&#x4E2D;&#x6307;&#x5B9A;key&#x7684;&#x952E;&#x503C;&#x5BF9;&#x5220;&#x9664;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hincrby</span><span class="hljs-params">(name, key, amount=<span class="hljs-number">1</span>)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x81EA;&#x589E;name&#x5BF9;&#x5E94;&#x7684;hash&#x4E2D;&#x7684;&#x6307;&#x5B9A;key&#x7684;&#x503C; , &#x4E0D;&#x5B58;&#x5728;&#x5219;&#x521B;&#x5EFA;key=amount
+    name , redis&#x4E2D;&#x7684;name
+    key , hash&#x5BF9;&#x5E94;&#x7684;key
+    amount , &#x81EA;&#x589E;&#x6570; (&#x6574;&#x6570;)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hincrbyfloat</span><span class="hljs-params">(name, key, amount=<span class="hljs-number">1.0</span>)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x81EA;&#x589E;name&#x5BF9;&#x5E94;&#x7684;hash&#x4E2D;&#x7684;&#x6307;&#x5B9A;key&#x7684;&#x503C; , &#x4E0D;&#x5B58;&#x5728;&#x5219;&#x521B;&#x5EFA;key=amount
+    name , redis&#x4E2D;&#x7684;name
+    key , hash&#x5BF9;&#x5E94;&#x7684;key
+    amount , &#x81EA;&#x589E;&#x6570; (&#x6D6E;&#x70B9;&#x6570;)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hscan</span><span class="hljs-params">(name, cursor=<span class="hljs-number">0</span>, match=None, count=None)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x589E;&#x91CF;&#x5F0F;&#x8FED;&#x4EE3;&#x83B7;&#x53D6; , &#x5BF9;&#x4E8E;&#x6570;&#x636E;&#x5927;&#x7684;&#x6570;&#x636E;&#x975E;&#x5E38;&#x6709;&#x7528; , hscan&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5206;&#x7247;&#x7684;&#x83B7;&#x53D6;&#x6570;&#x636E; , 
+    &#x5E76;&#x975E;&#x4E00;&#x6B21;&#x6027;&#x5C06;&#x6570;&#x636E;&#x5168;&#x90E8;&#x83B7;&#x53D6;&#x5B8C; , &#x4ECE;&#x800C;&#x653E;&#x7F6E;&#x5185;&#x5B58;&#x88AB;&#x6491;&#x7206;
+    name , redis&#x7684;name
+    cursor , &#x6E38;&#x6807; (&#x57FA;&#x4E8E;&#x6E38;&#x6807;&#x5206;&#x6279;&#x53D6;&#x83B7;&#x53D6;&#x6570;&#x636E;)
+    match , &#x5339;&#x914D;&#x6307;&#x5B9A;key , &#x9ED8;&#x8BA4;None &#x8868;&#x793A;&#x6240;&#x6709;&#x7684;key
+    count , &#x6BCF;&#x6B21;&#x5206;&#x7247;&#x6700;&#x5C11;&#x83B7;&#x53D6;&#x4E2A;&#x6570; , &#x9ED8;&#x8BA4;None&#x8868;&#x793A;&#x91C7;&#x7528;Redis&#x7684;&#x9ED8;&#x8BA4;&#x5206;&#x7247;&#x4E2A;&#x6570;
+
+    &#x5982; : 
+        &#x7B2C;&#x4E00;&#x6B21; : cursor1, data1 = r.hscan(&apos;xx&apos;, cursor=0, match=None, count=None)
+        &#x7B2C;&#x4E8C;&#x6B21; : cursor2, data1 = r.hscan(&apos;xx&apos;, cursor=cursor1, match=None, count=None)
+        ...
+        &#x76F4;&#x5230;&#x8FD4;&#x56DE;&#x503C;cursor&#x7684;&#x503C;&#x4E3A;0&#x65F6; , &#x8868;&#x793A;&#x6570;&#x636E;&#x5DF2;&#x7ECF;&#x901A;&#x8FC7;&#x5206;&#x7247;&#x83B7;&#x53D6;&#x5B8C;&#x6BD5;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hscan_iter</span><span class="hljs-params">(name, match=None, count=None)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5229;&#x7528;yield&#x5C01;&#x88C5;hscan&#x521B;&#x5EFA;&#x751F;&#x6210;&#x5668; , &#x5B9E;&#x73B0;&#x5206;&#x6279;&#x53BB;redis&#x4E2D;&#x83B7;&#x53D6;&#x6570;&#x636E;
+    match , &#x5339;&#x914D;&#x6307;&#x5B9A;key , &#x9ED8;&#x8BA4;None &#x8868;&#x793A;&#x6240;&#x6709;&#x7684;key
+    count , &#x6BCF;&#x6B21;&#x5206;&#x7247;&#x6700;&#x5C11;&#x83B7;&#x53D6;&#x4E2A;&#x6570; , &#x9ED8;&#x8BA4;None&#x8868;&#x793A;&#x91C7;&#x7528;Redis&#x7684;&#x9ED8;&#x8BA4;&#x5206;&#x7247;&#x4E2A;&#x6570;
+    &quot;&quot;&quot;</span>
+</code></pre>
+<h2 id="list&#x64CD;&#x4F5C;--&#x1F340;"><a name="list&#x64CD;&#x4F5C;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#list&#x64CD;&#x4F5C;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>List&#x64CD;&#x4F5C;  &#x1F340;</h2>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">lpush</span><span class="hljs-params">(name,values)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;name&#x5BF9;&#x5E94;&#x7684;list&#x4E2D;&#x6DFB;&#x52A0;&#x5143;&#x7D20; , &#x6BCF;&#x4E2A;&#x65B0;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x6DFB;&#x52A0;&#x5230;&#x5217;&#x8868;&#x7684;&#x6700;&#x5DE6;&#x8FB9;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">rpush</span><span class="hljs-params">(name, values)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x8868;&#x793A;&#x4ECE;&#x53F3;&#x5411;&#x5DE6;&#x64CD;&#x4F5C;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">lpushx</span><span class="hljs-params">(name,value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;name&#x5BF9;&#x5E94;&#x7684;list&#x4E2D;&#x6DFB;&#x52A0;&#x5143;&#x7D20; , &#x53EA;&#x6709;name&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x65F6; , &#x503C;&#x6DFB;&#x52A0;&#x5230;&#x5217;&#x8868;&#x7684;&#x6700;&#x5DE6;&#x8FB9;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">rpushx</span><span class="hljs-params">(name, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x8868;&#x793A;&#x4ECE;&#x53F3;&#x5411;&#x5DE6;&#x64CD;&#x4F5C;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">llen</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x8FD4;&#x56DE;list&#x7684;&#x957F;&#x5EA6;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">linsert</span><span class="hljs-params">(name, where, refvalue, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;name&#x5BF9;&#x5E94;&#x7684;&#x5217;&#x8868;&#x7684;&#x67D0;&#x4E00;&#x4E2A;&#x503C;&#x524D;&#x6216;&#x540E;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x65B0;&#x503C;
+    name , redis&#x7684;name
+    where , BEFORE&#x6216;AFTER
+    refvalue , &#x6807;&#x6746;&#x503C; , &#x5373; : &#x5728;&#x5B83;&#x524D;&#x540E;&#x63D2;&#x5165;&#x6570;&#x636E;
+    value , &#x8981;&#x63D2;&#x5165;&#x7684;&#x6570;&#x636E;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">lset</span><span class="hljs-params">(name, index, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5BF9;name&#x5BF9;&#x5E94;&#x7684;list&#x4E2D;&#x7684;&#x67D0;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;&#x91CD;&#x65B0;&#x8D4B;&#x503C;
+    name , redis&#x7684;name
+    index , list&#x7684;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;
+    value , &#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x503C;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">lrem</span><span class="hljs-params">(name, value, num)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;name&#x5BF9;&#x5E94;&#x7684;list&#x4E2D;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x503C;
+    name , redis&#x7684;name
+    value , &#x8981;&#x5220;&#x9664;&#x7684;&#x503C;
+    num , num=0&#x5220;&#x9664;&#x5217;&#x8868;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x6307;&#x5B9A;&#x503C;
+         num=2,&#x4ECE;&#x524D;&#x5230;&#x540E; , &#x5220;&#x9664;2&#x4E2A;
+         num=-2,&#x4ECE;&#x540E;&#x5411;&#x524D; , &#x5220;&#x9664;2&#x4E2A;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">lpop</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;name&#x5BF9;&#x5E94;&#x7684;&#x5217;&#x8868;&#x7684;&#x5DE6;&#x4FA7;&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5E76;&#x5728;&#x5217;&#x8868;&#x4E2D;&#x79FB;&#x9664; , &#x8FD4;&#x56DE;&#x503C;&#x5219;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">rpop</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x8868;&#x793A;&#x4ECE;&#x53F3;&#x5411;&#x5DE6;&#x64CD;&#x4F5C;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">lindex</span><span class="hljs-params">(name, index)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;name&#x5BF9;&#x5E94;&#x7684;&#x5217;&#x8868;&#x4E2D;&#x6839;&#x636E;&#x7D22;&#x5F15;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x5143;&#x7D20;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">lrange</span><span class="hljs-params">(name, start, end)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;name&#x5BF9;&#x5E94;&#x7684;&#x5217;&#x8868;&#x5206;&#x7247;&#x83B7;&#x53D6;&#x6570;&#x636E;
+    name , redis&#x7684;name
+    start , &#x7D22;&#x5F15;&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;
+    end , &#x7D22;&#x5F15;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ltrim</span><span class="hljs-params">(name, start, end)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;name&#x5BF9;&#x5E94;&#x7684;&#x5217;&#x8868;&#x4E2D;&#x79FB;&#x9664;&#x6CA1;&#x6709;&#x5728;start-end&#x7D22;&#x5F15;&#x4E4B;&#x95F4;&#x7684;&#x503C;
+    name , redis&#x7684;name
+    start , &#x7D22;&#x5F15;&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;
+    end , &#x7D22;&#x5F15;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">rpoplpush</span><span class="hljs-params">(src, dst)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x4ECE;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x53D6;&#x51FA;&#x6700;&#x53F3;&#x8FB9;&#x7684;&#x5143;&#x7D20; , &#x540C;&#x65F6;&#x5C06;&#x5176;&#x6DFB;&#x52A0;&#x81F3;&#x53E6;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x7684;&#x6700;&#x5DE6;&#x8FB9;
+    src , &#x8981;&#x53D6;&#x6570;&#x636E;&#x7684;&#x5217;&#x8868;&#x7684;name
+    dst , &#x8981;&#x6DFB;&#x52A0;&#x6570;&#x636E;&#x7684;&#x5217;&#x8868;&#x7684;name
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">blpop</span><span class="hljs-params">(keys, timeout)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5C06;&#x591A;&#x4E2A;&#x5217;&#x8868;&#x6392;&#x5217; , &#x6309;&#x7167;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x53BB;pop&#x5BF9;&#x5E94;&#x5217;&#x8868;&#x7684;&#x5143;&#x7D20;
+    keys , redis&#x7684;name&#x7684;&#x96C6;&#x5408;
+    timeout , &#x8D85;&#x65F6;&#x65F6;&#x95F4; , &#x5F53;&#x5143;&#x7D20;&#x6240;&#x6709;&#x5217;&#x8868;&#x7684;&#x5143;&#x7D20;&#x83B7;&#x53D6;&#x5B8C;&#x4E4B;&#x540E; , &#x963B;&#x585E;&#x7B49;&#x5F85;&#x5217;&#x8868;&#x5185;&#x6709;&#x6570;&#x636E;&#x7684;&#x65F6;&#x95F4; (&#x79D2;), 0 &#x8868;&#x793A;&#x6C38;&#x8FDC;&#x963B;&#x585E;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">brpop</span><span class="hljs-params">(keys, timeout)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x4ECE;&#x53F3;&#x5411;&#x5DE6;&#x83B7;&#x53D6;&#x6570;&#x636E;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">brpoplpush</span><span class="hljs-params">(src, dst, timeout=<span class="hljs-number">0</span>)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x4ECE;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x7684;&#x53F3;&#x4FA7;&#x79FB;&#x9664;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5E76;&#x5C06;&#x5176;&#x6DFB;&#x52A0;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x7684;&#x5DE6;&#x4FA7;
+    src , &#x53D6;&#x51FA;&#x5E76;&#x8981;&#x79FB;&#x9664;&#x5143;&#x7D20;&#x7684;&#x5217;&#x8868;&#x5BF9;&#x5E94;&#x7684;name
+    dst , &#x8981;&#x63D2;&#x5165;&#x5143;&#x7D20;&#x7684;&#x5217;&#x8868;&#x5BF9;&#x5E94;&#x7684;name
+    timeout , &#x5F53;src&#x5BF9;&#x5E94;&#x7684;&#x5217;&#x8868;&#x4E2D;&#x6CA1;&#x6709;&#x6570;&#x636E;&#x65F6; , &#x963B;&#x585E;&#x7B49;&#x5F85;&#x5176;&#x6709;&#x6570;&#x636E;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4; (&#x79D2;) , 0 &#x8868;&#x793A;&#x6C38;&#x8FDC;&#x963B;&#x585E;
+    &quot;&quot;&quot;</span>
+</code></pre>
+<p>&#x81EA;&#x5B9A;&#x4E49;&#x589E;&#x91CF;&#x8FED;&#x4EE3;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x7531;&#x4E8E;redis&#x7C7B;&#x5E93;&#x4E2D;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x5BF9;&#x5217;&#x8868;&#x5143;&#x7D20;&#x7684;&#x589E;&#x91CF;&#x8FED;&#x4EE3; , &#x5982;&#x679C;&#x60F3;&#x8981;&#x5FAA;&#x73AF;name&#x5BF9;&#x5E94;&#x7684;&#x5217;&#x8868;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20; , &#x90A3;&#x4E48;&#x5C31;&#x9700;&#x8981; : </span>
+    <span class="hljs-comment"># 1&#x3001;&#x83B7;&#x53D6;name&#x5BF9;&#x5E94;&#x7684;&#x6240;&#x6709;&#x5217;&#x8868;</span>
+    <span class="hljs-comment"># 2&#x3001;&#x5FAA;&#x73AF;&#x5217;&#x8868;</span>
+<span class="hljs-comment"># &#x4F46;&#x662F; , &#x5982;&#x679C;&#x5217;&#x8868;&#x975E;&#x5E38;&#x5927; , &#x90A3;&#x4E48;&#x5C31;&#x6709;&#x53EF;&#x80FD;&#x5728;&#x7B2C;&#x4E00;&#x6B65;&#x65F6;&#x5C31;&#x5C06;&#x7A0B;&#x5E8F;&#x7684;&#x5185;&#x5BB9;&#x6491;&#x7206; , &#x6240;&#x6709;&#x6709;&#x5FC5;&#x8981;&#x81EA;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x589E;&#x91CF;&#x8FED;&#x4EE3;&#x7684;&#x529F;&#x80FD; : </span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">list_iter</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x81EA;&#x5B9A;&#x4E49;redis&#x5217;&#x8868;&#x589E;&#x91CF;&#x8FED;&#x4EE3;
+    :param name: redis&#x4E2D;&#x7684;name , &#x5373; : &#x8FED;&#x4EE3;name&#x5BF9;&#x5E94;&#x7684;&#x5217;&#x8868;
+    :return: yield &#x8FD4;&#x56DE;&#x5217;&#x8868;&#x5143;&#x7D20;
+    &quot;&quot;&quot;</span>
+    list_count = r.llen(name)
+    <span class="hljs-keyword">for</span> index <span class="hljs-keyword">in</span> xrange(list_count):
+        <span class="hljs-keyword">yield</span> r.lindex(name, index)
+
+<span class="hljs-comment"># &#x4F7F;&#x7528;</span>
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> list_iter(<span class="hljs-string">&apos;pp&apos;</span>):
+    print(item)
+</code></pre>
+<h2 id="set&#x64CD;&#x4F5C;--&#x1F340;"><a name="set&#x64CD;&#x4F5C;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#set&#x64CD;&#x4F5C;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>Set&#x64CD;&#x4F5C;  &#x1F340;</h2>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sadd</span><span class="hljs-params">(name,values)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    name&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408;&#x4E2D;&#x6DFB;&#x52A0;&#x5143;&#x7D20;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">scard</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;name&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408;&#x4E2D;&#x5143;&#x7D20;&#x4E2A;&#x6570;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sdiff</span><span class="hljs-params">(keys, *args)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;&#x7B2C;&#x4E00;&#x4E2A;name&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408;&#x4E2D;&#x4E14;&#x4E0D;&#x5728;&#x5176;&#x4ED6;name&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408;&#x7684;&#x5143;&#x7D20;&#x96C6;&#x5408;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sdiffstore</span><span class="hljs-params">(dest, keys, *args)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;name&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408;&#x4E2D;&#x4E14;&#x4E0D;&#x5728;&#x5176;&#x4ED6;name&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408; , &#x518D;&#x5C06;&#x5176;&#x65B0;&#x52A0;&#x5165;&#x5230;dest&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408;&#x4E2D;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sinter</span><span class="hljs-params">(keys, *args)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;&#x591A;&#x4E00;&#x4E2A;name&#x5BF9;&#x5E94;&#x96C6;&#x5408;&#x7684;&#x5E76;&#x96C6;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sinterstore</span><span class="hljs-params">(dest, keys, *args)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;&#x591A;&#x4E00;&#x4E2A;name&#x5BF9;&#x5E94;&#x96C6;&#x5408;&#x7684;&#x5E76;&#x96C6; , &#x518D;&#x8BB2;&#x5176;&#x52A0;&#x5165;&#x5230;dest&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408;&#x4E2D;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sismember</span><span class="hljs-params">(name, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x68C0;&#x67E5;value&#x662F;&#x5426;&#x662F;name&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408;&#x7684;&#x6210;&#x5458;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">smembers</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;name&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408;&#x7684;&#x6240;&#x6709;&#x6210;&#x5458;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">smove</span><span class="hljs-params">(src, dst, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5C06;&#x67D0;&#x4E2A;&#x6210;&#x5458;&#x4ECE;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#x4E2D;&#x79FB;&#x52A8;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x96C6;&#x5408;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">spop</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x4ECE;&#x96C6;&#x5408;&#x7684;&#x53F3;&#x4FA7; (&#x5C3E;&#x90E8;)&#x79FB;&#x9664;&#x4E00;&#x4E2A;&#x6210;&#x5458; , &#x5E76;&#x5C06;&#x5176;&#x8FD4;&#x56DE;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">srandmember</span><span class="hljs-params">(name, numbers)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x4ECE;name&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408;&#x4E2D;&#x968F;&#x673A;&#x83B7;&#x53D6; numbers &#x4E2A;&#x5143;&#x7D20;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">srem</span><span class="hljs-params">(name, values)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;name&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408;&#x4E2D;&#x5220;&#x9664;&#x67D0;&#x4E9B;&#x503C;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sunion</span><span class="hljs-params">(keys, *args)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;&#x591A;&#x4E00;&#x4E2A;name&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408;&#x7684;&#x5E76;&#x96C6;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sunionstore</span><span class="hljs-params">(dest,keys, *args)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;&#x591A;&#x4E00;&#x4E2A;name&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408;&#x7684;&#x5E76;&#x96C6; , &#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x4FDD;&#x5B58;&#x5230;dest&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x5408;&#x4E2D;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sscan</span><span class="hljs-params">(name, cursor=<span class="hljs-number">0</span>, match=None, count=None)</span>:</span>
+    sscan_iter(name, match=<span class="hljs-keyword">None</span>, count=<span class="hljs-keyword">None</span>):
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x540C;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x64CD;&#x4F5C; , &#x7528;&#x4E8E;&#x589E;&#x91CF;&#x8FED;&#x4EE3;&#x5206;&#x6279;&#x83B7;&#x53D6;&#x5143;&#x7D20; , &#x907F;&#x514D;&#x5185;&#x5B58;&#x6D88;&#x8017;&#x592A;&#x5927;
+    &quot;&quot;&quot;</span>
+</code></pre>
+<h2 id="zset&#x64CD;&#x4F5C;--&#x1F340;"><a name="zset&#x64CD;&#x4F5C;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#zset&#x64CD;&#x4F5C;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>Zset&#x64CD;&#x4F5C;  &#x1F340;</h2>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zadd</span><span class="hljs-params">(name, *args, **kwargs)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5728;name&#x5BF9;&#x5E94;&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x6DFB;&#x52A0;&#x5143;&#x7D20;
+    zadd(&apos;zz&apos;, &apos;n1&apos;, 1, &apos;n2&apos;, 2)
+    &#x6216;
+    zadd(&apos;zz&apos;, n1=11, n2=22)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zcard</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;name&#x5BF9;&#x5E94;&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x5143;&#x7D20;&#x7684;&#x6570;&#x91CF;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zcount</span><span class="hljs-params">(name, min, max)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;name&#x5BF9;&#x5E94;&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x5206;&#x6570; &#x5728; [min,max] &#x4E4B;&#x95F4;&#x7684;&#x4E2A;&#x6570;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zincrby</span><span class="hljs-params">(name, value, amount)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x81EA;&#x589E;name&#x5BF9;&#x5E94;&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7684; name &#x5BF9;&#x5E94;&#x7684;&#x5206;&#x6570;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zrange</span><span class="hljs-params">( name, start, end, desc=False, withscores=False, score_cast_func=float)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x6309;&#x7167;&#x7D22;&#x5F15;&#x8303;&#x56F4;&#x83B7;&#x53D6;name&#x5BF9;&#x5E94;&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7684;&#x5143;&#x7D20;
+    name , redis&#x7684;name
+    start , &#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7D22;&#x5F15;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E; (&#x975E;&#x5206;&#x6570;)
+    end , &#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7D22;&#x5F15;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E; (&#x975E;&#x5206;&#x6570;)
+    desc , &#x6392;&#x5E8F;&#x89C4;&#x5219; , &#x9ED8;&#x8BA4;&#x6309;&#x7167;&#x5206;&#x6570;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;
+    withscores , &#x662F;&#x5426;&#x83B7;&#x53D6;&#x5143;&#x7D20;&#x7684;&#x5206;&#x6570; , &#x9ED8;&#x8BA4;&#x53EA;&#x83B7;&#x53D6;&#x5143;&#x7D20;&#x7684;&#x503C;
+    score_cast_func , &#x5BF9;&#x5206;&#x6570;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x7684;&#x51FD;&#x6570;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zrevrange</span><span class="hljs-params">(name, start, end, withscores=False, score_cast_func=float)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x6309;&#x7167;&#x7D22;&#x5F15;&#x8303;&#x56F4;&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x6392;&#x5E8F;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zrangebyscore</span><span class="hljs-params">(name, min, max, start=None, num=None, withscores=False, score_cast_func=float)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x6309;&#x7167;&#x5206;&#x6570;&#x8303;&#x56F4;&#x83B7;&#x53D6;name&#x5BF9;&#x5E94;&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7684;&#x5143;&#x7D20;
+    &quot;&quot;&quot;</span>
+
+zrevrangebyscore(name, max, min, start=<span class="hljs-keyword">None</span>, num=<span class="hljs-keyword">None</span>, withscores=<span class="hljs-keyword">False</span>, score_cast_func=float)
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x6309;&#x7167;&#x5206;&#x6570;&#x8303;&#x56F4;&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x6392;&#x5217;
+    &quot;&quot;&quot;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zrank</span><span class="hljs-params">(name, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x503C;&#x5728; name&#x5BF9;&#x5E94;&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6392;&#x884C; (&#x4ECE; 0 &#x5F00;&#x59CB;)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zrevrank</span><span class="hljs-params">(name, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    zrank&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x6392;&#x5E8F;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zrangebylex</span><span class="hljs-params">(name, min, max, start=None, num=None)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5F53;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7684;&#x6240;&#x6709;&#x6210;&#x5458;&#x90FD;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x5206;&#x503C;&#x65F6; , 
+    &#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7684;&#x5143;&#x7D20;&#x4F1A;&#x6839;&#x636E;&#x6210;&#x5458;&#x7684;&#x503C; (lexicographical ordering)&#x6765;&#x8FDB;&#x884C;&#x6392;&#x5E8F; , 
+    &#x800C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x5219;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x952E; key &#x4E2D; , &#x5143;&#x7D20;&#x7684;&#x503C;&#x4ECB;&#x4E8E; min &#x548C; max &#x4E4B;&#x95F4;&#x7684;&#x6210;&#x5458;,
+    &#x5BF9;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x6210;&#x5458;&#x8FDB;&#x884C;&#x9010;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x5BF9;&#x6BD4; (byte-by-byte compare) , &#x5E76;&#x6309;&#x7167;&#x4ECE;&#x4F4E;&#x5230;&#x9AD8;&#x7684;&#x987A;&#x5E8F; , 
+    &#x8FD4;&#x56DE;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x96C6;&#x5408;&#x6210;&#x5458;,
+    &#x5982;&#x679C;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6709;&#x4E00;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x662F;&#x76F8;&#x540C;&#x7684;&#x8BDD; , &#x90A3;&#x4E48;&#x547D;&#x4EE4;&#x4F1A;&#x8BA4;&#x4E3A;&#x8F83;&#x957F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6BD4;&#x8F83;&#x77ED;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8981;&#x5927;
+    name , redis&#x7684;name
+    min , &#x5DE6;&#x533A;&#x95F4; (&#x503C;)&#x3002; + &#x8868;&#x793A;&#x6B63;&#x65E0;&#x9650;&#xFF1B; - &#x8868;&#x793A;&#x8D1F;&#x65E0;&#x9650;&#xFF1B; ( &#x8868;&#x793A;&#x5F00;&#x533A;&#x95F4;&#xFF1B; [ &#x5219;&#x8868;&#x793A;&#x95ED;&#x533A;&#x95F4;
+    min , &#x53F3;&#x533A;&#x95F4; (&#x503C;)
+    start , &#x5BF9;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x5206;&#x7247;&#x5904;&#x7406; , &#x7D22;&#x5F15;&#x4F4D;&#x7F6E;
+    num , &#x5BF9;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x5206;&#x7247;&#x5904;&#x7406; , &#x7D22;&#x5F15;&#x540E;&#x9762;&#x7684;num&#x4E2A;&#x5143;&#x7D20;
+    &#x5982; : 
+        ZADD myzset 0 aa 0 ba 0 ca 0 da 0 ea 0 fa 0 ga
+        zrangebylex(&apos;myzset&apos;, &quot;-&quot;, &quot;[ca&quot;) &#x7ED3;&#x679C;&#x4E3A; : [&apos;aa&apos;, &apos;ba&apos;, &apos;ca&apos;]
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zrevrangebylex</span><span class="hljs-params">(name, max, min, start=None, num=None)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    zrangebylex&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x6392;&#x5E8F;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zrem</span><span class="hljs-params">(name, values)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5220;&#x9664;name&#x5BF9;&#x5E94;&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x503C;&#x662F;values&#x7684;&#x6210;&#x5458;
+    &#x5982; : 
+        zrem(&apos;zz&apos;, [&apos;s1&apos;, &apos;s2&apos;])
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zremrangebyrank</span><span class="hljs-params">(name, min, max)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x6839;&#x636E;&#x6392;&#x884C;&#x8303;&#x56F4;&#x5220;&#x9664;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zremrangebyscore</span><span class="hljs-params">(name, min, max)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x6839;&#x636E;&#x6392;&#x884C;&#x8303;&#x56F4;&#x5220;&#x9664;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zremrangebylex</span><span class="hljs-params">(name, min, max)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x6839;&#x636E;&#x503C;&#x8FD4;&#x56DE;&#x5220;&#x9664;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zscore</span><span class="hljs-params">(name, value)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;name&#x5BF9;&#x5E94;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D; value &#x5BF9;&#x5E94;&#x7684;&#x5206;&#x6570;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zinterstore</span><span class="hljs-params">(dest, keys, aggregate=None)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7684;&#x4EA4;&#x96C6; , &#x5982;&#x679C;&#x9047;&#x5230;&#x76F8;&#x540C;&#x503C;&#x4E0D;&#x540C;&#x5206;&#x6570; , &#x5219;&#x6309;&#x7167;aggregate&#x8FDB;&#x884C;&#x64CD;&#x4F5C;
+    aggregate&#x7684;&#x503C;&#x4E3A;:  SUM  MIN  MAX
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zunionstore</span><span class="hljs-params">(dest, keys, aggregate=None)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7684;&#x5E76;&#x96C6; , &#x5982;&#x679C;&#x9047;&#x5230;&#x76F8;&#x540C;&#x503C;&#x4E0D;&#x540C;&#x5206;&#x6570; , &#x5219;&#x6309;&#x7167;aggregate&#x8FDB;&#x884C;&#x64CD;&#x4F5C;
+    aggregate&#x7684;&#x503C;&#x4E3A;:  SUM  MIN  MAX
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zscan</span><span class="hljs-params">(name, cursor=<span class="hljs-number">0</span>, match=None, count=None, score_cast_func=float)</span>:</span>
+    zscan_iter(name, match=<span class="hljs-keyword">None</span>, count=<span class="hljs-keyword">None</span>,score_cast_func=float):
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x540C;&#x5B57;&#x7B26;&#x4E32;&#x76F8;&#x4F3C; , &#x76F8;&#x8F83;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x65B0;&#x589E;score_cast_func , &#x7528;&#x6765;&#x5BF9;&#x5206;&#x6570;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;
+    &quot;&quot;&quot;</span>
+</code></pre>
+<h2 id="&#x5176;&#x4ED6;&#x64CD;&#x4F5C;--&#x1F340;"><a name="&#x5176;&#x4ED6;&#x64CD;&#x4F5C;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;&#x64CD;&#x4F5C;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5176;&#x4ED6;&#x64CD;&#x4F5C;  &#x1F340;</h2>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">delete</span><span class="hljs-params">(*names)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x6839;&#x636E;&#x5220;&#x9664;redis&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x6570;&#x636E;&#x7C7B;&#x578B;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">exists</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x68C0;&#x6D4B;redis&#x7684;name&#x662F;&#x5426;&#x5B58;&#x5728;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">keys</span><span class="hljs-params">(pattern=<span class="hljs-string">&apos;*&apos;</span>)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x6839;&#x636E;&#x6A21;&#x578B;&#x83B7;&#x53D6;redis&#x7684;name
+    KEYS * &#x5339;&#x914D;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x6240;&#x6709; key &#x3002;
+    KEYS h?llo &#x5339;&#x914D; hello  , hallo &#x548C; hxllo &#x7B49;&#x3002;
+    KEYS h*llo &#x5339;&#x914D; hllo &#x548C; heeeeello &#x7B49;&#x3002;
+    KEYS h[ae]llo &#x5339;&#x914D; hello &#x548C; hallo  , &#x4F46;&#x4E0D;&#x5339;&#x914D; hillo
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">expire</span><span class="hljs-params">(name ,time)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x4E3A;&#x67D0;&#x4E2A;redis&#x7684;&#x67D0;&#x4E2A;name&#x8BBE;&#x7F6E;&#x8D85;&#x65F6;&#x65F6;&#x95F4;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">rename</span><span class="hljs-params">(src, dst)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5BF9;redis&#x7684;name&#x91CD;&#x547D;&#x540D;&#x4E3A;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">move</span><span class="hljs-params">(name, db)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5C06;redis&#x7684;&#x67D0;&#x4E2A;&#x503C;&#x79FB;&#x52A8;&#x5230;&#x6307;&#x5B9A;&#x7684;db&#x4E0B;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">randomkey</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x968F;&#x673A;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;redis&#x7684;name (&#x4E0D;&#x5220;&#x9664;)
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">type</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;name&#x5BF9;&#x5E94;&#x503C;&#x7684;&#x7C7B;&#x578B;
+    &quot;&quot;&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">scan</span><span class="hljs-params">(cursor=<span class="hljs-number">0</span>, match=None, count=None)</span>:</span>
+    scan_iter(match=<span class="hljs-keyword">None</span>, count=<span class="hljs-keyword">None</span>):
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x540C;&#x5B57;&#x7B26;&#x4E32;&#x64CD;&#x4F5C; , &#x7528;&#x4E8E;&#x589E;&#x91CF;&#x8FED;&#x4EE3;&#x83B7;&#x53D6;key
+    &quot;&quot;&quot;</span>
+</code></pre>
+<h2 id="&#x7BA1;&#x9053;--&#x1F340;"><a name="&#x7BA1;&#x9053;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#&#x7BA1;&#x9053;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7BA1;&#x9053;  &#x1F340;</h2>
+<p>Pipelines &#x662F;&#x57FA; Redis &#x7C7B;&#x7684;&#x5B50;&#x7C7B; , &#x5B83;&#x652F;&#x6301;&#x5728;&#x5355;&#x4E2A;&#x8BF7;&#x6C42;&#x4E2D;&#x7F13;&#x51B2;&#x591A;&#x4E2A;&#x547D;&#x4EE4;&#x5230;&#x670D;&#x52A1;&#x5668; , &#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x51CF;&#x5C11;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x6765;&#x56DE; TCP &#x6570;&#x636E;&#x5305;&#x7684;&#x6570;&#x91CF;&#x6765;&#x663E;&#x7740;&#x5730;&#x63D0;&#x9AD8;&#x547D;&#x4EE4;&#x7EC4;&#x7684;&#x6027;&#x80FD;</p>
+<p>&#x7BA1;&#x9053;&#x7684;&#x4F7F;&#x7528;&#x975E;&#x5E38;&#x7B80;&#x5355; :</p>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span>r = redis.Redis(...)
+<span class="hljs-prompt">&gt;&gt;&gt; </span>r.set(<span class="hljs-string">&apos;bing&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>)
+<span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-comment"># Use the pipeline() method to create a pipeline instance</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>pipe = r.pipeline()
+<span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-comment"># The following SET commands are buffered</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>pipe.set(<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>)
+<span class="hljs-prompt">&gt;&gt;&gt; </span>pipe.get(<span class="hljs-string">&apos;bing&apos;</span>)
+<span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-comment"># the EXECUTE call sends all buffered commands to the server, returning</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-comment"># a list of responses, one for each command.</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>pipe.execute()
+[<span class="hljs-keyword">True</span>, <span class="hljs-string">&apos;baz&apos;</span>]
+</code></pre>
+<p>&#x4E3A;&#x4E86;&#x4FBF;&#x4E8E;&#x4F7F;&#x7528; , &#x6240;&#x6709;&#x88AB;&#x7F13;&#x51B2;&#x5230;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x547D;&#x4EE4;&#x90FD;&#x8FD4;&#x56DE;&#x7BA1;&#x9053;&#x5BF9;&#x8C61;&#x672C;&#x8EAB; , &#x56E0;&#x6B64; , &#x8C03;&#x7528;&#x53EF;&#x4EE5;&#x5982;&#x4E0B; :</p>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span>pipe.set(<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>).sadd(<span class="hljs-string">&apos;faz&apos;</span>, <span class="hljs-string">&apos;baz&apos;</span>).incr(<span class="hljs-string">&apos;auto_number&apos;</span>).execute()
+[<span class="hljs-keyword">True</span>, <span class="hljs-keyword">True</span>, <span class="hljs-number">6</span>]
+</code></pre>
+<p>&#x6B64;&#x5916; , &#x7BA1;&#x9053;&#x8FD8;&#x53EF;&#x4EE5;&#x786E;&#x4FDD;&#x7F13;&#x51B2;&#x547D;&#x4EE4;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x7EC4;&#x4EE5;&#x539F;&#x5B50;&#x5F62;&#x5F0F;&#x6267;&#x884C; , &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x53D1;&#x751F;&#x8FD9;&#x79CD;&#x60C5;&#x51B5; , &#x5982;&#x679C;&#x5E0C;&#x671B;&#x7981;&#x7528;&#x7BA1;&#x9053;&#x7684;&#x539F;&#x5B50;&#x6027;&#x8D28; , &#x4F46;&#x4ECD;&#x7136;&#x5E0C;&#x671B;&#x7F13;&#x51B2;&#x547D;&#x4EE4; , &#x5219;&#x53EF;&#x4EE5;&#x5173;&#x95ED;&#x4E8B;&#x52A1;</p>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span>pipe = r.pipeline(transaction=<span class="hljs-keyword">False</span>)
+</code></pre>
+<p>&#x5F53;&#x9700;&#x8981;&#x539F;&#x5B50;&#x4E8B;&#x52A1;&#x65F6; , &#x9700;&#x8981;&#x5728; Redis &#x4E2D;&#x68C0;&#x7D22;&#x503C;&#x4EE5;&#x4FBF;&#x5728;&#x4E8B;&#x52A1;&#x4E2D;&#x4F7F;&#x7528;&#x65F6; , &#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x4E00;&#x4E2A;&#x5E38;&#x89C1;&#x7684;&#x95EE;&#x9898; , &#x4F8B;&#x5982; , &#x8BA9;&#x6211;&#x4EEC;&#x5047;&#x8BBE; <code>incr</code> &#x547D;&#x4EE4;&#x4E0D;&#x5B58;&#x5728; , &#x6211;&#x4EEC;&#x9700;&#x8981;&#x5728; Python &#x4E2D;&#x6784;&#x5EFA; <code>incr</code> &#x7684;&#x539F;&#x5B50;&#x7248;&#x672C;</p>
+<p>&#x5B8C;&#x5168;&#x5929;&#x771F;&#x7684;&#x5B9E;&#x73B0;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x503C; , &#x5728; Python &#x4E2D;&#x589E;&#x52A0;&#x503C; , &#x5E76;&#x5C06;&#x65B0;&#x503C;&#x8BBE;&#x7F6E;&#x56DE;&#x539F;&#x6765;&#x7684;&#x503C; . &#x4F46;&#x662F; , &#x8FD9;&#x4E0D;&#x662F;&#x539F;&#x5B50;&#x6027;&#x7684; , &#x56E0;&#x4E3A;&#x591A;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x6267;&#x884C;&#x6B64;&#x64CD;&#x4F5C; , &#x6BCF;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x4ECE; <code>get</code> &#x83B7;&#x5F97;&#x76F8;&#x540C;&#x7684;&#x503C;</p>
+<p>&#x8F93;&#x5165;&#x76D1;&#x89C6;&#x547D;&#x4EE4; , WATCH &#x547D;&#x4EE4;&#x63D0;&#x4F9B;&#x4E86;&#x5728;&#x542F;&#x52A8;&#x4E8B;&#x52A1;&#x4E4B;&#x524D;&#x76D1;&#x89C6;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x952E;&#x7684;&#x80FD;&#x529B; , &#x5982;&#x679C;&#x8FD9;&#x4E9B;&#x952E;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x5728;&#x8BE5;&#x4E8B;&#x52A1;&#x6267;&#x884C;&#x4E4B;&#x524D;&#x53D1;&#x751F;&#x66F4;&#x6539; , &#x5219;&#x6574;&#x4E2A;&#x4E8B;&#x52A1;&#x5C06;&#x88AB;&#x53D6;&#x6D88;&#x5E76;&#x5F15;&#x53D1; WatchError , &#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x7684;&#x5BA2;&#x6237;&#x7AEF; incr &#x547D;&#x4EE4; , &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x505A; :</p>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-keyword">with</span> r.pipeline() <span class="hljs-keyword">as</span> pipe:
+<span class="hljs-prompt">... </span>    <span class="hljs-keyword">while</span> <span class="hljs-number">1</span>:
+<span class="hljs-prompt">... </span>        <span class="hljs-keyword">try</span>:
+<span class="hljs-prompt">... </span>            <span class="hljs-comment"># put a WATCH on the key that holds our sequence value</span>
+<span class="hljs-prompt">... </span>            pipe.watch(<span class="hljs-string">&apos;OUR-SEQUENCE-KEY&apos;</span>)
+<span class="hljs-prompt">... </span>            <span class="hljs-comment"># after WATCHing, the pipeline is put into immediate execution</span>
+<span class="hljs-prompt">... </span>            <span class="hljs-comment"># mode until we tell it to start buffering commands again.</span>
+<span class="hljs-prompt">... </span>            <span class="hljs-comment"># this allows us to get the current value of our sequence</span>
+<span class="hljs-prompt">... </span>            current_value = pipe.get(<span class="hljs-string">&apos;OUR-SEQUENCE-KEY&apos;</span>)
+<span class="hljs-prompt">... </span>            next_value = int(current_value) + <span class="hljs-number">1</span>
+<span class="hljs-prompt">... </span>            <span class="hljs-comment"># now we can put the pipeline back into buffered mode with MULTI</span>
+<span class="hljs-prompt">... </span>            pipe.multi()
+<span class="hljs-prompt">... </span>            pipe.set(<span class="hljs-string">&apos;OUR-SEQUENCE-KEY&apos;</span>, next_value)
+<span class="hljs-prompt">... </span>            <span class="hljs-comment"># and finally, execute the pipeline (the set command)</span>
+<span class="hljs-prompt">... </span>            pipe.execute()
+<span class="hljs-prompt">... </span>            <span class="hljs-comment"># if a WatchError wasn&apos;t raised during execution, everything</span>
+<span class="hljs-prompt">... </span>            <span class="hljs-comment"># we just did happened atomically.</span>
+<span class="hljs-prompt">... </span>            <span class="hljs-keyword">break</span>
+<span class="hljs-prompt">... </span>       <span class="hljs-keyword">except</span> WatchError:
+<span class="hljs-prompt">... </span>            <span class="hljs-comment"># another client must have changed &apos;OUR-SEQUENCE-KEY&apos; between</span>
+<span class="hljs-prompt">... </span>            <span class="hljs-comment"># the time we started WATCHing it and the pipeline&apos;s execution.</span>
+<span class="hljs-prompt">... </span>            <span class="hljs-comment"># our best bet is to just retry.</span>
+<span class="hljs-prompt">... </span>            <span class="hljs-keyword">continue</span>
+</code></pre>
+<p>&#x6CE8;&#x610F; , &#x7531;&#x4E8E;&#x7BA1;&#x9053;&#x5FC5;&#x987B;&#x5728;&#x76D1;&#x89C6;&#x671F;&#x95F4;&#x7ED1;&#x5B9A;&#x5230;&#x5355;&#x4E2A;&#x8FDE;&#x63A5; , &#x56E0;&#x6B64;&#x5FC5;&#x987B;&#x6CE8;&#x610F;&#x901A;&#x8FC7;&#x8C03;&#x7528; Reset() &#x65B9;&#x6CD5;&#x786E;&#x4FDD;&#x8FDE;&#x63A5;&#x8FD4;&#x56DE;&#x5230;&#x8FDE;&#x63A5;&#x6C60; . &#x5982;&#x679C;&#x7BA1;&#x9053;&#x88AB;&#x7528;&#x4F5C;&#x4E0A;&#x4E0B;&#x6587;&#x7BA1;&#x7406;&#x5668;(&#x5982;&#x4E0A;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x6240;&#x793A;) , &#x5219;&#x5C06;&#x81EA;&#x52A8;&#x8C03;&#x7528; Reset() , &#x5F53;&#x7136; , &#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x663E;&#x5F0F;&#x8C03;&#x7528; Reset() &#x6765;&#x624B;&#x52A8;&#x5B8C;&#x6210;&#x6B64;&#x64CD;&#x4F5C; :</p>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span>pipe = r.pipeline()
+<span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-keyword">while</span> <span class="hljs-number">1</span>:
+<span class="hljs-prompt">... </span>    <span class="hljs-keyword">try</span>:
+<span class="hljs-prompt">... </span>        pipe.watch(<span class="hljs-string">&apos;OUR-SEQUENCE-KEY&apos;</span>)
+<span class="hljs-prompt">... </span>        ...
+<span class="hljs-prompt">... </span>        pipe.execute()
+<span class="hljs-prompt">... </span>        <span class="hljs-keyword">break</span>
+<span class="hljs-prompt">... </span>    <span class="hljs-keyword">except</span> WatchError:
+<span class="hljs-prompt">... </span>        <span class="hljs-keyword">continue</span>
+<span class="hljs-prompt">... </span>    <span class="hljs-keyword">finally</span>:
+<span class="hljs-prompt">... </span>        pipe.reset()
+</code></pre>
+<p>&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<code>transaction</code> &#x7684;&#x65B9;&#x4FBF;&#x65B9;&#x6CD5; , &#x7528;&#x4E8E;&#x5904;&#x7406;&#x6240;&#x6709;&#x5904;&#x7406;&#x548C;&#x91CD;&#x8BD5;&#x624B;&#x8868;&#x9519;&#x8BEF;&#x7684;&#x6837;&#x677F; , &#x5B83;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x53EF;&#x8C03;&#x7528;&#x7684; , &#x5E94;&#x8BE5;&#x671F;&#x671B;&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570; , &#x4E00;&#x4E2A;&#x7BA1;&#x9053;&#x5BF9;&#x8C61;&#x548C;&#x4EFB;&#x4F55;&#x6570;&#x91CF;&#x7684;&#x952E;&#x6765;&#x76D1;&#x89C6; , &#x4E0A;&#x9762;&#x7684;&#x5BA2;&#x6237;&#x7AEF; incr &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x7F16;&#x5199; , &#x8FD9;&#x66F4;&#x5BB9;&#x6613;&#x9605;&#x8BFB; :</p>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">client_side_incr</span><span class="hljs-params">(pipe)</span>:</span>
+<span class="hljs-prompt">... </span>    current_value = pipe.get(<span class="hljs-string">&apos;OUR-SEQUENCE-KEY&apos;</span>)
+<span class="hljs-prompt">... </span>    next_value = int(current_value) + <span class="hljs-number">1</span>
+<span class="hljs-prompt">... </span>    pipe.multi()
+<span class="hljs-prompt">... </span>    pipe.set(<span class="hljs-string">&apos;OUR-SEQUENCE-KEY&apos;</span>, next_value)
+&gt;&gt;&gt;
+<span class="hljs-prompt">&gt;&gt;&gt; </span>r.transaction(client_side_incr, <span class="hljs-string">&apos;OUR-SEQUENCE-KEY&apos;</span>)
+[<span class="hljs-keyword">True</span>]
+</code></pre>
+<h2 id="&#x5229;&#x7528;&#x7BA1;&#x9053;&#x5B9E;&#x73B0;&#x8BA1;&#x6570;&#x5668;--&#x1F340;"><a name="&#x5229;&#x7528;&#x7BA1;&#x9053;&#x5B9E;&#x73B0;&#x8BA1;&#x6570;&#x5668;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#&#x5229;&#x7528;&#x7BA1;&#x9053;&#x5B9E;&#x73B0;&#x8BA1;&#x6570;&#x5668;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5229;&#x7528;&#x7BA1;&#x9053;&#x5B9E;&#x73B0;&#x8BA1;&#x6570;&#x5668;  &#x1F340;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> redis
+
+conn = redis.Redis(host=<span class="hljs-string">&apos;192.168.1.41&apos;</span>,port=<span class="hljs-number">6379</span>)
+
+conn.set(<span class="hljs-string">&apos;count&apos;</span>,<span class="hljs-number">1000</span>)
+
+<span class="hljs-keyword">with</span> conn.pipeline() <span class="hljs-keyword">as</span> pipe:
+
+    <span class="hljs-comment"># &#x5148;&#x76D1;&#x89C6; , &#x81EA;&#x5DF1;&#x7684;&#x503C;&#x6CA1;&#x6709;&#x88AB;&#x4FEE;&#x6539;&#x8FC7;</span>
+    conn.watch(<span class="hljs-string">&apos;count&apos;</span>)
+
+    <span class="hljs-comment"># &#x4E8B;&#x52A1;&#x5F00;&#x59CB;</span>
+    pipe.multi()
+    old_count = conn.get(<span class="hljs-string">&apos;count&apos;</span>)
+    count = int(old_count)
+    <span class="hljs-keyword">if</span> count &gt; <span class="hljs-number">0</span>:  <span class="hljs-comment"># &#x6709;&#x5E93;&#x5B58;</span>
+        pipe.set(<span class="hljs-string">&apos;count&apos;</span>, count - <span class="hljs-number">1</span>)
+
+    <span class="hljs-comment"># &#x6267;&#x884C; , &#x628A;&#x6240;&#x6709;&#x547D;&#x4EE4;&#x4E00;&#x6B21;&#x6027;&#x63A8;&#x9001;&#x8FC7;&#x53BB;</span>
+    pipe.execute()
+</code></pre>
+<h2 id="&#x53D1;&#x5E03;&#x8BA2;&#x9605;--&#x1F340;"><a name="&#x53D1;&#x5E03;&#x8BA2;&#x9605;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#&#x53D1;&#x5E03;&#x8BA2;&#x9605;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x5E03;&#x8BA2;&#x9605;  &#x1F340;</h2>
+<p>&#x53D1;&#x5E03;&#x8005; : &#x670D;&#x52A1;&#x5668;</p>
+<p>&#x8BA2;&#x9605;&#x8005; : Dashboard&#x548C;&#x6570;&#x636E;&#x5904;&#x7406;</p>
+<p>&#x793A;&#x4F8B;&#x5982;&#x4E0B; :</p>
+<p>helprs.py</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> redis
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RedisHelper</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.__conn = redis.Redis(host=<span class="hljs-string">&apos;10.211.55.4&apos;</span>)
+        self.chan_sub = <span class="hljs-string">&apos;fm104.5&apos;</span>
+        self.chan_pub = <span class="hljs-string">&apos;fm104.5&apos;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">public</span><span class="hljs-params">(self, msg)</span>:</span>
+        self.__conn.publish(self.chan_pub, msg)
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">subscribe</span><span class="hljs-params">(self)</span>:</span>
+        pub = self.__conn.pubsub()
+        pub.subscribe(self.chan_sub)
+        pub.parse_response()
+        <span class="hljs-keyword">return</span> pub
+</code></pre>
+<p>&#x8BA2;&#x9605;&#x8005;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> helpers <span class="hljs-keyword">import</span> RedisHelper
+
+obj = RedisHelper()
+redis_sub = obj.subscribe()
+
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+    msg= redis_sub.parse_response()
+    print(msg)
+</code></pre>
+<p>&#x53D1;&#x5E03;&#x8005;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> helpers <span class="hljs-keyword">import</span> RedisHelper
+
+obj = RedisHelper()
+obj.public(<span class="hljs-string">&apos;hello&apos;</span>)
+</code></pre>
+<h2 id="sentinel--&#x1F340;"><a name="sentinel--&#x1F340;" class="anchor-navigation-ex-anchor" href="#sentinel--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>Sentinel  &#x1F340;</h2>
+<p>redis&#x91CD;&#x7684;sentinel&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5728;redis&#x4E3B;&#x4ECE;&#x590D;&#x5236;&#x4E2D; , &#x5982;&#x679C;master&#x987E;&#x4E0A; , &#x5219;&#x81EA;&#x52A8;&#x5C06;slave&#x66FF;&#x6362;&#x6210;master </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> redis.sentinel <span class="hljs-keyword">import</span> Sentinel
+
+<span class="hljs-comment"># &#x8FDE;&#x63A5;&#x54E8;&#x5175;&#x670D;&#x52A1;&#x5668;(&#x4E3B;&#x673A;&#x540D;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x57DF;&#x540D;)</span>
+sentinel = Sentinel([(<span class="hljs-string">&apos;10.211.55.20&apos;</span>, <span class="hljs-number">26379</span>),
+                     (<span class="hljs-string">&apos;10.211.55.20&apos;</span>, <span class="hljs-number">26380</span>),
+                     ],
+                    socket_timeout=<span class="hljs-number">0.5</span>)
+
+<span class="hljs-comment"># &#x83B7;&#x53D6;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</span>
+<span class="hljs-comment"># master = sentinel.discover_master(&apos;mymaster&apos;)</span>
+<span class="hljs-comment"># print(master)</span>
+
+<span class="hljs-comment"># &#x83B7;&#x53D6;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</span>
+<span class="hljs-comment"># slave = sentinel.discover_slaves(&apos;mymaster&apos;)</span>
+<span class="hljs-comment"># print(slave)</span>
+
+<span class="hljs-comment"># &#x83B7;&#x53D6;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x5199;&#x5165;</span>
+<span class="hljs-comment"># master = sentinel.master_for(&apos;mymaster&apos;)</span>
+<span class="hljs-comment"># master.set(&apos;foo&apos;, &apos;bar&apos;)</span>
+
+<span class="hljs-comment"># &#x83B7;&#x53D6;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x8BFB;&#x53D6; (&#x9ED8;&#x8BA4;&#x662F;round-roubin)</span>
+<span class="hljs-comment"># slave = sentinel.slave_for(&apos;mymaster&apos;, password=&apos;redis_auth_pass&apos;)</span>
+<span class="hljs-comment"># r_ret = slave.get(&apos;foo&apos;)</span>
+<span class="hljs-comment"># print(r_ret)</span>
+</code></pre>
+<p>&#x66F4;&#x591A;&#x53C2;&#x89C1; : <a href="https://github.com/andymccurdy/redis-py/" target="_blank">Redis for GitHub</a> , <a href="http://doc.redisfans.com/" target="_blank">Doc</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Python操作MongoDB.html" class="navigation navigation-prev " aria-label="Previous page: Python操作MongoDB">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../07-设计模式/" class="navigation navigation-next " aria-label="Next page: 设计模式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Python操作Redis","level":"1.8.10","depth":2,"next":{"title":"设计模式","level":"1.9","depth":1,"path":"07-设计模式/README.md","ref":"07-设计模式/README.md","articles":[{"title":"六大原则","level":"1.9.1","depth":2,"path":"07-设计模式/01-六大原则.md","ref":"07-设计模式/01-六大原则.md","articles":[]},{"title":"单例模式","level":"1.9.2","depth":2,"path":"07-设计模式/02-单例模式.md","ref":"07-设计模式/02-单例模式.md","articles":[]}]},"previous":{"title":"Python操作MongoDB","level":"1.8.9","depth":2,"path":"06-Redis/Python操作MongoDB.md","ref":"06-Redis/Python操作MongoDB.md","articles":[]},"dir":"ltr"},"config":{"plugins":["advanced-emoji","toggle-chapters","theme-comscore","splitter","github","github-buttons@2.1.0","-sharing","-lunr","-search","search-plus","anchor-navigation-ex-toc@0.0.9","editlink","fontsettings","copy-code-button","lightbox"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/lyonyang/blogs"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/lyonyang/blogs/blob/master"},"splitter":{},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"github-buttons":{"repo":"lyonyang/blogs","types":["star"],"size":"small"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"search-plus":{}},"theme":"default","author":"Lyon","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":18,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"blog","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"my notes","extension":null},"file":{"path":"06-Redis/Python操作Redis.md","mtime":"2021-05-31T13:37:58.349Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-31T13:39:32.784Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

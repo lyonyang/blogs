@@ -1,0 +1,3635 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Redis - 基础命令 · blog</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Lyon">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex-toc/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04-Redis - 数据库.html" />
+    
+    
+    <link rel="prev" href="02-Redis - 配置参数说明.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"lyonyang/blogs","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../SUMMARY.html">
+            
+                <a href="../SUMMARY.html">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../01-Python/">
+            
+                <a href="../01-Python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../01-Python/01-基础篇/">
+            
+                <a href="../01-Python/01-基础篇/">
+            
+                    
+                    基础篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../01-Python/01-基础篇/01-语言基础.html">
+            
+                <a href="../01-Python/01-基础篇/01-语言基础.html">
+            
+                    
+                    语言基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../01-Python/01-基础篇/02-数字.html">
+            
+                <a href="../01-Python/01-基础篇/02-数字.html">
+            
+                    
+                    数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../01-Python/01-基础篇/03-字符串.html">
+            
+                <a href="../01-Python/01-基础篇/03-字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../01-Python/01-基础篇/04-元组.html">
+            
+                <a href="../01-Python/01-基础篇/04-元组.html">
+            
+                    
+                    元组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../01-Python/01-基础篇/05-列表.html">
+            
+                <a href="../01-Python/01-基础篇/05-列表.html">
+            
+                    
+                    列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../01-Python/01-基础篇/06-字典.html">
+            
+                <a href="../01-Python/01-基础篇/06-字典.html">
+            
+                    
+                    字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../01-Python/01-基础篇/07-集合.html">
+            
+                <a href="../01-Python/01-基础篇/07-集合.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../01-Python/01-基础篇/08-字符编码.html">
+            
+                <a href="../01-Python/01-基础篇/08-字符编码.html">
+            
+                    
+                    字符编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../01-Python/01-基础篇/09-文件操作.html">
+            
+                <a href="../01-Python/01-基础篇/09-文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../01-Python/02-函数篇/">
+            
+                <a href="../01-Python/02-函数篇/">
+            
+                    
+                    函数篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../01-Python/02-函数篇/01-函数基础.html">
+            
+                <a href="../01-Python/02-函数篇/01-函数基础.html">
+            
+                    
+                    函数基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../01-Python/02-函数篇/02-匿名函数.html">
+            
+                <a href="../01-Python/02-函数篇/02-匿名函数.html">
+            
+                    
+                    匿名函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../01-Python/02-函数篇/03-函数进阶.html">
+            
+                <a href="../01-Python/02-函数篇/03-函数进阶.html">
+            
+                    
+                    函数进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../01-Python/02-函数篇/04-内置函数.html">
+            
+                <a href="../01-Python/02-函数篇/04-内置函数.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../01-Python/02-函数篇/05-迭代器.html">
+            
+                <a href="../01-Python/02-函数篇/05-迭代器.html">
+            
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../01-Python/02-函数篇/06-生成器.html">
+            
+                <a href="../01-Python/02-函数篇/06-生成器.html">
+            
+                    
+                    生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../01-Python/02-函数篇/07-递归.html">
+            
+                <a href="../01-Python/02-函数篇/07-递归.html">
+            
+                    
+                    递归
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../01-Python/03-对象篇/">
+            
+                <a href="../01-Python/03-对象篇/">
+            
+                    
+                    对象篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../01-Python/03-对象篇/01-面向对象.html">
+            
+                <a href="../01-Python/03-对象篇/01-面向对象.html">
+            
+                    
+                    面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../01-Python/03-对象篇/02-继承.html">
+            
+                <a href="../01-Python/03-对象篇/02-继承.html">
+            
+                    
+                    继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../01-Python/03-对象篇/03-多态.html">
+            
+                <a href="../01-Python/03-对象篇/03-多态.html">
+            
+                    
+                    多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../01-Python/03-对象篇/04-封装.html">
+            
+                <a href="../01-Python/03-对象篇/04-封装.html">
+            
+                    
+                    封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../01-Python/03-对象篇/05-方法转换.html">
+            
+                <a href="../01-Python/03-对象篇/05-方法转换.html">
+            
+                    
+                    方法转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../01-Python/03-对象篇/06-魔术方法.html">
+            
+                <a href="../01-Python/03-对象篇/06-魔术方法.html">
+            
+                    
+                    魔术方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../01-Python/03-对象篇/07-反射.html">
+            
+                <a href="../01-Python/03-对象篇/07-反射.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="../01-Python/03-对象篇/08-异常处理.html">
+            
+                <a href="../01-Python/03-对象篇/08-异常处理.html">
+            
+                    
+                    异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../01-Python/04-模块篇/">
+            
+                <a href="../01-Python/04-模块篇/">
+            
+                    
+                    模块篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../01-Python/04-模块篇/01-模块.html">
+            
+                <a href="../01-Python/04-模块篇/01-模块.html">
+            
+                    
+                    模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../01-Python/04-模块篇/02-包.html">
+            
+                <a href="../01-Python/04-模块篇/02-包.html">
+            
+                    
+                    包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../01-Python/04-模块篇/03-正则表达式.html">
+            
+                <a href="../01-Python/04-模块篇/03-正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../01-Python/04-模块篇/04-序列化.html">
+            
+                <a href="../01-Python/04-模块篇/04-序列化.html">
+            
+                    
+                    序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../01-Python/04-模块篇/05-os模块.html">
+            
+                <a href="../01-Python/04-模块篇/05-os模块.html">
+            
+                    
+                    os模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../01-Python/04-模块篇/06-random模块.html">
+            
+                <a href="../01-Python/04-模块篇/06-random模块.html">
+            
+                    
+                    random模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="../01-Python/04-模块篇/07-sys模块.html">
+            
+                <a href="../01-Python/04-模块篇/07-sys模块.html">
+            
+                    
+                    sys模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.8" data-path="../01-Python/04-模块篇/08-wsgiref模块.html">
+            
+                <a href="../01-Python/04-模块篇/08-wsgiref模块.html">
+            
+                    
+                    wsgiref模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../01-Python/05-网络篇/">
+            
+                <a href="../01-Python/05-网络篇/">
+            
+                    
+                    网络篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../01-Python/05-网络篇/01-网络编程.html">
+            
+                <a href="../01-Python/05-网络篇/01-网络编程.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../01-Python/05-网络篇/02-Socket.html">
+            
+                <a href="../01-Python/05-网络篇/02-Socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../01-Python/05-网络篇/03-Socket实现QQ聊天.html">
+            
+                <a href="../01-Python/05-网络篇/03-Socket实现QQ聊天.html">
+            
+                    
+                    Socket实现QQ聊天
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../01-Python/05-网络篇/04-Socket实现远程执行命令.html">
+            
+                <a href="../01-Python/05-网络篇/04-Socket实现远程执行命令.html">
+            
+                    
+                    Socket实现远程执行命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.5" data-path="../01-Python/05-网络篇/05-粘包.html">
+            
+                <a href="../01-Python/05-网络篇/05-粘包.html">
+            
+                    
+                    粘包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.6" data-path="../01-Python/05-网络篇/06-Socketserver实现多并发.html">
+            
+                <a href="../01-Python/05-网络篇/06-Socketserver实现多并发.html">
+            
+                    
+                    Socketserver实现多并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../01-Python/06-并发篇/">
+            
+                <a href="../01-Python/06-并发篇/">
+            
+                    
+                    并发篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../01-Python/06-并发篇/01-进程与线程.html">
+            
+                <a href="../01-Python/06-并发篇/01-进程与线程.html">
+            
+                    
+                    进程与线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../01-Python/06-并发篇/02-多线程.html">
+            
+                <a href="../01-Python/06-并发篇/02-多线程.html">
+            
+                    
+                    多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="../01-Python/06-并发篇/03-多进程.html">
+            
+                <a href="../01-Python/06-并发篇/03-多进程.html">
+            
+                    
+                    多进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" data-path="../01-Python/06-并发篇/04-多进程实例及回调函数.html">
+            
+                <a href="../01-Python/06-并发篇/04-多进程实例及回调函数.html">
+            
+                    
+                    多进程实例及回调函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.5" data-path="../01-Python/06-并发篇/05-协程.html">
+            
+                <a href="../01-Python/06-并发篇/05-协程.html">
+            
+                    
+                    协程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.6" data-path="../01-Python/06-并发篇/06-IO多路复用.html">
+            
+                <a href="../01-Python/06-并发篇/06-IO多路复用.html">
+            
+                    
+                    IO多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.7" data-path="../01-Python/06-并发篇/07-实现线程池.html">
+            
+                <a href="../01-Python/06-并发篇/07-实现线程池.html">
+            
+                    
+                    实现线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../01-Python/07-内存篇/">
+            
+                <a href="../01-Python/07-内存篇/">
+            
+                    
+                    内存篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../01-Python/07-内存篇/01-对象机制.html">
+            
+                <a href="../01-Python/07-内存篇/01-对象机制.html">
+            
+                    
+                    对象机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../01-Python/07-内存篇/02-对象的创建.html">
+            
+                <a href="../01-Python/07-内存篇/02-对象的创建.html">
+            
+                    
+                    对象的创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../01-Python/07-内存篇/03-整数对象.html">
+            
+                <a href="../01-Python/07-内存篇/03-整数对象.html">
+            
+                    
+                    整数对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.4" data-path="../01-Python/07-内存篇/04-字符串对象.html">
+            
+                <a href="../01-Python/07-内存篇/04-字符串对象.html">
+            
+                    
+                    字符串对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.5" data-path="../01-Python/07-内存篇/05-List对象.html">
+            
+                <a href="../01-Python/07-内存篇/05-List对象.html">
+            
+                    
+                    List对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.6" data-path="../01-Python/07-内存篇/06-Dict对象.html">
+            
+                <a href="../01-Python/07-内存篇/06-Dict对象.html">
+            
+                    
+                    Dict对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.7" data-path="../01-Python/07-内存篇/07-Tuple对象.html">
+            
+                <a href="../01-Python/07-内存篇/07-Tuple对象.html">
+            
+                    
+                    Tuple对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.8" data-path="../01-Python/07-内存篇/08-垃圾回收.html">
+            
+                <a href="../01-Python/07-内存篇/08-垃圾回收.html">
+            
+                    
+                    垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.9" data-path="../01-Python/07-内存篇/09-元类.html">
+            
+                <a href="../01-Python/07-内存篇/09-元类.html">
+            
+                    
+                    元类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../01-Python/08-番外篇/">
+            
+                <a href="../01-Python/08-番外篇/">
+            
+                    
+                    番外篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.8.1" data-path="../01-Python/08-番外篇/04-Python - 第三方库之PyMySQL.html">
+            
+                <a href="../01-Python/08-番外篇/04-Python - 第三方库之PyMySQL.html">
+            
+                    
+                    Python - 第三方库之PyMySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.2" data-path="../01-Python/08-番外篇/05-Python - 第三方库之MySQLdb.html">
+            
+                <a href="../01-Python/08-番外篇/05-Python - 第三方库之MySQLdb.html">
+            
+                    
+                    Python - 第三方库之MySQLdb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.3" data-path="../01-Python/08-番外篇/06-Python - 第三方库之SQlAlchemy.html">
+            
+                <a href="../01-Python/08-番外篇/06-Python - 第三方库之SQlAlchemy.html">
+            
+                    
+                    Python - 第三方库之SQlAlchemy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../02-Go/">
+            
+                <a href="../02-Go/">
+            
+                    
+                    Go
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../02-Go/Golang - 语言基础.html">
+            
+                <a href="../02-Go/Golang - 语言基础.html">
+            
+                    
+                    Golang - 语言基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../03-MySQL/">
+            
+                <a href="../03-MySQL/">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../03-MySQL/01-MySQL - 库操作.html">
+            
+                <a href="../03-MySQL/01-MySQL - 库操作.html">
+            
+                    
+                    MySQL - 库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../03-MySQL/02-MySQL - 数据类型.html">
+            
+                <a href="../03-MySQL/02-MySQL - 数据类型.html">
+            
+                    
+                    MySQL - 数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../03-MySQL/03-MySQL - 存储引擎.html">
+            
+                <a href="../03-MySQL/03-MySQL - 存储引擎.html">
+            
+                    
+                    MySQL - 存储引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../03-MySQL/04-MySQL - 表操作.html">
+            
+                <a href="../03-MySQL/04-MySQL - 表操作.html">
+            
+                    
+                    MySQL - 表操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../03-MySQL/05-MySQL - 数据操作.html">
+            
+                <a href="../03-MySQL/05-MySQL - 数据操作.html">
+            
+                    
+                    MySQL - 数据操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../03-MySQL/06-MySQL - 索引.html">
+            
+                <a href="../03-MySQL/06-MySQL - 索引.html">
+            
+                    
+                    MySQL - 索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../03-MySQL/07-MySQL - 视图.html">
+            
+                <a href="../03-MySQL/07-MySQL - 视图.html">
+            
+                    
+                    MySQL - 视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../03-MySQL/08-MySQL - 存储过程与函数.html">
+            
+                <a href="../03-MySQL/08-MySQL - 存储过程与函数.html">
+            
+                    
+                    MySQL - 存储过程与函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../03-MySQL/09-MySQL - 触发器.html">
+            
+                <a href="../03-MySQL/09-MySQL - 触发器.html">
+            
+                    
+                    MySQL - 触发器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../03-MySQL/10-MySQL - 事务.html">
+            
+                <a href="../03-MySQL/10-MySQL - 事务.html">
+            
+                    
+                    MySQL - 事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../03-MySQL/11-MySQL - SQL注入.html">
+            
+                <a href="../03-MySQL/11-MySQL - SQL注入.html">
+            
+                    
+                    MySQL - SQL注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../03-MySQL/SQL优化.html">
+            
+                <a href="../03-MySQL/SQL优化.html">
+            
+                    
+                    SQL优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../04-前端/">
+            
+                <a href="../04-前端/">
+            
+                    
+                    前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../04-前端/02-Web开发 - HTML-head.html">
+            
+                <a href="../04-前端/02-Web开发 - HTML-head.html">
+            
+                    
+                    Web开发 - HTML-head
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../04-前端/03-Web开发 - HTML-body.html">
+            
+                <a href="../04-前端/03-Web开发 - HTML-body.html">
+            
+                    
+                    Web开发 - HTML-body
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../04-前端/05-Web开发 - CSS.html">
+            
+                <a href="../04-前端/05-Web开发 - CSS.html">
+            
+                    
+                    Web开发 - CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../04-前端/06-Web开发 - JavaScript.html">
+            
+                <a href="../04-前端/06-Web开发 - JavaScript.html">
+            
+                    
+                    Web开发 - JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../04-前端/07-Web开发 - BOM.html">
+            
+                <a href="../04-前端/07-Web开发 - BOM.html">
+            
+                    
+                    Web开发 - BOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../04-前端/08-Web开发 - DOM.html">
+            
+                <a href="../04-前端/08-Web开发 - DOM.html">
+            
+                    
+                    Web开发 - DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../04-前端/09-Web开发 - jQuery.html">
+            
+                <a href="../04-前端/09-Web开发 - jQuery.html">
+            
+                    
+                    Web开发 - jQuery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../04-前端/11-Web开发 - Ajax.html">
+            
+                <a href="../04-前端/11-Web开发 - Ajax.html">
+            
+                    
+                    Web开发 - Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../04-前端/Vue/">
+            
+                <a href="../04-前端/Vue/">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.9.1" data-path="../04-前端/Vue/01-Vue - 介绍.html">
+            
+                <a href="../04-前端/Vue/01-Vue - 介绍.html">
+            
+                    
+                    Vue - 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.2" data-path="../04-前端/Vue/02-Vue - 实例.html">
+            
+                <a href="../04-前端/Vue/02-Vue - 实例.html">
+            
+                    
+                    Vue - 实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.3" data-path="../04-前端/Vue/03-Vue - 模板语法.html">
+            
+                <a href="../04-前端/Vue/03-Vue - 模板语法.html">
+            
+                    
+                    Vue - 模板语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.4" data-path="../04-前端/Vue/04-Vue - 计算属性和侦听器.html">
+            
+                <a href="../04-前端/Vue/04-Vue - 计算属性和侦听器.html">
+            
+                    
+                    Vue - 计算属性和侦听器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.5" data-path="../04-前端/Vue/05-Vue - Class与Style 绑定.html">
+            
+                <a href="../04-前端/Vue/05-Vue - Class与Style 绑定.html">
+            
+                    
+                    Vue - Class与Style 绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.6" data-path="../04-前端/Vue/06-Vue - 条件渲染.html">
+            
+                <a href="../04-前端/Vue/06-Vue - 条件渲染.html">
+            
+                    
+                    Vue - 条件渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.7" data-path="../04-前端/Vue/07-Vue - 列表渲染.html">
+            
+                <a href="../04-前端/Vue/07-Vue - 列表渲染.html">
+            
+                    
+                    Vue - 列表渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.8" data-path="../04-前端/Vue/08-Vue - 事件处理.html">
+            
+                <a href="../04-前端/Vue/08-Vue - 事件处理.html">
+            
+                    
+                    Vue - 事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.9" data-path="../04-前端/Vue/09-Vue - 组件基础.html">
+            
+                <a href="../04-前端/Vue/09-Vue - 组件基础.html">
+            
+                    
+                    Vue - 组件基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.10" data-path="../04-前端/Vue/10-Vue - Vue-cli.html">
+            
+                <a href="../04-前端/Vue/10-Vue - Vue-cli.html">
+            
+                    
+                    Vue - Vue-cli
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../05-Web框架/">
+            
+                <a href="../05-Web框架/">
+            
+                    
+                    Web框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../05-Web框架/01-HTTP基础.html">
+            
+                <a href="../05-Web框架/01-HTTP基础.html">
+            
+                    
+                    HTTP基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../05-Web框架/02-REST.html">
+            
+                <a href="../05-Web框架/02-REST.html">
+            
+                    
+                    REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../05-Web框架/03-ORM简介.html">
+            
+                <a href="../05-Web框架/03-ORM简介.html">
+            
+                    
+                    ORM简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../05-Web框架/Django/">
+            
+                <a href="../05-Web框架/Django/">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../05-Web框架/Django/01-Web框架简介.html">
+            
+                <a href="../05-Web框架/Django/01-Web框架简介.html">
+            
+                    
+                    Web框架简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../05-Web框架/Django/02-Django - Django初识.html">
+            
+                <a href="../05-Web框架/Django/02-Django - Django初识.html">
+            
+                    
+                    Django - Django初识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.3" data-path="../05-Web框架/Django/03-Django - Settings.html">
+            
+                <a href="../05-Web框架/Django/03-Django - Settings.html">
+            
+                    
+                    Django - Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.4" data-path="../05-Web框架/Django/04-Django - Urls.html">
+            
+                <a href="../05-Web框架/Django/04-Django - Urls.html">
+            
+                    
+                    Django - Urls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.5" data-path="../05-Web框架/Django/05-Django - Views.html">
+            
+                <a href="../05-Web框架/Django/05-Django - Views.html">
+            
+                    
+                    Django - Views
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.6" data-path="../05-Web框架/Django/06-Django - Model.html">
+            
+                <a href="../05-Web框架/Django/06-Django - Model.html">
+            
+                    
+                    Django - Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.7" data-path="../05-Web框架/Django/07-Django - Model Fields.html">
+            
+                <a href="../05-Web框架/Django/07-Django - Model Fields.html">
+            
+                    
+                    Django - Model Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.8" data-path="../05-Web框架/Django/08-Django - Model Field Options.html">
+            
+                <a href="../05-Web框架/Django/08-Django - Model Field Options.html">
+            
+                    
+                    Django - Model Field Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.9" data-path="../05-Web框架/Django/09-Django - Model QuerySet API.html">
+            
+                <a href="../05-Web框架/Django/09-Django - Model QuerySet API.html">
+            
+                    
+                    Django - Model QuerySet API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.10" data-path="../05-Web框架/Django/10-Django - Model Making queries.html">
+            
+                <a href="../05-Web框架/Django/10-Django - Model Making queries.html">
+            
+                    
+                    Django - Model Making queries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.11" data-path="../05-Web框架/Django/11-Django - Forms.html">
+            
+                <a href="../05-Web框架/Django/11-Django - Forms.html">
+            
+                    
+                    Django - Forms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.12" data-path="../05-Web框架/Django/12-Django - Template.html">
+            
+                <a href="../05-Web框架/Django/12-Django - Template.html">
+            
+                    
+                    Django - Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.13" data-path="../05-Web框架/Django/13-Django - Template Language.html">
+            
+                <a href="../05-Web框架/Django/13-Django - Template Language.html">
+            
+                    
+                    Django - Template Language
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.14" data-path="../05-Web框架/Django/14-Django - Middleware.html">
+            
+                <a href="../05-Web框架/Django/14-Django - Middleware.html">
+            
+                    
+                    Django - Middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.15" data-path="../05-Web框架/Django/15-Django - Sessions.html">
+            
+                <a href="../05-Web框架/Django/15-Django - Sessions.html">
+            
+                    
+                    Django - Sessions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.16" data-path="../05-Web框架/Django/16-Django - Authentication System.html">
+            
+                <a href="../05-Web框架/Django/16-Django - Authentication System.html">
+            
+                    
+                    Django - Authentication System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.17" data-path="../05-Web框架/Django/50-Django - 源码之startproject.html">
+            
+                <a href="../05-Web框架/Django/50-Django - 源码之startproject.html">
+            
+                    
+                    Django - 源码之startproject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.18" data-path="../05-Web框架/Django/51-Django - 源码之runserver.html">
+            
+                <a href="../05-Web框架/Django/51-Django - 源码之runserver.html">
+            
+                    
+                    Django - 源码之runserver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.19" data-path="../05-Web框架/Django/52-Django - 源码之middleware.html">
+            
+                <a href="../05-Web框架/Django/52-Django - 源码之middleware.html">
+            
+                    
+                    Django - 源码之middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.20" data-path="../05-Web框架/Django/53-Django - 源码之url.html">
+            
+                <a href="../05-Web框架/Django/53-Django - 源码之url.html">
+            
+                    
+                    Django - 源码之url
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.21" data-path="../05-Web框架/Django/54-Django - 源码之admin.html">
+            
+                <a href="../05-Web框架/Django/54-Django - 源码之admin.html">
+            
+                    
+                    Django - 源码之admin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.22" data-path="../05-Web框架/Django/Django - Django命令整理.html">
+            
+                <a href="../05-Web框架/Django/Django - Django命令整理.html">
+            
+                    
+                    Django - Django命令整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../05-Web框架/Django-Rest-Framework/">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/">
+            
+                    
+                    Django-Rest-Framework
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.5.1" data-path="../05-Web框架/Django-Rest-Framework/Quickstart.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Quickstart.html">
+            
+                    
+                    Quickstart
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.2" data-path="../05-Web框架/Django-Rest-Framework/Tutorial 1 Serialization.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Tutorial 1 Serialization.html">
+            
+                    
+                    Tutorial 1 Serialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.3" data-path="../05-Web框架/Django-Rest-Framework/Tutorial 2 Requests and Responses.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Tutorial 2 Requests and Responses.html">
+            
+                    
+                    Tutorial 2 Requests and Responses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.4" data-path="../05-Web框架/Django-Rest-Framework/Tutorial 3 Class-based Views.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Tutorial 3 Class-based Views.html">
+            
+                    
+                    Tutorial 3 Class-based Views
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.5" data-path="../05-Web框架/Django-Rest-Framework/Tutorial 4 Authentication & Permissions.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Tutorial 4 Authentication & Permissions.html">
+            
+                    
+                    Tutorial 4 Authentication & Permissions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.6" data-path="../05-Web框架/Django-Rest-Framework/Tutorial 5 Relationships & Hyperlinked APIs.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Tutorial 5 Relationships & Hyperlinked APIs.html">
+            
+                    
+                    Tutorial 5 Relationships & Hyperlinked APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.7" data-path="../05-Web框架/Django-Rest-Framework/Tutorial 6 ViewSets & Routers.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Tutorial 6 ViewSets & Routers.html">
+            
+                    
+                    Tutorial 6 ViewSets & Routers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.8" data-path="../05-Web框架/Django-Rest-Framework/Tutorial 7 Schemas & client libraries.html">
+            
+                <a href="../05-Web框架/Django-Rest-Framework/Tutorial 7 Schemas & client libraries.html">
+            
+                    
+                    Tutorial 7 Schemas & client libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../05-Web框架/Flask/">
+            
+                <a href="../05-Web框架/Flask/">
+            
+                    
+                    Flask
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.6.1" data-path="../05-Web框架/Flask/01-Flask - 源码简要说明.html">
+            
+                <a href="../05-Web框架/Flask/01-Flask - 源码简要说明.html">
+            
+                    
+                    Flask - 源码简要说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.2" data-path="../05-Web框架/Flask/02-Flask - 源码之开始.html">
+            
+                <a href="../05-Web框架/Flask/02-Flask - 源码之开始.html">
+            
+                    
+                    Flask - 源码之开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.3" data-path="../05-Web框架/Flask/03-Flask - 源码之配置.html">
+            
+                <a href="../05-Web框架/Flask/03-Flask - 源码之配置.html">
+            
+                    
+                    Flask - 源码之配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.4" data-path="../05-Web框架/Flask/04-Flask - 源码之路由.html">
+            
+                <a href="../05-Web框架/Flask/04-Flask - 源码之路由.html">
+            
+                    
+                    Flask - 源码之路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.5" data-path="../05-Web框架/Flask/05-Flask - 源码之视图.html">
+            
+                <a href="../05-Web框架/Flask/05-Flask - 源码之视图.html">
+            
+                    
+                    Flask - 源码之视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.6" data-path="../05-Web框架/Flask/06-Flask - 源码之蓝图.html">
+            
+                <a href="../05-Web框架/Flask/06-Flask - 源码之蓝图.html">
+            
+                    
+                    Flask - 源码之蓝图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.7" data-path="../05-Web框架/Flask/07-Flask - 源码之本地线程.html">
+            
+                <a href="../05-Web框架/Flask/07-Flask - 源码之本地线程.html">
+            
+                    
+                    Flask - 源码之本地线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.8" data-path="../05-Web框架/Flask/08-Flask - 源码之上下文.html">
+            
+                <a href="../05-Web框架/Flask/08-Flask - 源码之上下文.html">
+            
+                    
+                    Flask - 源码之上下文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.9" data-path="../05-Web框架/Flask/09-Flask - 源码之信号.html">
+            
+                <a href="../05-Web框架/Flask/09-Flask - 源码之信号.html">
+            
+                    
+                    Flask - 源码之信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.10" data-path="../05-Web框架/Flask/10-Flask - 扩展.html">
+            
+                <a href="../05-Web框架/Flask/10-Flask - 扩展.html">
+            
+                    
+                    Flask - 扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.11" data-path="../05-Web框架/Flask/DBUtils.html">
+            
+                <a href="../05-Web框架/Flask/DBUtils.html">
+            
+                    
+                    DBUtils
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.12" data-path="../05-Web框架/Flask/virtualenv基本使用.html">
+            
+                <a href="../05-Web框架/Flask/virtualenv基本使用.html">
+            
+                    
+                    virtualenv基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../05-Web框架/Tornado/">
+            
+                <a href="../05-Web框架/Tornado/">
+            
+                    
+                    Tornado
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="01-Redis - 简介.html">
+            
+                <a href="01-Redis - 简介.html">
+            
+                    
+                    Redis - 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="02-Redis - 配置参数说明.html">
+            
+                <a href="02-Redis - 配置参数说明.html">
+            
+                    
+                    Redis - 配置参数说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.3" data-path="03-Redis - 基础命令.html">
+            
+                <a href="03-Redis - 基础命令.html">
+            
+                    
+                    Redis - 基础命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="04-Redis - 数据库.html">
+            
+                <a href="04-Redis - 数据库.html">
+            
+                    
+                    Redis - 数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="05-Redis - 事务.html">
+            
+                <a href="05-Redis - 事务.html">
+            
+                    
+                    Redis - 事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="06-Redis - 主从复制.html">
+            
+                <a href="06-Redis - 主从复制.html">
+            
+                    
+                    Redis - 主从复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="07-Redis - 集群.html">
+            
+                <a href="07-Redis - 集群.html">
+            
+                    
+                    Redis - 集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="08-Redis - Sentinel.html">
+            
+                <a href="08-Redis - Sentinel.html">
+            
+                    
+                    Redis - Sentinel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="Python操作MongoDB.html">
+            
+                <a href="Python操作MongoDB.html">
+            
+                    
+                    Python操作MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="Python操作Redis.html">
+            
+                <a href="Python操作Redis.html">
+            
+                    
+                    Python操作Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../07-设计模式/">
+            
+                <a href="../07-设计模式/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../07-设计模式/01-六大原则.html">
+            
+                <a href="../07-设计模式/01-六大原则.html">
+            
+                    
+                    六大原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../07-设计模式/02-单例模式.html">
+            
+                <a href="../07-设计模式/02-单例模式.html">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../08-算法/">
+            
+                <a href="../08-算法/">
+            
+                    
+                    算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../08-算法/01-算法基础.html">
+            
+                <a href="../08-算法/01-算法基础.html">
+            
+                    
+                    算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../08-算法/02-数组.html">
+            
+                <a href="../08-算法/02-数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../08-算法/03-栈.html">
+            
+                <a href="../08-算法/03-栈.html">
+            
+                    
+                    栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../08-算法/03-链表.html">
+            
+                <a href="../08-算法/03-链表.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../08-算法/04-树.html">
+            
+                <a href="../08-算法/04-树.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../08-算法/04-队列.html">
+            
+                <a href="../08-算法/04-队列.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../08-算法/05-哈希表.html">
+            
+                <a href="../08-算法/05-哈希表.html">
+            
+                    
+                    哈希表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../08-算法/06-双指针.html">
+            
+                <a href="../08-算法/06-双指针.html">
+            
+                    
+                    双指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../08-算法/07-并查集.html">
+            
+                <a href="../08-算法/07-并查集.html">
+            
+                    
+                    并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../08-算法/08-前缀树.html">
+            
+                <a href="../08-算法/08-前缀树.html">
+            
+                    
+                    前缀树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../08-算法/09-KMP&RK.html">
+            
+                <a href="../08-算法/09-KMP&RK.html">
+            
+                    
+                    KMP&RK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../08-算法/10-跳表.html">
+            
+                <a href="../08-算法/10-跳表.html">
+            
+                    
+                    跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.13" data-path="../08-算法/11-剪枝.html">
+            
+                <a href="../08-算法/11-剪枝.html">
+            
+                    
+                    剪枝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14" data-path="../08-算法/Python时间复杂度.html">
+            
+                <a href="../08-算法/Python时间复杂度.html">
+            
+                    
+                    Python时间复杂度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.15" data-path="../08-算法/优先队列.html">
+            
+                <a href="../08-算法/优先队列.html">
+            
+                    
+                    优先队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.16" data-path="../08-算法/力扣题解/">
+            
+                <a href="../08-算法/力扣题解/">
+            
+                    
+                    力扣题解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.17" data-path="../08-算法/双端队列.html">
+            
+                <a href="../08-算法/双端队列.html">
+            
+                    
+                    双端队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.18" data-path="../08-算法/排序合集.html">
+            
+                <a href="../08-算法/排序合集.html">
+            
+                    
+                    排序合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.19" data-path="../08-算法/树.html">
+            
+                <a href="../08-算法/树.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.20" data-path="../08-算法/链表.html">
+            
+                <a href="../08-算法/链表.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../09-Linux/">
+            
+                <a href="../09-Linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../09-Linux/Command/">
+            
+                <a href="../09-Linux/Command/">
+            
+                    
+                    Command
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1.1" data-path="../09-Linux/Command/01-常用命令.html">
+            
+                <a href="../09-Linux/Command/01-常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.2" data-path="../09-Linux/Command/vim.html">
+            
+                <a href="../09-Linux/Command/vim.html">
+            
+                    
+                    vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../09-Linux/Docker/">
+            
+                <a href="../09-Linux/Docker/">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../09-Linux/Git/">
+            
+                <a href="../09-Linux/Git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.3.1" data-path="../09-Linux/Git/01-Git&GitHub.html">
+            
+                <a href="../09-Linux/Git/01-Git&GitHub.html">
+            
+                    
+                    Git&GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2" data-path="../09-Linux/Git/02-Git基础命令.html">
+            
+                <a href="../09-Linux/Git/02-Git基础命令.html">
+            
+                    
+                    Git基础命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.3" data-path="../09-Linux/Git/GitHub Pages&Gitbook&Travis CI持续构建博客.html">
+            
+                <a href="../09-Linux/Git/GitHub Pages&Gitbook&Travis CI持续构建博客.html">
+            
+                    
+                    GitHub Pages&Gitbook&Travis CI持续构建博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.4" data-path="../09-Linux/Git/Travis  CI.html">
+            
+                <a href="../09-Linux/Git/Travis  CI.html">
+            
+                    
+                    Travis  CI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../09-Linux/RabbitMQ.html">
+            
+                <a href="../09-Linux/RabbitMQ.html">
+            
+                    
+                    RabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Read/">
+            
+                <a href="../Read/">
+            
+                    
+                    Read
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Redis - 基础命令</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#redis---&#x57FA;&#x7840;&#x547D;&#x4EE4;"><b></b>Redis - &#x57FA;&#x7840;&#x547D;&#x4EE4;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4ECB;&#x7ECD;--&#x1F340;"><b></b>&#x4ECB;&#x7ECD;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x952E;&#x547D;&#x4EE4;--&#x1F340;"><b></b>&#x952E;&#x547D;&#x4EE4;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x5B57;&#x7B26;&#x4E32;&#x547D;&#x4EE4;--&#x1F340;"><b></b>&#x5B57;&#x7B26;&#x4E32;&#x547D;&#x4EE4;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x54C8;&#x5E0C;&#x547D;&#x4EE4;--&#x1F340;"><b></b>&#x54C8;&#x5E0C;&#x547D;&#x4EE4;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x5217;&#x8868;&#x547D;&#x4EE4;--&#x1F340;"><b></b>&#x5217;&#x8868;&#x547D;&#x4EE4;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x96C6;&#x5408;&#x547D;&#x4EE4;--&#x1F340;"><b></b>&#x96C6;&#x5408;&#x547D;&#x4EE4;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x547D;&#x4EE4;--&#x1F340;"><b></b>&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x547D;&#x4EE4;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#hyperloglog&#x547D;&#x4EE4;--&#x1F340;"><b></b>HyperLogLog&#x547D;&#x4EE4;  &#x1F340;</a></li></ul></ul></div><a href="#redis---&#x57FA;&#x7840;&#x547D;&#x4EE4;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="redis---&#x57FA;&#x7840;&#x547D;&#x4EE4;"><a name="redis---&#x57FA;&#x7840;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#redis---&#x57FA;&#x7840;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>Redis - &#x57FA;&#x7840;&#x547D;&#x4EE4;</h1>
+<div id="anchor-navigation-ex-pagetop-navbar"><ul><li><span class="title-icon "></span><a href="#redis---&#x57FA;&#x7840;&#x547D;&#x4EE4;"><b></b>Redis - &#x57FA;&#x7840;&#x547D;&#x4EE4;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4ECB;&#x7ECD;--&#x1F340;"><b></b>&#x4ECB;&#x7ECD;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x952E;&#x547D;&#x4EE4;--&#x1F340;"><b></b>&#x952E;&#x547D;&#x4EE4;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x5B57;&#x7B26;&#x4E32;&#x547D;&#x4EE4;--&#x1F340;"><b></b>&#x5B57;&#x7B26;&#x4E32;&#x547D;&#x4EE4;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x54C8;&#x5E0C;&#x547D;&#x4EE4;--&#x1F340;"><b></b>&#x54C8;&#x5E0C;&#x547D;&#x4EE4;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x5217;&#x8868;&#x547D;&#x4EE4;--&#x1F340;"><b></b>&#x5217;&#x8868;&#x547D;&#x4EE4;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x96C6;&#x5408;&#x547D;&#x4EE4;--&#x1F340;"><b></b>&#x96C6;&#x5408;&#x547D;&#x4EE4;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x547D;&#x4EE4;--&#x1F340;"><b></b>&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x547D;&#x4EE4;  &#x1F340;</a></li><li><span class="title-icon "></span><a href="#hyperloglog&#x547D;&#x4EE4;--&#x1F340;"><b></b>HyperLogLog&#x547D;&#x4EE4;  &#x1F340;</a></li></ul></ul></div>
+
+<h2 id="&#x4ECB;&#x7ECD;--&#x1F340;"><a name="&#x4ECB;&#x7ECD;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#&#x4ECB;&#x7ECD;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4ECB;&#x7ECD;  &#x1F340;</h2>
+<p>Redis &#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5728; Redis &#x670D;&#x52A1;&#x4E0A;&#x6267;&#x884C;&#x64CD;&#x4F5C;</p>
+<p>&#x8981;&#x5728; Redis &#x670D;&#x52A1;&#x4E0A;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x9700;&#x8981;&#x4E00;&#x4E2A; Redis &#x5BA2;&#x6237;&#x7AEF; , Redis &#x5BA2;&#x6237;&#x7AEF;&#x5728;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x4E0B;&#x8F7D;&#x7684; Redis &#x7684;&#x5B89;&#x88C5;&#x5305;&#x4E2D;</p>
+<p>&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x5728; Redis &#x670D;&#x52A1;&#x542F;&#x52A8;&#x540E; , &#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x8FDE;&#x63A5; Redis &#x670D;&#x52A1; : </p>
+<pre><code class="lang-shell">$ redis-cli
+</code></pre>
+<p>&#x542F;&#x52A8; Redis &#x5BA2;&#x6237;&#x7AEF;&#x540E; , &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>PING</code> &#x547D;&#x4EE4;&#x68C0;&#x6D4B; Redis &#x670D;&#x52A1;&#x662F;&#x5426;&#x542F;&#x52A8; : </p>
+<pre><code>$ redis-cli
+127.0.0.1:6379&gt; 
+127.0.0.1:6379&gt; PING
+PONG
+127.0.0.1:6379&gt;
+</code></pre><p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x8FDC;&#x7A0B; Redis &#x670D;&#x52A1;&#x4E0A;&#x6267;&#x884C;&#x547D;&#x4EE4; , &#x6211;&#x4EEC;&#x53EA;&#x9700;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x53C2;&#x6570; : </p>
+<pre><code class="lang-shell">$ redis-cli -h host -p port -a password
+</code></pre>
+<p>&#x5B9E;&#x4F8B;</p>
+<pre><code class="lang-shell">$ redis-cli -h 127.0.0.1 -p 3769
+</code></pre>
+<h2 id="&#x952E;&#x547D;&#x4EE4;--&#x1F340;"><a name="&#x952E;&#x547D;&#x4EE4;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#&#x952E;&#x547D;&#x4EE4;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x952E;&#x547D;&#x4EE4;  &#x1F340;</h2>
+<p>Redis &#x952E;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x7BA1;&#x7406; Redis &#x7684;&#x952E;</p>
+<p>&#x8BED;&#x6CD5; : </p>
+<pre><code class="lang-shell">redis 127.0.0.1:6379&gt; COMMAND KEY_NAME
+</code></pre>
+<p>&#x5B9E;&#x4F8B;</p>
+<pre><code class="lang-shell">redis 127.0.0.1:6379&gt; SET w3ckey redis
+OK
+# &#x5220;&#x9664;&#x952E;w3ckey,&#x6210;&#x529F;&#x5220;&#x9664;&#x8FD4;&#x56DE;(integer) 1
+redis 127.0.0.1:6379&gt; DEL w3ckey
+(integer) 1
+</code></pre>
+<p>Redis &#x952E;&#x76F8;&#x5173;&#x57FA;&#x672C;&#x547D;&#x4EE4; : </p>
+<table>
+<thead>
+<tr>
+<th>&#x5E8F;&#x53F7;</th>
+<th>&#x547D;&#x4EE4;&#x53CA;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>DEL key</code> , &#x8BE5;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5728; key &#x5B58;&#x5728;&#x662F;&#x5220;&#x9664; key</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>DUMP key</code> , &#x5E8F;&#x5217;&#x5316;&#x7ED9;&#x5B9A; key , &#x5E76;&#x8FD4;&#x56DE;&#x88AB;&#x5E8F;&#x5217;&#x5316;&#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>EXISTS key</code> , &#x68C0;&#x67E5;&#x7ED9;&#x5B9A; key &#x662F;&#x5426;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>EXPIRE key</code> , seconds &#x4E3A;&#x7ED9;&#x5B9A; key &#x8BBE;&#x7F6E;&#x8FC7;&#x671F;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>EXPIREAT key timestamp</code> , EXPIREAT &#x7684;&#x4F5C;&#x7528;&#x548C; EXPIRE &#x7C7B;&#x4F3C; , &#x90FD;&#x7528;&#x4E8E;&#x4E3A; key &#x8BBE;&#x7F6E;&#x8FC7;&#x671F;&#x65F6;&#x95F4; , &#x4E0D;&#x540C;&#x5728;&#x4E8E; EXPIREAT &#x547D;&#x4EE4;&#x63A5;&#x53D7;&#x7684;&#x65F6;&#x95F4;&#x53C2;&#x6570;&#x662F; UNIX &#x65F6;&#x95F4;&#x6233;(unix timestamp)</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>PEXPIRE key milliseconds</code> , &#x8BBE;&#x7F6E; key &#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x4EBF;&#x4EE5;&#x6BEB;&#x79D2;&#x8BA1;</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>PEXPIREAT key milliseconds-timestamp</code> &#x8BBE;&#x7F6E; key &#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x7684;&#x65F6;&#x95F4;&#x6233; (unix timestamp) &#x4EE5;&#x6BEB;&#x79D2;&#x8BA1;</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>KEYS pattern</code> , &#x67E5;&#x627E;&#x6240;&#x6709;&#x7B26;&#x5408;&#x7ED9;&#x5B9A;&#x6A21;&#x5F0F;( pattern)&#x7684; key</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>MOVE key db</code> , &#x5C06;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x7684; key &#x79FB;&#x52A8;&#x5230;&#x7ED9;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x5E93; db &#x5F53;&#x4E2D;</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>PERSIST key</code> , &#x79FB;&#x9664; key &#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4; , key &#x5C06;&#x6301;&#x4E45;&#x4FDD;&#x6301;</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>PTTL key</code> , &#x4EE5;&#x6BEB;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#x8FD4;&#x56DE; key &#x7684;&#x5269;&#x4F59;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>TTL key</code> , &#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D; , &#x8FD4;&#x56DE;&#x7ED9;&#x5B9A; key &#x7684;&#x5269;&#x4F59;&#x751F;&#x5B58;&#x65F6;&#x95F4;(TTL, time to live)</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>RANDOMKEY</code> , &#x4ECE;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x968F;&#x673A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; key</td>
+</tr>
+<tr>
+<td>14</td>
+<td><code>RENAME key newkey</code> , &#x4FEE;&#x6539; key &#x7684;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>15</td>
+<td><code>RENAMENX key newkey</code> , &#x4EC5;&#x5F53; newkey &#x4E0D;&#x5B58;&#x5728;&#x65F6; , &#x5C06; key &#x6539;&#x540D;&#x4E3A; newkey</td>
+</tr>
+<tr>
+<td>16</td>
+<td><code>TYPE key</code> , &#x8FD4;&#x56DE; key &#x6240;&#x50A8;&#x5B58;&#x7684;&#x503C;&#x7684;&#x7C7B;&#x578B;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5B57;&#x7B26;&#x4E32;&#x547D;&#x4EE4;--&#x1F340;"><a name="&#x5B57;&#x7B26;&#x4E32;&#x547D;&#x4EE4;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x4E32;&#x547D;&#x4EE4;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B57;&#x7B26;&#x4E32;&#x547D;&#x4EE4;  &#x1F340;</h2>
+<p>Redis &#x5B57;&#x7B26;&#x4E32;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x76F8;&#x5173;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x7BA1;&#x7406; Redis &#x5B57;&#x7B26;&#x4E32;&#x503C;</p>
+<p>&#x8BED;&#x6CD5;</p>
+<pre><code class="lang-shell">redis 127.0.0.1:6379&gt; COMMAND KEY_NAME
+</code></pre>
+<p>&#x5B9E;&#x4F8B;</p>
+<pre><code class="lang-shell">redis 127.0.0.1:6379&gt; SET w3ckey redis 
+OK 
+redis 127.0.0.1:6379&gt; GET w3ckey &quot;redis&quot;
+</code></pre>
+<p>&#x5E38;&#x7528; Redis &#x5B57;&#x7B26;&#x4E32;&#x547D;&#x4EE4;&#x5982;&#x4E0B; : </p>
+<table>
+<thead>
+<tr>
+<th>&#x5E8F;&#x53F7;</th>
+<th>&#x547D;&#x4EE4;&#x53CA;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>SET key value</code> , &#x8BBE;&#x7F6E;&#x6307;&#x5B9A; key &#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>GET key</code> , &#x83B7;&#x53D6;&#x6307;&#x5B9A; key &#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>GETRANGE key start end</code> , &#x8FD4;&#x56DE; key &#x4E2D;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x7684;&#x5B50;&#x5B57;&#x7B26;</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>GETSET key value</code> , &#x5C06;&#x7ED9;&#x5B9A; key &#x7684;&#x503C;&#x8BBE;&#x4E3A; value  , &#x5E76;&#x8FD4;&#x56DE; key &#x7684;&#x65E7;&#x503C;(old value)</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>GETBIT key offset</code> , &#x5BF9; key &#x6240;&#x50A8;&#x5B58;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x503C; , &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x504F;&#x79FB;&#x91CF;&#x4E0A;&#x7684;&#x4F4D;(bit)</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>MGET key[key2..]</code> , &#x83B7;&#x53D6;&#x6240;&#x6709;(&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;)&#x7ED9;&#x5B9A; key &#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>SETBIT key offset value</code> , &#x5BF9; key &#x6240;&#x50A8;&#x5B58;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x503C; , &#x8BBE;&#x7F6E;&#x6216;&#x6E05;&#x9664;&#x6307;&#x5B9A;&#x504F;&#x79FB;&#x91CF;&#x4E0A;&#x7684;&#x4F4D;(bit)</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>SETEX key seconds value</code> , &#x5C06;&#x503C; value &#x5173;&#x8054;&#x5230; key  , &#x5E76;&#x5C06; key &#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x8BBE;&#x4E3A; seconds (&#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;)</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>SETNX key value</code> , &#x53EA;&#x6709;&#x5728; key &#x4E0D;&#x5B58;&#x5728;&#x65F6;&#x8BBE;&#x7F6E; key &#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>SETRANGE key offset value</code> , &#x7528; value &#x53C2;&#x6570;&#x8986;&#x5199;&#x7ED9;&#x5B9A; key &#x6240;&#x50A8;&#x5B58;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x503C; , &#x4ECE;&#x504F;&#x79FB;&#x91CF; offset &#x5F00;&#x59CB;</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>STRLEN key</code> , &#x8FD4;&#x56DE; key &#x6240;&#x50A8;&#x5B58;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x7684;&#x957F;&#x5EA6;</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>MSET key value [key value ...]</code> ,  &#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A; key-value &#x5BF9;</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>MSETNX key value [key value ...]</code> , &#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A; key-value &#x5BF9; , &#x5F53;&#x4E14;&#x4EC5;&#x5F53;&#x6240;&#x6709;&#x7ED9;&#x5B9A; key &#x90FD;&#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>14</td>
+<td><code>PSETEX key milliseconds value</code> , &#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x548C; SETEX &#x547D;&#x4EE4;&#x76F8;&#x4F3C; , &#x4F46;&#x5B83;&#x4EE5;&#x6BEB;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#x8BBE;&#x7F6E; key &#x7684;&#x751F;&#x5B58;&#x65F6;&#x95F4; , &#x800C;&#x4E0D;&#x662F;&#x50CF; SETEX &#x547D;&#x4EE4;&#x90A3;&#x6837; , &#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;</td>
+</tr>
+<tr>
+<td>15</td>
+<td><code>INCR key</code> , &#x5C06; key &#x4E2D;&#x50A8;&#x5B58;&#x7684;&#x6570;&#x5B57;&#x503C;&#x589E;&#x4E00;</td>
+</tr>
+<tr>
+<td>16</td>
+<td><code>INCRBY key increment</code> , &#x5C06; key &#x6240;&#x50A8;&#x5B58;&#x7684;&#x503C;&#x52A0;&#x4E0A;&#x7ED9;&#x5B9A;&#x7684;&#x589E;&#x91CF;&#x503C;&#xFF08;increment&#xFF09;</td>
+</tr>
+<tr>
+<td>17</td>
+<td><code>INCRBYFLOAT key increment</code> , &#x5C06; key &#x6240;&#x50A8;&#x5B58;&#x7684;&#x503C;&#x52A0;&#x4E0A;&#x7ED9;&#x5B9A;&#x7684;&#x6D6E;&#x70B9;&#x589E;&#x91CF;&#x503C;&#xFF08;increment&#xFF09;</td>
+</tr>
+<tr>
+<td>18</td>
+<td><code>DECR key</code> , &#x5C06; key &#x4E2D;&#x50A8;&#x5B58;&#x7684;&#x6570;&#x5B57;&#x503C;&#x51CF;&#x4E00;</td>
+</tr>
+<tr>
+<td>19</td>
+<td><code>DECRBY key decrement</code> , key &#x6240;&#x50A8;&#x5B58;&#x7684;&#x503C;&#x51CF;&#x53BB;&#x7ED9;&#x5B9A;&#x7684;&#x51CF;&#x91CF;&#x503C;(decrement)</td>
+</tr>
+<tr>
+<td>20</td>
+<td><code>APPEND key value</code> , &#x5982;&#x679C; key &#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32; ,  APPEND &#x547D;&#x4EE4;&#x5C06; value &#x8FFD;&#x52A0;&#x5230; key &#x539F;&#x6765;&#x7684;&#x503C;&#x7684;&#x672B;&#x5C3E;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x54C8;&#x5E0C;&#x547D;&#x4EE4;--&#x1F340;"><a name="&#x54C8;&#x5E0C;&#x547D;&#x4EE4;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#&#x54C8;&#x5E0C;&#x547D;&#x4EE4;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x54C8;&#x5E0C;&#x547D;&#x4EE4;  &#x1F340;</h2>
+<p>&#x8BED;&#x6CD5;</p>
+<pre><code class="lang-shell">redis 127.0.0.1:6379&gt; COMMAND KEY_NAME
+</code></pre>
+<p>&#x5B9E;&#x4F8B;</p>
+<pre><code class="lang-shell">redis 127.0.0.1:6379&gt; HMSET w3ckey name &quot;redis tutorial&quot; description &quot;redis basic commands for caching&quot; likes 20 visitors 23000
+OK
+redis 127.0.0.1:6379&gt; HGETALL w3ckey
+
+1) &quot;name&quot;
+2) &quot;redis tutorial&quot;
+3) &quot;description&quot;
+4) &quot;redis basic commands for caching&quot;
+5) &quot;likes&quot;
+6) &quot;20&quot;
+7) &quot;visitors&quot;
+8) &quot;23000&quot;
+</code></pre>
+<p>Redis Hash &#x76F8;&#x5173;&#x57FA;&#x672C;&#x547D;&#x4EE4; :</p>
+<table>
+<thead>
+<tr>
+<th>&#x5E8F;&#x53F7;</th>
+<th>&#x547D;&#x4EE4;&#x53CA;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>HDEL key field2 [field2]</code> , &#x5220;&#x9664;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x54C8;&#x5E0C;&#x8868;&#x5B57;&#x6BB5;</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>HEXISTS key field</code> , &#x67E5;&#x770B;&#x54C8;&#x5E0C;&#x8868; key &#x4E2D; , &#x6307;&#x5B9A;&#x7684;&#x5B57;&#x6BB5;&#x662F;&#x5426;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>HGET key field</code> , &#x83B7;&#x53D6;&#x5B58;&#x50A8;&#x5728;&#x54C8;&#x5E0C;&#x8868;&#x4E2D;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>HGETALL key</code> , &#x83B7;&#x53D6;&#x5728;&#x54C8;&#x5E0C;&#x8868;&#x4E2D;&#x6307;&#x5B9A; key &#x7684;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#x548C;&#x503C;</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>HINCRBY key field increment</code> , &#x4E3A;&#x54C8;&#x5E0C;&#x8868; key &#x4E2D;&#x7684;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x7684;&#x6574;&#x6570;&#x503C;&#x52A0;&#x4E0A;&#x589E;&#x91CF; increment</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>HINCRBYFLOAT key field increment</code> , &#x4E3A;&#x54C8;&#x5E0C;&#x8868; key &#x4E2D;&#x7684;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x7684;&#x6D6E;&#x70B9;&#x6570;&#x503C;&#x52A0;&#x4E0A;&#x589E;&#x91CF; increment</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>HKEYS key</code> , &#x83B7;&#x53D6;&#x6240;&#x6709;&#x54C8;&#x5E0C;&#x8868;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>HLEN key</code> , &#x83B7;&#x53D6;&#x54C8;&#x5E0C;&#x8868;&#x4E2D;&#x5B57;&#x6BB5;&#x7684;&#x6570;&#x91CF;</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>HMGET key field1 [field2]</code> , &#x83B7;&#x53D6;&#x6240;&#x6709;&#x7ED9;&#x5B9A;&#x5B57;&#x6BB5;&#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>HMSET key field1 value1 [field2 value2 ]</code> , &#x540C;&#x65F6;&#x5C06;&#x591A;&#x4E2A; field-value (&#x57DF;-&#x503C;)&#x5BF9;&#x8BBE;&#x7F6E;&#x5230;&#x54C8;&#x5E0C;&#x8868; key &#x4E2D;</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>HSET key field value</code> , &#x5C06;&#x54C8;&#x5E0C;&#x8868; key &#x4E2D;&#x7684;&#x5B57;&#x6BB5; field &#x7684;&#x503C;&#x8BBE;&#x4E3A; value</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>HSETNX key field value</code> , &#x53EA;&#x6709;&#x5728;&#x5B57;&#x6BB5; field &#x4E0D;&#x5B58;&#x5728;&#x65F6; , &#x8BBE;&#x7F6E;&#x54C8;&#x5E0C;&#x8868;&#x5B57;&#x6BB5;&#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>HVALS key</code> , &#x83B7;&#x53D6;&#x54C8;&#x5E0C;&#x8868;&#x4E2D;&#x6240;&#x6709;&#x503C;</td>
+</tr>
+<tr>
+<td>14</td>
+<td>HSCAN key cursor [MATCH pattern]  [COUNT count] &#x8FED;&#x4EE3;&#x54C8;&#x5E0C;&#x8868;&#x4E2D;&#x7684;&#x952E;&#x503C;&#x5BF9;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5217;&#x8868;&#x547D;&#x4EE4;--&#x1F340;"><a name="&#x5217;&#x8868;&#x547D;&#x4EE4;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#&#x5217;&#x8868;&#x547D;&#x4EE4;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5217;&#x8868;&#x547D;&#x4EE4;  &#x1F340;</h2>
+<p>&#x8BED;&#x6CD5;</p>
+<pre><code class="lang-shell">redis 127.0.0.1:6379&gt; COMMAND KEY_NAME
+</code></pre>
+<p>&#x5B9E;&#x4F8B;</p>
+<pre><code class="lang-shell">redis 127.0.0.1:6379&gt; LPUSH w3ckey redis
+(integer) 1
+redis 127.0.0.1:6379&gt; LPUSH w3ckey mongodb
+(integer) 2
+redis 127.0.0.1:6379&gt; LPUSH w3ckey mysql
+(integer) 3
+redis 127.0.0.1:6379&gt; LRANGE w3ckey 0 10
+
+1) &quot;mysql&quot;
+2) &quot;mongodb&quot;
+3) &quot;redis&quot;
+</code></pre>
+<p>Redis List &#x76F8;&#x5173;&#x57FA;&#x672C;&#x547D;&#x4EE4;&#x5982;&#x4E0B; : </p>
+<table>
+<thead>
+<tr>
+<th>&#x5E8F;&#x53F7;</th>
+<th>&#x547D;&#x4EE4;&#x53CA;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>BLPOP key1 [key2 ] timeout</code> , &#x79FB;&#x51FA;&#x5E76;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20; ,  &#x5982;&#x679C;&#x5217;&#x8868;&#x6CA1;&#x6709;&#x5143;&#x7D20;&#x4F1A;&#x963B;&#x585E;&#x5217;&#x8868;&#x76F4;&#x5230;&#x7B49;&#x5F85;&#x8D85;&#x65F6;&#x6216;&#x53D1;&#x73B0;&#x53EF;&#x5F39;&#x51FA;&#x5143;&#x7D20;&#x4E3A;&#x6B62;</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>BRPOP key1 [key2 ] timeout</code> &#x79FB;&#x51FA;&#x5E76;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20; ,  &#x5982;&#x679C;&#x5217;&#x8868;&#x6CA1;&#x6709;&#x5143;&#x7D20;&#x4F1A;&#x963B;&#x585E;&#x5217;&#x8868;&#x76F4;&#x5230;&#x7B49;&#x5F85;&#x8D85;&#x65F6;&#x6216;&#x53D1;&#x73B0;&#x53EF;&#x5F39;&#x51FA;&#x5143;&#x7D20;&#x4E3A;&#x6B62;</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>BRPOPLPUSH source destination timeout</code> , &#x4ECE;&#x5217;&#x8868;&#x4E2D;&#x5F39;&#x51FA;&#x4E00;&#x4E2A;&#x503C; , &#x5C06;&#x5F39;&#x51FA;&#x7684;&#x5143;&#x7D20;&#x63D2;&#x5165;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#x5E76;&#x8FD4;&#x56DE;&#x5B83; ;  &#x5982;&#x679C;&#x5217;&#x8868;&#x6CA1;&#x6709;&#x5143;&#x7D20;&#x4F1A;&#x963B;&#x585E;&#x5217;&#x8868;&#x76F4;&#x5230;&#x7B49;&#x5F85;&#x8D85;&#x65F6;&#x6216;&#x53D1;&#x73B0;&#x53EF;&#x5F39;&#x51FA;&#x5143;&#x7D20;&#x4E3A;&#x6B62;</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>LINDEX key index</code> , &#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x5143;&#x7D20;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>`LINSERT key BEFORE</td>
+<td>AFTER pivot value` , &#x5728;&#x5217;&#x8868;&#x7684;&#x5143;&#x7D20;&#x524D;&#x6216;&#x8005;&#x540E;&#x63D2;&#x5165;&#x5143;&#x7D20;</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>LLEN key</code> , &#x83B7;&#x53D6;&#x5217;&#x8868;&#x957F;&#x5EA6;</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>LPOP key</code> , &#x79FB;&#x51FA;&#x5E76;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>LPUSH key value1 [value2]</code> , &#x5C06;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x503C;&#x63D2;&#x5165;&#x5230;&#x5217;&#x8868;&#x5934;&#x90E8;</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>LPUSHX key value</code> , &#x5C06;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x503C;&#x63D2;&#x5165;&#x5230;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x5217;&#x8868;&#x5934;&#x90E8;</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>LRANGE key start stop</code> , &#x83B7;&#x53D6;&#x5217;&#x8868;&#x6307;&#x5B9A;&#x8303;&#x56F4;&#x5185;&#x7684;&#x5143;&#x7D20;</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>LREM key count value</code> , &#x79FB;&#x9664;&#x5217;&#x8868;&#x5143;&#x7D20;</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>LSET key index value</code> , &#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x8BBE;&#x7F6E;&#x5217;&#x8868;&#x5143;&#x7D20;&#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>LTRIM key start stop</code> , &#x5BF9;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x8FDB;&#x884C;&#x4FEE;&#x526A;(trim) , &#x5C31;&#x662F;&#x8BF4; , &#x8BA9;&#x5217;&#x8868;&#x53EA;&#x4FDD;&#x7559;&#x6307;&#x5B9A;&#x533A;&#x95F4;&#x5185;&#x7684;&#x5143;&#x7D20; , &#x4E0D;&#x5728;&#x6307;&#x5B9A;&#x533A;&#x95F4;&#x4E4B;&#x5185;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x5C06;&#x88AB;&#x5220;&#x9664;</td>
+</tr>
+<tr>
+<td>14</td>
+<td><code>RPOP key</code> , &#x79FB;&#x9664;&#x5E76;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</td>
+</tr>
+<tr>
+<td>15</td>
+<td><code>RPOPLPUSH source destination</code> , &#x79FB;&#x9664;&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20; , &#x5E76;&#x5C06;&#x8BE5;&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x5E76;&#x8FD4;&#x56DE;</td>
+</tr>
+<tr>
+<td>16</td>
+<td><code>RPUSH key value1 [value2]</code> , &#x5728;&#x5217;&#x8868;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x503C;</td>
+</tr>
+<tr>
+<td>17</td>
+<td><code>RPUSHX key value</code> , &#x4E3A;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x5217;&#x8868;&#x6DFB;&#x52A0;&#x503C;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x96C6;&#x5408;&#x547D;&#x4EE4;--&#x1F340;"><a name="&#x96C6;&#x5408;&#x547D;&#x4EE4;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x5408;&#x547D;&#x4EE4;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x96C6;&#x5408;&#x547D;&#x4EE4;  &#x1F340;</h2>
+<p>Redis &#x4E2D; &#x96C6;&#x5408;&#x662F;&#x901A;&#x8FC7;&#x54C8;&#x5E0C;&#x8868;&#x5B9E;&#x73B0;&#x7684; , &#x6240;&#x4EE5;&#x6DFB;&#x52A0; , &#x5220;&#x9664; , &#x67E5;&#x627E;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x90FD;&#x662F; <code>O(1)</code> </p>
+<p>&#x8BED;&#x6CD5;</p>
+<pre><code class="lang-shell">redis 127.0.0.1:6379&gt; COMMAND KEY_NAME
+</code></pre>
+<p>&#x5B9E;&#x4F8B;</p>
+<pre><code class="lang-shell">redis 127.0.0.1:6379&gt; SADD w3ckey redis
+(integer) 1
+redis 127.0.0.1:6379&gt; SADD w3ckey mongodb
+(integer) 1
+redis 127.0.0.1:6379&gt; SADD w3ckey mysql
+(integer) 1
+redis 127.0.0.1:6379&gt; SADD w3ckey mysql
+(integer) 0
+redis 127.0.0.1:6379&gt; SMEMBERS w3ckey
+
+1) &quot;mysql&quot;
+2) &quot;mongodb&quot;
+3) &quot;redis&quot;
+</code></pre>
+<p>Redis Set &#x76F8;&#x5173;&#x57FA;&#x672C;&#x547D;&#x4EE4;&#x5982;&#x4E0B; : </p>
+<table>
+<thead>
+<tr>
+<th>&#x5E8F;&#x53F7;</th>
+<th>&#x547D;&#x4EE4;&#x53CA;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>SADD key member1 [member2]</code> , &#x5411;&#x96C6;&#x5408;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6210;&#x5458;</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>SCARD key</code> , &#x83B7;&#x53D6;&#x96C6;&#x5408;&#x7684;&#x6210;&#x5458;&#x6570;</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>SDIFF key1 [key2]</code> , &#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x6240;&#x6709;&#x96C6;&#x5408;&#x7684;&#x5DEE;&#x96C6;</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>SDIFFSTORE destination key1 [key2]</code> , &#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x6240;&#x6709;&#x96C6;&#x5408;&#x7684;&#x5DEE;&#x96C6;&#x5E76;&#x5B58;&#x50A8;&#x5728; destination &#x4E2D;</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>SINTER key1 [key2]</code> , &#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x6240;&#x6709;&#x96C6;&#x5408;&#x7684;&#x4EA4;&#x96C6;</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>SINTERSTORE destination key1 [key2]</code> , &#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x6240;&#x6709;&#x96C6;&#x5408;&#x7684;&#x4EA4;&#x96C6;&#x5E76;&#x5B58;&#x50A8;&#x5728; destination &#x4E2D;</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>SISMEMBER key member</code> , &#x5224;&#x65AD; member &#x5143;&#x7D20;&#x662F;&#x5426;&#x662F;&#x96C6;&#x5408; key &#x7684;&#x6210;&#x5458;</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>SMEMBERS key</code> , &#x8FD4;&#x56DE;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6210;&#x5458;</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>SMOVE source destination member</code> , &#x5C06; member &#x5143;&#x7D20;&#x4ECE; source &#x96C6;&#x5408;&#x79FB;&#x52A8;&#x5230; destination &#x96C6;&#x5408;</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>SPOP key</code> , &#x79FB;&#x9664;&#x5E76;&#x8FD4;&#x56DE;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x5143;&#x7D20;</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>SRANDMEMBER key [count]</code> , &#x8FD4;&#x56DE;&#x96C6;&#x5408;&#x4E2D;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x968F;&#x673A;&#x6570;</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>SREM key member1 [member2]</code> , &#x79FB;&#x9664;&#x96C6;&#x5408;&#x4E2D;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6210;&#x5458;</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>SUNION key1 [key2]</code> , &#x8FD4;&#x56DE;&#x6240;&#x6709;&#x7ED9;&#x5B9A;&#x96C6;&#x5408;&#x7684;&#x5E76;&#x96C6;</td>
+</tr>
+<tr>
+<td>14</td>
+<td><code>SUNIONSTORE destination key1 [key2]</code> , &#x6240;&#x6709;&#x7ED9;&#x5B9A;&#x96C6;&#x5408;&#x7684;&#x5E76;&#x96C6;&#x5B58;&#x50A8;&#x5728; destination &#x96C6;&#x5408;&#x4E2D;</td>
+</tr>
+<tr>
+<td>15</td>
+<td><code>SSCAN key cursor [MATCH pattern] [COUNT count]</code> ,&#x8FED;&#x4EE3;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x5143;&#x7D20;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x547D;&#x4EE4;--&#x1F340;"><a name="&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x547D;&#x4EE4;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x547D;&#x4EE4;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x547D;&#x4EE4;  &#x1F340;</h2>
+<p>&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7684;&#x6210;&#x5458;&#x662F;&#x552F;&#x4E00;&#x7684;,&#x4F46;&#x5206;&#x6570;(score)&#x5374;&#x53EF;&#x4EE5;&#x91CD;&#x590D; </p>
+<p>&#x8BED;&#x6CD5;</p>
+<pre><code class="lang-shell">redis 127.0.0.1:6379&gt; COMMAND KEY_NAME
+</code></pre>
+<p>&#x5B9E;&#x4F8B;</p>
+<pre><code class="lang-shell">redis 127.0.0.1:6379&gt; ZADD w3ckey 1 redis
+(integer) 1
+redis 127.0.0.1:6379&gt; ZADD w3ckey 2 mongodb
+(integer) 1
+redis 127.0.0.1:6379&gt; ZADD w3ckey 3 mysql
+(integer) 1
+redis 127.0.0.1:6379&gt; ZADD w3ckey 3 mysql
+(integer) 0
+redis 127.0.0.1:6379&gt; ZADD w3ckey 4 mysql
+(integer) 0
+redis 127.0.0.1:6379&gt; ZRANGE w3ckey 0 10 WITHSCORES
+
+1) &quot;redis&quot;
+2) &quot;1&quot;
+3) &quot;mongodb&quot;
+4) &quot;2&quot;
+5) &quot;mysql&quot;
+6) &quot;4&quot;
+</code></pre>
+<p>Redis Sorted Set &#x76F8;&#x5173;&#x57FA;&#x672C;&#x547D;&#x4EE4;&#x5982;&#x4E0B; : </p>
+<table>
+<thead>
+<tr>
+<th>&#x5E8F;&#x53F7;</th>
+<th>&#x547D;&#x4EE4;&#x53CA;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>ZADD key score1 member1 [score2 member2]</code> , &#x5411;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6210;&#x5458; , &#x6216;&#x8005;&#x66F4;&#x65B0;&#x5DF2;&#x5B58;&#x5728;&#x6210;&#x5458;&#x7684;&#x5206;&#x6570;</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>ZCARD key</code> , &#x83B7;&#x53D6;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7684;&#x6210;&#x5458;&#x6570;</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>ZCOUNT key min max</code> , &#x8BA1;&#x7B97;&#x5728;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x6307;&#x5B9A;&#x533A;&#x95F4;&#x5206;&#x6570;&#x7684;&#x6210;&#x5458;&#x6570;</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>ZINCRBY key increment member</code> , &#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x5BF9;&#x6307;&#x5B9A;&#x6210;&#x5458;&#x7684;&#x5206;&#x6570;&#x52A0;&#x4E0A;&#x589E;&#x91CF; increment</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>ZINTERSTORE destination numkeys key [key ...]</code> , &#x8BA1;&#x7B97;&#x7ED9;&#x5B9A;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6709;&#x5E8F;&#x96C6;&#x7684;&#x4EA4;&#x96C6;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x96C6;&#x5B58;&#x50A8;&#x5728;&#x65B0;&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408; key &#x4E2D;</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>ZLEXCOUNT key min max</code> , &#x5728;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x8BA1;&#x7B97;&#x6307;&#x5B9A;&#x5B57;&#x5178;&#x533A;&#x95F4;&#x5185;&#x6210;&#x5458;&#x6570;&#x91CF;</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>ZRANGE key start stop [WITHSCORES]</code> , &#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x533A;&#x95F4;&#x8FD4;&#x56DE;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x6210;&#x6307;&#x5B9A;&#x533A;&#x95F4;&#x5185;&#x7684;&#x6210;&#x5458;</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>ZRANGEBYLEX key min max [LIMIT offset count]</code> , &#x901A;&#x8FC7;&#x5B57;&#x5178;&#x533A;&#x95F4;&#x8FD4;&#x56DE;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7684;&#x6210;&#x5458;</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>ZRANGEBYSCORE key min max [WITHSCORES] [LIMIT]</code> , &#x901A;&#x8FC7;&#x5206;&#x6570;&#x8FD4;&#x56DE;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x6307;&#x5B9A;&#x533A;&#x95F4;&#x5185;&#x7684;&#x6210;&#x5458;</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>ZRANK key member</code> , &#x8FD4;&#x56DE;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x6307;&#x5B9A;&#x6210;&#x5458;&#x7684;&#x7D22;&#x5F15;</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>ZREM key member [member ...]</code> , &#x79FB;&#x9664;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6210;&#x5458;</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>ZREMRANGEBYLEX key min max</code> , &#x79FB;&#x9664;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x5178;&#x533A;&#x95F4;&#x7684;&#x6240;&#x6709;&#x6210;&#x5458;</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>ZREMRANGEBYRANK key start stop</code> , &#x79FB;&#x9664;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x7ED9;&#x5B9A;&#x7684;&#x6392;&#x540D;&#x533A;&#x95F4;&#x7684;&#x6240;&#x6709;&#x6210;&#x5458;</td>
+</tr>
+<tr>
+<td>14</td>
+<td><code>ZREMRANGEBYSCORE key min max</code> , &#x79FB;&#x9664;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x7ED9;&#x5B9A;&#x7684;&#x5206;&#x6570;&#x533A;&#x95F4;&#x7684;&#x6240;&#x6709;&#x6210;&#x5458;</td>
+</tr>
+<tr>
+<td>15</td>
+<td><code>ZREVRANGE key start stop [WITHSCORES]</code> , &#x8FD4;&#x56DE;&#x6709;&#x5E8F;&#x96C6;&#x4E2D;&#x6307;&#x5B9A;&#x533A;&#x95F4;&#x5185;&#x7684;&#x6210;&#x5458; , &#x901A;&#x8FC7;&#x7D22;&#x5F15; , &#x5206;&#x6570;&#x4ECE;&#x9AD8;&#x5230;&#x5E95;</td>
+</tr>
+<tr>
+<td>16</td>
+<td><code>ZREVRANGEBYSCORE key max min [WITHSCORES]</code> , &#x8FD4;&#x56DE;&#x6709;&#x5E8F;&#x96C6;&#x4E2D;&#x6307;&#x5B9A;&#x5206;&#x6570;&#x533A;&#x95F4;&#x5185;&#x7684;&#x6210;&#x5458; , &#x5206;&#x6570;&#x4ECE;&#x9AD8;&#x5230;&#x4F4E;&#x6392;&#x5E8F;</td>
+</tr>
+<tr>
+<td>17</td>
+<td><code>ZREVRANK key member</code> , &#x8FD4;&#x56DE;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x6307;&#x5B9A;&#x6210;&#x5458;&#x7684;&#x6392;&#x540D; , &#x6709;&#x5E8F;&#x96C6;&#x6210;&#x5458;&#x6309;&#x5206;&#x6570;&#x503C;&#x9012;&#x51CF;(&#x4ECE;&#x5927;&#x5230;&#x5C0F;)&#x6392;&#x5E8F;</td>
+</tr>
+<tr>
+<td>18</td>
+<td><code>ZSCORE key member</code> , &#x8FD4;&#x56DE;&#x6709;&#x5E8F;&#x96C6;&#x4E2D; , &#x6210;&#x5458;&#x7684;&#x5206;&#x6570;&#x503C;</td>
+</tr>
+<tr>
+<td>19</td>
+<td><code>ZUNIONSTORE destination numkeys key [key ...]</code> , &#x8BA1;&#x7B97;&#x7ED9;&#x5B9A;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6709;&#x5E8F;&#x96C6;&#x7684;&#x5E76;&#x96C6; , &#x5E76;&#x5B58;&#x50A8;&#x5728;&#x65B0;&#x7684; key &#x4E2D;</td>
+</tr>
+<tr>
+<td>20</td>
+<td><code>ZSCAN key cursor [MATCH pattern] [COUNT count]</code> , &#x8FED;&#x4EE3;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#xFF08;&#x5305;&#x62EC;&#x5143;&#x7D20;&#x6210;&#x5458;&#x548C;&#x5143;&#x7D20;&#x5206;&#x503C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hyperloglog&#x547D;&#x4EE4;--&#x1F340;"><a name="hyperloglog&#x547D;&#x4EE4;--&#x1F340;" class="anchor-navigation-ex-anchor" href="#hyperloglog&#x547D;&#x4EE4;--&#x1F340;"><i class="fa fa-link" aria-hidden="true"></i></a>HyperLogLog&#x547D;&#x4EE4;  &#x1F340;</h2>
+<p>Redis HyperLogLog &#x662F;&#x7528;&#x6765;&#x505A;&#x57FA;&#x6570;&#x7EDF;&#x8BA1;&#x7684;&#x7B97;&#x6CD5; , HyperLogLog &#x7684;&#x4F18;&#x70B9;&#x662F; , &#x5728;&#x8F93;&#x5165;&#x5143;&#x7D20;&#x7684;&#x6570;&#x91CF;&#x6216;&#x8005;&#x4F53;&#x79EF;&#x975E;&#x5E38;&#x975E;&#x5E38;&#x5927;&#x65F6; , &#x8BA1;&#x7B97;&#x57FA;&#x6570;&#x6240;&#x9700;&#x7684;&#x7A7A;&#x95F4;&#x603B;&#x662F;&#x56FA;&#x5B9A;&#x7684; , &#x5E76;&#x4E14;&#x662F;&#x5F88;&#x5C0F;&#x7684; </p>
+<p>&#x5728; Redis &#x91CC;&#x9762; , &#x6BCF;&#x4E2A; HyperLogLog &#x952E;&#x53EA;&#x9700;&#x8981;&#x82B1;&#x8D39; 12 KB &#x5185;&#x5B58; , &#x5C31;&#x53EF;&#x4EE5;&#x8BA1;&#x7B97;&#x63A5;&#x8FD1; 2^64 &#x4E2A;&#x4E0D;&#x540C;&#x5143;&#x7D20;&#x7684;&#x57FA; &#x6570; &#x8FD9;&#x548C;&#x8BA1;&#x7B97;&#x57FA;&#x6570;&#x65F6; , &#x5143;&#x7D20;&#x8D8A;&#x591A;&#x8017;&#x8D39;&#x5185;&#x5B58;&#x5C31;&#x8D8A;&#x591A;&#x7684;&#x96C6;&#x5408;&#x5F62;&#x6210;&#x9C9C;&#x660E;&#x5BF9;&#x6BD4; </p>
+<p>&#x4F46;&#x662F; , &#x56E0;&#x4E3A; HyperLogLog &#x53EA;&#x4F1A;&#x6839;&#x636E;&#x8F93;&#x5165;&#x5143;&#x7D20;&#x6765;&#x8BA1;&#x7B97;&#x57FA;&#x6570; , &#x800C;&#x4E0D;&#x4F1A;&#x50A8;&#x5B58;&#x8F93;&#x5165;&#x5143;&#x7D20;&#x672C;&#x8EAB; , &#x6240;&#x4EE5; HyperLogLog &#x4E0D;&#x80FD;&#x50CF;&#x96C6;&#x5408;&#x90A3;&#x6837; , &#x8FD4;&#x56DE;&#x8F93;&#x5165;&#x7684;&#x5404;&#x4E2A;&#x5143;&#x7D20; </p>
+<p>&#x4E0B;&#x8868;&#x5217;&#x51FA;&#x4E86; redis HyperLogLog &#x7684;&#x57FA;&#x672C;&#x547D;&#x4EE4; :</p>
+<table>
+<thead>
+<tr>
+<th>&#x5E8F;&#x53F7;</th>
+<th>&#x547D;&#x4EE4;&#x53CA;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>PFADD key element [element ...]</code> , &#x6DFB;&#x52A0;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x5230; HyperLogLog &#x4E2D;</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>PFCOUNT key [key ...]</code> , &#x8FD4;&#x56DE;&#x7ED9;&#x5B9A; HyperLogLog &#x7684;&#x57FA;&#x6570;&#x4F30;&#x7B97;&#x503C;</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>PFMERGE destkey sourcekey [sourcekey ...]</code> , &#x5C06;&#x591A;&#x4E2A; HyperLogLog &#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x4E2A; HyperLogLog</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02-Redis - 配置参数说明.html" class="navigation navigation-prev " aria-label="Previous page: Redis - 配置参数说明">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04-Redis - 数据库.html" class="navigation navigation-next " aria-label="Next page: Redis - 数据库">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Redis - 基础命令","level":"1.8.3","depth":2,"next":{"title":"Redis - 数据库","level":"1.8.4","depth":2,"path":"06-Redis/04-Redis - 数据库.md","ref":"06-Redis/04-Redis - 数据库.md","articles":[]},"previous":{"title":"Redis - 配置参数说明","level":"1.8.2","depth":2,"path":"06-Redis/02-Redis - 配置参数说明.md","ref":"06-Redis/02-Redis - 配置参数说明.md","articles":[]},"dir":"ltr"},"config":{"plugins":["advanced-emoji","toggle-chapters","theme-comscore","splitter","github","github-buttons@2.1.0","-sharing","-lunr","-search","search-plus","anchor-navigation-ex-toc@0.0.9","editlink","fontsettings","copy-code-button","lightbox"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/lyonyang/blogs"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/lyonyang/blogs/blob/master"},"splitter":{},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"github-buttons":{"repo":"lyonyang/blogs","types":["star"],"size":"small"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"search-plus":{}},"theme":"default","author":"Lyon","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":18,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"blog","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"my notes","extension":null},"file":{"path":"06-Redis/03-Redis - 基础命令.md","mtime":"2021-05-31T13:37:58.345Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-31T13:39:32.784Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
