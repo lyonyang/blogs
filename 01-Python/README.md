@@ -1,24 +1,31 @@
-# The road to Python
+#  Attack on Python 🐍
+
+
+
+
+
+
+
+
+<extoc></extoc>
 
 ## 介绍
 
-本目录下为` Python之路 `系列文章
+本目录下为 `进击的Python` 系列文章
 
-目录结构如下 : 
+目录如下
 
 ```
 Python
-├── Basis   -- 基础篇
-├── Advanced   -- 进阶篇
-├── Modules   -- 模块篇
-├── Object-Oriented   -- 面向对象篇
-├── Network   -- 网络编程篇
-├── Concurrent   -- 并发编程篇
-├── Standard-Library   -- 标准库篇
-├── Third-Library   -- 第三方库篇
-└── In-Depth   -- 深入篇
+├── 基础篇
+├── 函数篇
+├── 对象篇
+├── 模块篇
+├── 网络篇
+├── 并发篇
+├── 内存篇
+└── 番外篇
 ```
 
 欢迎阅读 , 文章尚未整理完成 , 持续更新中 ...
-
 
