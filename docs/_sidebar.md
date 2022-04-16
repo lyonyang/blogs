@@ -48,16 +48,6 @@
   * [Django - 源码之admin](/django/source-admin.md)
   * [Django - Commands](/django/commands.md)
 
-* Django-REST-Framework
-  * [Quickstart](/drf/quickstart.md)
-  * [Serialization](/drf/serialization.md)
-  * [Requests and Responses](/drf/requests-and-responses.md)
-  * [Class-based Views](/drf/class-based-views.md)
-  * [Authentication & Permissions](/drf/authentication-permissions.md)
-  * [Relationships & Hyperlinked APIs](/drf/relationships-hyperlinked-api.md)
-  * [ViewSets & Routers](/drf/viewsets-routers.md)
-  * [Schemas & client libraries](/drf/schemas-client-libraries.md)
-
 * Golang
 
   * [Go - 语言基础](/go/basic.md)
@@ -124,3 +114,6 @@
   * [GitBook](/linux/gitbook.md)
   * [Travis CI](/linux/travis-ci.md)
   * [RabbitMQ](/linux/rabbitmq.md)
+
+* Books
+  * [推荐书籍](/recommended-books.md)
