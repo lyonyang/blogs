@@ -116,4 +116,4 @@
   * [RabbitMQ](/linux/rabbitmq.md)
 
 * Books
-  * [推荐书籍](/recommended-books.md)
+  * [推荐书籍](/books/recommended-books.md)
