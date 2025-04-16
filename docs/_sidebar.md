@@ -9,6 +9,8 @@
 
 * [**算法**](https://attack-on-backend.github.io/algorithm/)
 
+* [**设计模式**](https://attack-on-backend.github.io/design/)
+
 * Flask
   * [Flask - 源码介绍](/flask/introduction.md)
   * [Flask - 源码之开始](/flask/start.md)
@@ -101,10 +103,6 @@
   * [Vue - 事件处理](/vue/event.md)
   * [Vue - 组件基础](/vue/component.md)
   * [Vue - vue-cli](/vue/vue-cli.md)
-
-* 设计模式
-  * [六大原则](/design-pattern/six-principles.md)
-  * [单例模式](/design-pattern/singleton.md)
 
 * Linux
   * [常用命令](/linux/commands.md)
